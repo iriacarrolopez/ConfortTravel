@@ -24,7 +24,7 @@ public class VentanaLogin {
 	private JButton btnInicioSesion;
 	private JButton btnRegistrar;
 	private JLabel lblTitulo,lblImagen1,lblImagen2;
-	
+	private VentanaInicio VIni;
 
 	/**
 	 * Launch the application.
@@ -112,12 +112,19 @@ public class VentanaLogin {
 		btnInicioSesion = new JButton("INICIO SESION");		
 		panelCentro.add(btnInicioSesion);
 		
+		/**
+		 * Boton inicio de sesion
+		 * Este boton nos lleva a la venta de inicio sesión
+		 */
 		btnInicioSesion.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				//ir a la ventana de inicio
+				VIni = new VentanaInicio();
+				VIni.setVisible(true);
+				
 			}
 		});
 		
