@@ -5,12 +5,17 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.util.regex.Pattern;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
+
+import bd.BD;
+import clases.Persona;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -57,6 +62,9 @@ public class VentanaInicio extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaInicio() {
+		
+		Connection con = BD.initBD("confortTravel.db");
+		
 		setTitle("INICIO SESIÓN");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 500);
@@ -124,13 +132,23 @@ public class VentanaInicio extends JFrame {
 				String dniExpresR = "\\\\d{8}[A-HJ-NP-TV-Z]";
 				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
 				String dni= textDni.getText();
-				String con = txtcontrasenia.getText();
-				if(Pattern.matches(dniExpresR,dni) && Pattern.matches(conExpresR, con)) {
-					
-					JOptionPane.showMessageDialog(null, "INICIO DE SESIÓN CORRECTO,BIENVENIDO", "CORRECTO ", JOptionPane.INFORMATION_MESSAGE);
+				String cont = txtcontrasenia.getText();
+				if(Pattern.matches(dniExpresR,dni) && Pattern.matches(conExpresR, cont)) {
+					Persona p = BD.obtenerDatosPersona(con, dni);
+					if(p!=null) {
+						if(p.getContrasenia().equals(cont)) {
+							JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA", JOptionPane.INFORMATION_MESSAGE);
+						}else {
+							JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ERROR", JOptionPane.ERROR_MESSAGE);
+						}
+					}else {
+						JOptionPane.showMessageDialog(null, "No existe un registro asociado a ese DNI", "ERROR", JOptionPane.ERROR_MESSAGE);
+					}
 				}else {
-					JOptionPane.showMessageDialog(null, "ERROR, compruebe de nuevo los datos introduccidos", "ERROR", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Los datos no cumplen los requisitos", "ERROR", JOptionPane.ERROR_MESSAGE);
 				}
+				textDni.setText("");
+				txtcontrasenia.setText("");
 			}
 		});
 		

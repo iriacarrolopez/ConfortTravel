@@ -19,6 +19,21 @@ public class Persona {
 	public Persona() {
 		
 	}
+	
+	public Persona(String dni, String nombre, String contrasenia, String email) {
+		this.dni = dni;
+		//Comprobar si el dni es correcto
+		String erdni = "[0-9]{8}[A-Z]";
+		boolean correctoDni = Pattern.matches(erdni, "12345678H");
+		if(correctoDni)
+			System.out.println("El DNI es correcto");
+		else
+			System.out.println("El DNI no es correcto");
+		this.nombre = nombre;
+		this.contrasenia = contrasenia;
+		this.email = email;
+	}
+	
 	public Persona(String dni, String nombre, String apellido, int telefono, String email, String direccion,
 			String fechaNac, String nomUsuario, String contrasenia) {
 		this.dni = dni;

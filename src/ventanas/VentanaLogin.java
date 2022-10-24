@@ -7,6 +7,9 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import bd.BD;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -15,6 +18,7 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.awt.event.ActionEvent;
 
 public class VentanaLogin {
@@ -54,6 +58,8 @@ public class VentanaLogin {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		Connection con = BD.initBD("confortTravel.db");
+		
 		frame = new JFrame();
 		frame.setBackground(new Color(248, 248, 255));
 		frame.setBounds(200, 200, 950, 550);
