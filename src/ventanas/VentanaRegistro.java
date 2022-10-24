@@ -21,18 +21,18 @@ import javax.swing.JOptionPane;
 import java.awt.Color;
 import java.awt.Font;
 
-public class VentanaInicio extends JFrame {
+public class VentanaRegistro extends JFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane,panelNorte  ,panelSur,panelCentro,panelIzquierda;
-	private JButton btnInicio;
+	private JButton btnRegistro;
 	private JLabel lbldni;
 	private JTextField textDni;
-	private JPasswordField txtcontrasenia;
-	private JLabel lblContrasena,lblImagen;
+	private JPasswordField txtContrasenia, txtContrasenia2;
+	private JLabel lblContrasena, lblContrasena2 ,lblImagen;
 	private JLabel lblNewLabel;
 	
 	
@@ -44,7 +44,7 @@ public class VentanaInicio extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaInicio frame = new VentanaInicio();
+					VentanaRegistro frame = new VentanaRegistro();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -56,8 +56,8 @@ public class VentanaInicio extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaInicio() {
-		setTitle("INICIO SESIÓN");
+	public VentanaRegistro() {
+		setTitle("REGISTRARSE COMO USUARIO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 500);
 		
@@ -76,7 +76,7 @@ public class VentanaInicio extends JFrame {
 		panelNorte.setBackground(Color.CYAN);
 		contentPane.add(panelNorte, BorderLayout.NORTH);
 		
-		lblNewLabel = new JLabel("INICIO DE SESI\u00D3N");
+		lblNewLabel = new JLabel("REGISTRARSE COMO USUARIO");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblNewLabel.setForeground(Color.BLACK);
 		panelNorte.add(lblNewLabel);
@@ -92,7 +92,7 @@ public class VentanaInicio extends JFrame {
 		lblImagen = new JLabel();
 		lblImagen.setHorizontalAlignment(SwingConstants.CENTER);
 		
-		lblImagen.setIcon(new ImageIcon(VentanaInicio.class.getResource("/imagenes/iconoIni.jpg")));
+		lblImagen.setIcon(new ImageIcon(VentanaRegistro.class.getResource("/imagenes/iconoIni.jpg")));
 		
 		panelIzquierda.add(lblImagen);
 		
@@ -105,29 +105,39 @@ public class VentanaInicio extends JFrame {
 		panelCentro.add(textDni);
 		
 		
-		lblContrasena = new JLabel("Introduzca su contrase\u00F1a:");
+		lblContrasena = new JLabel("Introduzca una contraseña:");
 		lblContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(lblContrasena);
 		
-		txtcontrasenia = new JPasswordField(10);
-		txtcontrasenia.setHorizontalAlignment(SwingConstants.CENTER);
-		panelCentro.add(txtcontrasenia);
+		txtContrasenia = new JPasswordField(10);
+		txtContrasenia.setHorizontalAlignment(SwingConstants.CENTER);
+		panelCentro.add(txtContrasenia);
 		
 		
-		 btnInicio = new JButton("INICIO SESION");
-		panelSur.add(btnInicio);
+		lblContrasena2 = new JLabel("Confirme su contraseña:");
+		lblContrasena2.setHorizontalAlignment(SwingConstants.CENTER);
+		panelCentro.add(lblContrasena2);
+		
+		txtContrasenia2 = new JPasswordField(10);
+		txtContrasenia2.setHorizontalAlignment(SwingConstants.CENTER);
+		panelCentro.add(txtContrasenia2);
+		
+		
+		 btnRegistro = new JButton("REGISTRO");
+		panelSur.add(btnRegistro);
 		/**
-		 * Boton de inicio de sesión
+		 * Boton de registro del usuario
 		 */
-		btnInicio.addActionListener(new ActionListener() {
+		btnRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String dniExpresR = "\\\\d{8}[A-HJ-NP-TV-Z]";
 				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
 				String dni= textDni.getText();
-				String con = txtcontrasenia.getText();
-				if(Pattern.matches(dniExpresR,dni) && Pattern.matches(conExpresR, con)) {
+				String con = txtContrasenia.getText();
+				String con2 = txtContrasenia2.getText();
+				if(Pattern.matches(dniExpresR, dni) && Pattern.matches(conExpresR, con) && Pattern.matches(conExpresR, con2)) {
 					
-					JOptionPane.showMessageDialog(null, "INICIO DE SESIÓN CORRECTO,BIENVENIDO", "CORRECTO ", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "REGISTRO CORRECTO, BIENVENIDO", "CORRECTO ", JOptionPane.INFORMATION_MESSAGE);
 				}else {
 					JOptionPane.showMessageDialog(null, "ERROR, compruebe de nuevo los datos introduccidos", "ERROR", JOptionPane.ERROR_MESSAGE);
 				}
@@ -138,3 +148,4 @@ public class VentanaInicio extends JFrame {
 	}
 
 }
+

@@ -24,6 +24,7 @@ public class VentanaLogin {
 	private JButton btnInicioSesion;
 	private JButton btnRegistrar;
 	private JLabel lblTitulo,lblImagen1,lblImagen2;
+	private VentanaRegistro VReg;
 	private VentanaInicio VIni;
 
 	/**
@@ -107,6 +108,8 @@ public class VentanaLogin {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				//ir a la ventana de registro
+				VReg = new VentanaRegistro();
+				VReg.setVisible(true);
 			}
 		});
 		btnInicioSesion = new JButton("INICIO SESION");		
