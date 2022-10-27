@@ -9,13 +9,12 @@ import clases.Vuelo;
 public class VueloTest {
 
 	private Vuelo vuelo;
-	private String ID_Vuelo = "";
-	private String nombre_comp = "";
+	private String ID_vuelo = "v001";
 	private String compania = "IBERIA";
 	
 	@Before
 	public void setUp() throws Exception {
-		vuelo = new Vuelo(ID_Vuelo, nombre_comp , compania, 60.00f, 80.0f, 135);
+		vuelo = new Vuelo(ID_vuelo , compania, 60.00f, 80.0f, 135);
 	}
 
 	@After
@@ -26,21 +25,20 @@ public class VueloTest {
 	@Test
 	public void testVuelo() {
 		assertNotNull(vuelo);
-		assertEquals(ID_Vuelo, vuelo.getID_vuelos());
-		assertEquals(nombre_comp, vuelo.getNombre_comp());
+		assertEquals(ID_vuelo, vuelo.getID_vuelos());
 		assertEquals(compania, vuelo.getCompania());
 	}
 
 	@Test
 	public void testToString() {
-		String toString = "Vuelo [ID_Vuelo=" + vuelo.getID_vuelos() +"Nombre_comp=" + vuelo.getNombre_comp() +"Compañia=" + vuelo.getCompania() +" Precio=" + 60.00f + ", Duracion=" + 80.0f + ", Plazas="
-				+ 135 + "]";
+		String toString = "Vuelo [Precio=" + 60.00f + ", Duracion=" + 80.00f + ", Plazas=" + 135 + ", ID_vuelo=" + ID_vuelo
+				+ ", Compañia=" + compania + "]";;
 		assertEquals(toString, vuelo.toString());
 	}
-
+	
 	@Test
-	public void testGetID_Vuelo() {
-		assertEquals(ID_Vuelo, vuelo.getID_vuelos());
+	public void testGetID_vuelos() {
+		assertEquals(ID_vuelo, vuelo.getID_vuelos());
 	}
 
 	@Test
