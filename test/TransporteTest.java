@@ -73,7 +73,7 @@ public class TransporteTest {
 	@Test
 	public void testtoString() {
 		String toString = "Transporte [precio=" + precio + ", duracion=" + duracion + ", plazas=" + plazas + "]";
-		assertEquals(0, 0);
+		assertEquals(toString, transporte.toString());
 		
 	}
 	
