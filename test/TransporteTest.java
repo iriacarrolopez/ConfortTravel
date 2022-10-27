@@ -26,7 +26,7 @@ public class TransporteTest {
 	}
 
 	@Test
-	public void TransporteTest() {
+	public void TranspTest() {
 		assertNotNull(transporte);
 		assertEquals(precio, transporte.getPrecio(),0.0f);
 		assertEquals(duracion, transporte.getDuracion(),0.0f);
