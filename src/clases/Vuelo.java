@@ -3,6 +3,7 @@ package clases;
 public class Vuelo extends Transporte{
 	private String ID_vuelo;
 	private String nombre_comp;
+	private String compania;
 	
 	public Vuelo() {
 		super();
@@ -10,10 +11,11 @@ public class Vuelo extends Transporte{
 		this.nombre_comp = " ";
 	}
 
-	public Vuelo(float precio, float duracion, int plazas, String iD_vuelo, String nombre_comp) {
+	public Vuelo(String iD_vuelo, String nombre_comp, String compania, float precio, float duracion, int plazas) {
 		super(precio, duracion, plazas);
 		ID_vuelo = iD_vuelo;
 		this.nombre_comp = nombre_comp;
+		this.compania = compania;
 	}
 
 	public String getID_vuelos() {
@@ -28,9 +30,15 @@ public class Vuelo extends Transporte{
 	public void setNombre_comp(String nombre_comp) {
 		this.nombre_comp = nombre_comp;
 	}
+	public String getCompania() {
+		return compania;
+	}
+	public void setCompania(String compania) {
+		this.compania = compania;
+	}
 	@Override
 	public String toString() {
 		return "Vuelo [Precio=" + getPrecio() + ", Duracion=" + getDuracion() + ", Plazas=" + getPlazas()+ ", ID_vuelo=" + ID_vuelo
-				+ ", nombre_comp=" + nombre_comp + "]";
+				+ ", nombre_comp=" + nombre_comp + ", Compañia=" + getCompania() + "]";
 	}
 }
