@@ -6,12 +6,8 @@ public class Autobus extends Transporte{
 	public Autobus() {
 		super();
 	}
-	public Autobus(float precio, float duracion, int plazas) {
-		super(precio, duracion, plazas);
-		// TODO Auto-generated constructor stub
-	}
-	public Autobus(int num_Bus, String compania) {
-		super();
+	public Autobus(int num_Bus, String compania, float precio, float duracion, int plazas) {
+		super(precio,duracion,plazas);
 		this.num_Bus = num_Bus;
 		this.compania = compania;
 	}
