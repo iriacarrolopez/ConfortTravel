@@ -23,6 +23,17 @@ public class AlojamientoTest {
 
 	@After
 	public void tearDown() throws Exception {
+		alojamiento = null;
+	}
+	
+	@Test
+	public void testAlojamiento() {
+		assertNotNull(alojamiento);
+		assertEquals(nombre_comp, alojamiento.getNombre_comp());
+		assertEquals(talojamiento, alojamiento.getTalojamiento());
+		assertEquals(precio, alojamiento.getPrecio(), 0.0f);
+		assertEquals(duracion, alojamiento.getDuracion());
+		assertEquals(destino, alojamiento.getDestino());
 	}
 
 	@Test
@@ -51,14 +62,14 @@ public class AlojamientoTest {
 
 	@Test
 	public void testGetPrecio() {
-		assertEquals(precio, alojamiento.getPrecio());
+		assertEquals(precio, alojamiento.getPrecio(), 0.0f);
 	}
 
 	@Test
 	public void testSetPrecio() {
 		precio =  90.5f;
 		alojamiento.setPrecio(precio);
-		assertEquals(precio, alojamiento.getPrecio());;
+		assertEquals(precio, alojamiento.getPrecio(), 0.0f);;
 	}
 
 	@Test

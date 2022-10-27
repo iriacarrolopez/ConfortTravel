@@ -19,6 +19,14 @@ public class AutobusTest {
 
 	@After
 	public void tearDown() throws Exception {
+		autobus = null;
+	}
+	
+	@Test
+	public void testAutobus() {
+		assertNotNull(autobus);
+		assertEquals(num_Bus, autobus.getNum_Bus());
+		assertEquals(compania, autobus.getCompania());
 	}
 
 	@Test
