@@ -16,11 +16,12 @@ public class Persona {
 	private Date fechaNac; //Cambiar a date
 	private String nomUsuario;
 	private String contrasenia;
+	private String tipo;
 	public Persona() {
 		
 	}
 	
-	public Persona(String dni, String nombre, String contrasenia, String email) {
+	public Persona(String dni, String nombre, String contrasenia, String email, String tipo) {
 		this.dni = dni;
 		//Comprobar si el dni es correcto
 		String erdni = "[0-9]{8}[A-Z]";
@@ -116,6 +117,8 @@ public class Persona {
 	public void setContrasenia(String contrasenia) {
 		this.contrasenia = contrasenia;
 	}
+	
+
 	//No se si queremos incluir la contraseña en el toString
 	@Override
 	public String toString() {

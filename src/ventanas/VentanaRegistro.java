@@ -24,6 +24,7 @@ import javax.swing.JOptionPane;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JComboBox;
 
 public class VentanaRegistro extends JFrame {
 
@@ -41,6 +42,8 @@ public class VentanaRegistro extends JFrame {
 	private JTextField txtNombre;
 	private JLabel lblEmail;
 	private JTextField txtEmail;
+	private JLabel lblTipo;
+	private JComboBox<String> comboBox;
 	
 	
 
@@ -66,6 +69,7 @@ public class VentanaRegistro extends JFrame {
 	public VentanaRegistro() {
 		
 		Connection con = BD.initBD("confortTravel.db");
+		BD.crearTablas(con);
 		
 		setTitle("REGISTRARSE COMO USUARIO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -94,7 +98,7 @@ public class VentanaRegistro extends JFrame {
 		panelCentro = new JPanel();
 		contentPane.add(panelCentro, BorderLayout.CENTER);
 		panelCentro.setLayout(new GridLayout(4, 2, 0, 0));
-		panelCentro.setLayout(new GridLayout(5,2));
+		panelCentro.setLayout(new GridLayout(6,2));
 		
 		panelIzquierda = new JPanel();
 		panelIzquierda.setBackground(Color.WHITE);
@@ -148,6 +152,16 @@ public class VentanaRegistro extends JFrame {
 		panelCentro.add(txtEmail);
 		txtEmail.setColumns(10);
 		
+		lblTipo = new JLabel("Elige el tipo:");
+		lblTipo.setHorizontalAlignment(SwingConstants.CENTER);
+		panelCentro.add(lblTipo);
+		
+		comboBox = new JComboBox<String>();
+		comboBox.setFont(new Font("ARIAL", Font.PLAIN, 12));
+		comboBox.addItem("CLIENTE");
+		comboBox.addItem("ADMINISTRADOR");
+		panelCentro.add(comboBox);
+		
 		
 		 btnRegistro = new JButton("REGISTRO");
 		panelSur.add(btnRegistro);
@@ -157,14 +171,19 @@ public class VentanaRegistro extends JFrame {
 		btnRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String nom = txtNombre.getText();
-				String dniExpresR = "\\\\d{8}[A-HJ-NP-TV-Z]";
+				String dniExpresR = "[0-9]{8}[A-Z]";
 				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
 				String dni= textDni.getText();
 				String cont = txtContrasenia.getText();
 				String cont2 = txtContrasenia2.getText();
 				String email = txtEmail.getText();
 				if(Pattern.matches(dniExpresR, dni) && Pattern.matches(conExpresR, cont) && Pattern.matches(conExpresR, cont2)) {
-					BD.insertarPersona(con, nom, dni, cont, email);
+					String sel = comboBox.getSelectedItem().toString();
+					if(sel.equals("CLIENTE")) {
+						BD.insertarPersona(con, nom, dni, cont2, email, sel);
+					}else if(sel.equals("ADMINISTRADOR")) {
+						BD.insertarPersona(con, nom, dni, cont2, email, sel);
+					}
 					JOptionPane.showMessageDialog(null, "REGISTRO CORRECTO, BIENVENIDO", "CORRECTO ", JOptionPane.INFORMATION_MESSAGE);
 				}else {
 					JOptionPane.showMessageDialog(null, "ERROR, compruebe de nuevo los datos introduccidos", "ERROR", JOptionPane.ERROR_MESSAGE);

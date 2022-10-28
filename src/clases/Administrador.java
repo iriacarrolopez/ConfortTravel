@@ -6,16 +6,22 @@ public class Administrador extends Persona {
 	protected ArrayList<String>funcionesDelAdmin;
 
 	
+	public Administrador(ArrayList<String> funcionesDelAdmin) {
+		super();
+		this.funcionesDelAdmin = funcionesDelAdmin;
+	}
 
 	public Administrador() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Administrador(String dni, String nombre, String apellido, int telefono, String email, String direccion,
 			String fechaNac, String nomUsuario, String contrasenia) {
 		super(dni, nombre, apellido, telefono, email, direccion, fechaNac, nomUsuario, contrasenia);
-		// TODO Auto-generated constructor stub
+	}
+
+	public Administrador(String dni, String nombre, String contrasenia, String email) {
+		super(dni, nombre, contrasenia, email, "ADMIN");
 	}
 
 	public ArrayList<String> getFuncionesDelAdmin() {

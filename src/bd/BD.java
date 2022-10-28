@@ -44,7 +44,7 @@ public class BD {
 	}
 	
 	public static void crearTablas(Connection con) {
-		String sql = "CREATE TABLE IF NOT EXISTS Persona (nom String, dni String, cont String, email String)";
+		String sql = "CREATE TABLE IF NOT EXISTS Persona (nom String, dni String, cont String, email String, tipo String)";
 		try {
 			Statement st = con.createStatement();
 			st.executeUpdate(sql);
@@ -55,8 +55,8 @@ public class BD {
 		}
 	}
 	
-	public static void insertarPersona(Connection con, String nom, String dni, String cont, String email) {
-		String sql = "INSERT INTO Persona VALUES('"+dni+"','"+nom+"','"+cont+"','"+email+"')";
+	public static void insertarPersona(Connection con, String nom, String dni, String cont, String email, String tipo) {
+		String sql = "INSERT INTO Persona VALUES('"+dni+"','"+nom+"','"+cont+"','"+email+"','"+tipo+"')";
 		try {
 			Statement st = con.createStatement();
 			st.executeUpdate(sql);
@@ -96,7 +96,8 @@ public class BD {
 				String n = rs.getString("nom");
 				String c = rs.getString("cont");
 				String e = rs.getString("email");
-				p = new Persona(d, n, c, e);
+				String t = rs.getString("tipo");
+				p = new Persona(d, n, c, e, t);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -14,6 +14,8 @@ import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 
 import bd.BD;
+import clases.Administrador;
+import clases.Cliente;
 import clases.Persona;
 
 import javax.swing.ImageIcon;
@@ -122,14 +124,14 @@ public class VentanaInicio extends JFrame {
 		panelCentro.add(txtcontrasenia);
 		
 		
-		 btnInicio = new JButton("INICIO SESION");
+		btnInicio = new JButton("INICIO SESION");
 		panelSur.add(btnInicio);
 		/**
 		 * Boton de inicio de sesión
 		 */
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String dniExpresR = "\\\\d{8}[A-HJ-NP-TV-Z]";
+				String dniExpresR = "[0-9]{8}[A-Z]";
 				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
 				String dni= textDni.getText();
 				String cont = txtcontrasenia.getText();
