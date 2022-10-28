@@ -1,13 +1,15 @@
 package clases;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Viaje {
 
 	private Transporte transporte;
 	private Alojamiento alojamiento;
-	private Date fechaInic;
-	private Date fechaFin;
+	
+	private LocalDate fechaInic;
+	private LocalDate fechaFin;
 	private String destino;
 	private float precio;
 	
@@ -15,7 +17,7 @@ public class Viaje {
 		
 	}
 
-	public Viaje(Transporte transporte, Alojamiento alojamiento, Date fechaInic, Date fechaFin) {
+	public Viaje(Transporte transporte, Alojamiento alojamiento,LocalDate fechaInic, LocalDate fechaFin) {
 		super();
 		this.transporte = transporte;
 		this.alojamiento = alojamiento;
@@ -41,19 +43,19 @@ public class Viaje {
 		this.alojamiento = alojamiento;
 	}
 
-	public Date getFechaInic() {
+	public LocalDate getFechaInic() {
 		return fechaInic;
 	}
 
-	public void setFechaInic(Date fechaInic) {
+	public void setFechaInic(LocalDate fechaInic) {
 		this.fechaInic = fechaInic;
 	}
 
-	public Date getFechaFin() {
+	public LocalDate getFechaFin() {
 		return fechaFin;
 	}
 
-	public void setFechaFin(Date fechaFin) {
+	public void setFechaFin(LocalDate fechaFin) {
 		this.fechaFin = fechaFin;
 	}
 
