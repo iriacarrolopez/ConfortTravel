@@ -105,5 +105,17 @@ public class BD {
 		}
 		return p;
 	}
+	
+	public static void eliminarPersona(Connection con, String dni) {
+		String sql = "DELETE FROM Persona WHERE dni="+dni+"';";
+		try {
+			Statement st = con.createStatement();
+			st.executeUpdate(sql);
+			st.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }
