@@ -117,14 +117,19 @@ public class Persona {
 	public void setContrasenia(String contrasenia) {
 		this.contrasenia = contrasenia;
 	}
-	
+	/*public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}*/
 
 	//No se si queremos incluir la contraseña en el toString
 	@Override
 	public String toString() {
 		return "Persona [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono
 				+ ", email=" + email + ", direccion=" + direccion + ", fechaNac=" + fechaNac + ", nomUsuario="
-				+ nomUsuario + ", contrasenia=" + contrasenia + "]";
+				+ nomUsuario + ", contrasenia=" + contrasenia + ", tipo=" + tipo +"]";
 	}
 	
 }
