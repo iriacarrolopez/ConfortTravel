@@ -5,9 +5,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import clases.Persona;
 import clases.TipoPersona;
+
 
 public class BD {
 	
@@ -22,9 +25,10 @@ public class BD {
 			Class.forName("org.sqlite.JDBC");
 			con = DriverManager.getConnection("jdbc:sqlite:"+nombreBD);
 					
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (ClassNotFoundException ex) {
+
+			System.err.println(String.format("* Error al cargar el driver de BBDD: %s", ex.getMessage()));
+			ex.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -37,6 +41,7 @@ public class BD {
 		if(con!=null) {
 			try {
 				con.close();
+				System.out.println("Cerrando la Base de Datos");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -45,13 +50,15 @@ public class BD {
 	}
 	
 	public static void crearTablas(Connection con) {
-		String sql = "CREATE TABLE IF NOT EXISTS Persona (nom String, dni String, cont String, email String, tipo String)";
+		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
 		try {
 			Statement st = con.createStatement();
 			st.executeUpdate(sql);
+			
+			System.out.println("--Se ha creado la tabla Persona");
 			st.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			System.err.println(String.format("* Error al crear la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 	}
@@ -61,9 +68,13 @@ public class BD {
 		try {
 			Statement st = con.createStatement();
 			st.executeUpdate(sql);
+			
+			System.out.println("--Se ha insertado a la tabla Persona");
+			
 			st.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 	}
@@ -76,14 +87,47 @@ public class BD {
 			ResultSet rs = st.executeQuery(sql);
 			if(rs.next()) {
 				personaEnc = true;
+				System.out.println("--Se ha encontrado la Persona");
 			}
 			rs.close();
 			st.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			System.err.println(String.format("* Error al buscar la perdsona en la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 		return personaEnc;
+	}
+	public static List<Persona> obtenerDatos() {
+		List<Persona> listaPersona = new ArrayList<>();
+		String sql = "SELECT * FROM Persona WHERE  dni>=0 ";
+		
+		
+		try(Connection con=DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			Persona p;
+			while(rs.next()) {
+				p= new Persona();
+				p.setDni(rs.getString("dni"));
+				p.setNombre( rs.getString("nom"));
+				p.setContrasenia(rs.getString("cont"));  
+				p.setDireccion(rs.getString("email")); 
+				p.setTipo(rs.getString("tipo")); 
+				
+				listaPersona.add(p);
+				
+				
+				
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d personas...", listaPersona.size()));			
+		} catch (Exception e) {
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaPersona;
 	}
 	
 	public static Persona obtenerDatosPersona(Connection con, String dni) {
@@ -98,24 +142,34 @@ public class BD {
 				String c = rs.getString("cont");
 				String e = rs.getString("email");
 				String t = rs.getString("tipo");
-				TipoPersona tp = TipoPersona.valueOf(t);
-				p = new Persona(d, n, c, e, tp);
+				
+				p = new Persona(d, n, c, e, t);
+				
 			}
+			System.out.println(String.format("- Obtengo la persona:",p));		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			System.err.println(String.format("* Error al obtener los  datos de la persona en la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 		return p;
 	}
-	
-	public static void eliminarPersona(Connection con, String dni) {
-		String sql = "DELETE FROM Persona WHERE dni="+dni+"';";
-		try {
-			Statement st = con.createStatement();
-			st.executeUpdate(sql);
-			st.close();
+	/**
+	 * Eliminar la persona 
+	 * @param con abrir la conexion con la BBDD
+	 * @param dni de la persona
+	 */
+	public static  void eliminarPersona( String dni) {
+		
+		try (Connection con =DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db");
+				Statement st = con.createStatement();){
+			String sql = "DELETE FROM Persona WHERE dni='"+dni+"';";
+			int result = st.executeUpdate(sql);
+			
+			System.out.println(String.format("- Se han borrado la persona con el dni'"+dni+"'", result));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			System.err.println(String.format("* Error al eliminar la persona de la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 	}

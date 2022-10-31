@@ -20,8 +20,8 @@ public class Cliente extends Persona{
 		this.viajes = new ArrayList<>();
 	}
 
-	public Cliente(String dni, String nombre, String contrasenia, String email ,TipoPersona tipo) {
-		super(dni, nombre, contrasenia, email, TipoPersona.CLIENTE);
+	public Cliente(String dni, String nombre, String contrasenia, String email ,String tipo) {
+		super(dni, nombre, contrasenia, email, tipo);
 		this.viajes = new ArrayList<>();
 	}
 

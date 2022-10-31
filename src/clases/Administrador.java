@@ -20,8 +20,8 @@ public class Administrador extends Persona {
 		super(dni, nombre, apellido, telefono, email, direccion, fechaNac, nomUsuario, contrasenia);
 	}
 
-	public Administrador(String dni, String nombre, String contrasenia, String email,TipoPersona tipo) {
-		super(dni, nombre, contrasenia, email, TipoPersona.ADMINISTRADOR);
+	public Administrador(String dni, String nombre, String contrasenia, String email,String tipo) {
+		super(dni, nombre, contrasenia, email, tipo);
 	}
 
 	public ArrayList<String> getFuncionesDelAdmin() {

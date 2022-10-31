@@ -70,6 +70,7 @@ public class VentanaRegistro extends JFrame {
 		
 		Connection con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
+		System.out.println("-- Abriendo la conexion con la base de datos");
 		
 		setTitle("REGISTRARSE COMO USUARIO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -186,10 +187,13 @@ public class VentanaRegistro extends JFrame {
 						BD.insertarPersona(con, nom, dni, cont2, email, sel);
 					}else if(sel.equals("ADMINISTRADOR")) {
 						BD.insertarPersona(con, nom, dni, cont2, email, sel);
+						
 					}
 					JOptionPane.showMessageDialog(null, "REGISTRO CORRECTO, BIENVENIDO", "CORRECTO ", JOptionPane.INFORMATION_MESSAGE);
+					System.out.println("--Se ha insertado la persona en la base de datos");
 				}else {
 					JOptionPane.showMessageDialog(null, "ERROR, compruebe de nuevo los datos introduccidos", "ERROR", JOptionPane.ERROR_MESSAGE);
+					System.out.println("--Error, no se ha insertado en la base de datos");
 				}
 				txtNombre.setText("");
 				textDni.setText("");

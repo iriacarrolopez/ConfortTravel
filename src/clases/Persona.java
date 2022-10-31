@@ -16,12 +16,12 @@ public class Persona {
 	private Date fechaNac; //Cambiar a date
 	private String nomUsuario;
 	private String contrasenia;
-	private TipoPersona tipo;
+	private String tipo;
 	public Persona() {
 		
 	}
 	
-	public Persona(String dni, String nombre, String contrasenia, String email, TipoPersona tipo) {
+	public Persona(String dni, String nombre, String contrasenia, String email, String tipo) {
 		this.dni = dni;
 		//Comprobar si el dni es correcto
 		String erdni = "[0-9]{8}[A-Z]";
@@ -117,19 +117,17 @@ public class Persona {
 	public void setContrasenia(String contrasenia) {
 		this.contrasenia = contrasenia;
 	}
-	public TipoPersona getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(TipoPersona tipo) {
-		this.tipo =TipoPersona.CLIENTE;
+	public void setTipo(String tipo) {
+		this.tipo =tipo;
 	}
 
 	//No se si queremos incluir la contraseña en el toString
 	@Override
 	public String toString() {
-		return "Persona [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono
-				+ ", email=" + email + ", direccion=" + direccion + ", fechaNac=" + fechaNac + ", nomUsuario="
-				+ nomUsuario + ", contrasenia=" + contrasenia + ", tipo=" + tipo +"]";
+		return "Persona [dni=" + dni + ", nombre=" + nombre + ", email=" + email + ",  contrasenia=" + contrasenia + ", tipo=" + tipo +"]";
 	}
 	
 }

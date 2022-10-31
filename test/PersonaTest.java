@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import clases.Persona;
 
-import clases.TipoPersona;
+
 
 public class PersonaTest {
 	
@@ -164,7 +164,7 @@ public class PersonaTest {
 
 	@Test
 	public void testSetTipo() {
-		TipoPersona nuevoTipo = TipoPersona.CLIENTE;
+		String nuevoTipo = "CLIENTE";
 		persona.setTipo(nuevoTipo);
 		assertEquals(nuevoTipo, persona.getTipo());
 	}

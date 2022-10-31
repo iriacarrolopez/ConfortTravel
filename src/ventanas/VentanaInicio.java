@@ -67,7 +67,7 @@ public class VentanaInicio extends JFrame {
 	public VentanaInicio() {
 		
 		Connection con = BD.initBD("confortTravel.db");
-		
+		System.out.println("--Abriendo la conexion con la base de datos en la ventana inicio sesion");
 		setTitle("INICIO SESIÓN");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 500);
@@ -128,7 +128,7 @@ public class VentanaInicio extends JFrame {
 		btnInicio = new JButton("INICIO SESION");
 		panelSur.add(btnInicio);
 		/**
-		 * Boton de inicio de sesión
+		 * BOTON INICIO SESION
 		 */
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -142,14 +142,18 @@ public class VentanaInicio extends JFrame {
 					if(p!=null) {
 						if(p.getContrasenia().equals(cont)) {
 							JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA", JOptionPane.INFORMATION_MESSAGE);
+							System.out.println("--Inicio de sesion correcto");
 						}else {
 							JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ERROR", JOptionPane.ERROR_MESSAGE);
+							System.out.println("--La contraseña es incorrecta");
 						}
 					}else {
 						JOptionPane.showMessageDialog(null, "No existe un registro asociado a ese DNI", "ERROR", JOptionPane.ERROR_MESSAGE);
+						System.out.println("--No existe un registro asociado a ese DNI");
 					}
 				}else {
 					JOptionPane.showMessageDialog(null, "Los datos no cumplen los requisitos", "ERROR", JOptionPane.ERROR_MESSAGE);
+				 System.out.println("Los datos no cumplen los requisitos");
 				}
 				textDni.setText("");
 				txtcontrasenia.setText("");
