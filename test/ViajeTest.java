@@ -1,9 +1,8 @@
 import static org.junit.Assert.*;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 
 import org.junit.After;
 import org.junit.Before;
@@ -81,7 +80,7 @@ public class ViajeTest {
 	@Test
 	public void testsetAjomiento() {
 		
-		nuevoAl = new Alojamiento("IBERIA", talojamiento.BUNGALO, 340.8f, 30, "Madrid");
+		nuevoAl = new Alojamiento("IBERIA", talojamiento, 340.8f, 30, "Madrid");
 		assertEquals(alojamiento, viaje.getAlojamiento());
 		viaje.setAlojamiento(nuevoAl);
 		assertEquals(nuevoAl, viaje.getAlojamiento());

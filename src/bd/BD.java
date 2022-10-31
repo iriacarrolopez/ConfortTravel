@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import clases.Persona;
+import clases.TipoPersona;
 
 public class BD {
 	
@@ -97,7 +98,8 @@ public class BD {
 				String c = rs.getString("cont");
 				String e = rs.getString("email");
 				String t = rs.getString("tipo");
-				p = new Persona(d, n, c, e, t);
+				TipoPersona tp = TipoPersona.valueOf(t);
+				p = new Persona(d, n, c, e, tp);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -7,8 +7,8 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import bd.BD;
+/*No lo usamos ahora*/
+//import bd.BD;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,7 +18,8 @@ import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
+/*No lo usamos ahora*/
+//import java.sql.Connection;
 import java.awt.event.ActionEvent;
 
 public class VentanaLogin {
@@ -58,7 +59,9 @@ public class VentanaLogin {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		Connection con = BD.initBD("confortTravel.db");
+		/*No la vamos a necesitar ahora mismo*/
+		//Connection con = BD.initBD("confortTravel.db");
+		
 		
 		frame = new JFrame();
 		frame.setBackground(new Color(248, 248, 255));
@@ -108,6 +111,10 @@ public class VentanaLogin {
 		//BOTONES
 		btnRegistrar = new JButton("REGISTRAR");
 		panelCentro.add(btnRegistrar);	
+		/**
+		 * Boton registrar
+		 * - Nos lleva a la ventana inicio sesion
+		 */
 		btnRegistrar.addActionListener(new ActionListener() {
 			
 			@Override

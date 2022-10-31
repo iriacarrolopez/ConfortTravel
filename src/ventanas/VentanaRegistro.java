@@ -174,7 +174,10 @@ public class VentanaRegistro extends JFrame {
 				String dniExpresR = "[0-9]{8}[A-Z]";
 				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
 				String dni= textDni.getText();
+				/*para quitar el warning de getText() from the ty JPasswordField is deprecated*/
+				@SuppressWarnings("deprecation")
 				String cont = txtContrasenia.getText();
+				@SuppressWarnings("deprecation")
 				String cont2 = txtContrasenia2.getText();
 				String email = txtEmail.getText();
 				if(Pattern.matches(dniExpresR, dni) && Pattern.matches(conExpresR, cont) && Pattern.matches(conExpresR, cont2)) {

@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import clases.Persona;
 
+import clases.TipoPersona;
+
 public class PersonaTest {
 	
 	private Persona persona;
@@ -18,7 +20,8 @@ public class PersonaTest {
 	private String fechaNacimiento = "01-01-2000";
 	private String nomUsuario = "nombreUsuario";
 	private String contrasenia = "contrasenia";
-	private String tipo = "tipo";
+	//private TipoPersona tipo = TipoPersona.CLIENTE;
+	//private String tipo = "tipo";
 	
 
 	@Before
@@ -156,14 +159,14 @@ public class PersonaTest {
 
 	/*@Test
 	public void testGetTipo() {
-		assertEquals(tipo, persona.getTipo());
-	}
+		assertEquals(TipoPersona.CLIENTE, persona.getTipo());
+	}*/
 
 	@Test
 	public void testSetTipo() {
-		String nuevoTipo = "Nuevo tipo";
+		TipoPersona nuevoTipo = TipoPersona.CLIENTE;
 		persona.setTipo(nuevoTipo);
 		assertEquals(nuevoTipo, persona.getTipo());
-	}*/
+	}
 
 }

@@ -35,6 +35,7 @@ public class AdministradorTest {
 				+ "Apellido" + ", Telefono=" + 1111111111 + ", Email=" + "email@gmail.com"
 				+ ", Direccion=" + "direccion" + ", FechaNac=" + "01-01-2000" + ", NomUsuario="
 				+ "Nombre Usuario" + ", Contrasenia=" + "contrasenia" + ", funcionesDelAdmin=" + funcionesAdministrador + "]";		
+	assertEquals(toString, administrador.toString());
 	}
 	
 	@Test
