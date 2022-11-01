@@ -159,10 +159,9 @@ public class BD {
 	 * @param con abrir la conexion con la BBDD
 	 * @param dni de la persona
 	 */
-	public static  void eliminarPersona( String dni) {
+	public static  void eliminarPersona( Connection con, String dni) {
 		
-		try (Connection con =DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db");
-				Statement st = con.createStatement();){
+		try (Statement st = con.createStatement();){
 			String sql = "DELETE FROM Persona WHERE dni='"+dni+"';";
 			int result = st.executeUpdate(sql);
 			
