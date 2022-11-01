@@ -37,6 +37,10 @@ public class BD {
 		return con;
 	}
 	
+	/**
+	 * Método que cierra la conexión con la base de datos
+	 * @param con
+	 */
 	public static void closeBD(Connection con) {
 		if(con!=null) {
 			try {
@@ -49,6 +53,10 @@ public class BD {
 		}
 	}
 	
+	/**
+	 * Método que crea las tablas en la base de datos
+	 * @param con Conexión con la base de datos
+	 */
 	public static void crearTablas(Connection con) {
 		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
 		try {
@@ -63,6 +71,16 @@ public class BD {
 		}
 	}
 	
+	/**
+	 * 
+	 * Método que inserta a una persona en la base de datos
+	 * @param con Conexión con la base de datos
+	 * @param nom Nombre de la persona
+	 * @param dni Dni de la persona
+	 * @param cont Contraseña de la persona
+	 * @param email Email de la persona
+	 * @param tipo Tipo de persona
+	 */
 	public static void insertarPersona(Connection con, String nom, String dni, String cont, String email, String tipo) {
 		String sql = "INSERT INTO Persona VALUES('"+dni+"','"+nom+"','"+cont+"','"+email+"','"+tipo+"')";
 		try {
@@ -79,6 +97,12 @@ public class BD {
 		}
 	}
 	
+	/**
+	 * Método que busca a una persona en la base de datos
+	 * @param con Conexión con la base de datos
+	 * @param dni Dni de la persona
+	 * @return Devuelve la persona que buscamos
+	 */
 	public static boolean buscarPersona(Connection con, String dni) {
 		String sql = "SELECT * FROM Persona WHERE dni='"+dni+"'";
 		boolean personaEnc = false;
@@ -98,6 +122,11 @@ public class BD {
 		}
 		return personaEnc;
 	}
+	
+	/**
+	 * Método que obtiene los datos de las personas
+	 * @return Devuelve una lista con todas las personas
+	 */
 	public static List<Persona> obtenerDatos() {
 		List<Persona> listaPersona = new ArrayList<>();
 		String sql = "SELECT * FROM Persona WHERE  dni>=0 ";
@@ -130,6 +159,12 @@ public class BD {
 		return listaPersona;
 	}
 	
+	/**
+	 * Método que obtiene los datos de una persona
+	 * @param con Conexión con la base de datos
+	 * @param dni Dni de la persona
+	 * @return Devuelve la persona
+	 */
 	public static Persona obtenerDatosPersona(Connection con, String dni) {
 		String sql = "SELECT * FROM Persona WHERE dni='"+dni+"'";
 		Persona p = null;

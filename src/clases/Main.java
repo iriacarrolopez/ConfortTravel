@@ -9,7 +9,7 @@ import bd.BD;
 
 public class Main {
 	
-	Connection con = BD.initBD("confortTravel.db");
+
 	
 	public static void main(String[] args) {
 		
@@ -46,8 +46,7 @@ public class Main {
 				 
 				 
 			 //DELETE :Eliminar persona
-				 /*
-				  * NO FUNCIONA*/
+				
 				  
 				 System.out.println("Eliminar de la base de datos el dni 12345678A:");
 				 BD.eliminarPersona( con, "12345678A");
