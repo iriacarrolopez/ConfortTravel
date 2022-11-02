@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import clases.Persona;
-import clases.TipoPersona;
+
 
 
 public class BD {
