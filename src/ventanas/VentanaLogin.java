@@ -24,13 +24,15 @@ import java.awt.event.ActionEvent;
 
 public class VentanaLogin {
 
-	private JFrame frame;
+	private static JFrame frame;
 	private JPanel contentPane, panelIzq, panelCentro, panelDerecha;
 	private JButton btnInicioSesion;
 	private JButton btnRegistrar;
 	private JLabel lblTitulo,lblImagen1,lblImagen2;
 	private VentanaRegistro VReg;
 	private VentanaInicio VIni;
+
+	
 
 	/**
 	 * Launch the application.
@@ -123,6 +125,7 @@ public class VentanaLogin {
 				//ir a la ventana de registro
 				VReg = new VentanaRegistro();
 				VReg.setVisible(true);
+				frame.dispose();
 			}
 		});
 		btnInicioSesion = new JButton("INICIO SESION");		
@@ -140,13 +143,12 @@ public class VentanaLogin {
 				//ir a la ventana de inicio
 				VIni = new VentanaInicio();
 				VIni.setVisible(true);
-				
+				frame.dispose();
 			}
 		});
 		
 		
 	
 	}
-	
 
 }
