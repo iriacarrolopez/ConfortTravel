@@ -28,11 +28,9 @@ public class VentanaLogin {
 	private JPanel contentPane, panelIzq, panelCentro, panelDerecha;
 	private JButton btnInicioSesion;
 	private JButton btnRegistrar;
-	private JLabel lblTitulo,lblImagen1,lblImagen2;
+	private JLabel lblTitulo, lblImagen1, lblImagen2;
 	private VentanaRegistro VReg;
 	private VentanaInicio VIni;
-
-	
 
 	/**
 	 * Launch the application.
@@ -61,10 +59,9 @@ public class VentanaLogin {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		/*No la vamos a necesitar ahora mismo*/
-		//Connection con = BD.initBD("confortTravel.db");
-		
-		
+		/* No la vamos a necesitar ahora mismo */
+		// Connection con = BD.initBD("confortTravel.db");
+
 		frame = new JFrame();
 		frame.setBackground(new Color(248, 248, 255));
 		frame.setBounds(200, 200, 950, 550);
@@ -73,82 +70,76 @@ public class VentanaLogin {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		frame.setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout());
-		
-		//paneles
+
+		// paneles
 		panelIzq = new JPanel();
 		contentPane.add(panelIzq);
-		//panelIzq.setLayout(new GridLayout(0, 1, 0, 0));
+		// panelIzq.setLayout(new GridLayout(0, 1, 0, 0));
 		panelIzq.setLayout(new FlowLayout(FlowLayout.CENTER));
-		
+
 		lblImagen1 = new JLabel();
 		lblImagen1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblImagen1.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblImagen1.setIcon(new ImageIcon(VentanaLogin.class.getResource("/imagenes/logo.jpg")));
-		
+
 		panelIzq.add(lblImagen1);
-		
+
 		panelCentro = new JPanel();
 		contentPane.add(panelCentro);
 		panelCentro.setLayout(new GridLayout(3, 0, 0, 0));
-		
+
 		panelDerecha = new JPanel();
 		contentPane.add(panelDerecha);
 		panelDerecha.setLayout(new FlowLayout(FlowLayout.CENTER));
-		
+
 		lblImagen2 = new JLabel();
 		lblImagen2.setIcon(new ImageIcon(VentanaLogin.class.getResource("/imagenes/travel.jpg")));
 		panelDerecha.add(lblImagen2);
-		
-		
-		
-		//titulo
-		
+
+		// titulo
+
 		lblTitulo = new JLabel("BIENVENIDO A COMFORTRAVEL");
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setBackground(SystemColor.controlLtHighlight);
 		lblTitulo.setForeground(new Color(0, 0, 0));
 		lblTitulo.setFont(new Font("Times New Roman", Font.BOLD, 17));
 		panelCentro.add(lblTitulo);
-		
-		//BOTONES
+
+		// BOTONES
 		btnRegistrar = new JButton("REGISTRAR");
-		panelCentro.add(btnRegistrar);	
+		panelCentro.add(btnRegistrar);
 		/**
-		 * Boton registrar
-		 * - Nos lleva a la ventana inicio sesion
+		 * Boton registrar - Nos lleva a la ventana inicio sesion
 		 */
 		btnRegistrar.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				//ir a la ventana de registro
+				// ir a la ventana de registro
 				VReg = new VentanaRegistro();
 				VReg.setVisible(true);
 				frame.dispose();
 			}
 		});
-		btnInicioSesion = new JButton("INICIO SESION");		
+		btnInicioSesion = new JButton("INICIO SESION");
 		panelCentro.add(btnInicioSesion);
-		
+
 		/**
-		 * Boton inicio de sesion
-		 * Este boton nos lleva a la venta de inicio sesión
+		 * Boton inicio de sesion Este boton nos lleva a la venta de inicio sesión
 		 */
 		btnInicioSesion.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				//ir a la ventana de inicio
+				// ir a la ventana de inicio
 				VIni = new VentanaInicio();
 				VIni.setVisible(true);
 				frame.dispose();
 			}
 		});
-		
-		
-	
+
 	}
 
 }
