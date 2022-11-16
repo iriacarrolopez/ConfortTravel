@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import clases.Alojamiento;
+import clases.Destino;
 import clases.TipoAlojamiento;
 import clases.Transporte;
 import clases.Viaje;
@@ -30,7 +31,7 @@ public class ViajeTest {
 	private String nombre_comp = "RIU";
 	private TipoAlojamiento talojamiento = TipoAlojamiento.HOTEL;
 	private int duracionA = 3;
-	private String destinoA = "Sevilla";
+	private Destino destinoA = new Destino("1", "Sevilla");
 	private float precioA = 85.9f;
 	private Alojamiento nuevoAl;
 	
@@ -80,7 +81,7 @@ public class ViajeTest {
 	@Test
 	public void testsetAjomiento() {
 		
-		nuevoAl = new Alojamiento("IBERIA", talojamiento, 340.8f, 30, "Madrid");
+		nuevoAl = new Alojamiento("IBERIA", talojamiento, 340.8f, 30, destinoA);
 		assertEquals(alojamiento, viaje.getAlojamiento());
 		viaje.setAlojamiento(nuevoAl);
 		assertEquals(nuevoAl, viaje.getAlojamiento());

@@ -7,10 +7,11 @@ public class Viaje {
 
 	private Transporte transporte;
 	private Alojamiento alojamiento;
-	
+
 	private LocalDate fechaInic;
 	private LocalDate fechaFin;
 	private String destino;
+	
 	private float precio;
 	
 	public Viaje() {
@@ -23,7 +24,7 @@ public class Viaje {
 		this.alojamiento = alojamiento;
 		this.fechaInic = fechaInic;
 		this.fechaFin = fechaFin;
-		this.destino = alojamiento.getDestino();
+		this.destino = alojamiento.getDestinoNombre();
 		this.precio = (alojamiento.getPrecio()+(transporte.getPrecio()));
 	}
 

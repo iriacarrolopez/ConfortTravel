@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import paneles.PanelAnadirDestino;
+
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -24,9 +27,9 @@ public class VentanaAdministrador {
 	private JComboBox<String> comboAn, comboEl, comboMo;
 	private JButton btnAnadir, btnEliminar, btnModificar;
 	public VentanaLogin ventanalogin;
-	/*paneles
-	PanelAniadirDestino pad = new PanelAniadirDestino();
-	PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
+	//paneles
+	PanelAnadirDestino pad = new PanelAnadirDestino() ;
+	/*PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	PanelAnadirExcursiones pae= new PanelAnadirExcursiones();*/
 
 	/**
@@ -94,9 +97,9 @@ public class VentanaAdministrador {
 		panelIzq.add(btnAnadir);
 
 		comboAn = new JComboBox<>();
-		comboAn.addItem("Añadir x ");
-		comboAn.addItem("Añadir y");
-		comboAn.addItem("Añadir y");
+		comboAn.addItem("Añadir Destino ");
+		comboAn.addItem("Añadir Alojamiento");
+		comboAn.addItem("Añadir Excursiones");
 		panelIzq.add(comboAn);
 		comboAn.setVisible(false);
 
@@ -108,18 +111,18 @@ public class VentanaAdministrador {
 
 				comboAn.setVisible(true);
 				String itemSeleccionado = (String) comboAn.getSelectedItem();
-				if ("Añadir x".equals(itemSeleccionado)) {
+				if ("Añadir Destino".equals(itemSeleccionado)) {
 					// visualizar el panel añadir x
 					panelPrincipal.removeAll();//BORRO
-					//panelPrincipal.add(pad);
+					panelPrincipal.add(pad); //no funciona
 					panelPrincipal.updateUI();
 
-				} else if ("Añadir y".equals(itemSeleccionado)) {
+				} else if ("Añadir Alojamiento ".equals(itemSeleccionado)) {
 					// visualizar el panelañadir y
 					panelPrincipal.removeAll();//BORRO
 				//	panelPrincipal.add(paa);
 					panelPrincipal.updateUI();
-				} else {
+				} else if("Añadir Excursiones".equals(itemSeleccionado)){
 					// visualizar el panel añadir z
 					panelPrincipal.removeAll();//BORRO
 				//	panelPrincipal.add(pae);

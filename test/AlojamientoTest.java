@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import clases.Alojamiento;
+import clases.Destino;
 import clases.TipoAlojamiento;
 
 public class AlojamientoTest {
@@ -13,11 +14,12 @@ public class AlojamientoTest {
 	private String nombre_comp = "RIU";
 	private TipoAlojamiento talojamiento = TipoAlojamiento.HOTEL;
 	private int duracion = 3;
-	private String destino = "Sevilla";
+	private Destino destino ;
 	private float precio = 85.9f;
 
 	@Before
 	public void setUp() throws Exception {
+		destino = new Destino("1","Sevilla");
 		alojamiento = new Alojamiento(nombre_comp, talojamiento, precio, duracion, destino);
 	}
 
@@ -33,7 +35,7 @@ public class AlojamientoTest {
 		assertEquals(talojamiento, alojamiento.getTalojamiento());
 		assertEquals(precio, alojamiento.getPrecio(), 0.0f);
 		assertEquals(duracion, alojamiento.getDuracion());
-		assertEquals(destino, alojamiento.getDestino());
+		assertEquals(destino, alojamiento.getDestinoNombre());
 	}
 
 	@Test
@@ -86,14 +88,15 @@ public class AlojamientoTest {
 
 	@Test
 	public void testGetDestino() {
-		assertEquals(destino, alojamiento.getDestino());
+		assertEquals(destino, alojamiento.getDestinoNombre());
 	}
 
 	@Test
 	public void testSetDestino() {
-		String nuevoDestino = "Barcelona";
+		Destino nuevoDestino = new Destino("2", "Barcelona");
+		
 		alojamiento.setDestino(nuevoDestino);
-		assertEquals(nuevoDestino, alojamiento.getDestino());
+		assertEquals(nuevoDestino, alojamiento.getDestinoNombre());
 	}
 
 	@Test

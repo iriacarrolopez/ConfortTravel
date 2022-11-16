@@ -6,13 +6,16 @@ public class Alojamiento {
 	private String nombre_comp;
 	private TipoAlojamiento talojamiento;
 	private int duracion;
-	private String destino;
+	//private String destino;
+	private Destino destino;
 	private float precio;
 	
 	public Alojamiento() {
 	}
-
-	public Alojamiento(String nombre_comp, TipoAlojamiento talojamiento, float precio, int duracion, String destino) {
+/*
+ * cambiar el destino por una clase destino
+ */
+	public Alojamiento(String nombre_comp, TipoAlojamiento talojamiento, float precio, int duracion, Destino destino) {
 		super();
 		this.nombre_comp = nombre_comp;
 		this.talojamiento = talojamiento;
@@ -53,18 +56,18 @@ public class Alojamiento {
 		this.duracion = duracion;
 	}
 	
-	public String getDestino() {
-		return destino;
+	public String getDestinoNombre() {
+		return destino.getNombre();
 	}
 
-	public void setDestino(String destino) {
+	public void setDestino(Destino destino) {
 		this.destino = destino;
 	}
 	
 	@Override
 	public String toString() {
 		return "Alojamiento [nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento + ", duracion=" + duracion
-				+ ", destino=" + destino + ", precio=" + precio + "]";
+				+ ", destino=" + destino.getNombre() + ", precio=" + precio + "]";
 	}
 	
 }

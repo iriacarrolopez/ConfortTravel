@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import clases.Destino;
 import clases.Persona;
 
 
@@ -59,10 +60,12 @@ public class BD {
 	 */
 	public static void crearTablas(Connection con) {
 		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
+		String sql1 = "CREATE TABLE IF NOT EXISTS Destino (id String, nom String)";
 		try {
 			Statement st = con.createStatement();
-			st.executeUpdate(sql);
 			
+			st.executeUpdate(sql);
+			st.executeUpdate(sql1);
 			System.out.println("--Se ha creado la tabla Persona");
 			st.close();
 		} catch (SQLException e) {
@@ -206,6 +209,26 @@ public class BD {
 			System.err.println(String.format("* Error al eliminar la persona de la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
+	
 	}
+	public static void obtenerTodosLosDestinos(Connection con,ArrayList<Destino> ldestino) {
+		String sql=" ";
+		
+		
+		try {
+			sql="SELECT * FROM Destino";
+			Statement st = con.createStatement();
+			ResultSet	rs = st.executeQuery(sql);
+			while(rs.next()) {
+				String id= rs.getString("dni");
+				String nombre =rs.getString("nombre");
+				Destino d = new Destino(id, nombre);
+				ldestino.add(d);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+	}
 }
