@@ -11,17 +11,17 @@ public class VueloTest {
 	private Vuelo vuelo;
 	private String ID_vuelo = "v001";
 	private String compania = "IBERIA";
-	
+
 	@Before
 	public void setUp() throws Exception {
-		vuelo = new Vuelo(ID_vuelo , compania, 60.00f, 80.0f, 135);
+		vuelo = new Vuelo(ID_vuelo, compania, 60.00f, 80.0f, 135);
 	}
 
 	@After
 	public void tearDown() throws Exception {
 		vuelo = null;
 	}
-	
+
 	@Test
 	public void testVuelo() {
 		assertNotNull(vuelo);
@@ -31,11 +31,12 @@ public class VueloTest {
 
 	@Test
 	public void testToString() {
-		String toString = "Vuelo [Precio=" + 60.00f + ", Duracion=" + 80.00f + ", Plazas=" + 135 + ", ID_vuelo=" + ID_vuelo
-				+ ", Compañia=" + compania + "]";;
+		String toString = "Vuelo [Precio=" + 60.00f + ", Duracion=" + 80.00f + ", Plazas=" + 135 + ", ID_vuelo="
+				+ ID_vuelo + ", Compañia=" + compania + "]";
+		;
 		assertEquals(toString, vuelo.toString());
 	}
-	
+
 	@Test
 	public void testGetID_vuelos() {
 		assertEquals(ID_vuelo, vuelo.getID_vuelos());
@@ -61,4 +62,3 @@ public class VueloTest {
 	}
 
 }
-

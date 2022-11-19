@@ -2,7 +2,6 @@ package clases;
 
 import java.time.LocalDate;
 
-
 public class Viaje {
 
 	private Transporte transporte;
@@ -11,21 +10,21 @@ public class Viaje {
 	private LocalDate fechaInic;
 	private LocalDate fechaFin;
 	private String destino;
-	
+
 	private float precio;
-	
+
 	public Viaje() {
-		
+
 	}
 
-	public Viaje(Transporte transporte, Alojamiento alojamiento,LocalDate fechaInic, LocalDate fechaFin) {
+	public Viaje(Transporte transporte, Alojamiento alojamiento, LocalDate fechaInic, LocalDate fechaFin) {
 		super();
 		this.transporte = transporte;
 		this.alojamiento = alojamiento;
 		this.fechaInic = fechaInic;
 		this.fechaFin = fechaFin;
 		this.destino = alojamiento.getDestinoNombre();
-		this.precio = (alojamiento.getPrecio()+(transporte.getPrecio()));
+		this.precio = (alojamiento.getPrecio() + (transporte.getPrecio()));
 	}
 
 	public Transporte getTransporte() {
@@ -81,6 +80,5 @@ public class Viaje {
 		return "Viaje [transporte=" + transporte + ", alojamiento=" + alojamiento + ", fechaInic=" + fechaInic
 				+ ", fechaFin=" + fechaFin + ", destino=" + destino + ", precio=" + precio + "]";
 	}
-	
-	
+
 }

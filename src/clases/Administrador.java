@@ -3,9 +3,8 @@ package clases;
 import java.util.ArrayList;
 
 public class Administrador extends Persona {
-	protected ArrayList<String>funcionesDelAdmin;
+	protected ArrayList<String> funcionesDelAdmin;
 
-	
 	public Administrador(ArrayList<String> funcionesDelAdmin) {
 		super();
 		this.funcionesDelAdmin = funcionesDelAdmin;
@@ -20,7 +19,7 @@ public class Administrador extends Persona {
 		super(dni, nombre, apellido, telefono, email, direccion, fechaNac, nomUsuario, contrasenia);
 	}
 
-	public Administrador(String dni, String nombre, String contrasenia, String email,String tipo) {
+	public Administrador(String dni, String nombre, String contrasenia, String email, String tipo) {
 		super(dni, nombre, contrasenia, email, tipo);
 	}
 
@@ -34,9 +33,9 @@ public class Administrador extends Persona {
 
 	@Override
 	public String toString() {
-		return "Administrador [Dni=" + getDni() + ", Nombre=" + getNombre() + ", Apellido="
-				+ getApellido() + ", Telefono=" + getTelefono() + ", Email=" + getEmail()
-				+ ", Direccion=" + getDireccion() + ", FechaNac=" + getFechaNac() + ", NomUsuario="
-				+ getNomUsuario() + ", Contrasenia=" + getContrasenia() + ", funcionesDelAdmin=" + funcionesDelAdmin + "]";
+		return "Administrador [Dni=" + getDni() + ", Nombre=" + getNombre() + ", Apellido=" + getApellido()
+				+ ", Telefono=" + getTelefono() + ", Email=" + getEmail() + ", Direccion=" + getDireccion()
+				+ ", FechaNac=" + getFechaNac() + ", NomUsuario=" + getNomUsuario() + ", Contrasenia="
+				+ getContrasenia() + ", funcionesDelAdmin=" + funcionesDelAdmin + "]";
 	}
 }

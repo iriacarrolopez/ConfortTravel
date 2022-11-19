@@ -6,10 +6,8 @@ import org.junit.Test;
 
 import clases.Persona;
 
-
-
 public class PersonaTest {
-	
+
 	private Persona persona;
 	private String dni = "11111111A";
 	private String nombre = "Nombre";
@@ -20,13 +18,13 @@ public class PersonaTest {
 	private String fechaNacimiento = "01-01-2000";
 	private String nomUsuario = "nombreUsuario";
 	private String contrasenia = "contrasenia";
-	//private TipoPersona tipo = TipoPersona.CLIENTE;
-	//private String tipo = "tipo";
-	
+	// private TipoPersona tipo = TipoPersona.CLIENTE;
+	// private String tipo = "tipo";
 
 	@Before
 	public void setUp() throws Exception {
-		persona = new Persona(dni, nombre, apellido, telefono, email, direccion, fechaNacimiento, nomUsuario, contrasenia);
+		persona = new Persona(dni, nombre, apellido, telefono, email, direccion, fechaNacimiento, nomUsuario,
+				contrasenia);
 	}
 
 	@After
@@ -43,10 +41,10 @@ public class PersonaTest {
 		assertEquals(telefono, persona.getTelefono());
 		assertEquals(email, persona.getEmail());
 		assertEquals(direccion, persona.getDireccion());
-		//assertEquals(fechaNacimiento, persona.getFechaNac());
+		// assertEquals(fechaNacimiento, persona.getFechaNac());
 		assertEquals(nomUsuario, persona.getNomUsuario());
 		assertEquals(contrasenia, persona.getContrasenia());
-		//assertEquals(tipo, persona.getTipo());
+		// assertEquals(tipo, persona.getTipo());
 	}
 
 	@Test
@@ -121,17 +119,14 @@ public class PersonaTest {
 		assertEquals(nuevaDireccion, persona.getDireccion());
 	}
 
-	/*@Test
-	public void testGetFechaNac() {
-		assertEquals(fechaNacimiento, persona.getFechaNac());
-	}
-
-	@Test
-	public void testSetFechaNac() {
-		String nuevaFechaNac = "02-02-2000";
-		persona.setFechaNac(nuevaFechaNac);
-		assertEquals(nuevaFechaNac, persona.getFechaNac());
-	}*/
+	/*
+	 * @Test public void testGetFechaNac() { assertEquals(fechaNacimiento,
+	 * persona.getFechaNac()); }
+	 * 
+	 * @Test public void testSetFechaNac() { String nuevaFechaNac = "02-02-2000";
+	 * persona.setFechaNac(nuevaFechaNac); assertEquals(nuevaFechaNac,
+	 * persona.getFechaNac()); }
+	 */
 
 	@Test
 	public void testGetNomUsuario() {
@@ -157,10 +152,10 @@ public class PersonaTest {
 		assertEquals(nuevaContrasenia, persona.getContrasenia());
 	}
 
-	/*@Test
-	public void testGetTipo() {
-		assertEquals(TipoPersona.CLIENTE, persona.getTipo());
-	}*/
+	/*
+	 * @Test public void testGetTipo() { assertEquals(TipoPersona.CLIENTE,
+	 * persona.getTipo()); }
+	 */
 
 	@Test
 	public void testSetTipo() {

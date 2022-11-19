@@ -11,7 +11,7 @@ public class AutobusTest {
 	private Autobus autobus;
 	private int num_Bus = 001;
 	private String compania = "ALSA";
-	
+
 	@Before
 	public void setUp() throws Exception {
 		autobus = new Autobus(num_Bus, compania, 20.00f, 60.0f, 75);
@@ -21,7 +21,7 @@ public class AutobusTest {
 	public void tearDown() throws Exception {
 		autobus = null;
 	}
-	
+
 	@Test
 	public void testAutobus() {
 		assertNotNull(autobus);
@@ -31,8 +31,8 @@ public class AutobusTest {
 
 	@Test
 	public void testToString() {
-		String toString = "Autobus [Precio=" + 20.00f + ", Duracion=" + 60.0f + ", Plazas="
-				+ 75 + ", num_Bus=" + num_Bus + ", compania=" + compania+ "]";
+		String toString = "Autobus [Precio=" + 20.00f + ", Duracion=" + 60.0f + ", Plazas=" + 75 + ", num_Bus="
+				+ num_Bus + ", compania=" + compania + "]";
 		assertEquals(toString, autobus.toString());
 	}
 

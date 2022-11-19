@@ -8,7 +8,6 @@ import javax.swing.border.EmptyBorder;
 
 import paneles.PanelAnadirDestino;
 
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,17 +19,21 @@ import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import java.awt.Font;
+import java.awt.Color;
 
 public class VentanaAdministrador {
 	private static JFrame frame;
-	private JPanel contentPane, panelPrincipal;
+	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte;
 	private JComboBox<String> comboAn, comboEl, comboMo;
-	private JButton btnAnadir, btnEliminar, btnModificar;
+	private JButton btnAnadir, btnEliminar, btnModificar, btnVolver, btnSalir;
 	public VentanaLogin ventanalogin;
-	//paneles
-	PanelAnadirDestino pad = new PanelAnadirDestino() ;
-	/*PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
-	PanelAnadirExcursiones pae= new PanelAnadirExcursiones();*/
+	private JLabel lblInfor,lblTitulo ;
+	// paneles
+	public PanelAnadirDestino pad;
+	/*
+	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
+	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
+	 */
 
 	/**
 	 * Launch the application.
@@ -55,7 +58,7 @@ public class VentanaAdministrador {
 		frame = new JFrame();
 		frame.setTitle("Ventana Administrador");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(100, 100, 900, 500);
+		frame.setBounds(40, 50, 1010, 790);
 		contentPane = new JPanel();
 		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -64,72 +67,102 @@ public class VentanaAdministrador {
 		contentPane.setLayout(new BorderLayout(0, 0));
 //		paneles
 
-		JPanel panelNorte = new JPanel();
+		panelNorte = new JPanel();
+		panelNorte.setBackground(new Color(0, 204, 255));
 		contentPane.add(panelNorte, BorderLayout.NORTH);
 
-		JLabel lblTitulo = new JLabel("Administrador");
-		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
-		panelNorte.add(lblTitulo);
-
-		JPanel panelSur = new JPanel();
+		panelSur = new JPanel();
 		contentPane.add(panelSur, BorderLayout.SOUTH);
-
-		JButton btnSalir = new JButton("Salir");
-		panelSur.add(btnSalir);
-
-		JButton btnVolver = new JButton("Volver a la pagina principal");
-		panelSur.add(btnVolver);
-
-		JPanel panelIzq = new JPanel();
-		contentPane.add(panelIzq, BorderLayout.WEST);
-		panelIzq.setLayout(new GridLayout(7, 0, 0, 0));
-
-		JLabel lblInfor = new JLabel("Introduce que operaci\u00F3n desea realizar");
-		panelIzq.add(lblInfor);
-//		paneles
 
 // panel que va a cambiar dependiedo que opcion elija el usuario		 
 		panelPrincipal = new JPanel();
+		panelPrincipal.setBackground(new Color(204, 204, 255));
 		contentPane.add(panelPrincipal, BorderLayout.CENTER);
+		panelPrincipal.setBounds(100, 100, 700, 700);
+		pad = new PanelAnadirDestino();
+
+		panelIzq = new JPanel();
+		panelIzq.setBackground(new Color(0, 255, 204));
+		contentPane.add(panelIzq, BorderLayout.WEST);
+		panelIzq.setLayout(new GridLayout(7, 0, 0, 0));
+		pad = new PanelAnadirDestino();
+//Etiquetas
+		lblTitulo = new JLabel("Administrador");
+		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
+		panelNorte.add(lblTitulo);
+
+		lblInfor = new JLabel("Introduce que operaci\u00F3n desea realizar");
+		lblInfor.setBackground(new Color(102, 153, 255));
+		panelIzq.add(lblInfor);
+
+
+//botones
+		btnSalir = new JButton("Salir");
+		panelSur.add(btnSalir);
+
+		btnVolver = new JButton("Volver a la pagina principal");
+		panelSur.add(btnVolver);
+
 
 		btnAnadir = new JButton("AÑADIR");
 		btnAnadir.setPreferredSize(new Dimension(5, 5));
 		panelIzq.add(btnAnadir);
 
 		comboAn = new JComboBox<>();
+	
 		comboAn.addItem("Añadir Destino ");
 		comboAn.addItem("Añadir Alojamiento");
 		comboAn.addItem("Añadir Excursiones");
 		panelIzq.add(comboAn);
+		//comboAn.setVisible(false);
 		comboAn.setVisible(false);
+		//listener del combo
+		/*
+		comboAn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				comboAn.setVisible(true);
+				String itemSeleccionado = (String) comboAn.getSelectedItem();
+				if ("Añadir Destino".equals(itemSeleccionado)) {
+					System.out.println("ha seleccionado añadir destino");
+					// visualizar el panel añadir x
+					panelPrincipal.removeAll();// BORRO
+					panelPrincipal.add(pad);
+				
+					panelPrincipal.updateUI();
+				} else if ("Añadir Alojamiento ".equals(itemSeleccionado)) {
+					// visualizar el panelañadir y
+					System.out.println("entra al combo de alojamiento");
+					panelPrincipal.removeAll();// BORRO
+					// panelPrincipal.add(paa);
+					panelPrincipal.updateUI();
+				} else if ("Añadir Excursiones".equals(itemSeleccionado)) {
+					// visualizar el panel añadir z
+					panelPrincipal.removeAll();// BORRO
+					// panelPrincipal.add(pae);
+					panelPrincipal.updateUI();	
+				
+			}
+		}
+	});
+		
+		*/
 
 		btnAnadir.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-
-				comboAn.setVisible(true);
-				String itemSeleccionado = (String) comboAn.getSelectedItem();
-				if ("Añadir Destino".equals(itemSeleccionado)) {
-					// visualizar el panel añadir x
-					panelPrincipal.removeAll();//BORRO
-					panelPrincipal.add(pad); //no funciona
-					panelPrincipal.updateUI();
-
-				} else if ("Añadir Alojamiento ".equals(itemSeleccionado)) {
-					// visualizar el panelañadir y
-					panelPrincipal.removeAll();//BORRO
-				//	panelPrincipal.add(paa);
-					panelPrincipal.updateUI();
-				} else if("Añadir Excursiones".equals(itemSeleccionado)){
-					// visualizar el panel añadir z
-					panelPrincipal.removeAll();//BORRO
-				//	panelPrincipal.add(pae);
-					panelPrincipal.updateUI();
-				}
-
+			System.out.println("entra al boton");
+			panelPrincipal.removeAll();
+			panelPrincipal.add(pad);
+			panelPrincipal.updateUI();
+			
+				
 			}
+
+				
 		});
 		btnEliminar = new JButton("ELIMINAR");
 		panelIzq.add(btnEliminar);

@@ -9,17 +9,17 @@ import clases.Destino;
 import clases.TipoAlojamiento;
 
 public class AlojamientoTest {
-	
+
 	private Alojamiento alojamiento;
 	private String nombre_comp = "RIU";
 	private TipoAlojamiento talojamiento = TipoAlojamiento.HOTEL;
 	private int duracion = 3;
-	private Destino destino ;
+	private Destino destino;
 	private float precio = 85.9f;
 
 	@Before
 	public void setUp() throws Exception {
-		destino = new Destino("1","Sevilla");
+		destino = new Destino(1, "Sevilla");
 		alojamiento = new Alojamiento(nombre_comp, talojamiento, precio, duracion, destino);
 	}
 
@@ -27,7 +27,7 @@ public class AlojamientoTest {
 	public void tearDown() throws Exception {
 		alojamiento = null;
 	}
-	
+
 	@Test
 	public void testAlojamiento() {
 		assertNotNull(alojamiento);
@@ -69,9 +69,10 @@ public class AlojamientoTest {
 
 	@Test
 	public void testSetPrecio() {
-		precio =  90.5f;
+		precio = 90.5f;
 		alojamiento.setPrecio(precio);
-		assertEquals(precio, alojamiento.getPrecio(), 0.0f);;
+		assertEquals(precio, alojamiento.getPrecio(), 0.0f);
+		;
 	}
 
 	@Test
@@ -93,16 +94,16 @@ public class AlojamientoTest {
 
 	@Test
 	public void testSetDestino() {
-		Destino nuevoDestino = new Destino("2", "Barcelona");
-		
+		Destino nuevoDestino = new Destino(2, "Barcelona");
+
 		alojamiento.setDestino(nuevoDestino);
 		assertEquals(nuevoDestino, alojamiento.getDestinoNombre());
 	}
 
 	@Test
 	public void testToString() {
-		String toString = "Alojamiento [nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento + ", duracion=" + duracion
-				+ ", destino=" + destino + ", precio=" + precio + "]";
+		String toString = "Alojamiento [nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento + ", duracion="
+				+ duracion + ", destino=" + destino + ", precio=" + precio + "]";
 		assertEquals(toString, alojamiento.toString());
 	}
 

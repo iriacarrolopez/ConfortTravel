@@ -10,7 +10,7 @@ import clases.Cliente;
 import clases.Viaje;
 
 public class ClienteTest {
-	
+
 	private Cliente cliente;
 	private ArrayList<Viaje> viajes = new ArrayList<>();
 
@@ -29,13 +29,13 @@ public class ClienteTest {
 		assertNotNull(cliente);
 		assertEquals(viajes, cliente.getViajes());
 	}
-	
+
 	@Test
 	public void testToString() {
 		String toString = "Cliente [Dni=" + "11111111A" + ", Nombre=" + "nombre" + ", Apellido=" + "apellido"
-		+ ", Telefono=" + 111111111 + ", Email=" + "email@gmail.com" + ", Direccion="
-		+ "direccion" + ", FechaNac=" + "01-01-2000" + ", NomUsuario=" + "nomUsuario"
-		+ ", Contrasenia=" + "contrasenia" + ", viajes=" + viajes+ "]";
+				+ ", Telefono=" + 111111111 + ", Email=" + "email@gmail.com" + ", Direccion=" + "direccion"
+				+ ", FechaNac=" + "01-01-2000" + ", NomUsuario=" + "nomUsuario" + ", Contrasenia=" + "contrasenia"
+				+ ", viajes=" + viajes + "]";
 		assertEquals(toString, cliente.toString());
 	}
 
