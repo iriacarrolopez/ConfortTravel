@@ -239,6 +239,19 @@ public class BD {
 		}
 
 	}
+	
+	public static void eliminarDestino(Connection con, int id) {
+		try (Statement st = con.createStatement();) {
+			String sql = "DELETE FROM Destino WHERE id='" + id + "';";
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			int result = st.executeUpdate(sql);
+			System.out.println(String.format("- Se ha borrado el destino con id '" + id + "'", result));
+			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
+			System.err.println(String.format("* Error al eliminar el destino de la BBDD: %s", e.getMessage()));
+		}
+	}
 
 	public static ArrayList<Destino> obtenerDestinos() {
 		ArrayList<Destino> destinos = new ArrayList<>();

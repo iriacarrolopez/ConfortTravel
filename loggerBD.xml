@@ -1,0 +1,3808 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T12:20:20.026980400Z</date>
+  <millis>1668946820026</millis>
+  <nanos>980400</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.053908200Z</date>
+  <millis>1668946820053</millis>
+  <nanos>908200</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.056900500Z</date>
+  <millis>1668946820056</millis>
+  <nanos>900500</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.147842500Z</date>
+  <millis>1668946820147</millis>
+  <nanos>842500</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.149837200Z</date>
+  <millis>1668946820149</millis>
+  <nanos>837200</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.149837200Z</date>
+  <millis>1668946820149</millis>
+  <nanos>837200</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.150834600Z</date>
+  <millis>1668946820150</millis>
+  <nanos>834600</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.152829200Z</date>
+  <millis>1668946820152</millis>
+  <nanos>829200</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.153826700Z</date>
+  <millis>1668946820153</millis>
+  <nanos>826700</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.155821600Z</date>
+  <millis>1668946820155</millis>
+  <nanos>821600</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.157816400Z</date>
+  <millis>1668946820157</millis>
+  <nanos>816400</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.158813600Z</date>
+  <millis>1668946820158</millis>
+  <nanos>813600</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.162802700Z</date>
+  <millis>1668946820162</millis>
+  <nanos>802700</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.163800200Z</date>
+  <millis>1668946820163</millis>
+  <nanos>800200</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.164797400Z</date>
+  <millis>1668946820164</millis>
+  <nanos>797400</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.166792300Z</date>
+  <millis>1668946820166</millis>
+  <nanos>792300</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.167789300Z</date>
+  <millis>1668946820167</millis>
+  <nanos>789300</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:20:20.168786900Z</date>
+  <millis>1668946820168</millis>
+  <nanos>786900</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T12:26:56.379293200Z</date>
+  <millis>1668947216379</millis>
+  <nanos>293200</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.408185400Z</date>
+  <millis>1668947216408</millis>
+  <nanos>185400</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.411177300Z</date>
+  <millis>1668947216411</millis>
+  <nanos>177300</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.456057700Z</date>
+  <millis>1668947216456</millis>
+  <nanos>57700</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.458052900Z</date>
+  <millis>1668947216458</millis>
+  <nanos>52900</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.458052900Z</date>
+  <millis>1668947216458</millis>
+  <nanos>52900</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.460047300Z</date>
+  <millis>1668947216460</millis>
+  <nanos>47300</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.461044300Z</date>
+  <millis>1668947216461</millis>
+  <nanos>44300</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.462040800Z</date>
+  <millis>1668947216462</millis>
+  <nanos>40800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.464036300Z</date>
+  <millis>1668947216464</millis>
+  <nanos>36300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.465033500Z</date>
+  <millis>1668947216465</millis>
+  <nanos>33500</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.466031200Z</date>
+  <millis>1668947216466</millis>
+  <nanos>31200</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.469023200Z</date>
+  <millis>1668947216469</millis>
+  <nanos>23200</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.470020300Z</date>
+  <millis>1668947216470</millis>
+  <nanos>20300</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.471017700Z</date>
+  <millis>1668947216471</millis>
+  <nanos>17700</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.472014Z</date>
+  <millis>1668947216472</millis>
+  <nanos>14000</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.473013100Z</date>
+  <millis>1668947216473</millis>
+  <nanos>13100</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:26:56.475006200Z</date>
+  <millis>1668947216475</millis>
+  <nanos>6200</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T12:27:14.348313900Z</date>
+  <millis>1668947234348</millis>
+  <nanos>313900</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.375215200Z</date>
+  <millis>1668947234375</millis>
+  <nanos>215200</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.379202100Z</date>
+  <millis>1668947234379</millis>
+  <nanos>202100</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.423086Z</date>
+  <millis>1668947234423</millis>
+  <nanos>86000</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.425080900Z</date>
+  <millis>1668947234425</millis>
+  <nanos>80900</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.426078900Z</date>
+  <millis>1668947234426</millis>
+  <nanos>78900</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.427076600Z</date>
+  <millis>1668947234427</millis>
+  <nanos>76600</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.428073700Z</date>
+  <millis>1668947234428</millis>
+  <nanos>73700</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.429068800Z</date>
+  <millis>1668947234429</millis>
+  <nanos>68800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.432060900Z</date>
+  <millis>1668947234432</millis>
+  <nanos>60900</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.433060800Z</date>
+  <millis>1668947234433</millis>
+  <nanos>60800</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.435052900Z</date>
+  <millis>1668947234435</millis>
+  <nanos>52900</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.438046500Z</date>
+  <millis>1668947234438</millis>
+  <nanos>46500</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.439044800Z</date>
+  <millis>1668947234439</millis>
+  <nanos>44800</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.440039800Z</date>
+  <millis>1668947234440</millis>
+  <nanos>39800</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.441036900Z</date>
+  <millis>1668947234441</millis>
+  <nanos>36900</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.442036600Z</date>
+  <millis>1668947234442</millis>
+  <nanos>36600</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:14.444030200Z</date>
+  <millis>1668947234444</millis>
+  <nanos>30200</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T12:27:32.019185600Z</date>
+  <millis>1668947252019</millis>
+  <nanos>185600</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T12:27:43.779727700Z</date>
+  <millis>1668947263779</millis>
+  <nanos>727700</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.810760Z</date>
+  <millis>1668947263810</millis>
+  <nanos>760000</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.813752200Z</date>
+  <millis>1668947263813</millis>
+  <nanos>752200</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.859002500Z</date>
+  <millis>1668947263859</millis>
+  <nanos>2500</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.860997200Z</date>
+  <millis>1668947263860</millis>
+  <nanos>997200</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.861994500Z</date>
+  <millis>1668947263861</millis>
+  <nanos>994500</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.862992Z</date>
+  <millis>1668947263862</millis>
+  <nanos>992000</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.863989200Z</date>
+  <millis>1668947263863</millis>
+  <nanos>989200</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.865984100Z</date>
+  <millis>1668947263865</millis>
+  <nanos>984100</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.867978700Z</date>
+  <millis>1668947263867</millis>
+  <nanos>978700</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.868976Z</date>
+  <millis>1668947263868</millis>
+  <nanos>976000</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.870970600Z</date>
+  <millis>1668947263870</millis>
+  <nanos>970600</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.873962800Z</date>
+  <millis>1668947263873</millis>
+  <nanos>962800</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.874960100Z</date>
+  <millis>1668947263874</millis>
+  <nanos>960100</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.875957300Z</date>
+  <millis>1668947263875</millis>
+  <nanos>957300</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.876956100Z</date>
+  <millis>1668947263876</millis>
+  <nanos>956100</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.878950700Z</date>
+  <millis>1668947263878</millis>
+  <nanos>950700</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T12:27:43.879948400Z</date>
+  <millis>1668947263879</millis>
+  <nanos>948400</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:07:12.140575700Z</date>
+  <millis>1668949632140</millis>
+  <nanos>575700</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.168980400Z</date>
+  <millis>1668949632168</millis>
+  <nanos>980400</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.172944300Z</date>
+  <millis>1668949632172</millis>
+  <nanos>944300</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.215855100Z</date>
+  <millis>1668949632215</millis>
+  <nanos>855100</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.217823900Z</date>
+  <millis>1668949632217</millis>
+  <nanos>823900</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.218820600Z</date>
+  <millis>1668949632218</millis>
+  <nanos>820600</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.219819Z</date>
+  <millis>1668949632219</millis>
+  <nanos>819000</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.220815900Z</date>
+  <millis>1668949632220</millis>
+  <nanos>815900</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.221812700Z</date>
+  <millis>1668949632221</millis>
+  <nanos>812700</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.224804900Z</date>
+  <millis>1668949632224</millis>
+  <nanos>804900</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.225802Z</date>
+  <millis>1668949632225</millis>
+  <nanos>802000</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.226801Z</date>
+  <millis>1668949632226</millis>
+  <nanos>801000</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.229791200Z</date>
+  <millis>1668949632229</millis>
+  <nanos>791200</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.230788700Z</date>
+  <millis>1668949632230</millis>
+  <nanos>788700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.230788700Z</date>
+  <millis>1668949632230</millis>
+  <nanos>788700</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.231786200Z</date>
+  <millis>1668949632231</millis>
+  <nanos>786200</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.233780500Z</date>
+  <millis>1668949632233</millis>
+  <nanos>780500</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:07:12.234777700Z</date>
+  <millis>1668949632234</millis>
+  <nanos>777700</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:15:29.344304800Z</date>
+  <millis>1668950129344</millis>
+  <nanos>304800</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.372229500Z</date>
+  <millis>1668950129372</millis>
+  <nanos>229500</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.376219100Z</date>
+  <millis>1668950129376</millis>
+  <nanos>219100</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.419720600Z</date>
+  <millis>1668950129419</millis>
+  <nanos>720600</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.421715500Z</date>
+  <millis>1668950129421</millis>
+  <nanos>715500</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.421715500Z</date>
+  <millis>1668950129421</millis>
+  <nanos>715500</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.423707900Z</date>
+  <millis>1668950129423</millis>
+  <nanos>707900</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.424705Z</date>
+  <millis>1668950129424</millis>
+  <nanos>705000</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.425702500Z</date>
+  <millis>1668950129425</millis>
+  <nanos>702500</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.428695700Z</date>
+  <millis>1668950129428</millis>
+  <nanos>695700</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.429692900Z</date>
+  <millis>1668950129429</millis>
+  <nanos>692900</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.430690900Z</date>
+  <millis>1668950129430</millis>
+  <nanos>690900</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.433682300Z</date>
+  <millis>1668950129433</millis>
+  <nanos>682300</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.434680500Z</date>
+  <millis>1668950129434</millis>
+  <nanos>680500</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.434680500Z</date>
+  <millis>1668950129434</millis>
+  <nanos>680500</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.436675200Z</date>
+  <millis>1668950129436</millis>
+  <nanos>675200</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.437672500Z</date>
+  <millis>1668950129437</millis>
+  <nanos>672500</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:29.438668300Z</date>
+  <millis>1668950129438</millis>
+  <nanos>668300</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:15:59.201695800Z</date>
+  <millis>1668950159201</millis>
+  <nanos>695800</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.229236400Z</date>
+  <millis>1668950159229</millis>
+  <nanos>236400</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.231230600Z</date>
+  <millis>1668950159231</millis>
+  <nanos>230600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.273193900Z</date>
+  <millis>1668950159273</millis>
+  <nanos>193900</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.275160100Z</date>
+  <millis>1668950159275</millis>
+  <nanos>160100</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.275160100Z</date>
+  <millis>1668950159275</millis>
+  <nanos>160100</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.276192Z</date>
+  <millis>1668950159276</millis>
+  <nanos>192000</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.277155800Z</date>
+  <millis>1668950159277</millis>
+  <nanos>155800</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.279150600Z</date>
+  <millis>1668950159279</millis>
+  <nanos>150600</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.282141200Z</date>
+  <millis>1668950159282</millis>
+  <nanos>141200</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.283140100Z</date>
+  <millis>1668950159283</millis>
+  <nanos>140100</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.284136Z</date>
+  <millis>1668950159284</millis>
+  <nanos>136000</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.286132Z</date>
+  <millis>1668950159286</millis>
+  <nanos>132000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.288126300Z</date>
+  <millis>1668950159288</millis>
+  <nanos>126300</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.288126300Z</date>
+  <millis>1668950159288</millis>
+  <nanos>126300</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.290120500Z</date>
+  <millis>1668950159290</millis>
+  <nanos>120500</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.291135300Z</date>
+  <millis>1668950159291</millis>
+  <nanos>135300</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:15:59.292115500Z</date>
+  <millis>1668950159292</millis>
+  <nanos>115500</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:38:02.506103100Z</date>
+  <millis>1668951482506</millis>
+  <nanos>103100</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.534001700Z</date>
+  <millis>1668951482534</millis>
+  <nanos>1700</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.537019900Z</date>
+  <millis>1668951482537</millis>
+  <nanos>19900</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.580123400Z</date>
+  <millis>1668951482580</millis>
+  <nanos>123400</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.581944700Z</date>
+  <millis>1668951482581</millis>
+  <nanos>944700</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.582972500Z</date>
+  <millis>1668951482582</millis>
+  <nanos>972500</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.584938400Z</date>
+  <millis>1668951482584</millis>
+  <nanos>938400</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.585949600Z</date>
+  <millis>1668951482585</millis>
+  <nanos>949600</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.586933100Z</date>
+  <millis>1668951482586</millis>
+  <nanos>933100</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.590922300Z</date>
+  <millis>1668951482590</millis>
+  <nanos>922300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.591919800Z</date>
+  <millis>1668951482591</millis>
+  <nanos>919800</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.592948700Z</date>
+  <millis>1668951482592</millis>
+  <nanos>948700</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.595909Z</date>
+  <millis>1668951482595</millis>
+  <nanos>909000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.596906400Z</date>
+  <millis>1668951482596</millis>
+  <nanos>906400</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.597904900Z</date>
+  <millis>1668951482597</millis>
+  <nanos>904900</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.598901200Z</date>
+  <millis>1668951482598</millis>
+  <nanos>901200</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.600896800Z</date>
+  <millis>1668951482600</millis>
+  <nanos>896800</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.601921200Z</date>
+  <millis>1668951482601</millis>
+  <nanos>921200</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.603891600Z</date>
+  <millis>1668951482603</millis>
+  <nanos>891600</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.604913300Z</date>
+  <millis>1668951482604</millis>
+  <nanos>913300</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.606881500Z</date>
+  <millis>1668951482606</millis>
+  <nanos>881500</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.611895900Z</date>
+  <millis>1668951482611</millis>
+  <nanos>895900</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.612864800Z</date>
+  <millis>1668951482612</millis>
+  <nanos>864800</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.612864800Z</date>
+  <millis>1668951482612</millis>
+  <nanos>864800</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.613860800Z</date>
+  <millis>1668951482613</millis>
+  <nanos>860800</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.615855900Z</date>
+  <millis>1668951482615</millis>
+  <nanos>855900</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.616852700Z</date>
+  <millis>1668951482616</millis>
+  <nanos>852700</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.618848500Z</date>
+  <millis>1668951482618</millis>
+  <nanos>848500</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.620854600Z</date>
+  <millis>1668951482620</millis>
+  <nanos>854600</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.621839400Z</date>
+  <millis>1668951482621</millis>
+  <nanos>839400</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.623833900Z</date>
+  <millis>1668951482623</millis>
+  <nanos>833900</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.624831400Z</date>
+  <millis>1668951482624</millis>
+  <nanos>831400</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.625828700Z</date>
+  <millis>1668951482625</millis>
+  <nanos>828700</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.626828300Z</date>
+  <millis>1668951482626</millis>
+  <nanos>828300</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.628821800Z</date>
+  <millis>1668951482628</millis>
+  <nanos>821800</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:38:02.629818Z</date>
+  <millis>1668951482629</millis>
+  <nanos>818000</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:46:32.585716300Z</date>
+  <millis>1668951992585</millis>
+  <nanos>716300</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.612643100Z</date>
+  <millis>1668951992612</millis>
+  <nanos>643100</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.616632100Z</date>
+  <millis>1668951992616</millis>
+  <nanos>632100</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.659113600Z</date>
+  <millis>1668951992659</millis>
+  <nanos>113600</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.661108300Z</date>
+  <millis>1668951992661</millis>
+  <nanos>108300</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.661108300Z</date>
+  <millis>1668951992661</millis>
+  <nanos>108300</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.663080300Z</date>
+  <millis>1668951992663</millis>
+  <nanos>80300</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.664074100Z</date>
+  <millis>1668951992664</millis>
+  <nanos>74100</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.666067700Z</date>
+  <millis>1668951992666</millis>
+  <nanos>67700</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.669059600Z</date>
+  <millis>1668951992669</millis>
+  <nanos>59600</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.670057100Z</date>
+  <millis>1668951992670</millis>
+  <nanos>57100</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.671054400Z</date>
+  <millis>1668951992671</millis>
+  <nanos>54400</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.674046600Z</date>
+  <millis>1668951992674</millis>
+  <nanos>46600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.674046600Z</date>
+  <millis>1668951992674</millis>
+  <nanos>46600</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.675042800Z</date>
+  <millis>1668951992675</millis>
+  <nanos>42800</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.676041100Z</date>
+  <millis>1668951992676</millis>
+  <nanos>41100</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.677037100Z</date>
+  <millis>1668951992677</millis>
+  <nanos>37100</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.678035800Z</date>
+  <millis>1668951992678</millis>
+  <nanos>35800</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.681027500Z</date>
+  <millis>1668951992681</millis>
+  <nanos>27500</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.682024700Z</date>
+  <millis>1668951992682</millis>
+  <nanos>24700</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.683022300Z</date>
+  <millis>1668951992683</millis>
+  <nanos>22300</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.688123600Z</date>
+  <millis>1668951992688</millis>
+  <nanos>123600</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.689121100Z</date>
+  <millis>1668951992689</millis>
+  <nanos>121100</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.690118400Z</date>
+  <millis>1668951992690</millis>
+  <nanos>118400</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.691115700Z</date>
+  <millis>1668951992691</millis>
+  <nanos>115700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.692115800Z</date>
+  <millis>1668951992692</millis>
+  <nanos>115800</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.693110400Z</date>
+  <millis>1668951992693</millis>
+  <nanos>110400</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.695104900Z</date>
+  <millis>1668951992695</millis>
+  <nanos>104900</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.696102300Z</date>
+  <millis>1668951992696</millis>
+  <nanos>102300</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.698097200Z</date>
+  <millis>1668951992698</millis>
+  <nanos>97200</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.700093Z</date>
+  <millis>1668951992700</millis>
+  <nanos>93000</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.701091Z</date>
+  <millis>1668951992701</millis>
+  <nanos>91000</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.702086400Z</date>
+  <millis>1668951992702</millis>
+  <nanos>86400</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.703114100Z</date>
+  <millis>1668951992703</millis>
+  <nanos>114100</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.704082400Z</date>
+  <millis>1668951992704</millis>
+  <nanos>82400</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:32.705078Z</date>
+  <millis>1668951992705</millis>
+  <nanos>78000</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:39.037085800Z</date>
+  <millis>1668951999037</millis>
+  <nanos>85800</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:39.037085800Z</date>
+  <millis>1668951999037</millis>
+  <nanos>85800</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: DELETE FROM Destino WHERE id='4';</message>
+</record>
+<record>
+  <date>2022-11-20T13:46:39.049221Z</date>
+  <millis>1668951999049</millis>
+  <nanos>221000</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha eliminado de la base de datos: 1</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:47:36.578405300Z</date>
+  <millis>1668952056578</millis>
+  <nanos>405300</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.605302800Z</date>
+  <millis>1668952056605</millis>
+  <nanos>302800</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.608294800Z</date>
+  <millis>1668952056608</millis>
+  <nanos>294800</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.649212600Z</date>
+  <millis>1668952056649</millis>
+  <nanos>212600</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.651204400Z</date>
+  <millis>1668952056651</millis>
+  <nanos>204400</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.652202300Z</date>
+  <millis>1668952056652</millis>
+  <nanos>202300</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.653199400Z</date>
+  <millis>1668952056653</millis>
+  <nanos>199400</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.655196200Z</date>
+  <millis>1668952056655</millis>
+  <nanos>196200</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.657188900Z</date>
+  <millis>1668952056657</millis>
+  <nanos>188900</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.660195300Z</date>
+  <millis>1668952056660</millis>
+  <nanos>195300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.661177800Z</date>
+  <millis>1668952056661</millis>
+  <nanos>177800</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.663174600Z</date>
+  <millis>1668952056663</millis>
+  <nanos>174600</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.665168600Z</date>
+  <millis>1668952056665</millis>
+  <nanos>168600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.666516700Z</date>
+  <millis>1668952056666</millis>
+  <nanos>516700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.667545400Z</date>
+  <millis>1668952056667</millis>
+  <nanos>545400</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.668516200Z</date>
+  <millis>1668952056668</millis>
+  <nanos>516200</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.669512400Z</date>
+  <millis>1668952056669</millis>
+  <nanos>512400</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.670509900Z</date>
+  <millis>1668952056670</millis>
+  <nanos>509900</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.674500100Z</date>
+  <millis>1668952056674</millis>
+  <nanos>500100</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.675498Z</date>
+  <millis>1668952056675</millis>
+  <nanos>498000</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.676493500Z</date>
+  <millis>1668952056676</millis>
+  <nanos>493500</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.681479500Z</date>
+  <millis>1668952056681</millis>
+  <nanos>479500</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.682477400Z</date>
+  <millis>1668952056682</millis>
+  <nanos>477400</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.683475Z</date>
+  <millis>1668952056683</millis>
+  <nanos>475000</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.684472400Z</date>
+  <millis>1668952056684</millis>
+  <nanos>472400</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.685470300Z</date>
+  <millis>1668952056685</millis>
+  <nanos>470300</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.687464100Z</date>
+  <millis>1668952056687</millis>
+  <nanos>464100</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.689458700Z</date>
+  <millis>1668952056689</millis>
+  <nanos>458700</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.690455600Z</date>
+  <millis>1668952056690</millis>
+  <nanos>455600</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.691453600Z</date>
+  <millis>1668952056691</millis>
+  <nanos>453600</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.694445300Z</date>
+  <millis>1668952056694</millis>
+  <nanos>445300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.695442600Z</date>
+  <millis>1668952056695</millis>
+  <nanos>442600</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.695442600Z</date>
+  <millis>1668952056695</millis>
+  <nanos>442600</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.697437900Z</date>
+  <millis>1668952056697</millis>
+  <nanos>437900</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.698435100Z</date>
+  <millis>1668952056698</millis>
+  <nanos>435100</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:47:36.699432100Z</date>
+  <millis>1668952056699</millis>
+  <nanos>432100</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:48:02.103553100Z</date>
+  <millis>1668952082103</millis>
+  <nanos>553100</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.134439Z</date>
+  <millis>1668952082134</millis>
+  <nanos>439000</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.137431900Z</date>
+  <millis>1668952082137</millis>
+  <nanos>431900</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.180316300Z</date>
+  <millis>1668952082180</millis>
+  <nanos>316300</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.182310300Z</date>
+  <millis>1668952082182</millis>
+  <nanos>310300</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.183307700Z</date>
+  <millis>1668952082183</millis>
+  <nanos>307700</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.184304900Z</date>
+  <millis>1668952082184</millis>
+  <nanos>304900</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.185304100Z</date>
+  <millis>1668952082185</millis>
+  <nanos>304100</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.187296800Z</date>
+  <millis>1668952082187</millis>
+  <nanos>296800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.189291700Z</date>
+  <millis>1668952082189</millis>
+  <nanos>291700</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.190289200Z</date>
+  <millis>1668952082190</millis>
+  <nanos>289200</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.192285Z</date>
+  <millis>1668952082192</millis>
+  <nanos>285000</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.194278Z</date>
+  <millis>1668952082194</millis>
+  <nanos>278000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.196274700Z</date>
+  <millis>1668952082196</millis>
+  <nanos>274700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.196274700Z</date>
+  <millis>1668952082196</millis>
+  <nanos>274700</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.197270100Z</date>
+  <millis>1668952082197</millis>
+  <nanos>270100</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.199265600Z</date>
+  <millis>1668952082199</millis>
+  <nanos>265600</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.200262900Z</date>
+  <millis>1668952082200</millis>
+  <nanos>262900</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.203255200Z</date>
+  <millis>1668952082203</millis>
+  <nanos>255200</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.204252300Z</date>
+  <millis>1668952082204</millis>
+  <nanos>252300</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.205248700Z</date>
+  <millis>1668952082205</millis>
+  <nanos>248700</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.210236400Z</date>
+  <millis>1668952082210</millis>
+  <nanos>236400</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.211232900Z</date>
+  <millis>1668952082211</millis>
+  <nanos>232900</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.212232100Z</date>
+  <millis>1668952082212</millis>
+  <nanos>232100</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.213229500Z</date>
+  <millis>1668952082213</millis>
+  <nanos>229500</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.214226300Z</date>
+  <millis>1668952082214</millis>
+  <nanos>226300</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.215222Z</date>
+  <millis>1668952082215</millis>
+  <nanos>222000</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.217217700Z</date>
+  <millis>1668952082217</millis>
+  <nanos>217700</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.219211200Z</date>
+  <millis>1668952082219</millis>
+  <nanos>211200</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.220209500Z</date>
+  <millis>1668952082220</millis>
+  <nanos>209500</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.222203900Z</date>
+  <millis>1668952082222</millis>
+  <nanos>203900</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.223200200Z</date>
+  <millis>1668952082223</millis>
+  <nanos>200200</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.224200100Z</date>
+  <millis>1668952082224</millis>
+  <nanos>200100</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.225196Z</date>
+  <millis>1668952082225</millis>
+  <nanos>196000</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.226192600Z</date>
+  <millis>1668952082226</millis>
+  <nanos>192600</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:02.227190300Z</date>
+  <millis>1668952082227</millis>
+  <nanos>190300</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:05.852922500Z</date>
+  <millis>1668952085852</millis>
+  <nanos>922500</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:05.853880700Z</date>
+  <millis>1668952085853</millis>
+  <nanos>880700</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: DELETE FROM Destino WHERE id='3';</message>
+</record>
+<record>
+  <date>2022-11-20T13:48:05.867799800Z</date>
+  <millis>1668952085867</millis>
+  <nanos>799800</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha eliminado de la base de datos: 1</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-20T13:57:42.365547800Z</date>
+  <millis>1668952662365</millis>
+  <nanos>547800</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.393444600Z</date>
+  <millis>1668952662393</millis>
+  <nanos>444600</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.397433700Z</date>
+  <millis>1668952662397</millis>
+  <nanos>433700</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.439808300Z</date>
+  <millis>1668952662439</millis>
+  <nanos>808300</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.441830Z</date>
+  <millis>1668952662441</millis>
+  <nanos>830000</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.441830Z</date>
+  <millis>1668952662441</millis>
+  <nanos>830000</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.442800300Z</date>
+  <millis>1668952662442</millis>
+  <nanos>800300</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.444794Z</date>
+  <millis>1668952662444</millis>
+  <nanos>794000</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.445792300Z</date>
+  <millis>1668952662445</millis>
+  <nanos>792300</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.448784Z</date>
+  <millis>1668952662448</millis>
+  <nanos>784000</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.450779900Z</date>
+  <millis>1668952662450</millis>
+  <nanos>779900</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.452774Z</date>
+  <millis>1668952662452</millis>
+  <nanos>774000</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.455765400Z</date>
+  <millis>1668952662455</millis>
+  <nanos>765400</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.456762Z</date>
+  <millis>1668952662456</millis>
+  <nanos>762000</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.457759200Z</date>
+  <millis>1668952662457</millis>
+  <nanos>759200</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.458756600Z</date>
+  <millis>1668952662458</millis>
+  <nanos>756600</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.459754800Z</date>
+  <millis>1668952662459</millis>
+  <nanos>754800</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.460751900Z</date>
+  <millis>1668952662460</millis>
+  <nanos>751900</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.463743700Z</date>
+  <millis>1668952662463</millis>
+  <nanos>743700</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.464741300Z</date>
+  <millis>1668952662464</millis>
+  <nanos>741300</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.465739100Z</date>
+  <millis>1668952662465</millis>
+  <nanos>739100</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.471722500Z</date>
+  <millis>1668952662471</millis>
+  <nanos>722500</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.472719500Z</date>
+  <millis>1668952662472</millis>
+  <nanos>719500</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.472719500Z</date>
+  <millis>1668952662472</millis>
+  <nanos>719500</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.474713600Z</date>
+  <millis>1668952662474</millis>
+  <nanos>713600</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.475711Z</date>
+  <millis>1668952662475</millis>
+  <nanos>711000</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.476708100Z</date>
+  <millis>1668952662476</millis>
+  <nanos>708100</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.479700600Z</date>
+  <millis>1668952662479</millis>
+  <nanos>700600</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.480698900Z</date>
+  <millis>1668952662480</millis>
+  <nanos>698900</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.481696100Z</date>
+  <millis>1668952662481</millis>
+  <nanos>696100</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.484688Z</date>
+  <millis>1668952662484</millis>
+  <nanos>688000</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.485684500Z</date>
+  <millis>1668952662485</millis>
+  <nanos>684500</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.485684500Z</date>
+  <millis>1668952662485</millis>
+  <nanos>684500</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.486682500Z</date>
+  <millis>1668952662486</millis>
+  <nanos>682500</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos BaseDeDatos.db</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.487686400Z</date>
+  <millis>1668952662487</millis>
+  <nanos>686400</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM destino</message>
+</record>
+<record>
+  <date>2022-11-20T13:57:42.488677200Z</date>
+  <millis>1668952662488</millis>
+  <nanos>677200</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>

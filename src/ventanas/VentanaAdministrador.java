@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import paneles.PanelAnadirDestino;
+import paneles.PanelEliminarDestino;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -30,6 +31,7 @@ public class VentanaAdministrador {
 	private JLabel lblInfor,lblTitulo ;
 	// paneles
 	public PanelAnadirDestino pad;
+	public PanelEliminarDestino ped;
 	/*
 	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
@@ -80,12 +82,14 @@ public class VentanaAdministrador {
 		contentPane.add(panelPrincipal, BorderLayout.CENTER);
 		panelPrincipal.setBounds(100, 100, 700, 700);
 		pad = new PanelAnadirDestino();
+		ped = new PanelEliminarDestino();
 
 		panelIzq = new JPanel();
 		panelIzq.setBackground(new Color(0, 255, 204));
 		contentPane.add(panelIzq, BorderLayout.WEST);
 		panelIzq.setLayout(new GridLayout(7, 0, 0, 0));
 		pad = new PanelAnadirDestino();
+		ped = new PanelEliminarDestino();
 //Etiquetas
 		lblTitulo = new JLabel("Administrador");
 		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
@@ -171,17 +175,9 @@ public class VentanaAdministrador {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				comboEl.setVisible(true);
-
-				String itemSeleccionado = (String) comboEl.getSelectedItem();
-				if ("Eliminar x".equals(itemSeleccionado)) {
-					// visualizar el panel añadir x
-
-				} else if ("Eliminar y".equals(itemSeleccionado)) {
-					// visualizar el panelañadir y
-				} else {
-					// visualizar el panel añadir z
-				}
+				panelPrincipal.removeAll();
+				panelPrincipal.add(ped);
+				panelPrincipal.updateUI();
 
 			}
 		});
