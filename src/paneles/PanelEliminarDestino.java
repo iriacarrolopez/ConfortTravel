@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
@@ -35,6 +36,9 @@ public class PanelEliminarDestino extends JPanel{
 
 	private JPanel panelArriba;
 	private JLabel lblInfo;
+	
+	private JLabel lblId;
+	private JTextField txtId;
 	
 	private Connection con;
 	
@@ -72,10 +76,15 @@ public class PanelEliminarDestino extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				Connection con = BD.initBD("confortTravel.db");
+				con = BD.initBD("confortTravel.db");
+				int d = tableDestino.getSelectedRow();
+				int id = (int) tableDestino.getValueAt(d, 0);
+				System.out.println(id);
+				BD.eliminarDestino(con, id);	
+				BD.closeBD(con);
 			}
 		});
+		
 	}
 	
 	private void inicializarTabla() {
