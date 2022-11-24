@@ -31,7 +31,7 @@ public class Main {
 		// SELECT : Se obtienen datos de la BBDD
 		System.out.println("VISUALIZANDO LAS PERSONAS QUE ESTAN EN LA BBDD:");
 		List<Persona> listaPersonas = new ArrayList<>();
-		listaPersonas = BD.obtenerDatos();
+		listaPersonas = BD.obtenerPersonas();
 		visualizarPersonas(listaPersonas);
 
 		// SELECT :Se obtienen datos de la BBDD

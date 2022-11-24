@@ -32,6 +32,7 @@ public class ViajeTest {
 	private int duracionA = 3;
 	private Destino destinoA = new Destino(1, "Sevilla");
 	private float precioA = 85.9f;
+	private int id = 00;
 	private Alojamiento nuevoAl;
 
 	private Transporte transporte;
@@ -41,7 +42,7 @@ public class ViajeTest {
 
 	@Before
 	public void setUp() throws Exception {
-		alojamiento = new Alojamiento(nombre_comp, talojamiento, precioA, duracionA, destinoA);
+		alojamiento = new Alojamiento(id, nombre_comp, talojamiento, precioA, duracionA, destinoA);
 		transporte = new Transporte(preciot, duraciont, plazas);
 		viaje = new Viaje(transporte, alojamiento, fechaInic, fechaFin);
 
@@ -84,7 +85,7 @@ public class ViajeTest {
 	@Test
 	public void testsetAjomiento() {
 
-		nuevoAl = new Alojamiento("IBERIA", talojamiento, 340.8f, 30, destinoA);
+		nuevoAl = new Alojamiento(00,"IBERIA", talojamiento, 340.8f, 30, destinoA);
 		assertEquals(alojamiento, viaje.getAlojamiento());
 		viaje.setAlojamiento(nuevoAl);
 		assertEquals(nuevoAl, viaje.getAlojamiento());

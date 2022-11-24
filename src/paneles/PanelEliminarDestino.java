@@ -32,13 +32,9 @@ public class PanelEliminarDestino extends JPanel{
 	private JScrollPane scrollPaneTablaDestino;
 
 	private JPanel panelAbajo;
-	JButton btnInsertarDestino;
 
 	private JPanel panelArriba;
 	private JLabel lblInfo;
-	
-	private JLabel lblId;
-	private JTextField txtId;
 	
 	private Connection con;
 	
@@ -79,7 +75,6 @@ public class PanelEliminarDestino extends JPanel{
 				con = BD.initBD("confortTravel.db");
 				int d = tableDestino.getSelectedRow();
 				int id = (int) tableDestino.getValueAt(d, 0);
-				System.out.println(id);
 				BD.eliminarDestino(con, id);	
 				BD.closeBD(con);
 			}
@@ -109,13 +104,11 @@ public class PanelEliminarDestino extends JPanel{
 	}
 	
 	private static void cargarModeloTabla() {
-		Connection con = BD.initBD("BaseDeDatos.db");
+		Connection con = BD.initBD("confortTravel.db");
 		
 		try {
 			ArrayList<Destino> listaDestinos = BD.obtenerDestinos();
-			while (modeloDestino.getRowCount()>0) {
-				modeloDestino.removeRow(0);
-			}
+			eliminarFilaDestinoDeLaTabla();
 			for (Destino d: listaDestinos) {
 				Object fila[] = {d.getId(), d.getNombre()};
 				modeloDestino.addRow(fila);

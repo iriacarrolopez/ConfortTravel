@@ -1,10 +1,10 @@
 package clases;
 
 public class Destino extends Alojamiento {
-	private Integer id;
+	private int id;
 	private String nombre;
 
-	public Destino(Integer id, String nombre) {
+	public Destino(int id, String nombre) {
 		super();
 		this.id = id;
 		this.nombre = nombre;

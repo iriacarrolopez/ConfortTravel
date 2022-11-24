@@ -1,10 +1,11 @@
 package clases;
 
 public class Alojamiento {
+	
+	private Integer id;
 	private String nombre_comp;
 	private TipoAlojamiento talojamiento;
 	private int duracion;
-	// private String destino;
 	private Destino destino;
 	private float precio;
 
@@ -14,8 +15,9 @@ public class Alojamiento {
 	/*
 	 * cambiar el destino por una clase destino
 	 */
-	public Alojamiento(String nombre_comp, TipoAlojamiento talojamiento, float precio, int duracion, Destino destino) {
+	public Alojamiento( int id, String nombre_comp, TipoAlojamiento talojamiento, float precio, int duracion, Destino destino) {
 		super();
+		this.id = id;
 		this.nombre_comp = nombre_comp;
 		this.talojamiento = talojamiento;
 		this.precio = precio;
@@ -63,10 +65,24 @@ public class Alojamiento {
 		this.destino = destino;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Destino getDestino() {
+		return destino;
+	}
+
 	@Override
 	public String toString() {
-		return "Alojamiento [nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento + ", duracion=" + duracion
-				+ ", destino=" + destino.getNombre() + ", precio=" + precio + "]";
+		return "Alojamiento [id=" + id + ", nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento
+				+ ", duracion=" + duracion + ", destino=" + destino + ", precio=" + precio + "]";
 	}
+
+	
 
 }

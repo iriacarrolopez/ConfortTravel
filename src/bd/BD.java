@@ -12,8 +12,10 @@ import java.io.FileReader;
 
 import java.util.logging.*;
 
+import clases.Alojamiento;
 import clases.Destino;
 import clases.Persona;
+import clases.TipoAlojamiento;
 
 public class BD {
 	private static Logger logger = null;
@@ -69,14 +71,17 @@ public class BD {
 	public static void crearTablas(Connection con) {
 		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
 		String sql1 = "CREATE TABLE IF NOT EXISTS Destino (id Integer, nom String)";
+		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id Integer, nombre_comp String, talojamiento String, precio Float, duracion Integer, destino Integer)";
 		try {
 			Statement st = con.createStatement();
 
 			st.executeUpdate(sql);
 			st.executeUpdate(sql1);
+			st.executeUpdate(sql2);
 			log(Level.INFO, "Creacion de las tablas", null);
 			System.out.println("--Se ha creado la tabla Destino");
 			System.out.println("--Se ha creado la tabla Persona");
+			System.out.println("--Se ha creado la tabla Alojamiento");
 			st.close();
 		} catch (SQLException e) {
 			System.err.println(String.format("* Error al crear la BBDD: %s", e.getMessage()));
@@ -115,7 +120,7 @@ public class BD {
 			e.printStackTrace();
 		}
 	}
-
+	
 	/**
 	 * Método que busca a una persona en la base de datos
 	 * 
@@ -149,7 +154,7 @@ public class BD {
 	 * 
 	 * @return Devuelve una lista con todas las personas
 	 */
-	public static List<Persona> obtenerDatos() {
+	public static List<Persona> obtenerPersonas() {
 		List<Persona> listaPersona = new ArrayList<>();
 		String sql = "SELECT * FROM Persona WHERE  dni>=0 ";
 
@@ -181,7 +186,78 @@ public class BD {
 		}
 		return listaPersona;
 	}
+	
+	/***
+	 * Método que obtiene los destinos
+	 * 
+	 * @return Devuelve un ArrayList con todos los destinos
+	 */
+	
+	public static ArrayList<Destino> obtenerDestinos() {
+		ArrayList<Destino> destinos = new ArrayList<>();
+		String sql = "SELECT * FROM destino";
 
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
+			log( Level.INFO, "Lanzada consulta a base de datos: " + sql, null );
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				Destino d = new Destino();
+				d.setId(rs.getInt("id"));
+				d.setNombre(rs.getString("nom"));
+				destinos.add(d);
+				
+				
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d destinos...", destinos.size()));
+			log(Level.INFO, "Se han encontrado los siguientes destinos:" + destinos.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+
+		return destinos;
+	}
+	
+	/***
+	 * 
+	 * Método que obtiene los alojamientos
+	 * 
+	 * @return Devuelve un ArrayList con todos los alojamientos
+	 */
+	public static ArrayList<Alojamiento> obtenerAlojamientos() {
+		ArrayList<Alojamiento> listaAlojamiento = new ArrayList<>();
+		String sql = "SELECT * FROM Alojamiento WHERE id>=0";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			Alojamiento al; 
+			while (rs.next()) {
+				al = new Alojamiento();
+				al.setId(rs.getInt("id"));
+				Destino d = obtenerDestino(con, rs.getInt("id"));
+				al.setDestino(d);
+				al.setDuracion(rs.getInt("duracion"));
+				al.setNombre_comp(rs.getString("nombre_comp"));
+				al.setPrecio(rs.getFloat("precio"));
+				String t = rs.getString("tAlojamiento");
+				al.setTalojamiento(TipoAlojamiento.valueOf(t));
+				listaAlojamiento.add(al);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d alojamientos", listaAlojamiento.size()));
+			log(Level.INFO, "Se han encontrado los siguientes alojamientos:" + listaAlojamiento.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaAlojamiento;
+	}
 	/**
 	 * Método que obtiene los datos de una persona
 	 * 
@@ -216,6 +292,36 @@ public class BD {
 		}
 		return p;
 	}
+	
+	/***
+	 * 
+	 * Método que obtiene los datos de un destino
+	 * 
+	 * @param con Conexión con la base de datos
+	 * @param id Id del destino
+	 * @return Devuelve el destino con dicho id
+	 */
+	public static Destino obtenerDestino(Connection con, int id) {
+		
+		String sql = "SELECT * FROM Destino WHERE id ='" + id + "'";
+		Destino d = null;
+		log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
+		try {
+			log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if (rs.next()) {
+				String nombre = rs.getString("nombre");
+				d = new Destino(id,nombre);
+			}
+			log(Level.INFO, "Se ha obtenido: " + d, null);
+			System.out.println(String.format("- Obtengo el destino:", d));
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
+			System.err.println(String.format("*Error al obtener lod datosw del destino en la BBDD: %s", e.getMessage()));
+		}
+		return d;
+	}
 
 	/**
 	 * Eliminar la persona
@@ -240,6 +346,14 @@ public class BD {
 
 	}
 	
+	/***
+	 * 
+	 * Eliminar un destino
+	 * 
+	 * @param con abrir la conexion con la BBDD
+	 * @param id de la persona 
+	 */
+	
 	public static void eliminarDestino(Connection con, int id) {
 		try (Statement st = con.createStatement();) {
 			String sql = "DELETE FROM Destino WHERE id='" + id + "';";
@@ -252,51 +366,18 @@ public class BD {
 			System.err.println(String.format("* Error al eliminar el destino de la BBDD: %s", e.getMessage()));
 		}
 	}
-
-	public static ArrayList<Destino> obtenerDestinos() {
-		ArrayList<Destino> destinos = new ArrayList<>();
-		String sql = "SELECT * FROM destino";
-
-		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
-			log( Level.INFO, "Lanzada consulta a base de datos: " + sql, null );
-			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
-			while (rs.next()) {
-				Destino d = new Destino();
-				d.setId(rs.getInt("id"));
-				d.setNombre(rs.getString("nom"));
-				destinos.add(d);
-				
-				
-			}
-			rs.close();
+	
+	public static void eliminarAlojamiento(Connection con, int id) {
+		try (Statement st = con.createStatement();) {
+			String sql = "DELETE FROM Alojamiento WHERE id='" + id + "';";
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			int result = st.executeUpdate(sql);
+			System.out.println(String.format("- Se ha borrado el alojamiento con id '" + id + "'", result));
+			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
 		} catch (SQLException e) {
-			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
-			e.printStackTrace();
-		}
-
-		return destinos;
-	}
-
-	/*
-	 * public static ArrayList<Destino> obtenerTodosLosDestinos(Connection con) {
-	 * ArrayList<Destino > ldestino = new ArrayList<>(); Destino d = new Destino();
-	 * 
-	 * ResultSet rs;
-	 * 
-	 * try { String sql ="SELECT * FROM Destino"; Statement stmt =
-	 * con.createStatement(); System.out.println("ENTRA AL RESULTSET"); rs =
-	 * stmt.executeQuery(sql);
-	 * 
-	 * if(rs.next()) { String id = rs.getString("dni"); String nombre =
-	 * rs.getString("nombre"); d = new Destino(id, nombre); ldestino.add(d); }
-	 * rs.close(); stmt.close(); } catch (SQLException e) { // TODO Auto-generated
-	 * catch block
-	 * 
-	 * e.printStackTrace(); } return ldestino;
-	 * 
-	 * }
-	 */
+			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
+			System.err.println(String.format("* Error al eliminar el alojamiento de la BBDD: %s", e.getMessage()));
+		}	}
 	/*
 	 * LOGGER
 	 */

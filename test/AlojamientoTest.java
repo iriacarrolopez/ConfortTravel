@@ -16,11 +16,12 @@ public class AlojamientoTest {
 	private int duracion = 3;
 	private Destino destino;
 	private float precio = 85.9f;
+	private int id = 00;
 
 	@Before
 	public void setUp() throws Exception {
 		destino = new Destino(1, "Sevilla");
-		alojamiento = new Alojamiento(nombre_comp, talojamiento, precio, duracion, destino);
+		alojamiento = new Alojamiento(id, nombre_comp, talojamiento, precio, duracion, destino);
 	}
 
 	@After
