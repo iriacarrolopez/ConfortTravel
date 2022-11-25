@@ -11,60 +11,51 @@ import java.util.Vector;
 
 import javax.swing.JScrollPane;
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 
 import bd.BD;
 import clases.Alojamiento;
 import clases.Destino;
 
-public class PanelAnadirAlojamiento extends JPanel {
+public class PanelExcursiones extends JPanel {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTable tablaAlojamiento;
+	private JTable tablaExcursion;
 	private JPanel panelArriba, panelAbajo;
 	private JLabel lblTitulo;
-	private JButton btnInsertarAlojamiento;
-	private static DefaultTableModel modeloAlojamiento;
-	private JScrollPane scrollPaneAlojamiento;
+	private JButton btnInsertarExcursion;
+	private static DefaultTableModel modeloExcursion;
+	private JScrollPane scrollPaneExcursion;
 	private Connection	con;
-	
-	private int mouseRow =-1;
-	private int mouseColumn =-1;
-	
 
 	/**
 	 * Create the panel.
 	 */
-	public PanelAnadirAlojamiento() {
+	public PanelExcursiones() {
 		setLayout(new BorderLayout(0, 0));
 
 		panelArriba = new JPanel();
 		add(panelArriba, BorderLayout.NORTH);
 
-		lblTitulo = new JLabel("AÑADIR ALOJAMIENTO");
+		lblTitulo = new JLabel("AÑADIR EXCUSION");
 		panelArriba.add(lblTitulo);
 
 		panelAbajo = new JPanel();
 		add(panelAbajo, BorderLayout.SOUTH);
 		
-		 btnInsertarAlojamiento = new JButton("NUEVO ALOJAMIENTO");
-		panelAbajo.add(btnInsertarAlojamiento);
+		 btnInsertarExcursion = new JButton("Nueva Excursion");
+		panelAbajo.add(btnInsertarExcursion);
 		
-		btnInsertarAlojamiento.addActionListener(new ActionListener() {
+		btnInsertarExcursion.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -79,11 +70,11 @@ public class PanelAnadirAlojamiento extends JPanel {
 				con = BD.initBD("confortTravel.db");
 				
 				cargarModeloTabla();
-				BD.insertarAlojamiento(con,Integer.parseInt(id), nombre, tipo,Float.parseFloat(precio), Integer.parseInt(duracion), destino);
+				BD.insertarAlojamiento(con,Integer.parseInt(id), nombre, tipo,Float.parseFloat(precio), Integer.parseInt(duracion), Integer.parseInt(destino));
 				
 				//Borramos el contenido del modelo de la tabla
-				while(modeloAlojamiento.getRowCount()>0) {
-					modeloAlojamiento.removeRow(0);
+				while(modeloExcursion.getRowCount()>0) {
+					modeloExcursion.removeRow(0);
 				}
 				cargarModeloTabla();
 				//modeloDestino.addRow(new Object[]{id,nombre});
@@ -98,12 +89,12 @@ public class PanelAnadirAlojamiento extends JPanel {
 		// La tabla de destino se inserta en un panel con scroll
 		
 		
-		tablaAlojamiento = new JTable();
-		scrollPaneAlojamiento = new JScrollPane(tablaAlojamiento);
-		scrollPaneAlojamiento.setBorder(new TitledBorder("ALOJAMIENTOS"));
-		tablaAlojamiento.setFillsViewportHeight(true);
-		add(scrollPaneAlojamiento, BorderLayout.CENTER);
-		scrollPaneAlojamiento.setViewportView(tablaAlojamiento);
+		tablaExcursion = new JTable();
+		scrollPaneExcursion = new JScrollPane(tablaExcursion);
+		scrollPaneExcursion.setBorder(new TitledBorder("Excursion"));
+		tablaExcursion.setFillsViewportHeight(true);
+		add(scrollPaneExcursion, BorderLayout.CENTER);
+		scrollPaneExcursion.setViewportView(tablaExcursion);
 		inicializarTabla();
 		// hacemos la conexion con la BD
 				Connection con = BD.initBD("confortTravel.db");
@@ -124,38 +115,34 @@ public class PanelAnadirAlojamiento extends JPanel {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraAlojamiento = new Vector<String>(Arrays.asList("NOMBRE","TIPO ALOJAMIENTO","PRECIO","DURACION","DESTINO"));
 		// Se crea el modelo de datos para la tabla de comics sólo con la cabecera
-		modeloAlojamiento = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraAlojamiento);
+		modeloExcursion = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraAlojamiento);
 		// Se crea la tabla de comics con el modelo de datos
-		tablaAlojamiento= new JTable(modeloAlojamiento);
+		tablaExcursion= new JTable(modeloExcursion);
 		//cargo el modelo
 		cargarModeloTabla();
 		 
-		tablaAlojamiento.setRowHeight(30);
+		tablaExcursion.setRowHeight(30);
 		
 
 		// Se cambia la anchura de las columnas
-		tablaAlojamiento.getColumnModel().getColumn(0).setPreferredWidth(400);
-		tablaAlojamiento.getColumnModel().getColumn(1).setPreferredWidth(400);
+		tablaExcursion.getColumnModel().getColumn(0).setPreferredWidth(400);
+		tablaExcursion.getColumnModel().getColumn(1).setPreferredWidth(400);
 		
 		
 			// Se modifica el modelo de selección de la tabla para que se pueda selecciona
 			// únicamente una fila
-			tablaAlojamiento.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-			
-		
-			
-			
+		tablaExcursion.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 	}
 	public void cargarModeloTabla() {
-		Connection con = BD.initBD("confortTravel.db");
+		/*Connection con = BD.initBD("confortTravel.db");
 
 		try {
 
-			ArrayList<Alojamiento> listaAlojamientos= BD.obtenerAlojamientos();
+			//ArrayList<Alojamientos> listaAlojamientos= BD.obtenerAlojamientos();
 			while (modeloAlojamiento.getRowCount() > 0)
 				modeloAlojamiento.removeRow(0);
-			for (Alojamiento a : listaAlojamientos) {
+			for (Alojamiento a : listaAlojaminetos) {
 				Object fila[] = { a.getId(), a.getNombre_comp(),a.getTalojamiento(),a.getPrecio(),a.getDuracion(),a.getDestinoNombre() };
 				// System.out.println(c.getDni());
 				modeloAlojamiento.addRow(fila);
@@ -164,7 +151,7 @@ public class PanelAnadirAlojamiento extends JPanel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		BD.closeBD(con);
+		BD.closeBD(con);*/
 
 	}
 	/*public static void eliminarFilaAlojamientoDeLaTabla() {
@@ -178,3 +165,4 @@ public class PanelAnadirAlojamiento extends JPanel {
 		
 
 }
+

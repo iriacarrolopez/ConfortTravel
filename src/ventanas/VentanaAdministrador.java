@@ -6,9 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import paneles.PanelAnadirAlojamiento;
-import paneles.PanelAnadirDestino;
-import paneles.PanelAnadirExcursiones;
+import paneles.PanelAlojamiento;
+import paneles.PanelDestino;
+import paneles.PanelExcursiones;
 import paneles.PanelEliminarDestino;
 
 import java.awt.GridLayout;
@@ -35,10 +35,10 @@ public class VentanaAdministrador {
 	public VentanaLogin ventanalogin;
 	private JLabel lblInfor, lblTitulo;
 	// paneles
-	public PanelAnadirDestino pad;
+	public PanelDestino pad;
 	public PanelEliminarDestino ped;
-	public PanelAnadirAlojamiento paa;
-	public PanelAnadirExcursiones pex;
+	public PanelAlojamiento paa;
+	public PanelExcursiones pex;
 	/*
 	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
@@ -95,10 +95,10 @@ public class VentanaAdministrador {
 		contentPane.add(panelIzq, BorderLayout.WEST);
 		panelIzq.setLayout(new GridLayout(7, 0, 0, 0));
 		// inicializacion de paneles
-		pad = new PanelAnadirDestino();
+		pad = new PanelDestino();
 		ped = new PanelEliminarDestino();
-		paa = new PanelAnadirAlojamiento();
-		pex = new PanelAnadirExcursiones();
+		paa = new PanelAlojamiento();
+		pex = new PanelExcursiones();
 //Etiquetas
 		lblTitulo = new JLabel("Administrador");
 		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
@@ -115,23 +115,50 @@ public class VentanaAdministrador {
 		btnVolver = new JButton("Volver a la pagina principal");
 		panelSur.add(btnVolver);
 
-		btnAnadir = new JButton("AÑADIR");
-		btnAnadir.setPreferredSize(new Dimension(5, 5));
-		panelIzq.add(btnAnadir);
-
 		comboAn = new JComboBox<>();
 		comboAn.setModel(new DefaultComboBoxModel<String>(
 				new String[] { "Opciones:", "Destino", "Alojamiento", "Excursiones" }));
 
 		panelIzq.add(comboAn);
 		// comboAn.setVisible(false);
-		comboAn.setEnabled(false);
+		comboAn.setEnabled(true);
 
 		/*
 		 * nuevo
 		 */
+		comboAn.addItemListener(new ItemListener() {
 
-		btnAnadir.addActionListener(new ActionListener() {
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				// TODO Auto-generated method stub
+				if (e.getSource() == comboAn) {
+					String item1 = comboAn.getSelectedItem().toString(); // seleciona el primero
+					System.out.println(item1);
+					if ("Destino".equals(item1)) {
+
+						System.out.println("entra al boton");
+						panelPrincipal.removeAll();
+						panelPrincipal.add(pad);
+						panelPrincipal.updateUI();
+					} else if ("Alojamiento".equals(item1)) {
+						panelPrincipal.removeAll();
+						panelPrincipal.add(paa);
+						panelPrincipal.updateUI();
+
+					} else {
+						panelPrincipal.removeAll();
+						panelPrincipal.add(pex);
+						panelPrincipal.updateUI();
+
+					}
+
+				}
+
+			}
+		});
+
+
+	/*	btnAnadir.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -169,102 +196,9 @@ public class VentanaAdministrador {
 
 			}
 
-		});
+		});*/
 
-		btnEliminar = new JButton("ELIMINAR");
-		panelIzq.add(btnEliminar);
-
-		comboEl = new JComboBox<>();
-		comboEl.setModel(new DefaultComboBoxModel(new String[] { "Opciones:", "Destino", "Alojamiento", "Excursion" }));
-		panelIzq.add(comboEl);
-
-		comboEl.setEnabled(false);
-		btnEliminar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
-				comboEl.setEnabled(true);
-				comboEl.addItemListener(new ItemListener() {
-
-					@Override
-					public void itemStateChanged(ItemEvent e) {
-						// TODO Auto-generated method stub
-						if (e.getSource() == comboEl) {
-							String item1 = comboEl.getSelectedItem().toString(); // seleciona el primero
-							System.out.println(item1);
-							if ("Destino".equals(item1)) {
-
-								System.out.println("entra al boton");
-								panelPrincipal.removeAll();
-								panelPrincipal.add(ped);
-								panelPrincipal.updateUI();
-							} else if ("Alojamiento".equals(item1)) {
-								panelPrincipal.removeAll();
-								panelPrincipal.add(paa);
-								panelPrincipal.updateUI();
-
-							} else {
-								panelPrincipal.removeAll();
-								panelPrincipal.add(pex);
-								panelPrincipal.updateUI();
-
-							}
-
-						}
-
-					}
-				});
-
-			}
-		});
-
-		btnModificar = new JButton("MODIFICAR");
-		panelIzq.add(btnModificar);
-
-		comboMo = new JComboBox<>();
-		comboMo.setModel(
-				new DefaultComboBoxModel(new String[] { "Opciones:", "Destino", "Alojamiento", "Excursiones" }));
-		panelIzq.add(comboMo);
-		comboEl.setEnabled(false);
-		btnModificar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				comboMo.setEnabled(true);
-				comboMo.addItemListener(new ItemListener() {
-
-					@Override
-					public void itemStateChanged(ItemEvent e) {
-
-						if (e.getSource() == comboMo) {
-							String item1 = comboMo.getSelectedItem().toString(); // seleciona el primero
-							System.out.println(item1);
-							if ("Destino".equals(item1)) {
-
-								System.out.println("entra al boton");
-								panelPrincipal.removeAll();
-								// panelPrincipal.add(ped);
-								panelPrincipal.updateUI();
-							} else if ("Alojamiento".equals(item1)) {
-								panelPrincipal.removeAll();
-								// panelPrincipal.add(paa);
-								panelPrincipal.updateUI();
-
-							} else {
-								panelPrincipal.removeAll();
-								// panelPrincipal.add(pex);
-								panelPrincipal.updateUI();
-
-							}
-
-						}
-
-					}
-				});
-
-			}
-		});
+		
 
 		btnVolver.addActionListener(new ActionListener() {
 

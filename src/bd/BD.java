@@ -121,7 +121,7 @@ public class BD {
 		}
 	}
 	/**
-	 * Metdod que inserta un alojamiento
+	 * Metodo que inserta un alojamiento
 	 * @param con Conexion con la base de datos
 	 * @param id del alojamiento
 	 * @param nombre del alojamiento
@@ -130,8 +130,8 @@ public class BD {
 	 * @param duracion de la estancia
 	 * @param destino del alojamiento
 	 */
-	public static void insertarAlojamiento(Connection con ,Integer id, String nombre , String tipo,float precio,Integer duracion,String destino) {
-			String sql = "INSERT INTO Alojamiento VALUES("+id+",'"+nombre+"','"+tipo+"',"+precio+","+duracion+",'"+destino+");";
+	public static void insertarAlojamiento(Connection con ,Integer id, String nombre , String tipo,float precio,Integer duracion,Integer destino) {
+			String sql = "INSERT INTO Alojamiento VALUES("+id+",'"+nombre+"','"+tipo+"',"+precio+","+duracion+","+destino+");";
 			try {
 				Statement stmt = con.createStatement();
 				log(Level.INFO,"Lanzada actualización a base de datos: " + sql, null);
@@ -212,6 +212,7 @@ public class BD {
 		return listaPersona;
 	}
 	
+	
 	/***
 	 * Método que obtiene los destinos
 	 * 
@@ -256,7 +257,7 @@ public class BD {
 		ArrayList<Alojamiento> listaAlojamiento = new ArrayList<>();
 		String sql = "SELECT * FROM Alojamiento WHERE id>=0";
 		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
-			log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			
@@ -264,13 +265,17 @@ public class BD {
 			while (rs.next()) {
 				al = new Alojamiento();
 				al.setId(rs.getInt("id"));
+				al.setNombre_comp(rs.getString("nombre_comp"));
+				al.setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
+				al.setPrecio(rs.getFloat("precio"));
+				al.setDuracion(rs.getInt("duracion"));
 				Destino d = obtenerDestino(con, rs.getInt("id"));
 				al.setDestino(d);
-				al.setDuracion(rs.getInt("duracion"));
-				al.setNombre_comp(rs.getString("nombre_comp"));
-				al.setPrecio(rs.getFloat("precio"));
-				String t = rs.getString("tAlojamiento");
-				al.setTalojamiento(TipoAlojamiento.valueOf(t));
+				
+				
+				
+				
+				
 				listaAlojamiento.add(al);
 			}
 			rs.close();
@@ -282,6 +287,41 @@ public class BD {
 			e.printStackTrace();
 		}
 		return listaAlojamiento;
+	}
+	public static Alojamiento obtenerAlojamientosPorid(Integer id) {
+		
+		String sql = "SELECT * FROM Alojamiento WHERE id="+id+";";
+		Alojamiento al=null;
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			 
+			while (rs.next()) {
+			Integer i =  rs.getInt("id");//	al.setId(rs.getInt("id"));
+				String nom = rs.getString("nombre_comp");//al.setNombre_comp(rs.getString("nombre_comp"));
+				TipoAlojamiento tipo = TipoAlojamiento.valueOf(rs.getString("talojamiento"));//.setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
+				Float p = rs.getFloat("precio");//.setPrecio(rs.getFloat("precio"));
+				Integer dur= rs.getInt("duracion");//.setDuracion(rs.getInt("duracion"));
+				Destino d = obtenerDestino(con, rs.getInt("id"));
+			
+				
+				al = new Alojamiento(i,nom,tipo,p,dur,d);
+				
+				
+				
+				
+			}
+			rs.close();
+			
+			log(Level.INFO, "Se ha encontrado el alojamiento :" + al,null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return al;
 	}
 	/**
 	 * Método que obtiene los datos de una persona
@@ -336,8 +376,9 @@ public class BD {
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			if (rs.next()) {
-				String nombre = rs.getString("nombre");
-				d = new Destino(id,nombre);
+				String nom = rs.getString("nom");
+				
+				d = new Destino(id,nom);
 			}
 			log(Level.INFO, "Se ha obtenido: " + d, null);
 			System.out.println(String.format("- Obtengo el destino:", d));

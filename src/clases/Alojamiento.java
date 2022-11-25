@@ -56,6 +56,9 @@ public class Alojamiento {
 	public void setDuracion(int duracion) {
 		this.duracion = duracion;
 	}
+public Integer getDestinoID() {
+	return destino.getId();
+}
 
 	public String getDestinoNombre() {
 		return destino.getNombre();

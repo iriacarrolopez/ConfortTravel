@@ -30,7 +30,7 @@ import java.awt.Component;
 
 import javax.swing.JScrollPane;
 
-public class PanelAnadirDestino extends JPanel {
+public class PanelDestino extends JPanel {
 	/**
 	 * 
 	 */
@@ -48,14 +48,14 @@ public class PanelAnadirDestino extends JPanel {
 	private JLabel lblInfo;
 //conexion con la base de datso
 	private Connection con;
-	
-	private int mouseRow =-1;
-	private int mouseColumn=-1;
+
+	private int mouseRow = -1;
+	private int mouseColumn = -1;
 
 	/**
 	 * Create the panel.
 	 */
-	public PanelAnadirDestino() {
+	public PanelDestino() {
 		setBounds(100, 100, 900, 900);
 		setBackground(new Color(176, 224, 230));
 		setLayout(new BorderLayout(0, 0));
@@ -72,27 +72,27 @@ public class PanelAnadirDestino extends JPanel {
 		/*
 		 * nuevo
 		 */
-btnInsertarDestino.addActionListener(new ActionListener() {
-			
+		btnInsertarDestino.addActionListener(new ActionListener() {
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
-				String id =JOptionPane.showInputDialog("Introduce el id del destino:");
+
+				String id = JOptionPane.showInputDialog("Introduce el id del destino:");
 				String nombre = JOptionPane.showInputDialog("Introduce el nombre del destino:");
-				Integer idD =Integer.parseInt(id);
-			
-			con = BD.initBD("confortTravel.db");
-			
-			cargarModeloTabla();
-			BD.insertarDestino(con,idD,nombre);	
-			//Borramos el contenido del modelo de la tabla
-			while(modeloDestino.getRowCount()>0) {
-				modeloDestino.removeRow(0);
-			}
-			cargarModeloTabla();
-			//modeloDestino.addRow(new Object[]{id,nombre});
-			BD.closeBD(con);
+				Integer idD = Integer.parseInt(id);
+
+				con = BD.initBD("confortTravel.db");
+
+				cargarModeloTabla();
+				BD.insertarDestino(con, idD, nombre);
+				// Borramos el contenido del modelo de la tabla
+				while (modeloDestino.getRowCount() > 0) {
+					modeloDestino.removeRow(0);
+				}
+				cargarModeloTabla();
+				// modeloDestino.addRow(new Object[]{id,nombre});
+				BD.closeBD(con);
 			}
 		});
 
@@ -128,8 +128,7 @@ btnInsertarDestino.addActionListener(new ActionListener() {
 		tableDestino = new JTable(modeloDestino);
 
 		cargarModeloTabla();
-		
-		
+
 		// Se cambia la altura de las filas
 		tableDestino.setRowHeight(30);
 		// MODIFICAR LAS COLUMNAS
@@ -137,7 +136,7 @@ btnInsertarDestino.addActionListener(new ActionListener() {
 		// Se cambia la anchura de las columnas
 		tableDestino.getColumnModel().getColumn(0).setPreferredWidth(400);
 		tableDestino.getColumnModel().getColumn(1).setPreferredWidth(400);
-		
+
 		/*
 		 * 
 		 * PARA SELECIONAR SOLO UNA FILA
@@ -147,72 +146,63 @@ btnInsertarDestino.addActionListener(new ActionListener() {
 		// Se modifica el modelo de selección de la tabla para que se pueda selecciona
 		// únicamente una fila
 		tableDestino.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		
-		//nuevo
-		//PINTAR LA FILA ENTERA
-		
-		
+
+		// nuevo
+		// PINTAR LA FILA ENTERA
+
 		tableDestino.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
-		
-		/**
-			 * 
-			 */
+
+			/**
+				 * 
+				 */
 			private static final long serialVersionUID = 1L;
 
-		@Override
-		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
-				int row, int column) {
-			JLabel label =new JLabel(value.toString());
-			
-			//Si la celda está seleccionada se asocia un color de fondo y letra
-			if (mouseRow == row ) {
-				label.setForeground(Color.RED);
-				label.setBackground(Color.WHITE);//NO LO COGE
+			@Override
+			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+					boolean hasFocus, int row, int column) {
+				JLabel label = new JLabel(value.toString());
+
+				// Si la celda está seleccionada se asocia un color de fondo y letra
+				if (mouseRow == row) {
+					label.setForeground(Color.RED);
+					label.setBackground(Color.WHITE);// NO LO COGE
+				}
+				// Es necesaria esta sentencia para pintar correctamente el color de fondo
+				label.setOpaque(true);
+
+				return label;
 			}
-			//Es necesaria esta sentencia para pintar correctamente el color de fondo
-			label.setOpaque(true);
+		});
+		// Se define el comportamiento de los eventos de movimiento del ratón: MOVED
+		// DRAGGED
+		tableDestino.addMouseMotionListener(new MouseMotionListener() {
 
-			
-			return label;
-		}
-	});
-		//Se define el comportamiento de los eventos de movimiento del ratón: MOVED DRAGGED
-				tableDestino.addMouseMotionListener(new MouseMotionListener() {
-					
-					@Override
-					public void mouseMoved(MouseEvent e) {
-						//Se obtiene la fila/columna sobre la que están el ratón mientras se mueve
-						int row =tableDestino.rowAtPoint(e.getPoint());
-						
+			@Override
+			public void mouseMoved(MouseEvent e) {
+				// Se obtiene la fila/columna sobre la que están el ratón mientras se mueve
+				int row = tableDestino.rowAtPoint(e.getPoint());
 
-						//Cuando el ratón se mueve sobre tabla, actualiza la fila/columna sobre la que está el ratón
-						//de esta forma se puede modificar el color de renderizado de la celda.				
-						mouseRow = row;
-						
-						
-						 // tengo que volver a repitar la tabla
-						 
-						//Se fuerza el redibujado de la tabla para modificar el color de la celda sobre la que está el ratón.
-						tableDestino.repaint();
-						
-					}
-					
-					@Override
-					public void mouseDragged(MouseEvent e) {
-						// TODO Auto-generated method stub
-						
-					}
-				});
-		
-		
-		
-		
-		
-		
+				// Cuando el ratón se mueve sobre tabla, actualiza la fila/columna sobre la que
+				// está el ratón
+				// de esta forma se puede modificar el color de renderizado de la celda.
+				mouseRow = row;
+
+				// tengo que volver a repitar la tabla
+
+				// Se fuerza el redibujado de la tabla para modificar el color de la celda sobre
+				// la que está el ratón.
+				tableDestino.repaint();
+
+			}
+
+			@Override
+			public void mouseDragged(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+		});
 
 	}
-
-	
 
 	public static void cargarModeloTabla() {
 		Connection con = BD.initBD("confortTravel.db");
