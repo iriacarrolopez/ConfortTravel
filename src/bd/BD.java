@@ -120,6 +120,31 @@ public class BD {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * Metdod que inserta un alojamiento
+	 * @param con Conexion con la base de datos
+	 * @param id del alojamiento
+	 * @param nombre del alojamiento
+	 * @param tipo de alojamiento
+	 * @param precio del alojamiento
+	 * @param duracion de la estancia
+	 * @param destino del alojamiento
+	 */
+	public static void insertarAlojamiento(Connection con ,Integer id, String nombre , String tipo,float precio,Integer duracion,String destino) {
+			String sql = "INSERT INTO Alojamiento VALUES("+id+",'"+nombre+"','"+tipo+"',"+precio+","+duracion+",'"+destino+");";
+			try {
+				Statement stmt = con.createStatement();
+				log(Level.INFO,"Lanzada actualización a base de datos: " + sql, null);
+				int resultado = stmt.executeUpdate(sql);
+				log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+							log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+							System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
+							e.printStackTrace();
+			}
+		}
 	
 	/**
 	 * Método que busca a una persona en la base de datos
@@ -344,6 +369,35 @@ public class BD {
 
 		}
 
+	}
+	/*
+	 * nuevo
+	 */
+	
+	/**
+	 * METODO QUE INSERTA DESTINO
+	 * @param con CONEXION
+	 * @param id DEL DESTINO
+	 * @param nombre DEL DESTINO
+	 */
+	public static void insertarDestino(Connection con, Integer id, String nombre) {
+		String sql = "INSERT INTO Destino VALUES(" + id + ",'" + nombre + "');";
+		try {
+			
+			Statement stmt = con.createStatement();
+
+			log(Level.INFO, "Lanzada actualización a base de datos: " + sql, null);
+			int resultado = stmt.executeUpdate(sql);
+			log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+			System.out.println("--Se ha insertado a la tabla Destino");
+
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
 	}
 	
 	/***

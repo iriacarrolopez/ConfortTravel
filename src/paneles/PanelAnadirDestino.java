@@ -8,18 +8,26 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 import bd.BD;
 
 import clases.Destino;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.sql.Connection;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JScrollPane;
 
 public class PanelAnadirDestino extends JPanel {
@@ -40,6 +48,9 @@ public class PanelAnadirDestino extends JPanel {
 	private JLabel lblInfo;
 //conexion con la base de datso
 	private Connection con;
+	
+	private int mouseRow =-1;
+	private int mouseColumn=-1;
 
 	/**
 	 * Create the panel.
@@ -58,6 +69,32 @@ public class PanelAnadirDestino extends JPanel {
 
 		JButton btnInsertarDestino = new JButton("NUEVO DESTINO");
 		panelAbajo.add(btnInsertarDestino);
+		/*
+		 * nuevo
+		 */
+btnInsertarDestino.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				String id =JOptionPane.showInputDialog("Introduce el id del destino:");
+				String nombre = JOptionPane.showInputDialog("Introduce el nombre del destino:");
+				Integer idD =Integer.parseInt(id);
+			
+			con = BD.initBD("confortTravel.db");
+			
+			cargarModeloTabla();
+			BD.insertarDestino(con,idD,nombre);	
+			//Borramos el contenido del modelo de la tabla
+			while(modeloDestino.getRowCount()>0) {
+				modeloDestino.removeRow(0);
+			}
+			cargarModeloTabla();
+			//modeloDestino.addRow(new Object[]{id,nombre});
+			BD.closeBD(con);
+			}
+		});
 
 		inicializarTabla();
 		// La tabla de destino se inserta en un panel con scroll
@@ -92,6 +129,7 @@ public class PanelAnadirDestino extends JPanel {
 
 		cargarModeloTabla();
 		
+		
 		// Se cambia la altura de las filas
 		tableDestino.setRowHeight(30);
 		// MODIFICAR LAS COLUMNAS
@@ -109,20 +147,75 @@ public class PanelAnadirDestino extends JPanel {
 		// Se modifica el modelo de selección de la tabla para que se pueda selecciona
 		// únicamente una fila
 		tableDestino.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		
+		//nuevo
+		//PINTAR LA FILA ENTERA
+		
+		
+		tableDestino.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+		
+		/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
 
-	}
+		@Override
+		public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
+				int row, int column) {
+			JLabel label =new JLabel(value.toString());
+			
+			//Si la celda está seleccionada se asocia un color de fondo y letra
+			if (mouseRow == row ) {
+				label.setForeground(Color.RED);
+				label.setBackground(Color.WHITE);//NO LO COGE
+			}
+			//Es necesaria esta sentencia para pintar correctamente el color de fondo
+			label.setOpaque(true);
 
-	public static void eliminarFilaDestinoDeLaTabla() {
-		int rowCount = modeloDestino.getRowCount();
-		// Recorre y elimina la fila en la que esta
-		for (int i = rowCount - 1; i >= 0; i--) {
-			modeloDestino.removeRow(i);
+			
+			return label;
 		}
+	});
+		//Se define el comportamiento de los eventos de movimiento del ratón: MOVED DRAGGED
+				tableDestino.addMouseMotionListener(new MouseMotionListener() {
+					
+					@Override
+					public void mouseMoved(MouseEvent e) {
+						//Se obtiene la fila/columna sobre la que están el ratón mientras se mueve
+						int row =tableDestino.rowAtPoint(e.getPoint());
+						
+
+						//Cuando el ratón se mueve sobre tabla, actualiza la fila/columna sobre la que está el ratón
+						//de esta forma se puede modificar el color de renderizado de la celda.				
+						mouseRow = row;
+						
+						
+						 // tengo que volver a repitar la tabla
+						 
+						//Se fuerza el redibujado de la tabla para modificar el color de la celda sobre la que está el ratón.
+						tableDestino.repaint();
+						
+					}
+					
+					@Override
+					public void mouseDragged(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+				});
+		
+		
+		
+		
+		
+		
 
 	}
+
+	
 
 	public static void cargarModeloTabla() {
-		Connection con = BD.initBD("BaseDeDatos.db");
+		Connection con = BD.initBD("confortTravel.db");
 
 		try {
 
