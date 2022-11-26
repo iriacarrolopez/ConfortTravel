@@ -59,7 +59,7 @@ public class PanelAlojamiento extends JPanel {
 		panelArriba = new JPanel();
 		add(panelArriba, BorderLayout.NORTH);
 
-		lblTitulo = new JLabel("AÑADIR ALOJAMIENTO");
+		lblTitulo = new JLabel("ALOJAMIENTO");
 		panelArriba.add(lblTitulo);
 
 		panelAbajo = new JPanel();
@@ -144,10 +144,21 @@ inicializarTabla();
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				String id = JOptionPane.showInputDialog("Introduce el id  del alojamiento que sea modificar:");
 				con = BD.initBD("confortTravel.db");
+				String id = JOptionPane.showInputDialog("Introduce el id  del alojamiento que sea modificar:");
+				String precio = JOptionPane.showInputDialog("Introduce el precio:");
+				String duracion = JOptionPane.showInputDialog("Introduce la duracion (dias):");
+				
 				//modificar
 				BD.obtenerAlojamientosPorid(Integer.parseInt(id));
+				BD.UpdatePrecioPorDuracion(Integer.parseInt(id), Float.parseFloat(precio),Integer.parseInt(duracion));
+				// Borramos el contenido del modelo de la tabla
+				cargarModeloTabla();
+				while (modeloAlojamiento.getRowCount() > 0) {
+					modeloAlojamiento.removeRow(0);
+				}
+				cargarModeloTabla();
+				BD.closeBD(con);
 				
 				
 				
@@ -183,7 +194,13 @@ inicializarTabla();
 		tablaAlojamiento.getColumnModel().getColumn(3).setPreferredWidth(200);
 		tablaAlojamiento.getColumnModel().getColumn(4).setPreferredWidth(200);
 		tablaAlojamiento.getColumnModel().getColumn(5).setPreferredWidth(400);
+		//no modificar las celdas de la tabla
+		 modeloAlojamiento= new DefaultTableModel(){
+				
+				private static final long serialVersionUID = 1L;
 
+					public boolean isCellEditable(int rowIndex,int columnIndex){return false;}
+				};
 		// Se modifica el modelo de selección de la tabla para que se pueda selecciona
 		// únicamente una fila
 		tablaAlojamiento.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);

@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import paneles.PanelAlojamiento;
@@ -22,10 +23,13 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.Component.BaselineResizeBehavior;
+import javax.swing.UIManager;
 
 public class VentanaAdministrador {
 	private static JFrame frame;
@@ -39,6 +43,8 @@ public class VentanaAdministrador {
 	public PanelEliminarDestino ped;
 	public PanelAlojamiento paa;
 	public PanelExcursiones pex;
+	private JPanel panelInformacion;
+	private JLabel icono;
 	/*
 	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
@@ -91,9 +97,9 @@ public class VentanaAdministrador {
 		panelPrincipal.setLayout(new GridLayout(1, 0, 0, 0));
 
 		panelIzq = new JPanel();
-		panelIzq.setBackground(new Color(0, 255, 204));
+		panelIzq.setBackground(Color.WHITE);
 		contentPane.add(panelIzq, BorderLayout.WEST);
-		panelIzq.setLayout(new GridLayout(7, 0, 0, 0));
+		panelIzq.setLayout(new GridLayout(2, 0, 0, 0));
 		// inicializacion de paneles
 		pad = new PanelDestino();
 		ped = new PanelEliminarDestino();
@@ -104,28 +110,32 @@ public class VentanaAdministrador {
 		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
 		panelNorte.add(lblTitulo);
 
+		panelInformacion = new JPanel();
+		panelInformacion.setBackground(Color.BLACK);
+		panelIzq.add(panelInformacion);
+		panelInformacion.setLayout(new GridLayout(2, 0, 0, 0));
+		icono = new JLabel();
+		icono.setHorizontalAlignment(SwingConstants.CENTER); 
+		icono.setSize(50, 50);
+		icono.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("/imagenes/administrador.png")));
+		
+
+		panelIzq.add(icono);
 		lblInfor = new JLabel("Introduce que operaci\u00F3n desea realizar");
-		lblInfor.setBackground(new Color(102, 153, 255));
-		panelIzq.add(lblInfor);
-
-//botones
-		btnSalir = new JButton("Salir");
-		panelSur.add(btnSalir);
-
-		btnVolver = new JButton("Volver a la pagina principal");
-		panelSur.add(btnVolver);
+		lblInfor.setForeground(Color.WHITE);
+		lblInfor.setFont(new Font("Tahoma", Font.BOLD, 10));
+		panelInformacion.add(lblInfor);
+		lblInfor.setBackground(UIManager.getColor("Button.foreground"));
 
 		comboAn = new JComboBox<>();
+		comboAn.setBackground(UIManager.getColor("CheckBox.background"));
+		comboAn.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		panelInformacion.add(comboAn);
 		comboAn.setModel(new DefaultComboBoxModel<String>(
 				new String[] { "Opciones:", "Destino", "Alojamiento", "Excursiones" }));
-
-		panelIzq.add(comboAn);
 		// comboAn.setVisible(false);
 		comboAn.setEnabled(true);
 
-		/*
-		 * nuevo
-		 */
 		comboAn.addItemListener(new ItemListener() {
 
 			@Override
@@ -157,48 +167,46 @@ public class VentanaAdministrador {
 			}
 		});
 
+//botones
+		btnSalir = new JButton("Salir");
+		panelSur.add(btnSalir);
 
-	/*	btnAnadir.addActionListener(new ActionListener() {
+		btnVolver = new JButton("Volver a la pagina principal");
+		panelSur.add(btnVolver);
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				comboAn.setEnabled(true);
-				comboAn.addItemListener(new ItemListener() {
+		/*
+		 * nuevo
+		 */
 
-					@Override
-					public void itemStateChanged(ItemEvent e) {
-						// TODO Auto-generated method stub
-						if (e.getSource() == comboAn) {
-							String item1 = comboAn.getSelectedItem().toString(); // seleciona el primero
-							System.out.println(item1);
-							if ("Destino".equals(item1)) {
-
-								System.out.println("entra al boton");
-								panelPrincipal.removeAll();
-								panelPrincipal.add(pad);
-								panelPrincipal.updateUI();
-							} else if ("Alojamiento".equals(item1)) {
-								panelPrincipal.removeAll();
-								panelPrincipal.add(paa);
-								panelPrincipal.updateUI();
-
-							} else {
-								panelPrincipal.removeAll();
-								panelPrincipal.add(pex);
-								panelPrincipal.updateUI();
-
-							}
-
-						}
-
-					}
-				});
-
-			}
-
-		});*/
-
-		
+		/*
+		 * btnAnadir.addActionListener(new ActionListener() {
+		 * 
+		 * @Override public void actionPerformed(ActionEvent e) {
+		 * comboAn.setEnabled(true); comboAn.addItemListener(new ItemListener() {
+		 * 
+		 * @Override public void itemStateChanged(ItemEvent e) { // TODO Auto-generated
+		 * method stub if (e.getSource() == comboAn) { String item1 =
+		 * comboAn.getSelectedItem().toString(); // seleciona el primero
+		 * System.out.println(item1); if ("Destino".equals(item1)) {
+		 * 
+		 * System.out.println("entra al boton"); panelPrincipal.removeAll();
+		 * panelPrincipal.add(pad); panelPrincipal.updateUI(); } else if
+		 * ("Alojamiento".equals(item1)) { panelPrincipal.removeAll();
+		 * panelPrincipal.add(paa); panelPrincipal.updateUI();
+		 * 
+		 * } else { panelPrincipal.removeAll(); panelPrincipal.add(pex);
+		 * panelPrincipal.updateUI();
+		 * 
+		 * }
+		 * 
+		 * }
+		 * 
+		 * } });
+		 * 
+		 * }
+		 * 
+		 * });
+		 */
 
 		btnVolver.addActionListener(new ActionListener() {
 

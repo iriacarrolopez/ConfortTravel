@@ -14,8 +14,10 @@ import java.util.logging.*;
 
 import clases.Alojamiento;
 import clases.Destino;
+import clases.Excursion;
 import clases.Persona;
 import clases.TipoAlojamiento;
+import clases.TipoExcursion;
 
 public class BD {
 	private static Logger logger = null;
@@ -72,16 +74,20 @@ public class BD {
 		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
 		String sql1 = "CREATE TABLE IF NOT EXISTS Destino (id Integer, nom String)";
 		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id Integer, nombre_comp String, talojamiento String, precio Float, duracion Integer, destino Integer)";
+		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id Integer, nombre String, tipo String,lugar String, precio Float,duracion Integer, numPersonas Integer)";
 		try {
 			Statement st = con.createStatement();
 
 			st.executeUpdate(sql);
 			st.executeUpdate(sql1);
 			st.executeUpdate(sql2);
+			st.executeUpdate(sql3);
 			log(Level.INFO, "Creacion de las tablas", null);
 			System.out.println("--Se ha creado la tabla Destino");
 			System.out.println("--Se ha creado la tabla Persona");
 			System.out.println("--Se ha creado la tabla Alojamiento");
+			System.out.println("--Se ha creado la tabla Excursion");
+			
 			st.close();
 		} catch (SQLException e) {
 			System.err.println(String.format("* Error al crear la BBDD: %s", e.getMessage()));
@@ -473,6 +479,164 @@ public class BD {
 			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
 			System.err.println(String.format("* Error al eliminar el alojamiento de la BBDD: %s", e.getMessage()));
 		}	}
+	/**
+	 * ACTUALIZAR EL PRECIO POR DIA DEL ALOJAMIENTO
+	 * @param id EL IDENTIFICADOR DE ALOJAMIENTO
+	 * @param precio EL PRECIO
+	 * @param duracion LA DURACION(DIAS)
+	 */
+	public static void UpdatePrecioPorDuracion( Integer id,Float precio, Integer duracion) {
+		String sql = "UPDATE Alojamiento SET precio=?, duracion=? WHERE id =?";
+		PreparedStatement pstmt;
+		
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			pstmt = con.prepareStatement(sql);
+			pstmt.setFloat(1,precio);
+			pstmt.setInt(2, duracion);
+			pstmt.setInt(3,id);
+			pstmt.executeUpdate();
+		
+			log(Level.INFO, "Se ha actualiza la sentencia:" + sql, null);
+			pstmt.close();
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al actualizar de base de datos: " + sql, e );
+			System.err.println(String.format("* Error alactualizar  datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+	
+	}
+	
+	/*
+	 * EXCURSION
+	 */
+	public static void insertarExcursion(Connection con, Integer id,String nombre, String tipo, String lugar,Float precio, Integer duracion, Integer numPersonas) {
+		String sql = "INSERT INTO Excursion VALUES(" + id + ",'" + nombre + "','" + tipo + "','" + lugar + "',"+precio+"," +duracion+ ","+numPersonas+");";
+		try {
+			Statement st = con.createStatement();
+
+			log(Level.INFO, "Lanzada actualización a base de datos: " + sql, null);
+			int resultado = st.executeUpdate(sql);
+			log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+			System.out.println("--Se ha insertado a la tabla Excursion");
+
+			st.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+	} 
+	public static void EliminarExcursion(Connection con, int id) {
+		
+			try (Statement st = con.createStatement();) {
+				String sql = "DELETE FROM Excursion WHERE id='" + id + "';";
+				log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+				int result = st.executeUpdate(sql);
+				System.out.println(String.format("- Se ha borrado la excursion con id '" + id + "'", result));
+				log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
+			} catch (SQLException e) {
+				log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
+				System.err.println(String.format("* Error al eliminar la excursion de la BBDD: %s", e.getMessage()));
+			}
+	}
+	/*
+	 * nuevo
+	 */
+	public static Excursion obtenerDatosExcursion(Connection con, Integer id) {
+		String sql = "SELECT * FROM Excursion WHERE dni=" + id+ "";
+		Excursion excursion =null;
+		try {
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if (rs.next()) {
+				Integer d = rs.getInt("id");
+				String n = rs.getString("nombre");
+				TipoExcursion tipo =TipoExcursion.valueOf( rs.getString("tipo"));
+				Destino des = obtenerDestino(con, rs.getInt("id"));
+				//String e = rs.getString("lugar");
+				
+				Float precio = rs.getFloat("precio");
+				Integer dur = rs.getInt("duracion");
+				Integer num = rs.getInt("numPersonas");
+				
+				excursion = new Excursion(d,n,tipo,des,precio,dur,num);
+
+				
+
+			}
+			log(Level.INFO, "Se ha obten: " + excursion, null);
+			System.out.println(String.format("- Obtengo la persona:", excursion));
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
+			System.err.println(
+					String.format("* Error al obtener los  datos de la persona en la BBDD: %s", e.getMessage()));
+
+		}
+		return excursion;
+	}
+	public static ArrayList<Excursion> obtenerExcursiones() {
+		ArrayList<Excursion> listaExcursion = new ArrayList<>();
+		String sql = "SELECT * FROM Excursion WHERE id>=0";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			Excursion ex; 
+			while (rs.next()) {
+				ex = new Excursion();
+				ex.setId(rs.getInt("id"));
+				ex.setNombre(rs.getString("nombre"));
+				ex.setTipo(TipoExcursion.valueOf(rs.getString("tipo")));
+				Destino des = obtenerDestino(con,rs.getInt("id"));
+				ex.setLugar(des);
+				ex.setPrecio(rs.getFloat("precio"));
+				ex.setDuracion(rs.getInt("duracion"));
+				ex.setNumPersonas(rs.getInt("numPersonas"));
+				
+				
+				
+				listaExcursion.add(ex);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d excursiones", listaExcursion.size()));
+			log(Level.INFO, "Se han encontrado las siguientes excursiones:" + listaExcursion.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaExcursion;
+	}
+	/**
+	 * ACTUALIZA EL NUMERO DE PERSONAS DE LAS EXCURSIONES 
+	 * @param con CONEXION CON LA BASE DE DATOS
+	 * @param id EL ID DE LA EXCURSION
+	 * @param num El numero de personas maximo de personas
+	 */
+	public static void UpdateNumeroPersonasEnExcursion( Integer id,Integer numPersonas) {
+		String sql = "UPDATE Excursion SET numPersonas =? WHERE id =?";
+		PreparedStatement pstmt;
+		
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1,numPersonas);
+			pstmt.setInt(2, id);
+			pstmt.executeUpdate();
+		
+			log(Level.INFO, "Se ha actualiza la sentencia:" + sql, null);
+			pstmt.close();
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al actualizar de base de datos: " + sql, e );
+			System.err.println(String.format("* Error alactualizar  datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+	
+	}
+	
+	
 	/*
 	 * LOGGER
 	 */
