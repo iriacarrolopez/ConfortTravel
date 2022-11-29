@@ -12,10 +12,14 @@ import java.io.FileReader;
 
 import java.util.logging.*;
 
+import javax.swing.plaf.multi.MultiPopupMenuUI;
+
 import clases.Alojamiento;
 import clases.Destino;
 import clases.Excursion;
+import clases.Origen;
 import clases.Persona;
+import clases.Reserva;
 import clases.TipoAlojamiento;
 import clases.TipoExcursion;
 
@@ -39,7 +43,7 @@ public class BD {
 			System.err.println(String.format("* Error al cargar el driver de BBDD: %s", ex.getMessage()));
 			ex.printStackTrace();
 		} catch (SQLException e) {
-			log(Level.SEVERE, "Error en conexión de base de datos " + nombreBD, e);
+			log(Level.SEVERE, "Error en conexiï¿½n de base de datos " + nombreBD, e);
 
 		}
 
@@ -47,7 +51,7 @@ public class BD {
 	}
 
 	/**
-	 * Método que cierra la conexión con la base de datos
+	 * Mï¿½todo que cierra la conexiï¿½n con la base de datos
 	 * 
 	 * @param con
 	 */
@@ -66,15 +70,17 @@ public class BD {
 	}
 
 	/**
-	 * Método que crea las tablas en la base de datos
+	 * Mï¿½todo que crea las tablas en la base de datos
 	 * 
-	 * @param con Conexión con la base de datos
+	 * @param con Conexiï¿½n con la base de datos
 	 */
 	public static void crearTablas(Connection con) {
 		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
 		String sql1 = "CREATE TABLE IF NOT EXISTS Destino (id Integer, nom String)";
 		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id Integer, nombre_comp String, talojamiento String, precio Float, duracion Integer, destino Integer)";
 		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id Integer, nombre String, tipo String,lugar String, precio Float,duracion Integer, numPersonas Integer)";
+		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id Integer, origen String, destino String, fechaInicio String, fechaFin String, alquilerTransporte String, tipoAlojamiento String, excursion String, actividades String)";
+		String sql5 = "CREATE TABLE IF NOT EXISTS Origen (id Integer, nom String)";
 		try {
 			Statement st = con.createStatement();
 
@@ -82,6 +88,8 @@ public class BD {
 			st.executeUpdate(sql1);
 			st.executeUpdate(sql2);
 			st.executeUpdate(sql3);
+			st.executeUpdate(sql4);
+			st.executeUpdate(sql5);
 			log(Level.INFO, "Creacion de las tablas", null);
 			System.out.println("--Se ha creado la tabla Destino");
 			System.out.println("--Se ha creado la tabla Persona");
@@ -98,12 +106,12 @@ public class BD {
 
 	/**
 	 * 
-	 * Método que inserta a una persona en la base de datos
+	 * Mï¿½todo que inserta a una persona en la base de datos
 	 * 
-	 * @param con   Conexión con la base de datos
+	 * @param con   Conexiï¿½n con la base de datos
 	 * @param nom   Nombre de la persona
 	 * @param dni   Dni de la persona
-	 * @param cont  Contraseña de la persona
+	 * @param cont  Contraseï¿½a de la persona
 	 * @param email Email de la persona
 	 * @param tipo  Tipo de persona
 	 */
@@ -113,15 +121,15 @@ public class BD {
 		try {
 			Statement st = con.createStatement();
 
-			log(Level.INFO, "Lanzada actualización a base de datos: " + sql, null);
+			log(Level.INFO, "Lanzada actualizaciï¿½n a base de datos: " + sql, null);
 			int resultado = st.executeUpdate(sql);
-			log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+			log(Level.INFO, "Aï¿½adida " + resultado + " fila a base de datos\t" + sql, null);
 			System.out.println("--Se ha insertado a la tabla Persona");
 
 			st.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+			log(Level.SEVERE, "Error en inserciï¿½n de base de datos\t" + sql, e);
 			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
@@ -140,22 +148,22 @@ public class BD {
 			String sql = "INSERT INTO Alojamiento VALUES("+id+",'"+nombre+"','"+tipo+"',"+precio+","+duracion+","+destino+");";
 			try {
 				Statement stmt = con.createStatement();
-				log(Level.INFO,"Lanzada actualización a base de datos: " + sql, null);
+				log(Level.INFO,"Lanzada actualizaciï¿½n a base de datos: " + sql, null);
 				int resultado = stmt.executeUpdate(sql);
-				log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+				log(Level.INFO, "Aï¿½adida " + resultado + " fila a base de datos\t" + sql, null);
 				stmt.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-							log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+							log(Level.SEVERE, "Error en inserciï¿½n de base de datos\t" + sql, e);
 							System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 							e.printStackTrace();
 			}
 		}
 	
 	/**
-	 * Método que busca a una persona en la base de datos
+	 * Mï¿½todo que busca a una persona en la base de datos
 	 * 
-	 * @param con Conexión con la base de datos
+	 * @param con Conexiï¿½n con la base de datos
 	 * @param dni Dni de la persona
 	 * @return Devuelve la persona que buscamos
 	 */
@@ -173,7 +181,7 @@ public class BD {
 			rs.close();
 			st.close();
 		} catch (SQLException e) {
-			log(Level.SEVERE, "Error en búsqueda de base de datos: " + sql, e);
+			log(Level.SEVERE, "Error en bï¿½squeda de base de datos: " + sql, e);
 			System.err.println(String.format("* Error al buscar la perdsona en la BBDD: %s", e.getMessage()));
 
 		}
@@ -181,7 +189,7 @@ public class BD {
 	}
 
 	/**
-	 * Método que obtiene los datos de las personas
+	 * Mï¿½todo que obtiene los datos de las personas
 	 * 
 	 * @return Devuelve una lista con todas las personas
 	 */
@@ -220,7 +228,7 @@ public class BD {
 	
 	
 	/***
-	 * Método que obtiene los destinos
+	 * Mï¿½todo que obtiene los destinos
 	 * 
 	 * @return Devuelve un ArrayList con todos los destinos
 	 */
@@ -255,7 +263,7 @@ public class BD {
 	
 	/***
 	 * 
-	 * Método que obtiene los alojamientos
+	 * Mï¿½todo que obtiene los alojamientos
 	 * 
 	 * @return Devuelve un ArrayList con todos los alojamientos
 	 */
@@ -294,6 +302,66 @@ public class BD {
 		}
 		return listaAlojamiento;
 	}
+	
+	//IRIA
+	public static ArrayList<Reserva> obtenerReservas(){
+		ArrayList<Reserva> listaReservas = new ArrayList<>();
+		String sql = "SELECT * FROM Reserva WHERE id>=0";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			while (rs.next()) {
+				/*al.setId(rs.getInt("id"));
+				al.setNombre_comp(rs.getString("nombre_comp"));
+				al.setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
+				al.setPrecio(rs.getFloat("precio"));
+				al.setDuracion(rs.getInt("duracion"));
+				Destino d = obtenerDestino(con, rs.getInt("id"));
+				al.setDestino(d);
+				
+				r.setId(rs.getInt("id"));
+				Origen o = obtenerOrigen(con, rs.getInt("id"));
+				r.setOrigen(o);
+				Destino d = obtenerDestino(con, rs.getInt("id"));
+				r.setDestino(d);
+				r.setFechaIni(rs.getString("fechaInicio"));
+				r.setFechaFin(rs.getString("fechaFin"));
+				r.setAlquilerTransporte(rs.getString("alquilerTransporte"));
+				r.setTipoAlojamiento(rs.getString("tipoAlojamiento"));
+				r.setExcursion(rs.getString("excursion");
+				r.setActividades(rs.getString("actividades"));*/
+				
+				int dni = rs.getInt("id");
+				Origen o = null;
+				Destino d = null;
+				//Origen o = rs.getString("origen");
+				//Destino d = rs.getString("destino");
+				String fechaIni = rs.getString("fechaInicio");
+				String fechaFin = rs.getString("fechaFin");
+				String alquilerTransporte = rs.getString("alquilerTransporte");
+				String tipoA = rs.getString("tipoAlojamiento");
+				TipoAlojamiento ta = TipoAlojamiento.valueOf(tipoA);
+				String ex = rs.getString("excursiones");
+				TipoExcursion te = TipoExcursion.valueOf(ex);
+				String act = rs.getString("actividades");
+				
+				Reserva r = new Reserva(dni, o, d, fechaIni, fechaFin, alquilerTransporte, ta, te, act);
+				
+				listaReservas.add(r);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d alojamientos", listaReservas.size()));
+			log(Level.INFO, "Se han encontrado los siguientes alojamientos:" + listaReservas.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaReservas;
+	}
+	
 	public static Alojamiento obtenerAlojamientosPorid(Integer id) {
 		
 		String sql = "SELECT * FROM Alojamiento WHERE id="+id+";";
@@ -330,9 +398,9 @@ public class BD {
 		return al;
 	}
 	/**
-	 * Método que obtiene los datos de una persona
+	 * Mï¿½todo que obtiene los datos de una persona
 	 * 
-	 * @param con Conexión con la base de datos
+	 * @param con Conexiï¿½n con la base de datos
 	 * @param dni Dni de la persona
 	 * @return Devuelve la persona
 	 */
@@ -366,9 +434,9 @@ public class BD {
 	
 	/***
 	 * 
-	 * Método que obtiene los datos de un destino
+	 * Mï¿½todo que obtiene los datos de un destino
 	 * 
-	 * @param con Conexión con la base de datos
+	 * @param con Conexiï¿½n con la base de datos
 	 * @param id Id del destino
 	 * @return Devuelve el destino con dicho id
 	 */
@@ -394,6 +462,46 @@ public class BD {
 		}
 		return d;
 	}
+	
+	public static Origen obtenerOrigen(Connection con, int id) {
+		String sql = "SELECT * FROM Origen WHERE id ='" + id + "'";
+		Origen o = null;
+		log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if(rs.next()) {
+				String nom = rs.getString("nom");
+				
+				o = new Origen(id, nom);
+			}log(Level.INFO, "Se ha obtenido: " + o, null);
+			System.out.println(String.format("- Obtengo el destino:", o));
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
+			System.err.println(String.format("*Error al obtener lod datosw del destino en la BBDD: %s", e.getMessage()));
+		}
+		
+		return o;
+	}
+	
+	//IRIA
+	/*public static TipoAlojamiento obtenerTipoAlojamiento(Connection con, int id) {
+		String sql = "SELECT * FROM TipoAlojamiento WHERE id ='" + id + "'";
+		TipoAlojamiento ta = null;
+		
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if(rs.next()) {
+				String nom = rs.getString("nom");
+				
+				//ta = new TipoAlojamiento();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}*/
 
 	/**
 	 * Eliminar la persona
@@ -433,15 +541,15 @@ public class BD {
 			
 			Statement stmt = con.createStatement();
 
-			log(Level.INFO, "Lanzada actualización a base de datos: " + sql, null);
+			log(Level.INFO, "Lanzada actualizaciï¿½n a base de datos: " + sql, null);
 			int resultado = stmt.executeUpdate(sql);
-			log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+			log(Level.INFO, "Aï¿½adida " + resultado + " fila a base de datos\t" + sql, null);
 			System.out.println("--Se ha insertado a la tabla Destino");
 
 			stmt.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+			log(Level.SEVERE, "Error en inserciï¿½n de base de datos\t" + sql, e);
 			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
@@ -514,15 +622,15 @@ public class BD {
 		try {
 			Statement st = con.createStatement();
 
-			log(Level.INFO, "Lanzada actualización a base de datos: " + sql, null);
+			log(Level.INFO, "Lanzada actualizaciï¿½n a base de datos: " + sql, null);
 			int resultado = st.executeUpdate(sql);
-			log(Level.INFO, "Añadida " + resultado + " fila a base de datos\t" + sql, null);
+			log(Level.INFO, "Aï¿½adida " + resultado + " fila a base de datos\t" + sql, null);
 			System.out.println("--Se ha insertado a la tabla Excursion");
 
 			st.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
+			log(Level.SEVERE, "Error en inserciï¿½n de base de datos\t" + sql, e);
 			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
@@ -641,7 +749,7 @@ public class BD {
 	 * LOGGER
 	 */
 
-	// Método local para loggear (si no se asigna un logger externo, se asigna uno
+	// Mï¿½todo local para loggear (si no se asigna un logger externo, se asigna uno
 	// local)
 	private static void log(Level level, String msg, Throwable excepcion) {
 		if (logger == null) { // Logger por defecto local:
