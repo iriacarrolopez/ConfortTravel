@@ -15,7 +15,7 @@ public class OrigenTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		origen = new Origen (7, "Berlin");
+		origen = new Origen (idOrigen, nombreOrigen);
 	}
 
 	@After
@@ -55,7 +55,7 @@ public class OrigenTest {
 
 	@Test
 	public void testToString() {
-		String toString = "Origen [idOrigen=" + idOrigen + ", nombre=" + nombreOrigen + "]"; 
+		String toString = "Origen [id=" + idOrigen + ", nombre=" + nombreOrigen + "]"; 
 		assertEquals(toString, origen.toString());
 	}
 

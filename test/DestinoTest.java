@@ -15,7 +15,7 @@ public class DestinoTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		destino = new Destino (9, "Nueva Delhi");
+		destino = new Destino (idDestino, nombreDestino);
 	}
 
 	@After
@@ -55,7 +55,7 @@ public class DestinoTest {
 
 	@Test
 	public void testToString() {
-		String toString = "Destino [idDestino=" + idDestino + ", nombre=" + nombreDestino + "]"; 
+		String toString = "Destino [id=" + idDestino + ", nombre=" + nombreDestino + "]"; 
 		assertEquals(toString, destino.toString());
 	}
 
