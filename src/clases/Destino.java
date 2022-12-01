@@ -32,7 +32,7 @@ public class Destino {
 
 	@Override
 	public String toString() {
-		return "Destino id=" + id + ", nombre=" + nombre + " ";
+		return "Destino [id=" + id + ", nombre=" + nombre + "]";
 	}
 
 }
