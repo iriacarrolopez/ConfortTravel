@@ -361,7 +361,11 @@ public class BD {
 		}
 		return listaReservas;
 	}
-	
+	/**
+	 * Obtener un alojamiento mediante el id del alojamiento
+	 * @param id del alojamienti
+	 * @return devuelve el alojamiento con la id introducida 
+	 */
 	public static Alojamiento obtenerAlojamientosPorid(Integer id) {
 		
 		String sql = "SELECT * FROM Alojamiento WHERE id="+id+";";
@@ -575,7 +579,11 @@ public class BD {
 			System.err.println(String.format("* Error al eliminar el destino de la BBDD: %s", e.getMessage()));
 		}
 	}
-	
+	/**
+	 * Elimina un alojamiento pasando como parametro el id del alojamiento
+	 * @param con Conexion con la base de datos
+	 * @param id del alojamiento que queremos eliminar
+	 */
 	public static void eliminarAlojamiento(Connection con, int id) {
 		try (Statement st = con.createStatement();) {
 			String sql = "DELETE FROM Alojamiento WHERE id='" + id + "';";
@@ -617,6 +625,17 @@ public class BD {
 	/*
 	 * EXCURSION
 	 */
+	/**
+	 * Insertar una nueva excursion
+	 * @param con Conexion con la base de datos
+	 * @param id de la excursion 
+	 * @param nombre de la excursion 
+	 * @param tipo de  excursion 
+	 * @param lugar donde se realiza la excursion
+	 * @param precio de la excursion
+	 * @param duracion de la excursion 
+	 * @param numPersonas .Maximo numero de personas que pueden participar en la excursion
+	 */
 	public static void insertarExcursion(Connection con, Integer id,String nombre, String tipo, String lugar,Float precio, Integer duracion, Integer numPersonas) {
 		String sql = "INSERT INTO Excursion VALUES(" + id + ",'" + nombre + "','" + tipo + "','" + lugar + "',"+precio+"," +duracion+ ","+numPersonas+");";
 		try {
@@ -635,6 +654,11 @@ public class BD {
 			e.printStackTrace();
 		}
 	} 
+	/**
+	 * Eliminar una excursion ,pasando el id de la excurison
+	 * @param con Conexion con la BBDD
+	 * @param id de la excursion
+	 */
 	public static void EliminarExcursion(Connection con, int id) {
 		
 			try (Statement st = con.createStatement();) {
@@ -650,6 +674,12 @@ public class BD {
 	}
 	/*
 	 * nuevo
+	 */
+	/**
+	 * Obtener los datos de una sola excursion , pasando por parametro el id de ella.
+	 * @param con Conexion con la base de datos
+	 * @param id de la excursion
+	 * @return  devuelve los datos de la excursion del  id pasado por  parametro
 	 */
 	public static Excursion obtenerDatosExcursion(Connection con, Integer id) {
 		String sql = "SELECT * FROM Excursion WHERE dni=" + id+ "";
@@ -684,6 +714,10 @@ public class BD {
 		}
 		return excursion;
 	}
+	/**
+	 * OBTENER TODAS LAS EXCURSIONES
+	 * @return devuelve una lista con todas las excursiones
+	 */
 	public static ArrayList<Excursion> obtenerExcursiones() {
 		ArrayList<Excursion> listaExcursion = new ArrayList<>();
 		String sql = "SELECT * FROM Excursion WHERE id>=0";
