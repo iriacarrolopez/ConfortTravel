@@ -534,6 +534,53 @@ public class BD {
 	 */
 	
 	/**
+	 * METODO QUE INSERTA ORIGEN
+	 * @param con CONEXION
+	 * @param id DEL ORIGEN
+	 * @param nombre DEL ORIGEN
+	 */
+	public static void insertarOrigen(Connection con, Integer id, String nombre) {
+		String sql = "INSERT INTO Origen VALUES(" + id + ",'" + nombre + "');";
+		try {
+			
+			Statement stmt = con.createStatement();
+
+			log(Level.INFO, "Lanzada actualizaci�n a base de datos: " + sql, null);
+			int resultado = stmt.executeUpdate(sql);
+			log(Level.INFO, "A�adida " + resultado + " fila a base de datos\t" + sql, null);
+			System.out.println("--Se ha insertado a la tabla Origen");
+
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			log(Level.SEVERE, "Error en inserci�n de base de datos\t" + sql, e);
+			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+	}
+	
+	/***
+	 * 
+	 * Eliminar un origen
+	 * 
+	 * @param con abrir la conexion con la BBDD
+	 * @param id de la persona 
+	 */
+	
+	public static void eliminarOrigen(Connection con, int id) {
+		try (Statement st = con.createStatement();) {
+			String sql = "DELETE FROM Origen WHERE id='" + id + "';";
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			int result = st.executeUpdate(sql);
+			System.out.println(String.format("- Se ha borrado el origen con id '" + id + "'", result));
+			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
+			System.err.println(String.format("* Error al eliminar el origen de la BBDD: %s", e.getMessage()));
+		}
+	}
+	
+	/**
 	 * METODO QUE INSERTA DESTINO
 	 * @param con CONEXION
 	 * @param id DEL DESTINO
