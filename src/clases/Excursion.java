@@ -7,12 +7,12 @@ public class Excursion {
 	private Integer id;
 	private String nombre;
 	private  TipoExcursion tipo;
-	private Destino lugar;
+	private Ciudad lugar;
 	private Float precio;
 	private Integer numPersonas;
 	private Integer duracion;
 	
-	public Excursion(Integer id,String nombre, TipoExcursion tipo, Destino lugar, Float precio,Integer duracion, Integer numPersonas) {
+	public Excursion(Integer id,String nombre, TipoExcursion tipo, Ciudad lugar, Float precio,Integer duracion, Integer numPersonas) {
 		super();
 		this.id =id;
 		this.nombre = nombre;
@@ -44,14 +44,14 @@ public class Excursion {
 	public void setTipo(TipoExcursion tipo) {
 		this.tipo = tipo;
 	}
-	public Destino getLugar() {
+	public Ciudad getLugar() {
 		return lugar;
 	}
 	public String getLugarNombre() {
 		return lugar.getNombre();
 	}
 
-	public void setLugar(Destino lugar) {
+	public void setLugar(Ciudad lugar) {
 		this.lugar = lugar;
 	}
 	

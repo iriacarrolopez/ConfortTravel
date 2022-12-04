@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import clases.Alojamiento;
-import clases.Destino;
+import clases.Ciudad;
 import clases.TipoAlojamiento;
 
 public class AlojamientoTest {
@@ -14,14 +14,14 @@ public class AlojamientoTest {
 	private String nombre_comp = "RIU";
 	private TipoAlojamiento talojamiento = TipoAlojamiento.HOTEL;
 	private int duracion = 3;
-	private Destino destino;
+	private Ciudad ciudad;
 	private float precio = 85.9f;
 	private int id = 00;
 
 	@Before
 	public void setUp() throws Exception {
-		destino = new Destino(1, "Sevilla");
-		alojamiento = new Alojamiento(id, nombre_comp, talojamiento, precio, duracion, destino);
+		ciudad = new Ciudad(1, "Sevilla");
+		alojamiento = new Alojamiento(id, nombre_comp, talojamiento, precio, duracion, ciudad);
 	}
 
 	@After
@@ -36,7 +36,7 @@ public class AlojamientoTest {
 		assertEquals(talojamiento, alojamiento.getTalojamiento());
 		assertEquals(precio, alojamiento.getPrecio(), 0.0f);
 		assertEquals(duracion, alojamiento.getDuracion());
-		assertEquals(destino, alojamiento.getDestinoNombre());
+		assertEquals(ciudad, alojamiento.getDestinoNombre());
 	}
 
 	@Test
@@ -90,21 +90,21 @@ public class AlojamientoTest {
 
 	@Test
 	public void testGetDestino() {
-		assertEquals(destino, alojamiento.getDestinoNombre());
+		assertEquals(ciudad, alojamiento.getDestinoNombre());
 	}
 
 	@Test
 	public void testSetDestino() {
-		Destino nuevoDestino = new Destino(2, "Barcelona");
+		Ciudad nuevoDestino = new Ciudad(2, "Barcelona");
 
-		alojamiento.setDestino(nuevoDestino);
+		alojamiento.setCiudad(nuevoDestino);
 		assertEquals(nuevoDestino, alojamiento.getDestinoNombre());
 	}
 
 	@Test
 	public void testToString() {
 		String toString = "Alojamiento [nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento + ", duracion="
-				+ duracion + ", destino=" + destino + ", precio=" + precio + "]";
+				+ duracion + ", destino=" + ciudad + ", precio=" + precio + "]";
 		assertEquals(toString, alojamiento.toString());
 	}
 

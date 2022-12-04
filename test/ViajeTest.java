@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import clases.Alojamiento;
-import clases.Destino;
+import clases.Ciudad;
 import clases.TipoAlojamiento;
 import clases.Transporte;
 import clases.Viaje;
@@ -30,7 +30,7 @@ public class ViajeTest {
 	private String nombre_comp = "RIU";
 	private TipoAlojamiento talojamiento = TipoAlojamiento.HOTEL;
 	private int duracionA = 3;
-	private Destino destinoA = new Destino(1, "Sevilla");
+	private Ciudad destinoA = new Ciudad(1, "Sevilla");
 	private float precioA = 85.9f;
 	private int id = 00;
 	private Alojamiento nuevoAl;

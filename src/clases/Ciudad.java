@@ -1,18 +1,19 @@
 package clases;
 
-public class Destino {
+public class Ciudad {
+	
 	private int id;
 	private String nombre;
-
-	public Destino(int id, String nombre) {
+	
+	public Ciudad() {
+		
+	}
+	
+	public Ciudad(int id, String nombre) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 	}
-	public Destino() {
-		
-	}
-
 
 	public int getId() {
 		return id;
@@ -32,7 +33,9 @@ public class Destino {
 
 	@Override
 	public String toString() {
-		return "Destino [id=" + id + ", nombre=" + nombre + "]";
+		return "Ciudad [id=" + id + ", nombre=" + nombre + "]";
 	}
+	
+	
 
 }

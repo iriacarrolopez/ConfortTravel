@@ -26,7 +26,6 @@ import javax.swing.table.TableCellRenderer;
 
 import bd.BD;
 import clases.Alojamiento;
-import clases.Destino;
 import clases.Excursion;
 import clases.TipoAlojamiento;
 import clases.TipoExcursion;
@@ -168,7 +167,7 @@ public class PanelExcursiones extends JPanel {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraAlojamiento = new Vector<String>(
 				Arrays.asList("ID", "NOMBRE", "TIPO EXCUSION", "LUGAR", "PRECIO", "DURACION", "NUMERO DE PERSONAS"));
-		// Se crea el modelo de datos para la tabla de comics sólo con la cabecera
+		// Se crea el modelo de datos para la tabla de comics sï¿½lo con la cabecera
 		modeloExcursion = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraAlojamiento);
 		// Se crea la tabla de comics con el modelo de datos
 		tablaExcursion = new JTable(modeloExcursion);
@@ -222,8 +221,8 @@ public class PanelExcursiones extends JPanel {
 
 	}
 	/*
-	 * // Se modifica el modelo de selección de la tabla para que se pueda
-	 * selecciona // únicamente una fila
+	 * // Se modifica el modelo de selecciï¿½n de la tabla para que se pueda
+	 * selecciona // ï¿½nicamente una fila
 	 * tablaExcursion.setDefaultRenderer(Object.class, new TableCellRenderer() {
 	 * 
 	 * @Override public Component getTableCellRendererComponent(JTable table, Object

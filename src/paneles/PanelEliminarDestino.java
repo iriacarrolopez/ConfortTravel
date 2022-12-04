@@ -1,6 +1,7 @@
 package paneles;
 
 import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -21,7 +22,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
 import bd.BD;
-import clases.Destino;
+import clases.Ciudad;
 
 public class PanelEliminarDestino extends JPanel{
 
@@ -107,10 +108,10 @@ public class PanelEliminarDestino extends JPanel{
 		Connection con = BD.initBD("confortTravel.db");
 		
 		try {
-			ArrayList<Destino> listaDestinos = BD.obtenerDestinos();
+			ArrayList<Ciudad> listaCiudades = BD.obtenerTodasCiudades();
 			eliminarFilaDestinoDeLaTabla();
-			for (Destino d: listaDestinos) {
-				Object fila[] = {d.getId(), d.getNombre()};
+			for (Ciudad c: listaCiudades) {
+				Object fila[] = {c.getId(), c.getNombre()};
 				modeloDestino.addRow(fila);
  			}
 		} catch (Exception e) {

@@ -3,11 +3,11 @@ package clases;
 public class Reserva {
 	
 	private Integer id;
-	private Origen origen;
-	private Destino destino;
+	private Ciudad origen;
+	private Ciudad destino;
 	private String fechaIni;
 	private String fechaFin;
-	private String alquilerTransporte;
+	private TipoAlquiler alquilerTransporte;
 	private TipoAlojamiento tipoAlojamiento;
 	private TipoExcursion excursion;
 	private String actividades;
@@ -16,9 +16,9 @@ public class Reserva {
 		
 	}
 
-	public Reserva(int id, Origen origen, Destino destino, String fechaIni, String fechaFin, String alquilerTransporte,
-			TipoAlojamiento tipoAlojamiento, TipoExcursion excursion, String actividades) {
-		super();
+	public Reserva(Integer id, Ciudad origen, Ciudad destino, String fechaIni, String fechaFin,
+			TipoAlquiler alquilerTransporte, TipoAlojamiento tipoAlojamiento, TipoExcursion excursion,
+			String actividades) {
 		this.id = id;
 		this.origen = origen;
 		this.destino = destino;
@@ -29,105 +29,85 @@ public class Reserva {
 		this.excursion = excursion;
 		this.actividades = actividades;
 	}
-
 
 	public Integer getId() {
 		return id;
 	}
 
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-
-	public Origen getOrigen() {
+	public Ciudad getOrigen() {
 		return origen;
 	}
 
-
-	public void setOrigen(Origen origen) {
+	public void setOrigen(Ciudad origen) {
 		this.origen = origen;
 	}
 
-
-	public Destino getDestino() {
+	public Ciudad getDestino() {
 		return destino;
 	}
 
-
-	public void setDestino(Destino destino) {
+	public void setDestino(Ciudad destino) {
 		this.destino = destino;
 	}
-
 
 	public String getFechaIni() {
 		return fechaIni;
 	}
 
-
 	public void setFechaIni(String fechaIni) {
 		this.fechaIni = fechaIni;
 	}
-
 
 	public String getFechaFin() {
 		return fechaFin;
 	}
 
-
 	public void setFechaFin(String fechaFin) {
 		this.fechaFin = fechaFin;
 	}
 
-
-	public String getAlquilerTransporte() {
+	public TipoAlquiler getAlquilerTransporte() {
 		return alquilerTransporte;
 	}
 
-
-	public void setAlquilerTransporte(String alquilerTransporte) {
+	public void setAlquilerTransporte(TipoAlquiler alquilerTransporte) {
 		this.alquilerTransporte = alquilerTransporte;
 	}
-
 
 	public TipoAlojamiento getTipoAlojamiento() {
 		return tipoAlojamiento;
 	}
 
-
 	public void setTipoAlojamiento(TipoAlojamiento tipoAlojamiento) {
 		this.tipoAlojamiento = tipoAlojamiento;
 	}
-
 
 	public TipoExcursion getExcursion() {
 		return excursion;
 	}
 
-
 	public void setExcursion(TipoExcursion excursion) {
 		this.excursion = excursion;
 	}
-
 
 	public String getActividades() {
 		return actividades;
 	}
 
-
 	public void setActividades(String actividades) {
 		this.actividades = actividades;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Reserva [origen=" + origen + ", destino=" + destino + ", fechaIni=" + fechaIni + ", fechaFin="
-				+ fechaFin + ", alquilerTransporte=" + alquilerTransporte + ", tipoAlojamiento=" + tipoAlojamiento
-				+ ", excursion=" + excursion + ", actividades=" + actividades + "]";
+		return "Reserva [id=" + id + ", origen=" + origen + ", destino=" + destino + ", fechaIni=" + fechaIni
+				+ ", fechaFin=" + fechaFin + ", alquilerTransporte=" + alquilerTransporte + ", tipoAlojamiento="
+				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + "]";
 	}
-	
-	
 
+	
 }

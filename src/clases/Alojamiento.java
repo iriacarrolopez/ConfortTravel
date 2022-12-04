@@ -6,7 +6,7 @@ public class Alojamiento {
 	private String nombre_comp;
 	private TipoAlojamiento talojamiento;
 	private int duracion;
-	private Destino destino;
+	private Ciudad ciudad;
 	private float precio;
 
 	public Alojamiento() {
@@ -15,14 +15,14 @@ public class Alojamiento {
 	/*
 	 * cambiar el destino por una clase destino
 	 */
-	public Alojamiento( int id, String nombre_comp, TipoAlojamiento talojamiento, float precio, int duracion, Destino destino) {
+	public Alojamiento( int id, String nombre_comp, TipoAlojamiento talojamiento, float precio, int duracion, Ciudad ciudad) {
 		super();
 		this.id = id;
 		this.nombre_comp = nombre_comp;
 		this.talojamiento = talojamiento;
 		this.precio = precio;
 		this.duracion = duracion;
-		this.destino = destino;
+		this.ciudad = ciudad;
 	}
 
 	public String getNombre_comp() {
@@ -57,15 +57,15 @@ public class Alojamiento {
 		this.duracion = duracion;
 	}
 public Integer getDestinoID() {
-	return destino.getId();
+	return ciudad.getId();
 }
 
 	public String getDestinoNombre() {
-		return destino.getNombre();
+		return ciudad.getNombre();
 	}
 
-	public void setDestino(Destino destino) {
-		this.destino = destino;
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
 	}
 
 	public Integer getId() {
@@ -76,14 +76,14 @@ public Integer getDestinoID() {
 		this.id = id;
 	}
 
-	public Destino getDestino() {
-		return destino;
+	public Ciudad getCiudad() {
+		return ciudad;
 	}
 
 	@Override
 	public String toString() {
 		return "Alojamiento [id=" + id + ", nombre_comp=" + nombre_comp + ", talojamiento=" + talojamiento
-				+ ", duracion=" + duracion + ", destino=" + destino + ", precio=" + precio + "]";
+				+ ", duracion=" + duracion + ", ciudad=" + ciudad + ", precio=" + precio + "]";
 	}
 
 	

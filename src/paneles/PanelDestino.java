@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 import bd.BD;
 
-import clases.Destino;
+import clases.Ciudad;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -122,7 +122,7 @@ public class PanelDestino extends JPanel {
 	private void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraDestinos = new Vector<String>(Arrays.asList("ID", "NOMBRE"));
-		// Se crea el modelo de datos para la tabla de comics sólo con la cabecera
+		// Se crea el modelo de datos para la tabla de comics sï¿½lo con la cabecera
 		modeloDestino = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraDestinos);
 		// Se crea la tabla de comics con el modelo de datos
 		tableDestino = new JTable(modeloDestino);
@@ -143,8 +143,8 @@ public class PanelDestino extends JPanel {
 		 * 
 		 * 
 		 */
-		// Se modifica el modelo de selección de la tabla para que se pueda selecciona
-		// únicamente una fila
+		// Se modifica el modelo de selecciï¿½n de la tabla para que se pueda selecciona
+		// ï¿½nicamente una fila
 		tableDestino.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 		// nuevo
@@ -162,7 +162,7 @@ public class PanelDestino extends JPanel {
 					boolean hasFocus, int row, int column) {
 				JLabel label = new JLabel(value.toString());
 
-				// Si la celda está seleccionada se asocia un color de fondo y letra
+				// Si la celda estï¿½ seleccionada se asocia un color de fondo y letra
 				if (mouseRow == row) {
 					label.setForeground(Color.RED);
 					label.setBackground(Color.WHITE);// NO LO COGE
@@ -173,24 +173,24 @@ public class PanelDestino extends JPanel {
 				return label;
 			}
 		});
-		// Se define el comportamiento de los eventos de movimiento del ratón: MOVED
+		// Se define el comportamiento de los eventos de movimiento del ratï¿½n: MOVED
 		// DRAGGED
 		tableDestino.addMouseMotionListener(new MouseMotionListener() {
 
 			@Override
 			public void mouseMoved(MouseEvent e) {
-				// Se obtiene la fila/columna sobre la que están el ratón mientras se mueve
+				// Se obtiene la fila/columna sobre la que estï¿½n el ratï¿½n mientras se mueve
 				int row = tableDestino.rowAtPoint(e.getPoint());
 
-				// Cuando el ratón se mueve sobre tabla, actualiza la fila/columna sobre la que
-				// está el ratón
+				// Cuando el ratï¿½n se mueve sobre tabla, actualiza la fila/columna sobre la que
+				// estï¿½ el ratï¿½n
 				// de esta forma se puede modificar el color de renderizado de la celda.
 				mouseRow = row;
 
 				// tengo que volver a repitar la tabla
 
 				// Se fuerza el redibujado de la tabla para modificar el color de la celda sobre
-				// la que está el ratón.
+				// la que estÃ¡ el ratÃ³n
 				tableDestino.repaint();
 
 			}
@@ -209,11 +209,11 @@ public class PanelDestino extends JPanel {
 
 		try {
 
-			ArrayList<Destino> listaDestinos = BD.obtenerDestinos();
+			ArrayList<Ciudad> listaCiudades = BD.obtenerTodasCiudades();
 			while (modeloDestino.getRowCount() > 0)
 				modeloDestino.removeRow(0);
-			for (Destino d : listaDestinos) {
-				Object fila[] = { d.getId(), d.getNombre() };
+			for (Ciudad c : listaCiudades) {
+				Object fila[] = { c.getId(), c.getNombre() };
 				// System.out.println(c.getDni());
 				modeloDestino.addRow(fila);
 			}

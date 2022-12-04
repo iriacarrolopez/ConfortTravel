@@ -12,16 +12,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import clases.Destino;
-import clases.Origen;
+import clases.Ciudad;
 import clases.Reserva;
 import clases.TipoAlojamiento;
+import clases.TipoAlquiler;
 import clases.TipoExcursion;
 
 public class ReservaTest {
 	private Reserva reserva;
-	private Destino destino;
-	private Origen origen;
+	private Ciudad destino;
+	private Ciudad origen;
 	private int IdReserva =1;
 	private String actividad= "Esnorquel";
 	private String alquiler = "coche";
@@ -40,9 +40,9 @@ public class ReservaTest {
 	@Before
 	public void setUp() throws Exception {
 		//pensar el destino
-		destino = new Destino ( 8 , "Estambul");
-		origen = new Origen (5, "Roma");
-		reserva = new Reserva(IdReserva , origen,destino,fechaInic,fechaFin,"coche",TipoAlojamiento.APARTAMENTO,TipoExcursion.ACUATICA,"Esnorquel");
+		destino = new Ciudad ( 8 , "Estambul");
+		origen = new Ciudad (5, "Roma");
+		reserva = new Reserva(IdReserva , origen,destino,fechaInic,fechaFin,TipoAlquiler.BICICLETA,TipoAlojamiento.APARTAMENTO,TipoExcursion.ACUATICA,"Esnorquel");
 			
 	}
 
@@ -89,7 +89,7 @@ public class ReservaTest {
 
 	@Test
 	public void testSetOrigen() {
-		origen = new Origen(9,"Chicago");
+		origen = new Ciudad(9,"Chicago");
 		reserva.setOrigen(origen);
 		assertEquals(origen, reserva.getOrigen());
 		
@@ -104,7 +104,7 @@ public class ReservaTest {
 
 	@Test
 	public void testSetDestino() {
-		destino = new Destino(5,"Buenos_aires");
+		destino = new Ciudad(5,"Buenos_aires");
 		reserva.setDestino(destino);
 		assertEquals(destino, reserva.getDestino());
 	}
@@ -141,7 +141,7 @@ public class ReservaTest {
 
 	@Test
 	public void testSetAlquilerTransporte() {
-		String alq ="bicicleta";
+		TipoAlquiler alq = TipoAlquiler.BICICLETA;
 		reserva.setAlquilerTransporte(alq);
 		assertEquals(alq, reserva.getAlquilerTransporte());
 	}

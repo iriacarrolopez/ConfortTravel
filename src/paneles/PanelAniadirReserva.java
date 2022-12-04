@@ -14,6 +14,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
+import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
 import bd.BD;
@@ -27,7 +28,7 @@ public class PanelAniadirReserva extends JPanel{
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo, panelCC1, panelCC2, panelCC3, panelCC4, panelCA1, panelCA2, panelCA3, panelCA4;
 	private JLabel lblAniadirReserva, lblIDVuelo, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento, lblAlquilerTransporte, lblExcursiones, lblActividades;
 	private JTextField txtIDVuelo, txtFechaIni, txtFechaFin;
-	private JComboBox comboBoxOrigen, comboBoxDestino, comboBoxTipoAlojamiento;
+	private JComboBox comboBoxOrigen, comboBoxDestino, comboBoxTipoAlojamiento, cbAlquilerTransporte, cbExcursion;
 	private JButton btnAceptar;
 	private Connection con;
 	
@@ -48,7 +49,12 @@ public class PanelAniadirReserva extends JPanel{
 		add(panelCentro, BorderLayout.CENTER);
 		panelCentro.setLayout(new GridLayout(3, 1, 0, 0));
 		
-		scrollPane = new JScrollPane();
+		
+		inicializarTabla();
+		scrollPane = new JScrollPane(tablaReserva);
+		scrollPane.setBorder(new TitledBorder("RESERVAS"));
+		tablaReserva.setFillsViewportHeight(true);
+		scrollPane.setViewportView(tablaReserva);
 		panelCentro.add(scrollPane);
 		
 		panelCentroCentro = new JPanel();
@@ -58,7 +64,7 @@ public class PanelAniadirReserva extends JPanel{
 		panelCC1 = new JPanel();
 		panelCentroCentro.add(panelCC1);
 		
-		lblIDVuelo = new JLabel("ID Vuelo:");
+		lblIDVuelo = new JLabel("ID Reserva:");
 		panelCC1.add(lblIDVuelo);
 		
 		txtIDVuelo = new JTextField();
@@ -114,7 +120,12 @@ public class PanelAniadirReserva extends JPanel{
 		panelCC4.add(lblTipoAlojamiento);
 		
 		comboBoxTipoAlojamiento = new JComboBox();
-		//comboBoxTipoAlojamiento.addItem("");
+		comboBoxTipoAlojamiento.addItem("Rural");
+		comboBoxTipoAlojamiento.addItem("Apartamento");
+		comboBoxTipoAlojamiento.addItem("Hotel");
+		comboBoxTipoAlojamiento.addItem("Villa");
+		comboBoxTipoAlojamiento.addItem("Bungalo");
+		comboBoxTipoAlojamiento.addItem("Camping");
 		panelCC4.add(comboBoxTipoAlojamiento);
 		
 		panelCentroAbajo = new JPanel();
@@ -127,11 +138,24 @@ public class PanelAniadirReserva extends JPanel{
 		lblAlquilerTransporte = new JLabel("Alquiler Transporte");
 		panelCA1.add(lblAlquilerTransporte);
 		
+		cbAlquilerTransporte = new JComboBox();
+		cbAlquilerTransporte.addItem("Coche");
+		cbAlquilerTransporte.addItem("Bicicleta");
+		cbAlquilerTransporte.addItem("Patin Eléctrico");
+		cbAlquilerTransporte.addItem("Moto");
+		panelCA1.add(cbAlquilerTransporte);
+		
 		panelCA2 = new JPanel();
 		panelCentroAbajo.add(panelCA2);
 		
 		lblExcursiones = new JLabel("Excursiones");
 		panelCA2.add(lblExcursiones);
+		
+		cbExcursion = new JComboBox();
+		cbExcursion.addItem("Acuatica");
+		cbExcursion.addItem("Senderismo");
+		cbExcursion.addItem("Tour");
+		panelCA2.add(cbExcursion);
 		
 		panelCA3 = new JPanel();
 		panelCentroAbajo.add(panelCA3);
@@ -145,40 +169,31 @@ public class PanelAniadirReserva extends JPanel{
 		btnAceptar = new JButton("Aceptar");
 		panelCA4.add(btnAceptar);
 		
-		Connection con = BD.initBD("confortTravel.db");
+
+		
+		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
-		BD.closeBD(con);
 		cargarModeloTabla();
+		BD.closeBD(con);
+		
 	}
 	
 	public void cargarModeloTabla() {
+		
 		con = BD.initBD("confortTravel.db");
-		try {
-			ArrayList<Reserva> listaReservas = BD.obtenerReservas();
-			while(modeloReserva.getRowCount() > 0) {
-				modeloReserva.removeRow(0);
-			}
-			for(int i=0; i<listaReservas.size();i++) {
-				Object[] fila = new Object[9];
-				fila[0] = listaReservas.get(i).getId();
-				fila[1] = listaReservas.get(i).getOrigen();
-				fila[2] = listaReservas.get(i).getDestino();
-				fila[3] = listaReservas.get(i).getFechaIni();
-				fila[4] = listaReservas.get(i).getFechaFin();
-				fila[5] = listaReservas.get(i).getAlquilerTransporte();
-				fila[6] = listaReservas.get(i).getTipoAlojamiento();
-				fila[7] = listaReservas.get(i).getExcursion();
-				fila[8] = listaReservas.get(i).getActividades();
-				
-				modeloReserva.addRow(fila);
-			}
-			
-		}catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		ArrayList<Reserva> listaReservas = BD.obtenerReservas();
+		while(modeloReserva.getRowCount() > 0) {
+			modeloReserva.removeRow(0);
+		}
+		
+		for(Reserva r: listaReservas) {
+			Object fila[] = {r.getId(), r.getOrigen(), r.getDestino(), r.getFechaIni(), r.getFechaFin(), r.getAlquilerTransporte(), r.getTipoAlojamiento(), r.getExcursion(), r.getActividades()};
+			modeloReserva.addRow(fila);
 		}
 		
 		BD.closeBD(con);
+	
 	}
 	
 	public void inicializarTabla() {
@@ -189,16 +204,12 @@ public class PanelAniadirReserva extends JPanel{
 		
 		cargarModeloTabla();
 		
-		tablaReserva.setRowHeight(30);
-		
-		modeloReserva = new DefaultTableModel() {
+		modeloReserva = new DefaultTableModel(){
+			
 			private static final long serialVersionUID = 1L;
 
-			public boolean isCellEditable(int rowIndex,int columnIndex){return false;}
-		};
-		
-		tablaReserva.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-	}
+				public boolean isCellEditable(int rowIndex,int columnIndex){return false;}
+			};
 
-	
+	}
 }

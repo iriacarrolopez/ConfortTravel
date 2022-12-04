@@ -29,7 +29,6 @@ import javax.swing.table.TableCellRenderer;
 
 import bd.BD;
 import clases.Alojamiento;
-import clases.Destino;
 import clases.TipoAlojamiento;
 
 public class PanelAlojamiento extends JPanel {
@@ -177,7 +176,7 @@ inicializarTabla();
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraAlojamiento = new Vector<String>(
 				Arrays.asList("ID","NOMBRE", "TIPO ALOJAMIENTO", "PRECIO", "DURACION", "DESTINO"));
-		// Se crea el modelo de datos para la tabla de comics sólo con la cabecera
+		// Se crea el modelo de datos para la tabla de comics sï¿½lo con la cabecera
 		modeloAlojamiento = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraAlojamiento);
 		// Se crea la tabla de comics con el modelo de datos
 		tablaAlojamiento = new JTable(modeloAlojamiento);
@@ -201,8 +200,8 @@ inicializarTabla();
 
 					public boolean isCellEditable(int rowIndex,int columnIndex){return false;}
 				};
-		// Se modifica el modelo de selección de la tabla para que se pueda selecciona
-		// únicamente una fila
+		// Se modifica el modelo de selecciï¿½n de la tabla para que se pueda selecciona
+		// ï¿½nicamente una fila
 		tablaAlojamiento.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 	}

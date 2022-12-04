@@ -15,12 +15,12 @@ import java.util.logging.*;
 import javax.swing.plaf.multi.MultiPopupMenuUI;
 
 import clases.Alojamiento;
-import clases.Destino;
 import clases.Excursion;
-import clases.Origen;
+import clases.Ciudad;
 import clases.Persona;
 import clases.Reserva;
 import clases.TipoAlojamiento;
+import clases.TipoAlquiler;
 import clases.TipoExcursion;
 
 public class BD {
@@ -69,6 +69,7 @@ public class BD {
 		}
 	}
 
+	
 	/**
 	 * M�todo que crea las tablas en la base de datos
 	 * 
@@ -76,16 +77,14 @@ public class BD {
 	 */
 	public static void crearTablas(Connection con) {
 		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
-		String sql1 = "CREATE TABLE IF NOT EXISTS Destino (id Integer, nom String)";
 		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id Integer, nombre_comp String, talojamiento String, precio Float, duracion Integer, destino Integer)";
 		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id Integer, nombre String, tipo String,lugar String, precio Float,duracion Integer, numPersonas Integer)";
-		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id Integer, origen String, destino String, fechaInicio String, fechaFin String, alquilerTransporte String, tipoAlojamiento String, excursion String, actividades String)";
-		String sql5 = "CREATE TABLE IF NOT EXISTS Origen (id Integer, nom String)";
+		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id Integer, idOrigen Integer, idDestino Integer, fechaInicio String, fechaFin String, alquilerTransporte String, tipoAlojamiento String, excursion String, actividades String)";
+		String sql5 = "CREATE TABLE IF NOT EXISTS Ciudad (id Integer, nom String)";
 		try {
 			Statement st = con.createStatement();
 
 			st.executeUpdate(sql);
-			st.executeUpdate(sql1);
 			st.executeUpdate(sql2);
 			st.executeUpdate(sql3);
 			st.executeUpdate(sql4);
@@ -225,6 +224,32 @@ public class BD {
 		}
 		return listaPersona;
 	}
+	//IRIA
+	/**
+	 * Método que devuelve el nombre de la ciudad por el id
+	 * @param con conexion con la base de datos
+	 * @param id id de la ciudad
+	 * @return
+	 */
+	public static Ciudad getCiudad(Connection con, int id) {
+		Ciudad c = null;
+		String sql = "SELECT * FROM Ciudad WHERE id="+id;
+		try {
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if (rs.next()) {
+				c = new Ciudad(rs.getInt("id"),rs.getString("nom"));
+			}
+			rs.close();
+			st.close();
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error en b�squeda de base de datos: " + sql, e);
+			System.err.println(String.format("* Error al buscar la perdsona en la BBDD: %s", e.getMessage()));
+
+		}
+		return c;
+	}
 	
 	
 	/***
@@ -233,32 +258,32 @@ public class BD {
 	 * @return Devuelve un ArrayList con todos los destinos
 	 */
 	
-	public static ArrayList<Destino> obtenerDestinos() {
-		ArrayList<Destino> destinos = new ArrayList<>();
-		String sql = "SELECT * FROM destino";
+	public static ArrayList<Ciudad> obtenerTodasCiudades() {
+		ArrayList<Ciudad> ciudades = new ArrayList<>();
+		String sql = "SELECT * FROM Ciudad";
 
 		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
 			log( Level.INFO, "Lanzada consulta a base de datos: " + sql, null );
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 			while (rs.next()) {
-				Destino d = new Destino();
-				d.setId(rs.getInt("id"));
-				d.setNombre(rs.getString("nom"));
-				destinos.add(d);
+				Ciudad c = new Ciudad();
+				c.setId(rs.getInt("id"));
+				c.setNombre(rs.getString("nom"));
+				ciudades.add(c);
 				
 				
 			}
 			rs.close();
-			System.out.println(String.format("- Se han recuperado %d destinos...", destinos.size()));
-			log(Level.INFO, "Se han encontrado los siguientes destinos:" + destinos.size(), null);
+			System.out.println(String.format("- Se han recuperado %d destinos...", ciudades.size()));
+			log(Level.INFO, "Se han encontrado los siguientes destinos:" + ciudades.size(), null);
 		} catch (SQLException e) {
 			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
 			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 
-		return destinos;
+		return ciudades;
 	}
 	
 	/***
@@ -283,12 +308,8 @@ public class BD {
 				al.setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
 				al.setPrecio(rs.getFloat("precio"));
 				al.setDuracion(rs.getInt("duracion"));
-				Destino d = obtenerDestino(con, rs.getInt("id"));
-				al.setDestino(d);
-				
-				
-				
-				
+				Ciudad c = obtenerCiudad(con, rs.getInt("id"));
+				al.setCiudad(c);
 				
 				listaAlojamiento.add(al);
 			}
@@ -313,47 +334,29 @@ public class BD {
 			ResultSet rs = st.executeQuery(sql);
 			
 			while (rs.next()) {
-				/*al.setId(rs.getInt("id"));
-				al.setNombre_comp(rs.getString("nombre_comp"));
-				al.setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
-				al.setPrecio(rs.getFloat("precio"));
-				al.setDuracion(rs.getInt("duracion"));
-				Destino d = obtenerDestino(con, rs.getInt("id"));
-				al.setDestino(d);
-				
-				r.setId(rs.getInt("id"));
-				Origen o = obtenerOrigen(con, rs.getInt("id"));
-				r.setOrigen(o);
-				Destino d = obtenerDestino(con, rs.getInt("id"));
-				r.setDestino(d);
-				r.setFechaIni(rs.getString("fechaInicio"));
-				r.setFechaFin(rs.getString("fechaFin"));
-				r.setAlquilerTransporte(rs.getString("alquilerTransporte"));
-				r.setTipoAlojamiento(rs.getString("tipoAlojamiento"));
-				r.setExcursion(rs.getString("excursion");
-				r.setActividades(rs.getString("actividades"));*/
-				
+			
 				int dni = rs.getInt("id");
-				Origen o = null;
-				Destino d = null;
-				//Origen o = rs.getString("origen");
-				//Destino d = rs.getString("destino");
+				int o = rs.getInt("idOrigen");
+				int d = rs.getInt("idDestino");
+				Ciudad co = getCiudad(con,o);
+				Ciudad cd = getCiudad(con,d);
 				String fechaIni = rs.getString("fechaInicio");
 				String fechaFin = rs.getString("fechaFin");
-				String alquilerTransporte = rs.getString("alquilerTransporte");
+				String at = rs.getString("alquilerTransporte");
+				TipoAlquiler alquilerTransporte = TipoAlquiler.valueOf(at);
 				String tipoA = rs.getString("tipoAlojamiento");
 				TipoAlojamiento ta = TipoAlojamiento.valueOf(tipoA);
-				String ex = rs.getString("excursiones");
+				String ex = rs.getString("excursion");
 				TipoExcursion te = TipoExcursion.valueOf(ex);
 				String act = rs.getString("actividades");
 				
-				Reserva r = new Reserva(dni, o, d, fechaIni, fechaFin, alquilerTransporte, ta, te, act);
+				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, act);
 				
 				listaReservas.add(r);
 			}
 			rs.close();
-			System.out.println(String.format("- Se han recuperado %d alojamientos", listaReservas.size()));
-			log(Level.INFO, "Se han encontrado los siguientes alojamientos:" + listaReservas.size(), null);
+			System.out.println(String.format("- Se han recuperado %d reservas", listaReservas.size()));
+			log(Level.INFO, "Se han encontrado las siguientes reservas:" + listaReservas.size(), null);
 		} catch (SQLException e) {
 			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
 			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
@@ -361,11 +364,7 @@ public class BD {
 		}
 		return listaReservas;
 	}
-	/**
-	 * Obtener un alojamiento mediante el id del alojamiento
-	 * @param id del alojamienti
-	 * @return devuelve el alojamiento con la id introducida 
-	 */
+	
 	public static Alojamiento obtenerAlojamientosPorid(Integer id) {
 		
 		String sql = "SELECT * FROM Alojamiento WHERE id="+id+";";
@@ -382,10 +381,10 @@ public class BD {
 				TipoAlojamiento tipo = TipoAlojamiento.valueOf(rs.getString("talojamiento"));//.setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
 				Float p = rs.getFloat("precio");//.setPrecio(rs.getFloat("precio"));
 				Integer dur= rs.getInt("duracion");//.setDuracion(rs.getInt("duracion"));
-				Destino d = obtenerDestino(con, rs.getInt("id"));
+				Ciudad c = obtenerCiudad(con, rs.getInt("id"));
 			
 				
-				al = new Alojamiento(i,nom,tipo,p,dur,d);
+				al = new Alojamiento(i,nom,tipo,p,dur,c);
 				
 				
 				
@@ -444,10 +443,10 @@ public class BD {
 	 * @param id Id del destino
 	 * @return Devuelve el destino con dicho id
 	 */
-	public static Destino obtenerDestino(Connection con, int id) {
+	public static Ciudad obtenerCiudad(Connection con, int id) {
 		
-		String sql = "SELECT * FROM Destino WHERE id ='" + id + "'";
-		Destino d = null;
+		String sql = "SELECT * FROM Ciudad WHERE id ='" + id + "'";
+		Ciudad c = null;
 		log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
 		try {
 			log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
@@ -456,56 +455,17 @@ public class BD {
 			if (rs.next()) {
 				String nom = rs.getString("nom");
 				
-				d = new Destino(id,nom);
+				c = new Ciudad(id,nom);
 			}
-			log(Level.INFO, "Se ha obtenido: " + d, null);
-			System.out.println(String.format("- Obtengo el destino:", d));
+			log(Level.INFO, "Se ha obtenido: " + c, null);
+			System.out.println(String.format("- Obtengo el destino:", c));
 		} catch (SQLException e) {
 			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
 			System.err.println(String.format("*Error al obtener lod datosw del destino en la BBDD: %s", e.getMessage()));
 		}
-		return d;
-	}
+		return c;
+	}	
 	
-	public static Origen obtenerOrigen(Connection con, int id) {
-		String sql = "SELECT * FROM Origen WHERE id ='" + id + "'";
-		Origen o = null;
-		log(Level.INFO, "Lamzada consulta a base de datos: " + sql, null);
-		try {
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery(sql);
-			if(rs.next()) {
-				String nom = rs.getString("nom");
-				
-				o = new Origen(id, nom);
-			}log(Level.INFO, "Se ha obtenido: " + o, null);
-			System.out.println(String.format("- Obtengo el destino:", o));
-		} catch (SQLException e) {
-			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
-			System.err.println(String.format("*Error al obtener lod datosw del destino en la BBDD: %s", e.getMessage()));
-		}
-		
-		return o;
-	}
-	
-	//IRIA
-	/*public static TipoAlojamiento obtenerTipoAlojamiento(Connection con, int id) {
-		String sql = "SELECT * FROM TipoAlojamiento WHERE id ='" + id + "'";
-		TipoAlojamiento ta = null;
-		
-		try {
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery(sql);
-			if(rs.next()) {
-				String nom = rs.getString("nom");
-				
-				//ta = new TipoAlojamiento();
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}*/
 
 	/**
 	 * Eliminar la persona
@@ -529,56 +489,28 @@ public class BD {
 		}
 
 	}
-	/*
-	 * nuevo
-	 */
 	
 	/**
-	 * METODO QUE INSERTA ORIGEN
-	 * @param con CONEXION
-	 * @param id DEL ORIGEN
-	 * @param nombre DEL ORIGEN
+	 * Método que elimina la reserva por el id introducido
+	 * @param con conexión con la base de datos
+	 * @param id id de la reserva que deseamos eliminar
 	 */
-	public static void insertarOrigen(Connection con, Integer id, String nombre) {
-		String sql = "INSERT INTO Origen VALUES(" + id + ",'" + nombre + "');";
-		try {
+	public static void eliminarReserva(Connection con, int id) {
+		String sql = "DELETE FROM Reserva WHERE id="+id;
+		try (Statement st = con.createStatement();){
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			int result = st.executeUpdate(sql);
 			
-			Statement stmt = con.createStatement();
-
-			log(Level.INFO, "Lanzada actualizaci�n a base de datos: " + sql, null);
-			int resultado = stmt.executeUpdate(sql);
-			log(Level.INFO, "A�adida " + resultado + " fila a base de datos\t" + sql, null);
-			System.out.println("--Se ha insertado a la tabla Origen");
-
-			stmt.close();
+			System.out.println(String.format("- Se han borrado la reserva con el id'" + id+ "'", result));
+			log(Level.INFO, "Se ha eliminiado de la base de datos : " + result, null);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			log(Level.SEVERE, "Error en inserci�n de base de datos\t" + sql, e);
-			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
 	}
-	
-	/***
-	 * 
-	 * Eliminar un origen
-	 * 
-	 * @param con abrir la conexion con la BBDD
-	 * @param id de la persona 
+	/*
+	 * nuevo
 	 */
-	
-	public static void eliminarOrigen(Connection con, int id) {
-		try (Statement st = con.createStatement();) {
-			String sql = "DELETE FROM Origen WHERE id='" + id + "';";
-			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
-			int result = st.executeUpdate(sql);
-			System.out.println(String.format("- Se ha borrado el origen con id '" + id + "'", result));
-			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
-		} catch (SQLException e) {
-			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
-			System.err.println(String.format("* Error al eliminar el origen de la BBDD: %s", e.getMessage()));
-		}
-	}
 	
 	/**
 	 * METODO QUE INSERTA DESTINO
@@ -626,11 +558,7 @@ public class BD {
 			System.err.println(String.format("* Error al eliminar el destino de la BBDD: %s", e.getMessage()));
 		}
 	}
-	/**
-	 * Elimina un alojamiento pasando como parametro el id del alojamiento
-	 * @param con Conexion con la base de datos
-	 * @param id del alojamiento que queremos eliminar
-	 */
+	
 	public static void eliminarAlojamiento(Connection con, int id) {
 		try (Statement st = con.createStatement();) {
 			String sql = "DELETE FROM Alojamiento WHERE id='" + id + "';";
@@ -669,19 +597,12 @@ public class BD {
 	
 	}
 	
+	public static void uptadeReservas(int id, Ciudad corigen, Ciudad cdestino, TipoAlojamiento tAlojamiento) {
+		//String sql = "UPDATE Reserva SET "
+	}
+	
 	/*
 	 * EXCURSION
-	 */
-	/**
-	 * Insertar una nueva excursion
-	 * @param con Conexion con la base de datos
-	 * @param id de la excursion 
-	 * @param nombre de la excursion 
-	 * @param tipo de  excursion 
-	 * @param lugar donde se realiza la excursion
-	 * @param precio de la excursion
-	 * @param duracion de la excursion 
-	 * @param numPersonas .Maximo numero de personas que pueden participar en la excursion
 	 */
 	public static void insertarExcursion(Connection con, Integer id,String nombre, String tipo, String lugar,Float precio, Integer duracion, Integer numPersonas) {
 		String sql = "INSERT INTO Excursion VALUES(" + id + ",'" + nombre + "','" + tipo + "','" + lugar + "',"+precio+"," +duracion+ ","+numPersonas+");";
@@ -701,11 +622,6 @@ public class BD {
 			e.printStackTrace();
 		}
 	} 
-	/**
-	 * Eliminar una excursion ,pasando el id de la excurison
-	 * @param con Conexion con la BBDD
-	 * @param id de la excursion
-	 */
 	public static void EliminarExcursion(Connection con, int id) {
 		
 			try (Statement st = con.createStatement();) {
@@ -722,12 +638,6 @@ public class BD {
 	/*
 	 * nuevo
 	 */
-	/**
-	 * Obtener los datos de una sola excursion , pasando por parametro el id de ella.
-	 * @param con Conexion con la base de datos
-	 * @param id de la excursion
-	 * @return  devuelve los datos de la excursion del  id pasado por  parametro
-	 */
 	public static Excursion obtenerDatosExcursion(Connection con, Integer id) {
 		String sql = "SELECT * FROM Excursion WHERE dni=" + id+ "";
 		Excursion excursion =null;
@@ -739,14 +649,14 @@ public class BD {
 				Integer d = rs.getInt("id");
 				String n = rs.getString("nombre");
 				TipoExcursion tipo =TipoExcursion.valueOf( rs.getString("tipo"));
-				Destino des = obtenerDestino(con, rs.getInt("id"));
+				Ciudad c = obtenerCiudad(con, rs.getInt("id"));
 				//String e = rs.getString("lugar");
 				
 				Float precio = rs.getFloat("precio");
 				Integer dur = rs.getInt("duracion");
 				Integer num = rs.getInt("numPersonas");
 				
-				excursion = new Excursion(d,n,tipo,des,precio,dur,num);
+				excursion = new Excursion(d,n,tipo,c,precio,dur,num);
 
 				
 
@@ -761,10 +671,6 @@ public class BD {
 		}
 		return excursion;
 	}
-	/**
-	 * OBTENER TODAS LAS EXCURSIONES
-	 * @return devuelve una lista con todas las excursiones
-	 */
 	public static ArrayList<Excursion> obtenerExcursiones() {
 		ArrayList<Excursion> listaExcursion = new ArrayList<>();
 		String sql = "SELECT * FROM Excursion WHERE id>=0";
@@ -779,8 +685,8 @@ public class BD {
 				ex.setId(rs.getInt("id"));
 				ex.setNombre(rs.getString("nombre"));
 				ex.setTipo(TipoExcursion.valueOf(rs.getString("tipo")));
-				Destino des = obtenerDestino(con,rs.getInt("id"));
-				ex.setLugar(des);
+				Ciudad c = obtenerCiudad(con,rs.getInt("id"));
+				ex.setLugar(c);
 				ex.setPrecio(rs.getFloat("precio"));
 				ex.setDuracion(rs.getInt("duracion"));
 				ex.setNumPersonas(rs.getInt("numPersonas"));

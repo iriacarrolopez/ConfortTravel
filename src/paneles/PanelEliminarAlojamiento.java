@@ -110,7 +110,7 @@ public class PanelEliminarAlojamiento extends JPanel{
 			ArrayList<Alojamiento> listaAlojamientos = BD.obtenerAlojamientos();
 			eliminarFilaDestinoDeLaTabla();
 			for (Alojamiento a: listaAlojamientos) {
-				Object fila[] = {a.getId(),a.getNombre_comp(),a.getTalojamiento(), a.getDuracion(), a.getDestino(), a.getPrecio()};
+				Object fila[] = {a.getId(),a.getNombre_comp(),a.getTalojamiento(), a.getDuracion(), a.getCiudad(), a.getPrecio()};
 				modeloAlojamiento.addRow(fila);
 			}
 		} catch (Exception e) {
