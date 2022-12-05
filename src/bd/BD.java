@@ -400,6 +400,28 @@ public class BD {
 		}
 		return al;
 	}
+	
+	public static Ciudad obtenerDestinosPorId(Integer id) {
+		String sql = "SELECT * FROM Ciudad WHERE id="+id+";";
+		Ciudad c = null;
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql,null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()) {
+				Integer i = rs.getInt(id);
+				String nom = rs.getString("nom");
+				c = new Ciudad(i,nom);
+			}
+			rs.close();
+			log(Level.INFO, "Se ha encontrado el destino" + c, null);
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
+			System.err.println(String.format("Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return c;
+	}
 	/**
 	 * M�todo que obtiene los datos de una persona
 	 * 
@@ -519,7 +541,7 @@ public class BD {
 	 * @param nombre DEL DESTINO
 	 */
 	public static void insertarDestino(Connection con, Integer id, String nombre) {
-		String sql = "INSERT INTO Destino VALUES(" + id + ",'" + nombre + "');";
+		String sql = "INSERT INTO Ciudad VALUES(" + id + ",'" + nombre + "');";
 		try {
 			
 			Statement stmt = con.createStatement();
@@ -527,7 +549,7 @@ public class BD {
 			log(Level.INFO, "Lanzada actualizaci�n a base de datos: " + sql, null);
 			int resultado = stmt.executeUpdate(sql);
 			log(Level.INFO, "A�adida " + resultado + " fila a base de datos\t" + sql, null);
-			System.out.println("--Se ha insertado a la tabla Destino");
+			System.out.println("--Se ha insertado a la tabla Ciudad");
 
 			stmt.close();
 		} catch (SQLException e) {
@@ -548,7 +570,7 @@ public class BD {
 	
 	public static void eliminarDestino(Connection con, int id) {
 		try (Statement st = con.createStatement();) {
-			String sql = "DELETE FROM Destino WHERE id='" + id + "';";
+			String sql = "DELETE FROM Ciudad WHERE id='" + id + "';";
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			int result = st.executeUpdate(sql);
 			System.out.println(String.format("- Se ha borrado el destino con id '" + id + "'", result));
@@ -595,6 +617,22 @@ public class BD {
 			e.printStackTrace();
 		}
 	
+	}
+	
+	public static void UpdateNombreDestino(Integer id, String nombre) {
+		String sql = "UPDATE Ciudad SET nom=? WHERE id=?";
+		PreparedStatement pstmt;
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1,id);
+			pstmt.setString(2, nombre);
+			log(Level.INFO, "Se ha actualizado la sentencia:" + sql, null);
+			pstmt.close();
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error al actualizar la base de datos: " + sql, e);
+			System.err.println(String.format("*Error al actualizar datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
 	}
 	
 	public static void uptadeReservas(int id, Ciudad corigen, Ciudad cdestino, TipoAlojamiento tAlojamiento) {

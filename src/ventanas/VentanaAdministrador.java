@@ -10,7 +10,6 @@ import javax.swing.border.EmptyBorder;
 import paneles.PanelAlojamiento;
 import paneles.PanelDestino;
 import paneles.PanelExcursiones;
-import paneles.PanelEliminarDestino;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -40,7 +39,6 @@ public class VentanaAdministrador {
 	private JLabel lblInfor, lblTitulo;
 	// paneles
 	public PanelDestino pad;
-	public PanelEliminarDestino ped;
 	public PanelAlojamiento paa;
 	public PanelExcursiones pex;
 	private JPanel panelInformacion;
@@ -102,7 +100,6 @@ public class VentanaAdministrador {
 		panelIzq.setLayout(new GridLayout(2, 0, 0, 0));
 		// inicializacion de paneles
 		pad = new PanelDestino();
-		ped = new PanelEliminarDestino();
 		paa = new PanelAlojamiento();
 		pex = new PanelExcursiones();
 //Etiquetas

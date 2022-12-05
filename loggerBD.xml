@@ -23964,3 +23964,5604 @@
   <message>Conectada base de datos confortTravel.db</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T18:03:28.241978600Z</date>
+  <millis>1670263408241</millis>
+  <nanos>978600</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.271898300Z</date>
+  <millis>1670263408271</millis>
+  <nanos>898300</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.273893Z</date>
+  <millis>1670263408273</millis>
+  <nanos>893000</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.274890400Z</date>
+  <millis>1670263408274</millis>
+  <nanos>890400</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.277883800Z</date>
+  <millis>1670263408277</millis>
+  <nanos>883800</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.278879700Z</date>
+  <millis>1670263408278</millis>
+  <nanos>879700</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.279877Z</date>
+  <millis>1670263408279</millis>
+  <nanos>877000</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.280875700Z</date>
+  <millis>1670263408280</millis>
+  <nanos>875700</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.281871600Z</date>
+  <millis>1670263408281</millis>
+  <nanos>871600</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.282869300Z</date>
+  <millis>1670263408282</millis>
+  <nanos>869300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.450648300Z</date>
+  <millis>1670263408450</millis>
+  <nanos>648300</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.452642700Z</date>
+  <millis>1670263408452</millis>
+  <nanos>642700</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.454638Z</date>
+  <millis>1670263408454</millis>
+  <nanos>638000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.456631900Z</date>
+  <millis>1670263408456</millis>
+  <nanos>631900</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.457629300Z</date>
+  <millis>1670263408457</millis>
+  <nanos>629300</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.458626700Z</date>
+  <millis>1670263408458</millis>
+  <nanos>626700</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.459624100Z</date>
+  <millis>1670263408459</millis>
+  <nanos>624100</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.460621400Z</date>
+  <millis>1670263408460</millis>
+  <nanos>621400</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.460621400Z</date>
+  <millis>1670263408460</millis>
+  <nanos>621400</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.461618500Z</date>
+  <millis>1670263408461</millis>
+  <nanos>618500</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.462617200Z</date>
+  <millis>1670263408462</millis>
+  <nanos>617200</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.463613300Z</date>
+  <millis>1670263408463</millis>
+  <nanos>613300</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.463613300Z</date>
+  <millis>1670263408463</millis>
+  <nanos>613300</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.466606600Z</date>
+  <millis>1670263408466</millis>
+  <nanos>606600</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.468601800Z</date>
+  <millis>1670263408468</millis>
+  <nanos>601800</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.469625800Z</date>
+  <millis>1670263408469</millis>
+  <nanos>625800</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.470594500Z</date>
+  <millis>1670263408470</millis>
+  <nanos>594500</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.470594500Z</date>
+  <millis>1670263408470</millis>
+  <nanos>594500</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.471592Z</date>
+  <millis>1670263408471</millis>
+  <nanos>592000</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.471592Z</date>
+  <millis>1670263408471</millis>
+  <nanos>592000</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.472618100Z</date>
+  <millis>1670263408472</millis>
+  <nanos>618100</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.473586600Z</date>
+  <millis>1670263408473</millis>
+  <nanos>586600</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.474585800Z</date>
+  <millis>1670263408474</millis>
+  <nanos>585800</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.477575800Z</date>
+  <millis>1670263408477</millis>
+  <nanos>575800</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.478573300Z</date>
+  <millis>1670263408478</millis>
+  <nanos>573300</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.480568Z</date>
+  <millis>1670263408480</millis>
+  <nanos>568000</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.481565200Z</date>
+  <millis>1670263408481</millis>
+  <nanos>565200</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.482562600Z</date>
+  <millis>1670263408482</millis>
+  <nanos>562600</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.483560200Z</date>
+  <millis>1670263408483</millis>
+  <nanos>560200</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.483560200Z</date>
+  <millis>1670263408483</millis>
+  <nanos>560200</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.484557300Z</date>
+  <millis>1670263408484</millis>
+  <nanos>557300</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.484557300Z</date>
+  <millis>1670263408484</millis>
+  <nanos>557300</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.485554800Z</date>
+  <millis>1670263408485</millis>
+  <nanos>554800</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.486552500Z</date>
+  <millis>1670263408486</millis>
+  <nanos>552500</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.486552500Z</date>
+  <millis>1670263408486</millis>
+  <nanos>552500</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.487549400Z</date>
+  <millis>1670263408487</millis>
+  <nanos>549400</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.490541600Z</date>
+  <millis>1670263408490</millis>
+  <nanos>541600</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.492536100Z</date>
+  <millis>1670263408492</millis>
+  <nanos>536100</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.493533300Z</date>
+  <millis>1670263408493</millis>
+  <nanos>533300</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.493533300Z</date>
+  <millis>1670263408493</millis>
+  <nanos>533300</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.494530700Z</date>
+  <millis>1670263408494</millis>
+  <nanos>530700</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.495528200Z</date>
+  <millis>1670263408495</millis>
+  <nanos>528200</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.495528200Z</date>
+  <millis>1670263408495</millis>
+  <nanos>528200</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.496525500Z</date>
+  <millis>1670263408496</millis>
+  <nanos>525500</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.496525500Z</date>
+  <millis>1670263408496</millis>
+  <nanos>525500</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.497522800Z</date>
+  <millis>1670263408497</millis>
+  <nanos>522800</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.501511900Z</date>
+  <millis>1670263408501</millis>
+  <nanos>511900</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.503506700Z</date>
+  <millis>1670263408503</millis>
+  <nanos>506700</nanos>
+  <sequence>57</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.504503800Z</date>
+  <millis>1670263408504</millis>
+  <nanos>503800</nanos>
+  <sequence>58</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.505501500Z</date>
+  <millis>1670263408505</millis>
+  <nanos>501500</nanos>
+  <sequence>59</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.507496700Z</date>
+  <millis>1670263408507</millis>
+  <nanos>496700</nanos>
+  <sequence>60</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.508493800Z</date>
+  <millis>1670263408508</millis>
+  <nanos>493800</nanos>
+  <sequence>61</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.509491100Z</date>
+  <millis>1670263408509</millis>
+  <nanos>491100</nanos>
+  <sequence>62</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.509491100Z</date>
+  <millis>1670263408509</millis>
+  <nanos>491100</nanos>
+  <sequence>63</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.510488300Z</date>
+  <millis>1670263408510</millis>
+  <nanos>488300</nanos>
+  <sequence>64</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.510488300Z</date>
+  <millis>1670263408510</millis>
+  <nanos>488300</nanos>
+  <sequence>65</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.511485Z</date>
+  <millis>1670263408511</millis>
+  <nanos>485000</nanos>
+  <sequence>66</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.512482300Z</date>
+  <millis>1670263408512</millis>
+  <nanos>482300</nanos>
+  <sequence>67</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:28.513480400Z</date>
+  <millis>1670263408513</millis>
+  <nanos>480400</nanos>
+  <sequence>68</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T18:03:36.795568700Z</date>
+  <millis>1670263416795</millis>
+  <nanos>568700</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.829478500Z</date>
+  <millis>1670263416829</millis>
+  <nanos>478500</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.832470600Z</date>
+  <millis>1670263416832</millis>
+  <nanos>470600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.834465100Z</date>
+  <millis>1670263416834</millis>
+  <nanos>465100</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.890315700Z</date>
+  <millis>1670263416890</millis>
+  <nanos>315700</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.892311Z</date>
+  <millis>1670263416892</millis>
+  <nanos>311000</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.893307700Z</date>
+  <millis>1670263416893</millis>
+  <nanos>307700</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.895305Z</date>
+  <millis>1670263416895</millis>
+  <nanos>305000</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.896299800Z</date>
+  <millis>1670263416896</millis>
+  <nanos>299800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.898297100Z</date>
+  <millis>1670263416898</millis>
+  <nanos>297100</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.899292100Z</date>
+  <millis>1670263416899</millis>
+  <nanos>292100</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.903281Z</date>
+  <millis>1670263416903</millis>
+  <nanos>281000</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.905275600Z</date>
+  <millis>1670263416905</millis>
+  <nanos>275600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.906272700Z</date>
+  <millis>1670263416906</millis>
+  <nanos>272700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.908268Z</date>
+  <millis>1670263416908</millis>
+  <nanos>268000</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.912256600Z</date>
+  <millis>1670263416912</millis>
+  <nanos>256600</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.913254100Z</date>
+  <millis>1670263416913</millis>
+  <nanos>254100</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.914254500Z</date>
+  <millis>1670263416914</millis>
+  <nanos>254500</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.916246400Z</date>
+  <millis>1670263416916</millis>
+  <nanos>246400</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.917245Z</date>
+  <millis>1670263416917</millis>
+  <nanos>245000</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.919240600Z</date>
+  <millis>1670263416919</millis>
+  <nanos>240600</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.920238300Z</date>
+  <millis>1670263416920</millis>
+  <nanos>238300</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.928217Z</date>
+  <millis>1670263416928</millis>
+  <nanos>217000</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.929214Z</date>
+  <millis>1670263416929</millis>
+  <nanos>214000</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.931209500Z</date>
+  <millis>1670263416931</millis>
+  <nanos>209500</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.932206500Z</date>
+  <millis>1670263416932</millis>
+  <nanos>206500</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.940211400Z</date>
+  <millis>1670263416940</millis>
+  <nanos>211400</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.942179200Z</date>
+  <millis>1670263416942</millis>
+  <nanos>179200</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.943175500Z</date>
+  <millis>1670263416943</millis>
+  <nanos>175500</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.944171400Z</date>
+  <millis>1670263416944</millis>
+  <nanos>171400</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.946167400Z</date>
+  <millis>1670263416946</millis>
+  <nanos>167400</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.947164700Z</date>
+  <millis>1670263416947</millis>
+  <nanos>164700</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.948160800Z</date>
+  <millis>1670263416948</millis>
+  <nanos>160800</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.954474800Z</date>
+  <millis>1670263416954</millis>
+  <nanos>474800</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.956405900Z</date>
+  <millis>1670263416956</millis>
+  <nanos>405900</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.957403900Z</date>
+  <millis>1670263416957</millis>
+  <nanos>403900</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.958401700Z</date>
+  <millis>1670263416958</millis>
+  <nanos>401700</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.967405400Z</date>
+  <millis>1670263416967</millis>
+  <nanos>405400</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.969372500Z</date>
+  <millis>1670263416969</millis>
+  <nanos>372500</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.970368600Z</date>
+  <millis>1670263416970</millis>
+  <nanos>368600</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.972366700Z</date>
+  <millis>1670263416972</millis>
+  <nanos>366700</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.973360900Z</date>
+  <millis>1670263416973</millis>
+  <nanos>360900</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.975355200Z</date>
+  <millis>1670263416975</millis>
+  <nanos>355200</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T18:03:36.976352500Z</date>
+  <millis>1670263416976</millis>
+  <nanos>352500</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:03:15.188998500Z</date>
+  <millis>1670266995188</millis>
+  <nanos>998500</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.214902Z</date>
+  <millis>1670266995214</millis>
+  <nanos>902000</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.216923600Z</date>
+  <millis>1670266995216</millis>
+  <nanos>923600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.217894Z</date>
+  <millis>1670266995217</millis>
+  <nanos>894000</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.299913600Z</date>
+  <millis>1670266995299</millis>
+  <nanos>913600</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.301908800Z</date>
+  <millis>1670266995301</millis>
+  <nanos>908800</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.302906900Z</date>
+  <millis>1670266995302</millis>
+  <nanos>906900</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.303901800Z</date>
+  <millis>1670266995303</millis>
+  <nanos>901800</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.310997600Z</date>
+  <millis>1670266995310</millis>
+  <nanos>997600</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.311994700Z</date>
+  <millis>1670266995311</millis>
+  <nanos>994700</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.312989800Z</date>
+  <millis>1670266995312</millis>
+  <nanos>989800</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.315984400Z</date>
+  <millis>1670266995315</millis>
+  <nanos>984400</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.316982Z</date>
+  <millis>1670266995316</millis>
+  <nanos>982000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.318975400Z</date>
+  <millis>1670266995318</millis>
+  <nanos>975400</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.319973300Z</date>
+  <millis>1670266995319</millis>
+  <nanos>973300</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.321968400Z</date>
+  <millis>1670266995321</millis>
+  <nanos>968400</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.323961700Z</date>
+  <millis>1670266995323</millis>
+  <nanos>961700</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.324960Z</date>
+  <millis>1670266995324</millis>
+  <nanos>960000</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.325955500Z</date>
+  <millis>1670266995325</millis>
+  <nanos>955500</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.326952700Z</date>
+  <millis>1670266995326</millis>
+  <nanos>952700</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.328949900Z</date>
+  <millis>1670266995328</millis>
+  <nanos>949900</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.329946400Z</date>
+  <millis>1670266995329</millis>
+  <nanos>946400</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.336926400Z</date>
+  <millis>1670266995336</millis>
+  <nanos>926400</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.337924Z</date>
+  <millis>1670266995337</millis>
+  <nanos>924000</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.338921700Z</date>
+  <millis>1670266995338</millis>
+  <nanos>921700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.339919Z</date>
+  <millis>1670266995339</millis>
+  <nanos>919000</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.347898600Z</date>
+  <millis>1670266995347</millis>
+  <nanos>898600</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.349892300Z</date>
+  <millis>1670266995349</millis>
+  <nanos>892300</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.349892300Z</date>
+  <millis>1670266995349</millis>
+  <nanos>892300</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.351887Z</date>
+  <millis>1670266995351</millis>
+  <nanos>887000</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.352884200Z</date>
+  <millis>1670266995352</millis>
+  <nanos>884200</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.353881700Z</date>
+  <millis>1670266995353</millis>
+  <nanos>881700</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.354881600Z</date>
+  <millis>1670266995354</millis>
+  <nanos>881600</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.359866100Z</date>
+  <millis>1670266995359</millis>
+  <nanos>866100</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.361863600Z</date>
+  <millis>1670266995361</millis>
+  <nanos>863600</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.362858300Z</date>
+  <millis>1670266995362</millis>
+  <nanos>858300</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.363856800Z</date>
+  <millis>1670266995363</millis>
+  <nanos>856800</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.372013100Z</date>
+  <millis>1670266995372</millis>
+  <nanos>13100</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.373010400Z</date>
+  <millis>1670266995373</millis>
+  <nanos>10400</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.374008300Z</date>
+  <millis>1670266995374</millis>
+  <nanos>8300</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.376003600Z</date>
+  <millis>1670266995376</millis>
+  <nanos>3600</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.377001Z</date>
+  <millis>1670266995377</millis>
+  <nanos>1000</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.377997700Z</date>
+  <millis>1670266995377</millis>
+  <nanos>997700</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:15.378995800Z</date>
+  <millis>1670266995378</millis>
+  <nanos>995800</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.092395700Z</date>
+  <millis>1670267004092</millis>
+  <nanos>395700</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.093393Z</date>
+  <millis>1670267004093</millis>
+  <nanos>393000</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: DELETE FROM Destino WHERE id='6';</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.096384700Z</date>
+  <millis>1670267004096</millis>
+  <nanos>384700</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>SEVERE</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Error la eliminacion de base de datos: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: Destino)</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.098379400Z</date>
+  <millis>1670267004098</millis>
+  <nanos>379400</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.099378900Z</date>
+  <millis>1670267004099</millis>
+  <nanos>378900</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.100376100Z</date>
+  <millis>1670267004100</millis>
+  <nanos>376100</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.101361700Z</date>
+  <millis>1670267004101</millis>
+  <nanos>361700</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:24.102368300Z</date>
+  <millis>1670267004102</millis>
+  <nanos>368300</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.049429Z</date>
+  <millis>1670267031049</millis>
+  <nanos>429000</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.050425300Z</date>
+  <millis>1670267031050</millis>
+  <nanos>425300</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: DELETE FROM Destino WHERE id='3';</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.051394Z</date>
+  <millis>1670267031051</millis>
+  <nanos>394000</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>SEVERE</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Error la eliminacion de base de datos: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: Destino)</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.052392100Z</date>
+  <millis>1670267031052</millis>
+  <nanos>392100</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.053388900Z</date>
+  <millis>1670267031053</millis>
+  <nanos>388900</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.054423100Z</date>
+  <millis>1670267031054</millis>
+  <nanos>423100</nanos>
+  <sequence>57</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.055382300Z</date>
+  <millis>1670267031055</millis>
+  <nanos>382300</nanos>
+  <sequence>58</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:03:51.056380900Z</date>
+  <millis>1670267031056</millis>
+  <nanos>380900</nanos>
+  <sequence>59</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:04:48.370711600Z</date>
+  <millis>1670267088370</millis>
+  <nanos>711600</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.395645600Z</date>
+  <millis>1670267088395</millis>
+  <nanos>645600</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.397640600Z</date>
+  <millis>1670267088397</millis>
+  <nanos>640600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.398638Z</date>
+  <millis>1670267088398</millis>
+  <nanos>638000</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.440920100Z</date>
+  <millis>1670267088440</millis>
+  <nanos>920100</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.442913700Z</date>
+  <millis>1670267088442</millis>
+  <nanos>913700</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.442913700Z</date>
+  <millis>1670267088442</millis>
+  <nanos>913700</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.443883400Z</date>
+  <millis>1670267088443</millis>
+  <nanos>883400</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.444880800Z</date>
+  <millis>1670267088444</millis>
+  <nanos>880800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.445879100Z</date>
+  <millis>1670267088445</millis>
+  <nanos>879100</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.446890700Z</date>
+  <millis>1670267088446</millis>
+  <nanos>890700</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.449869900Z</date>
+  <millis>1670267088449</millis>
+  <nanos>869900</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.450865100Z</date>
+  <millis>1670267088450</millis>
+  <nanos>865100</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.452128100Z</date>
+  <millis>1670267088452</millis>
+  <nanos>128100</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.453129500Z</date>
+  <millis>1670267088453</millis>
+  <nanos>129500</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.456147400Z</date>
+  <millis>1670267088456</millis>
+  <nanos>147400</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.457118Z</date>
+  <millis>1670267088457</millis>
+  <nanos>118000</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.458137800Z</date>
+  <millis>1670267088458</millis>
+  <nanos>137800</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.459111600Z</date>
+  <millis>1670267088459</millis>
+  <nanos>111600</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.460109900Z</date>
+  <millis>1670267088460</millis>
+  <nanos>109900</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.461107400Z</date>
+  <millis>1670267088461</millis>
+  <nanos>107400</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.462105100Z</date>
+  <millis>1670267088462</millis>
+  <nanos>105100</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.468115800Z</date>
+  <millis>1670267088468</millis>
+  <nanos>115800</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.469113800Z</date>
+  <millis>1670267088469</millis>
+  <nanos>113800</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.470083700Z</date>
+  <millis>1670267088470</millis>
+  <nanos>83700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.471108Z</date>
+  <millis>1670267088471</millis>
+  <nanos>108000</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.477094700Z</date>
+  <millis>1670267088477</millis>
+  <nanos>94700</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.479060300Z</date>
+  <millis>1670267088479</millis>
+  <nanos>60300</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.480072900Z</date>
+  <millis>1670267088480</millis>
+  <nanos>72900</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.481057500Z</date>
+  <millis>1670267088481</millis>
+  <nanos>57500</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.483059800Z</date>
+  <millis>1670267088483</millis>
+  <nanos>59800</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.484047100Z</date>
+  <millis>1670267088484</millis>
+  <nanos>47100</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.485044400Z</date>
+  <millis>1670267088485</millis>
+  <nanos>44400</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.490030900Z</date>
+  <millis>1670267088490</millis>
+  <nanos>30900</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.491029400Z</date>
+  <millis>1670267088491</millis>
+  <nanos>29400</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.492026500Z</date>
+  <millis>1670267088492</millis>
+  <nanos>26500</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.493024100Z</date>
+  <millis>1670267088493</millis>
+  <nanos>24100</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.498010100Z</date>
+  <millis>1670267088498</millis>
+  <nanos>10100</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.499007100Z</date>
+  <millis>1670267088499</millis>
+  <nanos>7100</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.500005800Z</date>
+  <millis>1670267088500</millis>
+  <nanos>5800</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.501002100Z</date>
+  <millis>1670267088501</millis>
+  <nanos>2100</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.501999800Z</date>
+  <millis>1670267088501</millis>
+  <nanos>999800</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.502997Z</date>
+  <millis>1670267088502</millis>
+  <nanos>997000</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:48.503994900Z</date>
+  <millis>1670267088503</millis>
+  <nanos>994900</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:53.527263900Z</date>
+  <millis>1670267093527</millis>
+  <nanos>263900</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:53.527263900Z</date>
+  <millis>1670267093527</millis>
+  <nanos>263900</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: DELETE FROM Destino WHERE id='7';</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:53.530230Z</date>
+  <millis>1670267093530</millis>
+  <nanos>230000</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>SEVERE</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Error la eliminacion de base de datos: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: Destino)</message>
+</record>
+<record>
+  <date>2022-12-05T19:04:53.531224Z</date>
+  <millis>1670267093531</millis>
+  <nanos>224000</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:08:01.569934800Z</date>
+  <millis>1670267281569</millis>
+  <nanos>934800</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.596176300Z</date>
+  <millis>1670267281596</millis>
+  <nanos>176300</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.598171Z</date>
+  <millis>1670267281598</millis>
+  <nanos>171000</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.599201400Z</date>
+  <millis>1670267281599</millis>
+  <nanos>201400</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.642102Z</date>
+  <millis>1670267281642</millis>
+  <nanos>102000</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.644097200Z</date>
+  <millis>1670267281644</millis>
+  <nanos>97200</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.645084600Z</date>
+  <millis>1670267281645</millis>
+  <nanos>84600</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.646076800Z</date>
+  <millis>1670267281646</millis>
+  <nanos>76800</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.647087200Z</date>
+  <millis>1670267281647</millis>
+  <nanos>87200</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.648055400Z</date>
+  <millis>1670267281648</millis>
+  <nanos>55400</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.649052400Z</date>
+  <millis>1670267281649</millis>
+  <nanos>52400</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.652044100Z</date>
+  <millis>1670267281652</millis>
+  <nanos>44100</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.653041200Z</date>
+  <millis>1670267281653</millis>
+  <nanos>41200</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.654070700Z</date>
+  <millis>1670267281654</millis>
+  <nanos>70700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.655047300Z</date>
+  <millis>1670267281655</millis>
+  <nanos>47300</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.658027900Z</date>
+  <millis>1670267281658</millis>
+  <nanos>27900</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.659026600Z</date>
+  <millis>1670267281659</millis>
+  <nanos>26600</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.659026600Z</date>
+  <millis>1670267281659</millis>
+  <nanos>26600</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.661020600Z</date>
+  <millis>1670267281661</millis>
+  <nanos>20600</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.661504400Z</date>
+  <millis>1670267281661</millis>
+  <nanos>504400</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.662532500Z</date>
+  <millis>1670267281662</millis>
+  <nanos>532500</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:7</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.663504Z</date>
+  <millis>1670267281663</millis>
+  <nanos>504000</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.669514200Z</date>
+  <millis>1670267281669</millis>
+  <nanos>514200</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.670511Z</date>
+  <millis>1670267281670</millis>
+  <nanos>511000</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.671974800Z</date>
+  <millis>1670267281671</millis>
+  <nanos>974800</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.672509700Z</date>
+  <millis>1670267281672</millis>
+  <nanos>509700</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.678738800Z</date>
+  <millis>1670267281678</millis>
+  <nanos>738800</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.679738900Z</date>
+  <millis>1670267281679</millis>
+  <nanos>738900</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.680765700Z</date>
+  <millis>1670267281680</millis>
+  <nanos>765700</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.681734900Z</date>
+  <millis>1670267281681</millis>
+  <nanos>734900</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.682732300Z</date>
+  <millis>1670267281682</millis>
+  <nanos>732300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.683731400Z</date>
+  <millis>1670267281683</millis>
+  <nanos>731400</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.684728700Z</date>
+  <millis>1670267281684</millis>
+  <nanos>728700</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.688715800Z</date>
+  <millis>1670267281688</millis>
+  <nanos>715800</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.689713900Z</date>
+  <millis>1670267281689</millis>
+  <nanos>713900</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.690711200Z</date>
+  <millis>1670267281690</millis>
+  <nanos>711200</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.691709400Z</date>
+  <millis>1670267281691</millis>
+  <nanos>709400</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.696695100Z</date>
+  <millis>1670267281696</millis>
+  <nanos>695100</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.697692300Z</date>
+  <millis>1670267281697</millis>
+  <nanos>692300</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.698689600Z</date>
+  <millis>1670267281698</millis>
+  <nanos>689600</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.699688300Z</date>
+  <millis>1670267281699</millis>
+  <nanos>688300</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.700685100Z</date>
+  <millis>1670267281700</millis>
+  <nanos>685100</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.702681Z</date>
+  <millis>1670267281702</millis>
+  <nanos>681000</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:01.702681Z</date>
+  <millis>1670267281702</millis>
+  <nanos>681000</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:08.523556Z</date>
+  <millis>1670267288523</millis>
+  <nanos>556000</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:08.524581400Z</date>
+  <millis>1670267288524</millis>
+  <nanos>581400</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: DELETE FROM Ciudad WHERE id='7';</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:08.538114200Z</date>
+  <millis>1670267288538</millis>
+  <nanos>114200</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha eliminado de la base de datos: 1</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:08.539115700Z</date>
+  <millis>1670267288539</millis>
+  <nanos>115700</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:08:24.726605100Z</date>
+  <millis>1670267304726</millis>
+  <nanos>605100</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.754531400Z</date>
+  <millis>1670267304754</millis>
+  <nanos>531400</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.756532200Z</date>
+  <millis>1670267304756</millis>
+  <nanos>532200</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.757497700Z</date>
+  <millis>1670267304757</millis>
+  <nanos>497700</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.803405900Z</date>
+  <millis>1670267304803</millis>
+  <nanos>405900</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.805406200Z</date>
+  <millis>1670267304805</millis>
+  <nanos>406200</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.806398400Z</date>
+  <millis>1670267304806</millis>
+  <nanos>398400</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.807368400Z</date>
+  <millis>1670267304807</millis>
+  <nanos>368400</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.808404100Z</date>
+  <millis>1670267304808</millis>
+  <nanos>404100</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.809362200Z</date>
+  <millis>1670267304809</millis>
+  <nanos>362200</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.810360500Z</date>
+  <millis>1670267304810</millis>
+  <nanos>360500</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.813352200Z</date>
+  <millis>1670267304813</millis>
+  <nanos>352200</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.814350100Z</date>
+  <millis>1670267304814</millis>
+  <nanos>350100</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.815762800Z</date>
+  <millis>1670267304815</millis>
+  <nanos>762800</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.816764900Z</date>
+  <millis>1670267304816</millis>
+  <nanos>764900</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.819754800Z</date>
+  <millis>1670267304819</millis>
+  <nanos>754800</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.820751600Z</date>
+  <millis>1670267304820</millis>
+  <nanos>751600</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.821750600Z</date>
+  <millis>1670267304821</millis>
+  <nanos>750600</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.822746600Z</date>
+  <millis>1670267304822</millis>
+  <nanos>746600</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.823775900Z</date>
+  <millis>1670267304823</millis>
+  <nanos>775900</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.824742400Z</date>
+  <millis>1670267304824</millis>
+  <nanos>742400</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.825767900Z</date>
+  <millis>1670267304825</millis>
+  <nanos>767900</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.831751800Z</date>
+  <millis>1670267304831</millis>
+  <nanos>751800</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.832720500Z</date>
+  <millis>1670267304832</millis>
+  <nanos>720500</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.833752600Z</date>
+  <millis>1670267304833</millis>
+  <nanos>752600</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.834716300Z</date>
+  <millis>1670267304834</millis>
+  <nanos>716300</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.839954900Z</date>
+  <millis>1670267304839</millis>
+  <nanos>954900</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.840980600Z</date>
+  <millis>1670267304840</millis>
+  <nanos>980600</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.841977300Z</date>
+  <millis>1670267304841</millis>
+  <nanos>977300</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.842946700Z</date>
+  <millis>1670267304842</millis>
+  <nanos>946700</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.843944Z</date>
+  <millis>1670267304843</millis>
+  <nanos>944000</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.844970200Z</date>
+  <millis>1670267304844</millis>
+  <nanos>970200</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.845966800Z</date>
+  <millis>1670267304845</millis>
+  <nanos>966800</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.849955800Z</date>
+  <millis>1670267304849</millis>
+  <nanos>955800</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.850811900Z</date>
+  <millis>1670267304850</millis>
+  <nanos>811900</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.851841200Z</date>
+  <millis>1670267304851</millis>
+  <nanos>841200</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.852809800Z</date>
+  <millis>1670267304852</millis>
+  <nanos>809800</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.857754900Z</date>
+  <millis>1670267304857</millis>
+  <nanos>754900</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.858752300Z</date>
+  <millis>1670267304858</millis>
+  <nanos>752300</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.859754700Z</date>
+  <millis>1670267304859</millis>
+  <nanos>754700</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.860717800Z</date>
+  <millis>1670267304860</millis>
+  <nanos>717800</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.861717300Z</date>
+  <millis>1670267304861</millis>
+  <nanos>717300</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.862712900Z</date>
+  <millis>1670267304862</millis>
+  <nanos>712900</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:08:24.863710100Z</date>
+  <millis>1670267304863</millis>
+  <nanos>710100</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:16:30.788990400Z</date>
+  <millis>1670267790788</millis>
+  <nanos>990400</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.817884500Z</date>
+  <millis>1670267790817</millis>
+  <nanos>884500</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.820905Z</date>
+  <millis>1670267790820</millis>
+  <nanos>905000</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.821908700Z</date>
+  <millis>1670267790821</millis>
+  <nanos>908700</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.865258200Z</date>
+  <millis>1670267790865</millis>
+  <nanos>258200</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.867252600Z</date>
+  <millis>1670267790867</millis>
+  <nanos>252600</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.868228400Z</date>
+  <millis>1670267790868</millis>
+  <nanos>228400</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.869220200Z</date>
+  <millis>1670267790869</millis>
+  <nanos>220200</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.870217400Z</date>
+  <millis>1670267790870</millis>
+  <nanos>217400</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.871214900Z</date>
+  <millis>1670267790871</millis>
+  <nanos>214900</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.872211200Z</date>
+  <millis>1670267790872</millis>
+  <nanos>211200</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.874233800Z</date>
+  <millis>1670267790874</millis>
+  <nanos>233800</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.875203600Z</date>
+  <millis>1670267790875</millis>
+  <nanos>203600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.877197900Z</date>
+  <millis>1670267790877</millis>
+  <nanos>197900</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.878195400Z</date>
+  <millis>1670267790878</millis>
+  <nanos>195400</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.881187900Z</date>
+  <millis>1670267790881</millis>
+  <nanos>187900</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.882185100Z</date>
+  <millis>1670267790882</millis>
+  <nanos>185100</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.883182100Z</date>
+  <millis>1670267790883</millis>
+  <nanos>182100</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.885176600Z</date>
+  <millis>1670267790885</millis>
+  <nanos>176600</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.886174100Z</date>
+  <millis>1670267790886</millis>
+  <nanos>174100</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.887171500Z</date>
+  <millis>1670267790887</millis>
+  <nanos>171500</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.888169200Z</date>
+  <millis>1670267790888</millis>
+  <nanos>169200</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.894184400Z</date>
+  <millis>1670267790894</millis>
+  <nanos>184400</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.895178700Z</date>
+  <millis>1670267790895</millis>
+  <nanos>178700</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.896148400Z</date>
+  <millis>1670267790896</millis>
+  <nanos>148400</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.897147Z</date>
+  <millis>1670267790897</millis>
+  <nanos>147000</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.903158200Z</date>
+  <millis>1670267790903</millis>
+  <nanos>158200</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.904155600Z</date>
+  <millis>1670267790904</millis>
+  <nanos>155600</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.905152200Z</date>
+  <millis>1670267790905</millis>
+  <nanos>152200</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.906122600Z</date>
+  <millis>1670267790906</millis>
+  <nanos>122600</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.907120300Z</date>
+  <millis>1670267790907</millis>
+  <nanos>120300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.908150700Z</date>
+  <millis>1670267790908</millis>
+  <nanos>150700</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.909113800Z</date>
+  <millis>1670267790909</millis>
+  <nanos>113800</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.913104900Z</date>
+  <millis>1670267790913</millis>
+  <nanos>104900</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.914362700Z</date>
+  <millis>1670267790914</millis>
+  <nanos>362700</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.915391Z</date>
+  <millis>1670267790915</millis>
+  <nanos>391000</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.916362200Z</date>
+  <millis>1670267790916</millis>
+  <nanos>362200</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.922107400Z</date>
+  <millis>1670267790922</millis>
+  <nanos>107400</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.923110200Z</date>
+  <millis>1670267790923</millis>
+  <nanos>110200</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.924076800Z</date>
+  <millis>1670267790924</millis>
+  <nanos>76800</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.925072600Z</date>
+  <millis>1670267790925</millis>
+  <nanos>72600</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.926069800Z</date>
+  <millis>1670267790926</millis>
+  <nanos>69800</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.927066300Z</date>
+  <millis>1670267790927</millis>
+  <nanos>66300</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:30.928064800Z</date>
+  <millis>1670267790928</millis>
+  <nanos>64800</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:35.448634400Z</date>
+  <millis>1670267795448</millis>
+  <nanos>634400</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.933803400Z</date>
+  <millis>1670267806933</millis>
+  <nanos>803400</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=6;</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.936795700Z</date>
+  <millis>1670267806936</millis>
+  <nanos>795700</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>SEVERE</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Error al obtener de base de datos: SELECT * FROM Ciudad WHERE id=6;</message>
+  <exception>
+    <message>java.sql.SQLException: column 6 out of bounds [1,2]</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkCol</method>
+      <line>91</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>markCol</method>
+      <line>104</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>401</line>
+    </frame>
+    <frame>
+      <class>bd.BD</class>
+      <method>obtenerDestinosPorId</method>
+      <line>412</line>
+    </frame>
+    <frame>
+      <class>paneles.PanelDestino$3</class>
+      <method>actionPerformed</method>
+      <line>137</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton</class>
+      <method>fireActionPerformed</method>
+      <line>1972</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton$Handler</class>
+      <method>actionPerformed</method>
+      <line>2313</line>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>fireActionPerformed</method>
+      <line>405</line>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>setPressed</method>
+      <line>262</line>
+    </frame>
+    <frame>
+      <class>javax.swing.plaf.basic.BasicButtonListener</class>
+      <method>mouseReleased</method>
+      <line>279</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processMouseEvent</method>
+      <line>6626</line>
+    </frame>
+    <frame>
+      <class>javax.swing.JComponent</class>
+      <method>processMouseEvent</method>
+      <line>3389</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processEvent</method>
+      <line>6391</line>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>processEvent</method>
+      <line>2266</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEventImpl</method>
+      <line>5001</line>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+      <line>2324</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+      <line>4833</line>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>retargetMouseEvent</method>
+      <line>4948</line>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>processMouseEvent</method>
+      <line>4575</line>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>dispatchEvent</method>
+      <line>4516</line>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+      <line>2310</line>
+    </frame>
+    <frame>
+      <class>java.awt.Window</class>
+      <method>dispatchEventImpl</method>
+      <line>2780</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+      <line>4833</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+      <line>773</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+      <line>722</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+      <line>716</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+      <line>399</line>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+      <line>86</line>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+      <line>97</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$5</class>
+      <method>run</method>
+      <line>746</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$5</class>
+      <method>run</method>
+      <line>744</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+      <line>399</line>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+      <line>86</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+      <line>743</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+      <line>203</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+      <line>124</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+      <line>113</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+      <line>101</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+      <line>90</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.943777400Z</date>
+  <millis>1670267806943</millis>
+  <nanos>777400</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha actualizado la sentencia:UPDATE Ciudad SET nom=? WHERE id=?</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.945771800Z</date>
+  <millis>1670267806945</millis>
+  <nanos>771800</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.947766500Z</date>
+  <millis>1670267806947</millis>
+  <nanos>766500</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.948764100Z</date>
+  <millis>1670267806948</millis>
+  <nanos>764100</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.949761700Z</date>
+  <millis>1670267806949</millis>
+  <nanos>761700</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.951756900Z</date>
+  <millis>1670267806951</millis>
+  <nanos>756900</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.952753400Z</date>
+  <millis>1670267806952</millis>
+  <nanos>753400</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.953751700Z</date>
+  <millis>1670267806953</millis>
+  <nanos>751700</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.954749200Z</date>
+  <millis>1670267806954</millis>
+  <nanos>749200</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:16:46.955746700Z</date>
+  <millis>1670267806955</millis>
+  <nanos>746700</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:17:00.100261600Z</date>
+  <millis>1670267820100</millis>
+  <nanos>261600</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.130154400Z</date>
+  <millis>1670267820130</millis>
+  <nanos>154400</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.133172700Z</date>
+  <millis>1670267820133</millis>
+  <nanos>172700</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.134144Z</date>
+  <millis>1670267820134</millis>
+  <nanos>144000</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.184038300Z</date>
+  <millis>1670267820184</millis>
+  <nanos>38300</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.186006600Z</date>
+  <millis>1670267820186</millis>
+  <nanos>6600</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.187038500Z</date>
+  <millis>1670267820187</millis>
+  <nanos>38500</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.188000900Z</date>
+  <millis>1670267820188</millis>
+  <nanos>900</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.188999400Z</date>
+  <millis>1670267820188</millis>
+  <nanos>999400</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.190993300Z</date>
+  <millis>1670267820190</millis>
+  <nanos>993300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.190993300Z</date>
+  <millis>1670267820190</millis>
+  <nanos>993300</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.194981Z</date>
+  <millis>1670267820194</millis>
+  <nanos>981000</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.195978600Z</date>
+  <millis>1670267820195</millis>
+  <nanos>978600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.197973Z</date>
+  <millis>1670267820197</millis>
+  <nanos>973000</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.198970500Z</date>
+  <millis>1670267820198</millis>
+  <nanos>970500</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.201963100Z</date>
+  <millis>1670267820201</millis>
+  <nanos>963100</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.202960200Z</date>
+  <millis>1670267820202</millis>
+  <nanos>960200</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.203957300Z</date>
+  <millis>1670267820203</millis>
+  <nanos>957300</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.205952500Z</date>
+  <millis>1670267820205</millis>
+  <nanos>952500</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.206949200Z</date>
+  <millis>1670267820206</millis>
+  <nanos>949200</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.207949600Z</date>
+  <millis>1670267820207</millis>
+  <nanos>949600</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.209944500Z</date>
+  <millis>1670267820209</millis>
+  <nanos>944500</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.216925600Z</date>
+  <millis>1670267820216</millis>
+  <nanos>925600</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.217923300Z</date>
+  <millis>1670267820217</millis>
+  <nanos>923300</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.219918Z</date>
+  <millis>1670267820219</millis>
+  <nanos>918000</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.219918Z</date>
+  <millis>1670267820219</millis>
+  <nanos>918000</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.228921300Z</date>
+  <millis>1670267820228</millis>
+  <nanos>921300</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.229890400Z</date>
+  <millis>1670267820229</millis>
+  <nanos>890400</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.230887200Z</date>
+  <millis>1670267820230</millis>
+  <nanos>887200</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.232883800Z</date>
+  <millis>1670267820232</millis>
+  <nanos>883800</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.233879100Z</date>
+  <millis>1670267820233</millis>
+  <nanos>879100</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.234876600Z</date>
+  <millis>1670267820234</millis>
+  <nanos>876600</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.235873700Z</date>
+  <millis>1670267820235</millis>
+  <nanos>873700</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.240860300Z</date>
+  <millis>1670267820240</millis>
+  <nanos>860300</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.242856200Z</date>
+  <millis>1670267820242</millis>
+  <nanos>856200</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.243853300Z</date>
+  <millis>1670267820243</millis>
+  <nanos>853300</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.244850400Z</date>
+  <millis>1670267820244</millis>
+  <nanos>850400</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.250834700Z</date>
+  <millis>1670267820250</millis>
+  <nanos>834700</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.251832500Z</date>
+  <millis>1670267820251</millis>
+  <nanos>832500</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.252829900Z</date>
+  <millis>1670267820252</millis>
+  <nanos>829900</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.253825500Z</date>
+  <millis>1670267820253</millis>
+  <nanos>825500</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.255821300Z</date>
+  <millis>1670267820255</millis>
+  <nanos>821300</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.256818600Z</date>
+  <millis>1670267820256</millis>
+  <nanos>818600</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:17:00.257817500Z</date>
+  <millis>1670267820257</millis>
+  <nanos>817500</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-05T19:43:54.080382400Z</date>
+  <millis>1670269434080</millis>
+  <nanos>382400</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.107309700Z</date>
+  <millis>1670269434107</millis>
+  <nanos>309700</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.109305700Z</date>
+  <millis>1670269434109</millis>
+  <nanos>305700</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.110303100Z</date>
+  <millis>1670269434110</millis>
+  <nanos>303100</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.155183Z</date>
+  <millis>1670269434155</millis>
+  <nanos>183000</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.157178500Z</date>
+  <millis>1670269434157</millis>
+  <nanos>178500</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.158175500Z</date>
+  <millis>1670269434158</millis>
+  <nanos>175500</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.159173200Z</date>
+  <millis>1670269434159</millis>
+  <nanos>173200</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.160170400Z</date>
+  <millis>1670269434160</millis>
+  <nanos>170400</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.161166300Z</date>
+  <millis>1670269434161</millis>
+  <nanos>166300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:6</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.162165200Z</date>
+  <millis>1670269434162</millis>
+  <nanos>165200</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.166154500Z</date>
+  <millis>1670269434166</millis>
+  <nanos>154500</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.167152Z</date>
+  <millis>1670269434167</millis>
+  <nanos>152000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.168149700Z</date>
+  <millis>1670269434168</millis>
+  <nanos>149700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.169146400Z</date>
+  <millis>1670269434169</millis>
+  <nanos>146400</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.174133Z</date>
+  <millis>1670269434174</millis>
+  <nanos>133000</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.175130500Z</date>
+  <millis>1670269434175</millis>
+  <nanos>130500</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.176128100Z</date>
+  <millis>1670269434176</millis>
+  <nanos>128100</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.177125500Z</date>
+  <millis>1670269434177</millis>
+  <nanos>125500</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.178122700Z</date>
+  <millis>1670269434178</millis>
+  <nanos>122700</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.180116100Z</date>
+  <millis>1670269434180</millis>
+  <nanos>116100</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.180116100Z</date>
+  <millis>1670269434180</millis>
+  <nanos>116100</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.187097300Z</date>
+  <millis>1670269434187</millis>
+  <nanos>97300</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.189092500Z</date>
+  <millis>1670269434189</millis>
+  <nanos>92500</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.190089600Z</date>
+  <millis>1670269434190</millis>
+  <nanos>89600</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.190089600Z</date>
+  <millis>1670269434190</millis>
+  <nanos>89600</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.196074800Z</date>
+  <millis>1670269434196</millis>
+  <nanos>74800</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.198296500Z</date>
+  <millis>1670269434198</millis>
+  <nanos>296500</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.198296500Z</date>
+  <millis>1670269434198</millis>
+  <nanos>296500</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.199292500Z</date>
+  <millis>1670269434199</millis>
+  <nanos>292500</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.200317600Z</date>
+  <millis>1670269434200</millis>
+  <nanos>317600</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.201314500Z</date>
+  <millis>1670269434201</millis>
+  <nanos>314500</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-05T19:43:54.202286200Z</date>
+  <millis>1670269434202</millis>
+  <nanos>286200</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>

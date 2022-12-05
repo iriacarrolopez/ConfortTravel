@@ -25,7 +25,6 @@ import javax.swing.border.EmptyBorder;
 import paneles.PanelAlojamiento;
 import paneles.PanelAniadirReserva;
 import paneles.PanelDestino;
-import paneles.PanelEliminarDestino;
 import paneles.PanelEliminarReserva;
 import paneles.PanelExcursiones;
 import paneles.PanelModificarReserva;

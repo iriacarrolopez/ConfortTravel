@@ -38,11 +38,12 @@ public class PanelDestino extends JPanel {
 	// creaccion de la tabla
 	private static DefaultTableModel modeloDestino;
 	private static JTable tableDestino;
-	private JLabel lblMensaje;
 	private JScrollPane scrollPaneTablaDestino;
 
 	private JPanel panelAbajo;
-	JButton btnInsertarDestino;
+	private JButton btnInsertarDestino;
+	private JButton btnEliminarDestino;
+	private JButton btnModificarDestino;
 
 	private JPanel panelArriba;
 	private JLabel lblInfo;
@@ -63,15 +64,32 @@ public class PanelDestino extends JPanel {
 		panelAbajo = new JPanel();
 		add(panelAbajo, BorderLayout.SOUTH);
 		panelAbajo.setLayout(new GridLayout(0, 2, 0, 0));
-
-		lblMensaje = new JLabel("Introduce el nuevo destino:");
-		panelAbajo.add(lblMensaje);
-
-		JButton btnInsertarDestino = new JButton("NUEVO DESTINO");
+		
+		btnInsertarDestino = new JButton("NUEVO DESTINO");
 		panelAbajo.add(btnInsertarDestino);
-		/*
-		 * nuevo
-		 */
+		
+		btnEliminarDestino = new JButton("ELIMINAR DESTINO");
+		panelAbajo.add(btnEliminarDestino);
+		
+		btnModificarDestino = new JButton("MODIFICAR DESTINO");
+		panelAbajo.add(btnModificarDestino);
+
+		inicializarTabla();
+		// La tabla de destino se inserta en un panel con scroll
+		scrollPaneTablaDestino = new JScrollPane(tableDestino);
+		scrollPaneTablaDestino.setBorder(new TitledBorder("DESTINOS"));
+		tableDestino.setFillsViewportHeight(true);
+		add(scrollPaneTablaDestino, BorderLayout.CENTER);
+		scrollPaneTablaDestino.setViewportView(tableDestino);
+
+		panelArriba = new JPanel();
+		panelArriba.setBackground(new Color(0, 153, 255));
+		add(panelArriba, BorderLayout.NORTH);
+
+		lblInfo = new JLabel("A\u00F1adir Nuevo Destino");
+		lblInfo.setBackground(Color.WHITE);
+		panelArriba.add(lblInfo);
+
 		btnInsertarDestino.addActionListener(new ActionListener() {
 
 			@Override
@@ -95,22 +113,38 @@ public class PanelDestino extends JPanel {
 				BD.closeBD(con);
 			}
 		});
-
-		inicializarTabla();
-		// La tabla de destino se inserta en un panel con scroll
-		scrollPaneTablaDestino = new JScrollPane(tableDestino);
-		scrollPaneTablaDestino.setBorder(new TitledBorder("DESTINOS"));
-		tableDestino.setFillsViewportHeight(true);
-		add(scrollPaneTablaDestino, BorderLayout.CENTER);
-
-		panelArriba = new JPanel();
-		panelArriba.setBackground(new Color(0, 153, 255));
-		add(panelArriba, BorderLayout.NORTH);
-
-		lblInfo = new JLabel("A\u00F1adir Nuevo Destino");
-		lblInfo.setBackground(Color.WHITE);
-		panelArriba.add(lblInfo);
-
+		
+		btnEliminarDestino.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				con = BD.initBD("confortTravel.db");
+				int d = tableDestino.getSelectedRow();
+				int id = (int) tableDestino.getValueAt(d, 0);
+				BD.eliminarDestino(con, id);	
+				BD.closeBD(con);
+			}
+		});
+		
+		btnModificarDestino.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				con = BD.initBD("confortTravel.db");
+				String id = JOptionPane.showInputDialog("Introduce el id del destino a modificar:  ");
+				String nombre = JOptionPane.showInputDialog("Introduce el nombre del destino: ");
+				
+				BD.obtenerDestinosPorId(Integer.parseInt(id));
+				BD.UpdateNombreDestino(Integer.parseInt(id),nombre);
+				cargarModeloTabla();
+				while(modeloDestino.getRowCount()>0) {
+					modeloDestino.removeRow(0);
+				}
+				cargarModeloTabla();
+				BD.closeBD(con);
+			}
+		});
+		
 		// hacemos la conexion con la BD
 		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
