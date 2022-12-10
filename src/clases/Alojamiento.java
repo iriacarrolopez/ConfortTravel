@@ -38,7 +38,7 @@ public class Alojamiento {
 	}
 
 	public void setTalojamiento(TipoAlojamiento talojamiento) {
-		this.talojamiento = TipoAlojamiento.APARTAMENTO;
+		this.talojamiento = talojamiento;
 	}
 
 	public float getPrecio() {
