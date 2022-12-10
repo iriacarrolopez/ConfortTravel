@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import clases.Ciudad;
 import clases.Reserva;
+import clases.TipoActividad;
 import clases.TipoAlojamiento;
 import clases.TipoAlquiler;
 import clases.TipoExcursion;
@@ -42,7 +43,7 @@ public class ReservaTest {
 		//pensar el destino
 		destino = new Ciudad ( 8 , "Estambul");
 		origen = new Ciudad (5, "Roma");
-		reserva = new Reserva(IdReserva , origen,destino,fechaInic,fechaFin,TipoAlquiler.BICICLETA,TipoAlojamiento.APARTAMENTO,TipoExcursion.ACUATICA,"Esnorquel");
+		reserva = new Reserva(IdReserva , origen,destino,fechaInic,fechaFin,TipoAlquiler.BICICLETA,TipoAlojamiento.APARTAMENTO,TipoExcursion.ACUATICA, TipoActividad.SNORKEL);
 			
 	}
 
@@ -58,10 +59,10 @@ public class ReservaTest {
 		assertEquals(destino, reserva.getDestino());
 		assertEquals(fechaInic, reserva.getFechaIni());
 		assertEquals(fechaFin,reserva.getFechaFin());
-		assertEquals(alquiler, reserva.getAlquilerTransporte());
+		assertEquals(TipoAlquiler.BICICLETA, reserva.getAlquilerTransporte());
 		assertEquals(TipoAlojamiento.APARTAMENTO, reserva.getTipoAlojamiento());
 		assertEquals(TipoExcursion.ACUATICA,reserva.getExcursion());
-		assertEquals(actividad, reserva.getActividades());
+		assertEquals(TipoActividad.SNORKEL, reserva.getActividades());
 		
 		;
 	}
@@ -179,7 +180,7 @@ public class ReservaTest {
 
 	@Test
 	public void testSetActividades() {
-		String actN ="submarinismo";
+		TipoActividad actN = TipoActividad.BOLOS;
 		reserva.setActividades(actN);
 		assertEquals(actN, reserva.getActividades());
 	}

@@ -10,7 +10,7 @@ public class Reserva {
 	private TipoAlquiler alquilerTransporte;
 	private TipoAlojamiento tipoAlojamiento;
 	private TipoExcursion excursion;
-	private String actividades;
+	private TipoActividad actividades;
 	
 	public Reserva() {
 		
@@ -18,7 +18,8 @@ public class Reserva {
 
 	public Reserva(Integer id, Ciudad origen, Ciudad destino, String fechaIni, String fechaFin,
 			TipoAlquiler alquilerTransporte, TipoAlojamiento tipoAlojamiento, TipoExcursion excursion,
-			String actividades) {
+			TipoActividad actividades) {
+		super();
 		this.id = id;
 		this.origen = origen;
 		this.destino = destino;
@@ -94,11 +95,11 @@ public class Reserva {
 		this.excursion = excursion;
 	}
 
-	public String getActividades() {
+	public TipoActividad getActividades() {
 		return actividades;
 	}
 
-	public void setActividades(String actividades) {
+	public void setActividades(TipoActividad actividades) {
 		this.actividades = actividades;
 	}
 
@@ -108,6 +109,8 @@ public class Reserva {
 				+ ", fechaFin=" + fechaFin + ", alquilerTransporte=" + alquilerTransporte + ", tipoAlojamiento="
 				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + "]";
 	}
+
+	
 
 	
 }

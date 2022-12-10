@@ -33,7 +33,7 @@ public class Ciudad {
 
 	@Override
 	public String toString() {
-		return "Ciudad [id=" + id + ", nombre=" + nombre + "]";
+		return nombre;
 	}
 	
 	

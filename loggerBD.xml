@@ -29565,3 +29565,2463 @@
   <message>Cierre de base de datos</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-10T12:42:39.165767100Z</date>
+  <millis>1670676159165</millis>
+  <nanos>767100</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.195788500Z</date>
+  <millis>1670676159195</millis>
+  <nanos>788500</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.199789300Z</date>
+  <millis>1670676159199</millis>
+  <nanos>789300</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.202790100Z</date>
+  <millis>1670676159202</millis>
+  <nanos>790100</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.209791Z</date>
+  <millis>1670676159209</millis>
+  <nanos>791000</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.211793600Z</date>
+  <millis>1670676159211</millis>
+  <nanos>793600</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.212792900Z</date>
+  <millis>1670676159212</millis>
+  <nanos>792900</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.214795100Z</date>
+  <millis>1670676159214</millis>
+  <nanos>795100</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.216795600Z</date>
+  <millis>1670676159216</millis>
+  <nanos>795600</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.219795600Z</date>
+  <millis>1670676159219</millis>
+  <nanos>795600</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.502172400Z</date>
+  <millis>1670676159502</millis>
+  <nanos>172400</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.505174500Z</date>
+  <millis>1670676159505</millis>
+  <nanos>174500</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.507174600Z</date>
+  <millis>1670676159507</millis>
+  <nanos>174600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.509173700Z</date>
+  <millis>1670676159509</millis>
+  <nanos>173700</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.511174Z</date>
+  <millis>1670676159511</millis>
+  <nanos>174000</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.512175600Z</date>
+  <millis>1670676159512</millis>
+  <nanos>175600</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.513174800Z</date>
+  <millis>1670676159513</millis>
+  <nanos>174800</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.514175200Z</date>
+  <millis>1670676159514</millis>
+  <nanos>175200</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.515175100Z</date>
+  <millis>1670676159515</millis>
+  <nanos>175100</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.516176900Z</date>
+  <millis>1670676159516</millis>
+  <nanos>176900</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.518176700Z</date>
+  <millis>1670676159518</millis>
+  <nanos>176700</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.519177300Z</date>
+  <millis>1670676159519</millis>
+  <nanos>177300</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.524175300Z</date>
+  <millis>1670676159524</millis>
+  <nanos>175300</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.525175500Z</date>
+  <millis>1670676159525</millis>
+  <nanos>175500</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.527177700Z</date>
+  <millis>1670676159527</millis>
+  <nanos>177700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.528178100Z</date>
+  <millis>1670676159528</millis>
+  <nanos>178100</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.529178300Z</date>
+  <millis>1670676159529</millis>
+  <nanos>178300</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.530178800Z</date>
+  <millis>1670676159530</millis>
+  <nanos>178800</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.531179300Z</date>
+  <millis>1670676159531</millis>
+  <nanos>179300</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.532179700Z</date>
+  <millis>1670676159532</millis>
+  <nanos>179700</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.533178600Z</date>
+  <millis>1670676159533</millis>
+  <nanos>178600</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.534179500Z</date>
+  <millis>1670676159534</millis>
+  <nanos>179500</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.538180900Z</date>
+  <millis>1670676159538</millis>
+  <nanos>180900</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.539180800Z</date>
+  <millis>1670676159539</millis>
+  <nanos>180800</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.541179600Z</date>
+  <millis>1670676159541</millis>
+  <nanos>179600</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.543182100Z</date>
+  <millis>1670676159543</millis>
+  <nanos>182100</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.545182Z</date>
+  <millis>1670676159545</millis>
+  <nanos>182000</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.545182Z</date>
+  <millis>1670676159545</millis>
+  <nanos>182000</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.546182600Z</date>
+  <millis>1670676159546</millis>
+  <nanos>182600</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.547182900Z</date>
+  <millis>1670676159547</millis>
+  <nanos>182900</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.548183Z</date>
+  <millis>1670676159548</millis>
+  <nanos>183000</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.549182500Z</date>
+  <millis>1670676159549</millis>
+  <nanos>182500</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.550185200Z</date>
+  <millis>1670676159550</millis>
+  <nanos>185200</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.551183Z</date>
+  <millis>1670676159551</millis>
+  <nanos>183000</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.552183600Z</date>
+  <millis>1670676159552</millis>
+  <nanos>183600</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.556184400Z</date>
+  <millis>1670676159556</millis>
+  <nanos>184400</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.558184600Z</date>
+  <millis>1670676159558</millis>
+  <nanos>184600</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.560185100Z</date>
+  <millis>1670676159560</millis>
+  <nanos>185100</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.560185100Z</date>
+  <millis>1670676159560</millis>
+  <nanos>185100</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.562186600Z</date>
+  <millis>1670676159562</millis>
+  <nanos>186600</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.562186600Z</date>
+  <millis>1670676159562</millis>
+  <nanos>186600</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.563186300Z</date>
+  <millis>1670676159563</millis>
+  <nanos>186300</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.564186600Z</date>
+  <millis>1670676159564</millis>
+  <nanos>186600</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.565187500Z</date>
+  <millis>1670676159565</millis>
+  <nanos>187500</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.566187500Z</date>
+  <millis>1670676159566</millis>
+  <nanos>187500</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.570189Z</date>
+  <millis>1670676159570</millis>
+  <nanos>189000</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.571186300Z</date>
+  <millis>1670676159571</millis>
+  <nanos>186300</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.573187800Z</date>
+  <millis>1670676159573</millis>
+  <nanos>187800</nanos>
+  <sequence>57</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.575187100Z</date>
+  <millis>1670676159575</millis>
+  <nanos>187100</nanos>
+  <sequence>58</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.577188900Z</date>
+  <millis>1670676159577</millis>
+  <nanos>188900</nanos>
+  <sequence>59</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.577188900Z</date>
+  <millis>1670676159577</millis>
+  <nanos>188900</nanos>
+  <sequence>60</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.578189900Z</date>
+  <millis>1670676159578</millis>
+  <nanos>189900</nanos>
+  <sequence>61</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.579190500Z</date>
+  <millis>1670676159579</millis>
+  <nanos>190500</nanos>
+  <sequence>62</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.580190200Z</date>
+  <millis>1670676159580</millis>
+  <nanos>190200</nanos>
+  <sequence>63</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.581191100Z</date>
+  <millis>1670676159581</millis>
+  <nanos>191100</nanos>
+  <sequence>64</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.581191100Z</date>
+  <millis>1670676159581</millis>
+  <nanos>191100</nanos>
+  <sequence>65</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:42:39.582190400Z</date>
+  <millis>1670676159582</millis>
+  <nanos>190400</nanos>
+  <sequence>66</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-10T12:43:02.818836200Z</date>
+  <millis>1670676182818</millis>
+  <nanos>836200</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.856846200Z</date>
+  <millis>1670676182856</millis>
+  <nanos>846200</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.860846500Z</date>
+  <millis>1670676182860</millis>
+  <nanos>846500</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.867847600Z</date>
+  <millis>1670676182867</millis>
+  <nanos>847600</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.872849700Z</date>
+  <millis>1670676182872</millis>
+  <nanos>849700</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.874847600Z</date>
+  <millis>1670676182874</millis>
+  <nanos>847600</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.875849200Z</date>
+  <millis>1670676182875</millis>
+  <nanos>849200</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.877849100Z</date>
+  <millis>1670676182877</millis>
+  <nanos>849100</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.879849700Z</date>
+  <millis>1670676182879</millis>
+  <nanos>849700</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:02.881850700Z</date>
+  <millis>1670676182881</millis>
+  <nanos>850700</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.246950100Z</date>
+  <millis>1670676183246</millis>
+  <nanos>950100</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.251932200Z</date>
+  <millis>1670676183251</millis>
+  <nanos>932200</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.254934800Z</date>
+  <millis>1670676183254</millis>
+  <nanos>934800</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.256944800Z</date>
+  <millis>1670676183256</millis>
+  <nanos>944800</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.258935200Z</date>
+  <millis>1670676183258</millis>
+  <nanos>935200</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.260945700Z</date>
+  <millis>1670676183260</millis>
+  <nanos>945700</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.261934700Z</date>
+  <millis>1670676183261</millis>
+  <nanos>934700</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.262935800Z</date>
+  <millis>1670676183262</millis>
+  <nanos>935800</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.263946400Z</date>
+  <millis>1670676183263</millis>
+  <nanos>946400</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.265936Z</date>
+  <millis>1670676183265</millis>
+  <nanos>936000</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.267936900Z</date>
+  <millis>1670676183267</millis>
+  <nanos>936900</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.270939100Z</date>
+  <millis>1670676183270</millis>
+  <nanos>939100</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.275951800Z</date>
+  <millis>1670676183275</millis>
+  <nanos>951800</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.278940100Z</date>
+  <millis>1670676183278</millis>
+  <nanos>940100</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.280950700Z</date>
+  <millis>1670676183280</millis>
+  <nanos>950700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.281939200Z</date>
+  <millis>1670676183281</millis>
+  <nanos>939200</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.282939500Z</date>
+  <millis>1670676183282</millis>
+  <nanos>939500</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.283940700Z</date>
+  <millis>1670676183283</millis>
+  <nanos>940700</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.285941800Z</date>
+  <millis>1670676183285</millis>
+  <nanos>941800</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.286941800Z</date>
+  <millis>1670676183286</millis>
+  <nanos>941800</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.288942500Z</date>
+  <millis>1670676183288</millis>
+  <nanos>942500</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.290943400Z</date>
+  <millis>1670676183290</millis>
+  <nanos>943400</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.295944400Z</date>
+  <millis>1670676183295</millis>
+  <nanos>944400</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.297942700Z</date>
+  <millis>1670676183297</millis>
+  <nanos>942700</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.300946Z</date>
+  <millis>1670676183300</millis>
+  <nanos>946000</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.303947400Z</date>
+  <millis>1670676183303</millis>
+  <nanos>947400</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.305944500Z</date>
+  <millis>1670676183305</millis>
+  <nanos>944500</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.307948500Z</date>
+  <millis>1670676183307</millis>
+  <nanos>948500</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.308945500Z</date>
+  <millis>1670676183308</millis>
+  <nanos>945500</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.309945600Z</date>
+  <millis>1670676183309</millis>
+  <nanos>945600</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.310946500Z</date>
+  <millis>1670676183310</millis>
+  <nanos>946500</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.311946300Z</date>
+  <millis>1670676183311</millis>
+  <nanos>946300</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.313946Z</date>
+  <millis>1670676183313</millis>
+  <nanos>946000</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.314946900Z</date>
+  <millis>1670676183314</millis>
+  <nanos>946900</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.315946500Z</date>
+  <millis>1670676183315</millis>
+  <nanos>946500</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.320947800Z</date>
+  <millis>1670676183320</millis>
+  <nanos>947800</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.322948700Z</date>
+  <millis>1670676183322</millis>
+  <nanos>948700</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.324948600Z</date>
+  <millis>1670676183324</millis>
+  <nanos>948600</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.325948900Z</date>
+  <millis>1670676183325</millis>
+  <nanos>948900</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.327949900Z</date>
+  <millis>1670676183327</millis>
+  <nanos>949900</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.328950Z</date>
+  <millis>1670676183328</millis>
+  <nanos>950000</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.329950600Z</date>
+  <millis>1670676183329</millis>
+  <nanos>950600</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.330949800Z</date>
+  <millis>1670676183330</millis>
+  <nanos>949800</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.332950300Z</date>
+  <millis>1670676183332</millis>
+  <nanos>950300</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.333950500Z</date>
+  <millis>1670676183333</millis>
+  <nanos>950500</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.340965100Z</date>
+  <millis>1670676183340</millis>
+  <nanos>965100</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.342965300Z</date>
+  <millis>1670676183342</millis>
+  <nanos>965300</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.345981200Z</date>
+  <millis>1670676183345</millis>
+  <nanos>981200</nanos>
+  <sequence>57</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.348956400Z</date>
+  <millis>1670676183348</millis>
+  <nanos>956400</nanos>
+  <sequence>58</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.350956800Z</date>
+  <millis>1670676183350</millis>
+  <nanos>956800</nanos>
+  <sequence>59</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.351957300Z</date>
+  <millis>1670676183351</millis>
+  <nanos>957300</nanos>
+  <sequence>60</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.353956Z</date>
+  <millis>1670676183353</millis>
+  <nanos>956000</nanos>
+  <sequence>61</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.353956Z</date>
+  <millis>1670676183353</millis>
+  <nanos>956000</nanos>
+  <sequence>62</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.354956300Z</date>
+  <millis>1670676183354</millis>
+  <nanos>956300</nanos>
+  <sequence>63</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.356957300Z</date>
+  <millis>1670676183356</millis>
+  <nanos>957300</nanos>
+  <sequence>64</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.357958Z</date>
+  <millis>1670676183357</millis>
+  <nanos>958000</nanos>
+  <sequence>65</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:03.358960Z</date>
+  <millis>1670676183358</millis>
+  <nanos>960000</nanos>
+  <sequence>66</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:10.411879100Z</date>
+  <millis>1670676190411</millis>
+  <nanos>879100</nanos>
+  <sequence>67</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:25.122842600Z</date>
+  <millis>1670676205122</millis>
+  <nanos>842600</nanos>
+  <sequence>68</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha actualiza la sentencia:UPDATE Reserva SET alquilerTransporte=?, tipoAlojamiento=?, excursion=?, actividades=? WHERE id=?</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:26.589937900Z</date>
+  <millis>1670676206589</millis>
+  <nanos>937900</nanos>
+  <sequence>69</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-10T12:43:32.229743100Z</date>
+  <millis>1670676212229</millis>
+  <nanos>743100</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.273738700Z</date>
+  <millis>1670676212273</millis>
+  <nanos>738700</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.276737800Z</date>
+  <millis>1670676212276</millis>
+  <nanos>737800</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.279746800Z</date>
+  <millis>1670676212279</millis>
+  <nanos>746800</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.287765300Z</date>
+  <millis>1670676212287</millis>
+  <nanos>765300</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.288762400Z</date>
+  <millis>1670676212288</millis>
+  <nanos>762400</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.290761300Z</date>
+  <millis>1670676212290</millis>
+  <nanos>761300</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.291761100Z</date>
+  <millis>1670676212291</millis>
+  <nanos>761100</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.293747300Z</date>
+  <millis>1670676212293</millis>
+  <nanos>747300</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.295753900Z</date>
+  <millis>1670676212295</millis>
+  <nanos>753900</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.607129500Z</date>
+  <millis>1670676212607</millis>
+  <nanos>129500</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.611129700Z</date>
+  <millis>1670676212611</millis>
+  <nanos>129700</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.614142Z</date>
+  <millis>1670676212614</millis>
+  <nanos>142000</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.616131100Z</date>
+  <millis>1670676212616</millis>
+  <nanos>131100</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.618133Z</date>
+  <millis>1670676212618</millis>
+  <nanos>133000</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.620136Z</date>
+  <millis>1670676212620</millis>
+  <nanos>136000</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.621133200Z</date>
+  <millis>1670676212621</millis>
+  <nanos>133200</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.622134200Z</date>
+  <millis>1670676212622</millis>
+  <nanos>134200</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.623144400Z</date>
+  <millis>1670676212623</millis>
+  <nanos>144400</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.625133700Z</date>
+  <millis>1670676212625</millis>
+  <nanos>133700</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.626134Z</date>
+  <millis>1670676212626</millis>
+  <nanos>134000</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.628134300Z</date>
+  <millis>1670676212628</millis>
+  <nanos>134300</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.634135300Z</date>
+  <millis>1670676212634</millis>
+  <nanos>135300</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.637136300Z</date>
+  <millis>1670676212637</millis>
+  <nanos>136300</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.639147600Z</date>
+  <millis>1670676212639</millis>
+  <nanos>147600</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.640136900Z</date>
+  <millis>1670676212640</millis>
+  <nanos>136900</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.641136800Z</date>
+  <millis>1670676212641</millis>
+  <nanos>136800</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.642137100Z</date>
+  <millis>1670676212642</millis>
+  <nanos>137100</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.643137500Z</date>
+  <millis>1670676212643</millis>
+  <nanos>137500</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.645148900Z</date>
+  <millis>1670676212645</millis>
+  <nanos>148900</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.646149300Z</date>
+  <millis>1670676212646</millis>
+  <nanos>149300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.647149700Z</date>
+  <millis>1670676212647</millis>
+  <nanos>149700</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.653140300Z</date>
+  <millis>1670676212653</millis>
+  <nanos>140300</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.655141600Z</date>
+  <millis>1670676212655</millis>
+  <nanos>141600</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.657142600Z</date>
+  <millis>1670676212657</millis>
+  <nanos>142600</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.659141500Z</date>
+  <millis>1670676212659</millis>
+  <nanos>141500</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.661152700Z</date>
+  <millis>1670676212661</millis>
+  <nanos>152700</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.663142400Z</date>
+  <millis>1670676212663</millis>
+  <nanos>142400</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.664142500Z</date>
+  <millis>1670676212664</millis>
+  <nanos>142500</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.665143Z</date>
+  <millis>1670676212665</millis>
+  <nanos>143000</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.666144200Z</date>
+  <millis>1670676212666</millis>
+  <nanos>144200</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.667143200Z</date>
+  <millis>1670676212667</millis>
+  <nanos>143200</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.669155600Z</date>
+  <millis>1670676212669</millis>
+  <nanos>155600</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.670154500Z</date>
+  <millis>1670676212670</millis>
+  <nanos>154500</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.671145300Z</date>
+  <millis>1670676212671</millis>
+  <nanos>145300</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.676146600Z</date>
+  <millis>1670676212676</millis>
+  <nanos>146600</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.679145800Z</date>
+  <millis>1670676212679</millis>
+  <nanos>145800</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.681145700Z</date>
+  <millis>1670676212681</millis>
+  <nanos>145700</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.682147Z</date>
+  <millis>1670676212682</millis>
+  <nanos>147000</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.682147Z</date>
+  <millis>1670676212682</millis>
+  <nanos>147000</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.683147600Z</date>
+  <millis>1670676212683</millis>
+  <nanos>147600</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.684146700Z</date>
+  <millis>1670676212684</millis>
+  <nanos>146700</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.686147300Z</date>
+  <millis>1670676212686</millis>
+  <nanos>147300</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.687147900Z</date>
+  <millis>1670676212687</millis>
+  <nanos>147900</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.688148200Z</date>
+  <millis>1670676212688</millis>
+  <nanos>148200</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.693159800Z</date>
+  <millis>1670676212693</millis>
+  <nanos>159800</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.695151800Z</date>
+  <millis>1670676212695</millis>
+  <nanos>151800</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.698150300Z</date>
+  <millis>1670676212698</millis>
+  <nanos>150300</nanos>
+  <sequence>57</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.700161400Z</date>
+  <millis>1670676212700</millis>
+  <nanos>161400</nanos>
+  <sequence>58</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.702169200Z</date>
+  <millis>1670676212702</millis>
+  <nanos>169200</nanos>
+  <sequence>59</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.703162100Z</date>
+  <millis>1670676212703</millis>
+  <nanos>162100</nanos>
+  <sequence>60</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.704151200Z</date>
+  <millis>1670676212704</millis>
+  <nanos>151200</nanos>
+  <sequence>61</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.705151700Z</date>
+  <millis>1670676212705</millis>
+  <nanos>151700</nanos>
+  <sequence>62</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.706152400Z</date>
+  <millis>1670676212706</millis>
+  <nanos>152400</nanos>
+  <sequence>63</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.707153600Z</date>
+  <millis>1670676212707</millis>
+  <nanos>153600</nanos>
+  <sequence>64</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.708163500Z</date>
+  <millis>1670676212708</millis>
+  <nanos>163500</nanos>
+  <sequence>65</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2022-12-10T12:43:32.709154800Z</date>
+  <millis>1670676212709</millis>
+  <nanos>154800</nanos>
+  <sequence>66</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>

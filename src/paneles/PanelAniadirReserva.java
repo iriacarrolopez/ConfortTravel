@@ -4,8 +4,10 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.sql.Connection;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Vector;
 
 import javax.swing.JLabel;
@@ -17,20 +19,36 @@ import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
+import com.toedter.calendar.JCalendar;
+
 import bd.BD;
+import clases.Ciudad;
 import clases.Reserva;
+import clases.TipoActividad;
+import clases.TipoAlojamiento;
+import clases.TipoAlquiler;
+import clases.TipoExcursion;
 
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class PanelAniadirReserva extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo, panelCC1, panelCC2, panelCC3, panelCC4, panelCA1, panelCA2, panelCA3, panelCA4;
 	private JLabel lblAniadirReserva, lblIDVuelo, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento, lblAlquilerTransporte, lblExcursiones, lblActividades;
-	private JTextField txtIDVuelo, txtFechaIni, txtFechaFin;
-	private JComboBox comboBoxOrigen, comboBoxDestino, comboBoxTipoAlojamiento, cbAlquilerTransporte, cbExcursion;
+	private JTextField txtIDVuelo;
+	private JComboBox<Ciudad> comboBoxOrigen, comboBoxDestino;
+	private JComboBox<TipoAlojamiento> comboBoxTipoAlojamiento;
+	private JComboBox<TipoAlquiler> cbAlquilerTransporte;
+	private JComboBox<TipoExcursion> cbExcursion;
+	private JComboBox<TipoActividad> cbActividades;
 	private JButton btnAceptar;
+	private JCalendar cFechaInicio, cFechaFin;
 	private Connection con;
+	
+	private final static SimpleDateFormat SDF_FECHAS = new SimpleDateFormat("dd/MM/yyyy");
 	
 	private JScrollPane scrollPane;
 	private JTable tablaReserva;
@@ -48,7 +66,6 @@ public class PanelAniadirReserva extends JPanel{
 		panelCentro = new JPanel();
 		add(panelCentro, BorderLayout.CENTER);
 		panelCentro.setLayout(new GridLayout(3, 1, 0, 0));
-		
 		
 		inicializarTabla();
 		scrollPane = new JScrollPane(tablaReserva);
@@ -77,23 +94,34 @@ public class PanelAniadirReserva extends JPanel{
 		lblOrigen = new JLabel("Origen");
 		panelCC2.add(lblOrigen);
 		
-		comboBoxOrigen = new JComboBox();
-		comboBoxOrigen.addItem("Sevilla");
-		comboBoxOrigen.addItem("Barcelona");
-		comboBoxOrigen.addItem("Madrid");
-		comboBoxOrigen.addItem("Bilbao");
-		comboBoxOrigen.addItem("Mallorca");
+		Ciudad c1 = new Ciudad(1, "Sevilla");
+		Ciudad c2 = new Ciudad(2, "Barcelona");
+		Ciudad c3 = new Ciudad(3, "Madrid");
+		Ciudad c4 = new Ciudad(4, "Bilbao");
+		Ciudad c5 = new Ciudad(5, "Mallorca");
+		Ciudad c6 = new Ciudad(6, "Paris");
+		Ciudad c7 = new Ciudad(7, "Malta");
+		comboBoxOrigen = new JComboBox<Ciudad>();
+		comboBoxOrigen.addItem(c1);
+		comboBoxOrigen.addItem(c2);
+		comboBoxOrigen.addItem(c3);
+		comboBoxOrigen.addItem(c4);
+		comboBoxOrigen.addItem(c5);
+		comboBoxOrigen.addItem(c6);
+		comboBoxOrigen.addItem(c7);
 		panelCC2.add(comboBoxOrigen);
 		
 		lblDestino = new JLabel("Destino");
 		panelCC2.add(lblDestino);
 		
-		comboBoxDestino = new JComboBox();
-		comboBoxDestino.addItem("Sevilla");
-		comboBoxDestino.addItem("Barcelona");
-		comboBoxDestino.addItem("Madrid");
-		comboBoxDestino.addItem("Bilbao");
-		comboBoxDestino.addItem("Mallorca");
+		comboBoxDestino = new JComboBox<Ciudad>();
+		comboBoxDestino.addItem(c1);
+		comboBoxDestino.addItem(c2);
+		comboBoxDestino.addItem(c3);
+		comboBoxDestino.addItem(c4);
+		comboBoxDestino.addItem(c5);
+		comboBoxDestino.addItem(c6);
+		comboBoxDestino.addItem(c7);
 		panelCC2.add(comboBoxDestino);
 		
 		panelCC3 = new JPanel();
@@ -102,31 +130,17 @@ public class PanelAniadirReserva extends JPanel{
 		lblFechaIni = new JLabel("Fecha Inicio");
 		panelCC3.add(lblFechaIni);
 		
-		txtFechaIni = new JTextField();
-		panelCC3.add(txtFechaIni);
-		txtFechaIni.setColumns(10);
-		
-		lblFechaFin = new JLabel("Fecha Fin");
-		panelCC3.add(lblFechaFin);
-		
-		txtFechaFin = new JTextField();
-		panelCC3.add(txtFechaFin);
-		txtFechaFin.setColumns(10);
+		cFechaInicio = new JCalendar();
+		panelCC3.add(cFechaInicio);
 		
 		panelCC4 = new JPanel();
 		panelCentroCentro.add(panelCC4);
 		
-		lblTipoAlojamiento = new JLabel("Tipo Alojamiento:");
-		panelCC4.add(lblTipoAlojamiento);
+		lblFechaFin = new JLabel("Fecha Fin");
+		panelCC4.add(lblFechaFin);
 		
-		comboBoxTipoAlojamiento = new JComboBox();
-		comboBoxTipoAlojamiento.addItem("Rural");
-		comboBoxTipoAlojamiento.addItem("Apartamento");
-		comboBoxTipoAlojamiento.addItem("Hotel");
-		comboBoxTipoAlojamiento.addItem("Villa");
-		comboBoxTipoAlojamiento.addItem("Bungalo");
-		comboBoxTipoAlojamiento.addItem("Camping");
-		panelCC4.add(comboBoxTipoAlojamiento);
+		cFechaFin = new JCalendar();
+		panelCC4.add(cFechaFin);
 		
 		panelCentroAbajo = new JPanel();
 		panelCentro.add(panelCentroAbajo);
@@ -135,14 +149,16 @@ public class PanelAniadirReserva extends JPanel{
 		panelCA1 = new JPanel();
 		panelCentroAbajo.add(panelCA1);
 		
+		lblTipoAlojamiento = new JLabel("Tipo Alojamiento:");
+		panelCA1.add(lblTipoAlojamiento);
+		
+		comboBoxTipoAlojamiento = new JComboBox<>(TipoAlojamiento.values());
+		panelCA1.add(comboBoxTipoAlojamiento);
+		
 		lblAlquilerTransporte = new JLabel("Alquiler Transporte");
 		panelCA1.add(lblAlquilerTransporte);
 		
-		cbAlquilerTransporte = new JComboBox();
-		cbAlquilerTransporte.addItem("Coche");
-		cbAlquilerTransporte.addItem("Bicicleta");
-		cbAlquilerTransporte.addItem("Patin Eléctrico");
-		cbAlquilerTransporte.addItem("Moto");
+		cbAlquilerTransporte = new JComboBox<>(TipoAlquiler.values());
 		panelCA1.add(cbAlquilerTransporte);
 		
 		panelCA2 = new JPanel();
@@ -151,10 +167,7 @@ public class PanelAniadirReserva extends JPanel{
 		lblExcursiones = new JLabel("Excursiones");
 		panelCA2.add(lblExcursiones);
 		
-		cbExcursion = new JComboBox();
-		cbExcursion.addItem("Acuatica");
-		cbExcursion.addItem("Senderismo");
-		cbExcursion.addItem("Tour");
+		cbExcursion = new JComboBox<>(TipoExcursion.values());
 		panelCA2.add(cbExcursion);
 		
 		panelCA3 = new JPanel();
@@ -163,22 +176,60 @@ public class PanelAniadirReserva extends JPanel{
 		lblActividades = new JLabel("Actividades");
 		panelCA3.add(lblActividades);
 		
+		cbActividades = new JComboBox<>(TipoActividad.values());
+		panelCA3.add(cbActividades);
+				
 		panelCA4 = new JPanel();
 		panelCentroAbajo.add(panelCA4);
 		
 		btnAceptar = new JButton("Aceptar");
 		panelCA4.add(btnAceptar);
 		
-
-		
 		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
 		cargarModeloTabla();
-		BD.closeBD(con);
+		
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int id = Integer.parseInt(txtIDVuelo.getText());
+				Ciudad origen = (Ciudad) comboBoxOrigen.getSelectedItem();
+				Ciudad destino = (Ciudad) comboBoxDestino.getSelectedItem();
+				int idOrigen = origen.getId();
+				int idDestino = destino.getId();
+				
+				Date fechaInicio = cFechaInicio.getDate();
+				Date fechaFin = cFechaFin.getDate();
+				
+				String fInicio = SDF_FECHAS.format(fechaInicio);
+				String fFin = SDF_FECHAS.format(fechaFin);
+				
+				
+				String tipoAlquiler = String.valueOf(cbAlquilerTransporte.getSelectedItem());
+				//TipoAlquiler ta = TipoAlquiler.valueOf(tipoAlquiler);
+				
+				String tipoAlojamiento = String.valueOf(comboBoxTipoAlojamiento.getSelectedItem());
+				//TipoAlojamiento tal = TipoAlojamiento.valueOf(tipoAlojamiento);
+				
+				String tipoExcursion = String.valueOf(cbExcursion.getSelectedItem());
+				//TipoExcursion te = TipoExcursion.valueOf(tipoExcursion);
+				
+				String tipoActividad = String.valueOf(cbActividades.getSelectedItem());
+				//TipoActividad tact = TipoActividad.valueOf(tipoActividad);
+				
+				BD.insertarReserva(con, id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento, tipoExcursion, tipoActividad);
+				
+				BD.closeBD(con);
+						
+			}
+		});
+		
+		
+		
 		
 	}
 	
-	public void cargarModeloTabla() {
+	private void cargarModeloTabla() {
 		
 		con = BD.initBD("confortTravel.db");
 		
@@ -196,7 +247,7 @@ public class PanelAniadirReserva extends JPanel{
 	
 	}
 	
-	public void inicializarTabla() {
+	private void inicializarTabla() {
 		Vector<String> cabeceraReserva = new Vector<String>(
 				Arrays.asList("ID", "ORIGEN","DESTINO","FECHA INICIO", "FECHA FIN", "ALQUILER TRANSPORTE", "TIPO ALOJAMIENTO", "TIPO EXCURSION", "ACTIVIDADES"));
 		modeloReserva = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraReserva);
