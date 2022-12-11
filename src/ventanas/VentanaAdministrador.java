@@ -7,6 +7,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import bd.BD;
+import clases.Ciudad;
+import clases.Reserva;
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
 import paneles.PanelDestino;
@@ -19,6 +22,8 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
@@ -37,7 +42,7 @@ public class VentanaAdministrador {
 	private static JFrame frame;
 	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte;
 	private JComboBox<String> comboAn, comboEl, comboMo;
-	private JButton btnAnadir, btnEliminar, btnModificar, btnVolver, btnSalir;
+	private JButton btnAnadir, btnEliminar, btnModificar, btnVolver, btnSalir,btnReservas;
 	public VentanaLogin ventanalogin;
 	private JLabel lblInfor, lblTitulo;
 	// paneles
@@ -47,6 +52,7 @@ public class VentanaAdministrador {
 	private JPanel panelInformacion;
 	private JLabel icono;
 	private JLabel lblHora;
+	private HashMap<Ciudad, ArrayList<Reserva>> mapaReservas;
 	/*
 	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
@@ -229,6 +235,32 @@ public class VentanaAdministrador {
 				// TODO Auto-generated method stub
 				System.exit(0);
 
+			}
+		});
+		
+		mapaReservas = new HashMap<>();
+		ArrayList<Ciudad> listaCiudades = BD.obtenerTodasCiudades();
+		ArrayList<Reserva> listaReservas = new ArrayList<>();
+		for (Ciudad c: listaCiudades) {
+			if (!mapaReservas.containsKey(c)) {
+				listaReservas = BD.obtenerReservasPorDestino(c.getId());
+				mapaReservas.put(c, listaReservas);
+			}
+		}
+		
+		btnReservas = new JButton("RESERVAS POR DESTINO");
+		panelSur.add(btnReservas);
+		
+		btnReservas.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				for(Ciudad c: mapaReservas.keySet()) {
+					System.out.println("Reservas en "+c.getNombre());
+					for(Reserva r: mapaReservas.get(c)) {
+						System.out.println(r.toString());
+					}
+				}
 			}
 		});
 		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");

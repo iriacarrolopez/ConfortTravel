@@ -360,10 +360,56 @@ public class BD {
 		}
 		return listaAlojamiento;
 	}
-	
 	public static ArrayList<Reserva> obtenerReservas(){
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
 		String sql = "SELECT * FROM Reserva WHERE id>=0";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			while (rs.next()) {
+			
+				int dni = rs.getInt("id");
+				int o = rs.getInt("idOrigen");
+				int d = rs.getInt("idDestino");
+				Ciudad co = getCiudad(con,o);
+				Ciudad cd = getCiudad(con,d);
+				String fechaIni = rs.getString("fechaInicio");
+				String fechaFin = rs.getString("fechaFin");
+				String at = rs.getString("alquilerTransporte");
+				TipoAlquiler alquilerTransporte = TipoAlquiler.valueOf(at);
+				String tipoA = rs.getString("tipoAlojamiento");
+				TipoAlojamiento ta = TipoAlojamiento.valueOf(tipoA);
+				String ex = rs.getString("excursion");
+				TipoExcursion te = TipoExcursion.valueOf(ex);
+				String act = rs.getString("actividades");
+				TipoActividad tact = TipoActividad.valueOf(act);
+				
+				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact);
+				
+				listaReservas.add(r);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d reservas", listaReservas.size()));
+			log(Level.INFO, "Se han encontrado las siguientes reservas:" + listaReservas.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaReservas;
+	}
+	/***
+	 * 
+	 * Método para obtener las reservas en un destino
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public static ArrayList<Reserva> obtenerReservasPorDestino(Integer id) {
+		ArrayList<Reserva> listaReservas = new ArrayList<>();
+		String sql = "SELECT * FROM Reserva WHERE idDestino="+id+";";
 		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			Statement st = con.createStatement();
@@ -459,6 +505,7 @@ public class BD {
 		}
 		return c;
 	}
+	
 	/**
 	 * Mï¿½todo que obtiene los datos de una persona
 	 * 
