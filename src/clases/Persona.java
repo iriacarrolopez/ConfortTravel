@@ -16,13 +16,15 @@ public class Persona {
 	private Date fechaNac; // Cambiar a date
 	private String nomUsuario;
 	private String contrasenia;
-	private String tipo;
+	//private String tipo;
+	private TipoPersona tipo;
+
 
 	public Persona() {
 
 	}
 
-	public Persona(String dni, String nombre, String contrasenia, String email, String tipo) {
+	public Persona(String dni, String nombre, String contrasenia, String email, TipoPersona tipo) {
 		this.dni = dni;
 		// Comprobar si el dni es correcto
 		String erdni = "[0-9]{8}[A-Z]";
@@ -34,10 +36,11 @@ public class Persona {
 		this.nombre = nombre;
 		this.contrasenia = contrasenia;
 		this.email = email;
+		this.tipo =tipo;
 	}
 
 	public Persona(String dni, String nombre, String apellido, int telefono, String email, String direccion,
-			String fechaNac, String nomUsuario, String contrasenia) {
+			String fechaNac, String nomUsuario, String contrasenia,TipoPersona tipo) {
 		this.dni = dni;
 		// Comprobar si el dni es correcto
 		String erdni = "[0-9]{8}[A-Z]";
@@ -58,6 +61,7 @@ public class Persona {
 		}
 		this.nomUsuario = nomUsuario;
 		this.contrasenia = contrasenia;
+		this.tipo = tipo;
 	}
 
 	public String getDni() {
@@ -136,11 +140,11 @@ public class Persona {
 		this.contrasenia = contrasenia;
 	}
 
-	public String getTipo() {
+	public TipoPersona getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(String tipo) {
+	public void setTipo(TipoPersona tipo) {
 		this.tipo = tipo;
 	}
 

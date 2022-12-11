@@ -18,6 +18,7 @@ import bd.BD;
 //import clases.Administrador;
 //import clases.Cliente;
 import clases.Persona;
+import clases.TipoPersona;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -28,6 +29,7 @@ import javax.swing.JOptionPane;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Frame;
 
 public class VentanaInicio extends JFrame {
 
@@ -42,7 +44,9 @@ public class VentanaInicio extends JFrame {
 	private JPasswordField txtcontrasenia;
 	private JLabel lblContrasena, lblImagen;
 	private JLabel lblNewLabel;
-
+	
+	public VentanaAdministrador va;
+	public VentanaCliente vcl;
 	/**
 	 * Launch the application.
 	 */
@@ -120,22 +124,43 @@ public class VentanaInicio extends JFrame {
 
 		btnInicio = new JButton("INICIO SESION");
 		panelSur.add(btnInicio);
+		va= new VentanaAdministrador();
+		vcl = new VentanaCliente();
+		
+		
 		/**
 		 * BOTON INICIO SESION
 		 */
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String dniExpresR = "[0-9]{8}[A-Z]";
-				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
+				String dniExpresR = "[0-9]{8}[A-Z]{1}";
+				
+				//String conExpresR = "[A-Z][a-z]";
 				String dni = textDni.getText();
-				@SuppressWarnings("deprecation")
-				String cont = txtcontrasenia.getText();
-				if (Pattern.matches(dniExpresR, dni) && Pattern.matches(conExpresR, cont)) {
+				String cont = String.valueOf(txtcontrasenia.getPassword());
+				if (Pattern.matches(dniExpresR, dni)/* && Pattern.matches(conExpresR, cont)*/){
 					Persona p = BD.obtenerDatosPersona(con, dni);
 					if (p != null) {
 						if (p.getContrasenia().equals(cont)) {
-							JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA",
-									JOptionPane.INFORMATION_MESSAGE);
+							if(p.getTipo().equals(TipoPersona.ADMINISTRADOR)) {
+								
+								 va =new VentanaAdministrador(TipoPersona.ADMINISTRADOR);
+								JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA EN ADMINISTRADOR",JOptionPane.INFORMATION_MESSAGE);
+								
+								System.out.println("entra con el usuario administrador");
+								
+								
+								
+								
+								
+							}else {
+								 vcl = new VentanaCliente(TipoPersona.CLIENTE);
+								
+								JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA EN CLIENTE",
+										JOptionPane.INFORMATION_MESSAGE);
+								System.out.println("entra con el usuario cliente");
+							}
+							
 							System.out.println("--Inicio de sesion correcto");
 						} else {
 							JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ERROR",
@@ -158,5 +183,7 @@ public class VentanaInicio extends JFrame {
 		});
 
 	}
+	
+	
 
 }

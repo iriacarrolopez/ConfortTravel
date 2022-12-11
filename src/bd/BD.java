@@ -2,9 +2,14 @@ package bd;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
+import java.util.TimeZone;
 import java.sql.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
-
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.logging.*;
 
 import javax.swing.plaf.multi.MultiPopupMenuUI;
@@ -18,10 +23,47 @@ import clases.TipoActividad;
 import clases.TipoAlojamiento;
 import clases.TipoAlquiler;
 import clases.TipoExcursion;
+import clases.TipoPersona;
 
 public class BD {
 	private static Logger logger = null;
-
+	private Properties properties;
+	
+	/**
+	 * LEER EL FICHERO DE PROPIEDADES
+	 */
+	public BD()
+	{
+	
+			try(FileReader reader = new FileReader("ConfortTravel.properties");) {
+				
+				//Lectura del fichero properties
+				properties = new Properties();
+				properties.load(reader);
+				
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				 System.err.println(String.format("No se pudo leer el fichero de propiedades %s", e.getMessage()));
+		            
+				e.printStackTrace();
+			}
+			  try (FileWriter writer = new FileWriter("ConfortTravel.properties");) {
+	            	properties.store(writer, "Fichero de propiedades");
+	            	
+	            	System.out.println("El fichero de propiedades se ha guardado correctamente");
+	            } catch (IOException ioe2) {
+	            	System.err.println(String.format("No se pudo leer el fichero de propiedades %s", ioe2.getMessage()));	
+	            }
+	        }
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * MÃ©todo que realiza la conexiÃ³n con la base de datos
 	 * 
@@ -205,7 +247,7 @@ public class BD {
 				p.setNombre(rs.getString("nom"));
 				p.setContrasenia(rs.getString("cont"));
 				p.setDireccion(rs.getString("email"));
-				p.setTipo(rs.getString("tipo"));
+				p.setTipo(TipoPersona.valueOf(rs.getString("tipo")));
 
 				listaPersona.add(p);
 
@@ -436,9 +478,9 @@ public class BD {
 				String n = rs.getString("nom");
 				String c = rs.getString("cont");
 				String e = rs.getString("email");
-				String t = rs.getString("tipo");
+				TipoPersona tipo =TipoPersona.valueOf( rs.getString("tipo"));
 
-				p = new Persona(d, n, c, e, t);
+				p = new Persona(d, n, c, e, tipo);
 
 			}
 			log(Level.INFO, "Se ha obten: " + p, null);

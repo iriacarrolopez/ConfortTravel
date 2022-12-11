@@ -219,7 +219,7 @@ public class PanelAniadirReserva extends JPanel{
 				
 				BD.insertarReserva(con, id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento, tipoExcursion, tipoActividad);
 				
-				BD.closeBD(con);
+				//BD.closeBD(con);
 						
 			}
 		});

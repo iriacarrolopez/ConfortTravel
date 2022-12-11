@@ -22,6 +22,7 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
+import clases.TipoPersona;
 import paneles.PanelAlojamiento;
 import paneles.PanelAniadirReserva;
 import paneles.PanelDestino;
@@ -31,6 +32,10 @@ import paneles.PanelModificarReserva;
 
 public class VentanaCliente extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static JFrame frame;
 	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte, panelInformacion;
 	private JLabel lblInfor, lblTitulo;
@@ -187,6 +192,11 @@ public class VentanaCliente extends JFrame {
 
 			}
 		});
+	}
+	public VentanaCliente(TipoPersona tipo) {
+		VentanaInicio vi = new VentanaInicio();
+		vi.dispose();
+		frame.setVisible(true);
 	}
 
 }

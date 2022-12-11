@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import clases.Persona;
+import clases.TipoPersona;
 
 public class PersonaTest {
 
@@ -19,12 +20,12 @@ public class PersonaTest {
 	private String nomUsuario = "nombreUsuario";
 	private String contrasenia = "contrasenia";
 	// private TipoPersona tipo = TipoPersona.CLIENTE;
-	// private String tipo = "tipo";
+	 private String tipo = "CLIENTE";
 
 	@Before
 	public void setUp() throws Exception {
 		persona = new Persona(dni, nombre, apellido, telefono, email, direccion, fechaNacimiento, nomUsuario,
-				contrasenia);
+				contrasenia,TipoPersona.valueOf(tipo));
 	}
 
 	@After
@@ -152,16 +153,17 @@ public class PersonaTest {
 		assertEquals(nuevaContrasenia, persona.getContrasenia());
 	}
 
-	/*
-	 * @Test public void testGetTipo() { assertEquals(TipoPersona.CLIENTE,
-	 * persona.getTipo()); }
-	 */
+	
+	 @Test public void testGetTipo() {
+		 assertEquals(tipo, persona.getTipo().toString()); 
+		 }
+	
 
 	@Test
 	public void testSetTipo() {
-		String nuevoTipo = "CLIENTE";
-		persona.setTipo(nuevoTipo);
-		assertEquals(nuevoTipo, persona.getTipo());
+		String nuevoTipo = "ADMINISTRADOR";
+		persona.setTipo(TipoPersona.valueOf(nuevoTipo));
+		assertEquals(nuevoTipo, persona.getTipo().toString());
 	}
 
 }

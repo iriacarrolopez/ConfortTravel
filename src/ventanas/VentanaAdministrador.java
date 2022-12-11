@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import clases.TipoPersona;
 import paneles.PanelAlojamiento;
 import paneles.PanelDestino;
 import paneles.PanelExcursiones;
@@ -228,5 +229,10 @@ public class VentanaAdministrador {
 			}
 		});
 
+	}
+	public VentanaAdministrador(TipoPersona tipo) {
+		VentanaInicio vi = new VentanaInicio();
+		vi.dispose();
+		frame.setVisible(true);
 	}
 }

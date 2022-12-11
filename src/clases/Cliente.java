@@ -15,12 +15,12 @@ public class Cliente extends Persona {
 	}
 
 	public Cliente(String dni, String nombre, String apellido, int telefono, String email, String direccion,
-			String fechaNac, String nomUsuario, String contrasenia) {
-		super(dni, nombre, apellido, telefono, email, direccion, fechaNac, nomUsuario, contrasenia);
+			String fechaNac, String nomUsuario, String contrasenia,TipoPersona tipo) {
+		super(dni, nombre, apellido, telefono, email, direccion, fechaNac, nomUsuario, contrasenia,tipo);
 		this.viajes = new ArrayList<>();
 	}
 
-	public Cliente(String dni, String nombre, String contrasenia, String email, String tipo) {
+	public Cliente(String dni, String nombre, String contrasenia, String email,TipoPersona tipo) {
 		super(dni, nombre, contrasenia, email, tipo);
 		this.viajes = new ArrayList<>();
 	}
