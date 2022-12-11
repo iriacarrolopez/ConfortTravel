@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.sql.Connection;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -47,6 +49,7 @@ public class VentanaCliente extends JFrame {
 	private PanelAniadirReserva par;
 	private PanelEliminarReserva per;
 	private PanelModificarReserva pmr;
+	private JLabel lblHora;
 
 	/**
 	 * Launch the application.
@@ -192,6 +195,30 @@ public class VentanaCliente extends JFrame {
 
 			}
 		});
+		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
+		lblHora = new JLabel();
+		panelNorte.add(lblHora);
+		
+		Runnable runnable = new Runnable() {
+			
+			@Override
+			public void run() {
+				while (true) {
+					try {
+						Thread.sleep(500);
+						lblHora.setText(formateador.format(LocalDateTime.now()));
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				
+			}
+		};
+		
+		Thread hilo = new Thread(runnable);
+		hilo.start();
+		
+
 	}
 	public VentanaCliente(TipoPersona tipo) {
 		VentanaInicio vi = new VentanaInicio();

@@ -17,6 +17,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
@@ -44,6 +46,7 @@ public class VentanaAdministrador {
 	public PanelExcursiones pex;
 	private JPanel panelInformacion;
 	private JLabel icono;
+	private JLabel lblHora;
 	/*
 	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
@@ -228,6 +231,29 @@ public class VentanaAdministrador {
 
 			}
 		});
+		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
+		lblHora = new JLabel();
+		panelNorte.add(lblHora);
+		
+		Runnable runnable = new Runnable() {
+			
+			@Override
+			public void run() {
+				while (true) {
+					try {
+						Thread.sleep(500);
+						lblHora.setText(formateador.format(LocalDateTime.now()));
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				
+			}
+		};
+		
+		Thread hilo = new Thread(runnable);
+		hilo.start();
+		
 
 	}
 	public VentanaAdministrador(TipoPersona tipo) {

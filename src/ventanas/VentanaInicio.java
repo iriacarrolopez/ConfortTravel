@@ -6,6 +6,8 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.regex.Pattern;
 
 import javax.swing.JFrame;
@@ -44,6 +46,7 @@ public class VentanaInicio extends JFrame {
 	private JPasswordField txtcontrasenia;
 	private JLabel lblContrasena, lblImagen;
 	private JLabel lblNewLabel;
+	private JLabel lblHora;
 	
 	public VentanaAdministrador va;
 	public VentanaCliente vcl;
@@ -181,6 +184,30 @@ public class VentanaInicio extends JFrame {
 				txtcontrasenia.setText("");
 			}
 		});
+		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
+		lblHora = new JLabel();
+		panelNorte.add(lblHora);
+		
+		Runnable runnable = new Runnable() {
+			
+			@Override
+			public void run() {
+				while (true) {
+					try {
+						Thread.sleep(500);
+						lblHora.setText(formateador.format(LocalDateTime.now()));
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+				
+			}
+		};
+		
+		Thread hilo = new Thread(runnable);
+		hilo.start();
+		
+
 
 	}
 	
