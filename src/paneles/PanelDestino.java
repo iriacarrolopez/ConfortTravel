@@ -51,19 +51,24 @@ public class PanelDestino extends JPanel {
 	private Connection con;
 
 	private int mouseRow = -1;
-	private int mouseColumn = -1;
+	
 
 	/**
 	 * Create the panel.
 	 */
 	public PanelDestino() {
+		// hacemos la conexion con la BD
+				con = BD.initBD("confortTravel.db");
+				BD.crearTablas(con);
+				//BD.closeBD(con);
+				//cargarModeloTabla();
 		setBounds(100, 100, 900, 900);
 		setBackground(new Color(176, 224, 230));
 		setLayout(new BorderLayout(0, 0));
 
 		panelAbajo = new JPanel();
 		add(panelAbajo, BorderLayout.SOUTH);
-		panelAbajo.setLayout(new GridLayout(0, 2, 0, 0));
+		panelAbajo.setLayout(new GridLayout(1, 1, 0, 0));
 		
 		btnInsertarDestino = new JButton("NUEVO DESTINO");
 		panelAbajo.add(btnInsertarDestino);
@@ -121,8 +126,9 @@ public class PanelDestino extends JPanel {
 				con = BD.initBD("confortTravel.db");
 				int d = tableDestino.getSelectedRow();
 				int id = (int) tableDestino.getValueAt(d, 0);
-				BD.eliminarDestino(con, id);	
-				BD.closeBD(con);
+				BD.eliminarDestino(con, id);
+				cargarModeloTabla();
+				
 			}
 		});
 		
@@ -136,29 +142,28 @@ public class PanelDestino extends JPanel {
 				
 				BD.obtenerDestinosPorId(Integer.parseInt(id));
 				BD.UpdateNombreDestino(Integer.parseInt(id),nombre);
-				cargarModeloTabla();
+				
 				while(modeloDestino.getRowCount()>0) {
 					modeloDestino.removeRow(0);
 				}
 				cargarModeloTabla();
-				BD.closeBD(con);
+				//BD.closeBD(con);
 			}
 		});
 		
-		// hacemos la conexion con la BD
-		con = BD.initBD("confortTravel.db");
-		BD.crearTablas(con);
-		BD.closeBD(con);
-		cargarModeloTabla();
+		
 
 	}
 
 	private void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraDestinos = new Vector<String>(Arrays.asList("ID", "NOMBRE"));
-		// Se crea el modelo de datos para la tabla de comics s�lo con la cabecera
-		modeloDestino = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraDestinos);
-		// Se crea la tabla de comics con el modelo de datos
+		
+modeloDestino = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraDestinos) {
+			
+			private static final long serialVersionUID = 1L;
+};
+		// Se crea la tabla de destinos con el modelo de datos
 		tableDestino = new JTable(modeloDestino);
 
 		cargarModeloTabla();
@@ -239,7 +244,7 @@ public class PanelDestino extends JPanel {
 	}
 
 	public static void cargarModeloTabla() {
-		Connection con = BD.initBD("confortTravel.db");
+		//Connection con = BD.initBD("confortTravel.db");
 
 		try {
 
@@ -255,7 +260,7 @@ public class PanelDestino extends JPanel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		BD.closeBD(con);
+		//BD.closeBD(con);
 
 	}
 

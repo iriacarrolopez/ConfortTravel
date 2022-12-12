@@ -27,38 +27,8 @@ import clases.TipoPersona;
 
 public class BD {
 	private static Logger logger = null;
-	private Properties properties;
-	
-	/**
-	 * LEER EL FICHERO DE PROPIEDADES
-	 */
-	public BD()
-	{
-	
-			try(FileReader reader = new FileReader("ConfortTravel.properties");) {
-				
-				//Lectura del fichero properties
-				properties = new Properties();
-				properties.load(reader);
-				
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				 System.err.println(String.format("No se pudo leer el fichero de propiedades %s", e.getMessage()));
-		            
-				e.printStackTrace();
-			}
-			  try (FileWriter writer = new FileWriter("ConfortTravel.properties");) {
-	            	properties.store(writer, "Fichero de propiedades");
-	            	
-	            	System.out.println("El fichero de propiedades se ha guardado correctamente");
-	            } catch (IOException ioe2) {
-	            	System.err.println(String.format("No se pudo leer el fichero de propiedades %s", ioe2.getMessage()));	
-	            }
-	        }
-	
-	
+	private static Properties properties;
+	private Connection con = null;
 	
 	
 	
@@ -72,6 +42,28 @@ public class BD {
 	 */
 	public static Connection initBD(String nombreBD) {
 		Connection con = null;
+		//LEER EL FICHERO DE PROPIEDADES
+		try(FileReader reader = new FileReader("conf/ConfortTravel.properties");) {
+			
+			//Lectura del fichero properties
+			properties = new Properties();
+			properties.load(reader);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			 System.err.println(String.format("No se pudo leer el fichero de propiedades %s", e.getMessage()));
+	            
+			e.printStackTrace();
+		}
+		  try (FileWriter writer = new FileWriter("ConfortTravel.properties");) {
+            	properties.store(writer, "Fichero de propiedades");
+            	
+            	System.out.println("El fichero de propiedades se ha guardado correctamente");
+            } catch (IOException ioe2) {
+            	System.err.println(String.format("No se pudo leer el fichero de propiedades %s", ioe2.getMessage()));	
+            }
 		try {
 			Class.forName("org.sqlite.JDBC");
 			con = DriverManager.getConnection("jdbc:sqlite:" + nombreBD);
@@ -86,6 +78,7 @@ public class BD {
 		}
 
 		return con;
+		
 	}
 
 	/**
@@ -407,6 +400,46 @@ public class BD {
 	 * @param id
 	 * @return
 	 */
+	public static ArrayList<Reserva> obtenerReservasID(Integer id) {
+		ArrayList<Reserva> listaReservas = new ArrayList<>();
+		String sql = "SELECT * FROM Reserva WHERE id="+id+";";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			while (rs.next()) {
+			
+				Integer dni = rs.getInt("id");
+				int o = rs.getInt("idOrigen");
+				int d = rs.getInt("idDestino");
+				Ciudad co = getCiudad(con,o);
+				Ciudad cd = getCiudad(con,d);
+				String fechaIni = rs.getString("fechaInicio");
+				String fechaFin = rs.getString("fechaFin");
+				String at = rs.getString("alquilerTransporte");
+				TipoAlquiler alquilerTransporte = TipoAlquiler.valueOf(at);
+				String tipoA = rs.getString("tipoAlojamiento");
+				TipoAlojamiento ta = TipoAlojamiento.valueOf(tipoA);
+				String ex = rs.getString("excursion");
+				TipoExcursion te = TipoExcursion.valueOf(ex);
+				String act = rs.getString("actividades");
+				TipoActividad tact = TipoActividad.valueOf(act);
+				
+				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact);
+				
+				listaReservas.add(r);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d reservas", listaReservas.size()));
+			log(Level.INFO, "Se han encontrado las siguientes reservas:" + listaReservas.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaReservas;
+	}
 	public static ArrayList<Reserva> obtenerReservasPorDestino(Integer id) {
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
 		String sql = "SELECT * FROM Reserva WHERE idDestino="+id+";";
@@ -492,9 +525,13 @@ public class BD {
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			while(rs.next()) {
-				Integer i = rs.getInt(id);
+				Integer i = rs.getInt("id");
+				
 				String nom = rs.getString("nom");
+				
+				
 				c = new Ciudad(i,nom);
+				System.out.println(c);
 			}
 			rs.close();
 			log(Level.INFO, "Se ha encontrado el destino" + c, null);
@@ -722,8 +759,17 @@ public class BD {
 		}
 	
 	}
-	
-	public static void uptadeReservas(int id, String tipoAlquiler, String tipoAlojamiento, String tipoExcursion, String tipoActividad) {
+	/*	String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (
+	 * id Integer, 
+	 * idOrigen Integer,
+	 *  idDestino Integer, 
+	 *  fechaInicio String, 
+	 *  fechaFin String, 
+	 *  alquilerTransporte String, 
+	 *  tipoAlojamiento String, 
+	excursion String, 
+	actividades String)";*/
+	public static void uptadeReservas(Integer id, String tipoAlquiler, String tipoAlojamiento, String tipoExcursion, String tipoActividad) {
 		String sql = "UPDATE Reserva SET alquilerTransporte=?, tipoAlojamiento=?, excursion=?, actividades=? WHERE id=?";
 		PreparedStatement pstmt;
 		
@@ -750,8 +796,13 @@ public class BD {
 		PreparedStatement pstmt;
 		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1,id);
-			pstmt.setString(2, nombre);
+			pstmt.setInt(2,id);
+			pstmt.setString(1, nombre);
+			pstmt.executeUpdate();
+			
+			log(Level.INFO, " Id destino :" +id, null);
+			log(Level.INFO, " Nombre nuevo destino :" +nombre, null);
+
 			log(Level.INFO, "Se ha actualizado la sentencia:" + sql, null);
 			pstmt.close();
 		} catch (SQLException e) {
@@ -802,10 +853,10 @@ public class BD {
 	/*
 	 * nuevo
 	 */
-	public static Excursion obtenerDatosExcursion(Connection con, Integer id) {
+	public static Excursion obtenerDatosExcursion( Integer id) {
 		String sql = "SELECT * FROM Excursion WHERE dni=" + id+ "";
 		Excursion excursion =null;
-		try {
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);

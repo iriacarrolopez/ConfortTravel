@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import bd.BD;
 import clases.Ciudad;
+import clases.Persona;
 import clases.Reserva;
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
@@ -20,29 +21,32 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
-import java.awt.Dimension;
-
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+
+
 import java.awt.Font;
 import java.awt.Color;
-import java.awt.Component.BaselineResizeBehavior;
+
 import javax.swing.UIManager;
 
 public class VentanaAdministrador {
 	private static JFrame frame;
 	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte;
-	private JComboBox<String> comboAn, comboEl, comboMo;
-	private JButton btnAnadir, btnEliminar, btnModificar, btnVolver, btnSalir,btnReservas;
+	private JComboBox<String> comboAn;
+	private JButton btnVolver, btnSalir,btnReservas;
 	public VentanaLogin ventanalogin;
 	private JLabel lblInfor, lblTitulo;
 	// paneles
@@ -53,6 +57,7 @@ public class VentanaAdministrador {
 	private JLabel icono;
 	private JLabel lblHora;
 	private HashMap<Ciudad, ArrayList<Reserva>> mapaReservas;
+	private JButton btnCargar;
 	/*
 	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
 	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
@@ -120,7 +125,7 @@ public class VentanaAdministrador {
 		panelInformacion = new JPanel();
 		panelInformacion.setBackground(Color.BLACK);
 		panelIzq.add(panelInformacion);
-		panelInformacion.setLayout(new GridLayout(2, 0, 0, 0));
+		panelInformacion.setLayout(new GridLayout(3, 0, 0, 0));
 		icono = new JLabel();
 		icono.setHorizontalAlignment(SwingConstants.CENTER); 
 		icono.setSize(50, 50);
@@ -133,6 +138,10 @@ public class VentanaAdministrador {
 		lblInfor.setFont(new Font("Tahoma", Font.BOLD, 10));
 		panelInformacion.add(lblInfor);
 		lblInfor.setBackground(UIManager.getColor("Button.foreground"));
+		
+		btnCargar = new JButton("CARGAR TODOS LOS DATOS");
+		panelInformacion.add(btnCargar);
+		
 
 		comboAn = new JComboBox<>();
 		comboAn.setBackground(UIManager.getColor("CheckBox.background"));
@@ -175,6 +184,34 @@ public class VentanaAdministrador {
 		});
 
 //botones
+//		btnCargar.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//			
+//					
+//						try {
+//							BufferedReader br = new BufferedReader(new FileReader("Conf/Personas.csv"));
+//							String linea = br.readLine();
+//							while(linea != null) {
+//								String [] datos = linea.split(";");
+//								Persona p =new Persona(datos[0],datos[1],datos[2], datos[3], TipoPersona.valueOf(datos[4]));
+//								System.out.println(p);
+//								linea = br.readLine();
+//							}
+//							br.close();
+//						} catch (FileNotFoundException e1) {
+//							// TODO Auto-generated catch block
+//							e1.printStackTrace();
+//						} catch (IOException e1) {
+//							// TODO Auto-generated catch block
+//							e1.printStackTrace();
+//						}
+//					
+//				
+//				
+//			}
+//		});
 		btnSalir = new JButton("Salir");
 		panelSur.add(btnSalir);
 

@@ -172,14 +172,14 @@ public class PanelAlojamiento extends JPanel {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraAlojamiento = new Vector<String>(
 				Arrays.asList("ID","NOMBRE", "TIPO ALOJAMIENTO", "PRECIO", "DURACION", "DESTINO"));
-		// Se crea el modelo de datos para la tabla de comics s�lo con la cabecera
+	
 		modeloAlojamiento = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraAlojamiento) {
 			
 			private static final long serialVersionUID = 1L;
 
 			public boolean isCellEditable(int rowIndex,int columnIndex){return false;}
 		};
-		// Se crea la tabla de comics con el modelo de datos
+		// Se crea la tabla de alojamiento con el modelo de datos
 		tablaAlojamiento = new JTable(modeloAlojamiento);
 		// cargo el modelo
 		

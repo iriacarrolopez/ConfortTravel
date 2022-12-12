@@ -5,6 +5,10 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -105,6 +109,8 @@ public class VentanaInicio extends JFrame {
 		contentPane.add(panelIzquierda, BorderLayout.WEST);
 		lblImagen = new JLabel();
 		lblImagen.setHorizontalAlignment(SwingConstants.CENTER);
+		
+
 
 		lblImagen.setIcon(new ImageIcon(VentanaInicio.class.getResource("/imagenes/iconoIni.jpg")));
 
@@ -210,6 +216,8 @@ public class VentanaInicio extends JFrame {
 
 
 	}
+	
+
 	
 	
 

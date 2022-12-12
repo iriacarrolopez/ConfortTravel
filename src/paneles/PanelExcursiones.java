@@ -154,7 +154,7 @@ public class PanelExcursiones extends JPanel {
 				String num = JOptionPane.showInputDialog("Nuevo numero de personas que pueden participar:");
 
 				//modificar
-				BD.obtenerDatosExcursion(con, Integer.parseInt(id));
+				BD.obtenerDatosExcursion( Integer.parseInt(id));
 				BD.UpdateNumeroPersonasEnExcursion(Integer.parseInt(id), Integer.parseInt(num));
 				// Borramos el contenido del modelo de la tabla
 				while (modeloExcursion.getRowCount() > 0) {
@@ -170,7 +170,7 @@ public class PanelExcursiones extends JPanel {
 	public void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraExcursion = new Vector<String>(
-				Arrays.asList("ID", "NOMBRE", "TIPO EXCUSION", "LUGAR", "PRECIO", "DURACION", "NUMERO DE PERSONAS"));
+				Arrays.asList("ID", "NOMBRE", "TIPO EXCUSION", "LUGAR", "PRECIO", "DURACION(HORAS)", "NUMERO DE PERSONAS"));
 		// Se crea el modelo de datos para la tabla de comics s�lo con la cabecera
 		modeloExcursion = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraExcursion) {
 			
@@ -184,15 +184,15 @@ public class PanelExcursiones extends JPanel {
 		
 		cargarModeloTabla();
 
-		tablaExcursion.setRowHeight(30);
+		tablaExcursion.setRowHeight(40);
 
 		// Se cambia la anchura de las columnas
 				tablaExcursion.getColumnModel().getColumn(0).setPreferredWidth(100);
 				tablaExcursion.getColumnModel().getColumn(1).setPreferredWidth(300);
 				tablaExcursion.getColumnModel().getColumn(2).setPreferredWidth(300);
-				tablaExcursion.getColumnModel().getColumn(3).setPreferredWidth(300);
-				tablaExcursion.getColumnModel().getColumn(4).setPreferredWidth(100);
-				tablaExcursion.getColumnModel().getColumn(5).setPreferredWidth(100);
+				tablaExcursion.getColumnModel().getColumn(3).setPreferredWidth(100);
+				tablaExcursion.getColumnModel().getColumn(4).setPreferredWidth(200);
+				tablaExcursion.getColumnModel().getColumn(5).setPreferredWidth(200);
 				tablaExcursion.getColumnModel().getColumn(6).setPreferredWidth(300);
 		// Se modifica el modelo de selecci�n de la tabla para que se pueda selecciona
 		// �nicamente una fila
@@ -224,7 +224,7 @@ public class PanelExcursiones extends JPanel {
 				   System.out.println("CARGANDO MODELO DE LA TABLA...");
 			}*/
 			for(Excursion ex :lista) {
-				Object [] fila = {ex.getId(),ex.getNombre(),ex.getTipo(),ex.getLugar().getId(),ex.getPrecio(),ex.getDuracion(),ex.getDuracion()};
+				Object [] fila = {ex.getId(),ex.getNombre(),ex.getTipo(),ex.getLugar().getId(),ex.getPrecio(),ex.getDuracion(),ex.getNumPersonas()};
 				modeloExcursion.addRow(fila);
 			}
 			

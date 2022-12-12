@@ -37,11 +37,7 @@ public class PanelModificarReserva extends JPanel{
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo;
 	private JLabel lblModificarReserva, lblIntroducirID;
 	private JButton btnModificarID;
-	private JComboBox<TipoAlojamiento> cbTipoAlojamiento;
-	private JComboBox<TipoAlquiler> cbAlquilerTransporte;
-	private JComboBox<TipoExcursion> cbExcursion;
-	private JComboBox<TipoActividad> cbActividad;
-	
+
 
 	private JScrollPane scrollPane;
 	private JTable tablaReserva;
@@ -50,6 +46,8 @@ public class PanelModificarReserva extends JPanel{
 	private Connection con;
 	
 	public PanelModificarReserva() {
+		con = BD.initBD("confortTravel.db");
+		BD.crearTablas(con);
 		setLayout(new BorderLayout(0, 0));
 		
 		panelArriba = new JPanel();
@@ -63,6 +61,8 @@ public class PanelModificarReserva extends JPanel{
 		panelCentro.setLayout(new GridLayout(3, 0, 0, 0));
 		
 		inicializarTabla();
+		tablaReserva.updateUI();
+		
 		scrollPane = new JScrollPane(tablaReserva);
 		scrollPane.setBorder(new TitledBorder("RESERVAS"));
 		tablaReserva.setFillsViewportHeight(true);
@@ -85,16 +85,15 @@ public class PanelModificarReserva extends JPanel{
 		panelCentroAbajo = new JPanel();
 		panelCentro.add(panelCentroAbajo);		
 		
-		con = BD.initBD("confortTravel.db");
-		BD.crearTablas(con);
-		cargarModeloTabla();
+	
+		
 		
 		
 		btnModificarID.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				con = BD.initBD("confortTravel.db");
+			//	con = BD.initBD("confortTravel.db");
 				
-				int id = Integer.parseInt(txtID.getText());
+				Integer id = Integer.parseInt(txtID.getText());
 				
 				/*Object [] colores ={"rojo","negro","amarillo","azul","majenta"}; 
 				Object opcion = JOptionPane.showInputDialog(null,"Selecciona un color", "Elegir",JOptionPane.QUESTION_MESSAGE,null,colores, colores[0]);
@@ -112,14 +111,17 @@ public class PanelModificarReserva extends JPanel{
 				Object [] tipoActividad = {TipoActividad.SNORKEL, TipoActividad.SKI, TipoActividad.PATINAJE, TipoActividad.CINE, TipoActividad.BOLOS, TipoActividad.RUNNING};
 				String actividad = String.valueOf(JOptionPane.showInputDialog(null,"Selecciona un color", "Elegir",JOptionPane.QUESTION_MESSAGE,null,tipoActividad, tipoActividad[0]));
 				
-				
+				BD.obtenerReservasID(id);
 				BD.uptadeReservas(id, alquiler, alojamiento, excursion, actividad);
 				
 				JOptionPane.showMessageDialog(null, "Reserva modificada correctamente", "CORRECTO ",JOptionPane.INFORMATION_MESSAGE);
-				
+				while(modeloReserva.getRowCount()>0) {
+					modeloReserva.removeRow(0);
+				}
+				cargarModeloTabla();
 				txtID.setText("");
 				
-				BD.closeBD(con);
+				//BD.closeBD(con);
 			}
 		});
 		
@@ -127,9 +129,10 @@ public class PanelModificarReserva extends JPanel{
 		
 	}
 	
+	
 	private void cargarModeloTabla() {
 		
-		con = BD.initBD("confortTravel.db");
+		//con = BD.initBD("confortTravel.db");
 		
 		ArrayList<Reserva> listaReservas = BD.obtenerReservas();
 		while(modeloReserva.getRowCount() > 0) {
@@ -141,14 +144,17 @@ public class PanelModificarReserva extends JPanel{
 			modeloReserva.addRow(fila);
 		}
 		
-		BD.closeBD(con);
+		//BD.closeBD(con);
 	
 	}
 	
 	private void inicializarTabla() {
 		Vector<String> cabeceraReserva = new Vector<String>(
 				Arrays.asList("ID", "ORIGEN","DESTINO","FECHA INICIO", "FECHA FIN", "ALQUILER TRANSPORTE", "TIPO ALOJAMIENTO", "TIPO EXCURSION", "ACTIVIDADES"));
-		modeloReserva = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraReserva);
+		modeloReserva =  new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraReserva) {
+			
+			private static final long serialVersionUID = 1L;
+};
 		tablaReserva = new JTable(modeloReserva);
 		
 		cargarModeloTabla();
