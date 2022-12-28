@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.TimeZone;
+import java.util.TreeMap;
 import java.sql.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,6 +18,7 @@ import javax.swing.plaf.multi.MultiPopupMenuUI;
 import clases.Alojamiento;
 import clases.Excursion;
 import clases.Ciudad;
+import clases.Cliente;
 import clases.Persona;
 import clases.Reserva;
 import clases.TipoActividad;
@@ -80,6 +82,70 @@ public class BD {
 		return con;
 		
 	}
+	public static TreeMap<Cliente, ArrayList<Reserva>> obtenerTodasLasReservasPorDni(String dni_cliente) {
+		TreeMap<Cliente, ArrayList<Reserva>> tmR = new TreeMap<>();
+		ArrayList<Reserva> aR = new ArrayList<>();
+		
+		try(Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
+			
+				
+				String sql1 ="SELECT * FROM Reserva WHERE dni='"+dni_cliente+"';";
+				Statement st = con.createStatement();
+				ResultSet rs1 = st.executeQuery(sql1);
+				while(rs1.next()) {
+					Reserva r = new Reserva();
+					r.setId(rs1.getInt("id"));
+					Ciudad co= obtenerCiudad(con, rs1.getInt("idOrigen"));
+					r.setOrigen(co);
+					Ciudad cd= obtenerCiudad(con, rs1.getInt("idDestino"));
+					r.setDestino(cd);
+					r.setFechaIni(rs1.getString("fechaInicio"));
+					r.setFechaFin(rs1.getString("fechaFin"));
+					r.setAlquilerTransporte(TipoAlquiler.valueOf(rs1.getString("alquilerTransporte")));
+					r.setTipoAlojamiento(TipoAlojamiento.valueOf(rs1.getString("tipoAlojamiento")));
+					r.setExcursion(TipoExcursion.valueOf(rs1.getString("excursion")));
+					r.setActividades(TipoActividad.valueOf(rs1.getString("actividades")));
+					Cliente c = new Cliente();
+					c.setDni(rs1.getString("dni"));
+				
+					aR.add(r);
+					tmR.put(c, aR);
+				}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	return tmR;
+	}
+	public static ArrayList<Persona> ObtenerClientes(String tipo){
+		ArrayList<Persona>lp = new ArrayList<>();
+		String sql = "SELECT * FROM Persona WHERE tipo ='"+tipo+"';";
+		
+		
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")){
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			while(rs.next()) {
+				if(tipo == "CLIENTE") {
+					//CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
+					Persona p = new Persona();
+					p.setDni(rs.getString("dni"));
+					p.setNombre(rs.getString("nom"));
+					p.setContrasenia(rs.getString("cont"));
+					
+					p.setEmail(rs.getString("email"));
+					p.setTipo(TipoPersona.valueOf(rs.getString("tipo")));
+					lp.add(p);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return lp;
+		
+}
 
 	/**
 	 * Mï¿½todo que cierra la conexiï¿½n con la base de datos

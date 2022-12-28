@@ -11,7 +11,7 @@ public class Reserva {
 	private TipoAlojamiento tipoAlojamiento;
 	private TipoExcursion excursion;
 	private TipoActividad actividades;
-	
+	private Persona dni;
 	public Reserva() {
 		
 	}
@@ -29,6 +29,30 @@ public class Reserva {
 		this.tipoAlojamiento = tipoAlojamiento;
 		this.excursion = excursion;
 		this.actividades = actividades;
+	}
+
+	public Reserva(Integer id, Ciudad origen, Ciudad destino, String fechaIni, String fechaFin,
+			TipoAlquiler alquilerTransporte, TipoAlojamiento tipoAlojamiento, TipoExcursion excursion,
+			TipoActividad actividades, Persona dni) {
+		super();
+		this.id = id;
+		this.origen = origen;
+		this.destino = destino;
+		this.fechaIni = fechaIni;
+		this.fechaFin = fechaFin;
+		this.alquilerTransporte = alquilerTransporte;
+		this.tipoAlojamiento = tipoAlojamiento;
+		this.excursion = excursion;
+		this.actividades = actividades;
+		this.dni = dni;
+	}
+
+	public Persona getDni() {
+		return dni;
+	}
+
+	public void setDni(Persona dni) {
+		this.dni = dni;
 	}
 
 	public Integer getId() {
@@ -107,9 +131,10 @@ public class Reserva {
 	public String toString() {
 		return "Reserva [id=" + id + ", origen=" + origen + ", destino=" + destino + ", fechaIni=" + fechaIni
 				+ ", fechaFin=" + fechaFin + ", alquilerTransporte=" + alquilerTransporte + ", tipoAlojamiento="
-				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + "]";
+				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + ", dni=" + dni + "]";
 	}
 
+	
 	
 
 	
