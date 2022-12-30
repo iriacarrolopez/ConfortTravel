@@ -17,6 +17,7 @@ import clases.Ciudad;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.sql.Connection;
@@ -118,7 +119,7 @@ public class PanelDestino extends JPanel {
 				BD.closeBD(con);
 			}
 		});
-		
+		/*
 		btnEliminarDestino.addActionListener(new ActionListener() {
 			
 			@Override
@@ -127,6 +128,23 @@ public class PanelDestino extends JPanel {
 				int d = tableDestino.getSelectedRow();
 				int id = (int) tableDestino.getValueAt(d, 0);
 				BD.eliminarDestino(con, id);
+				cargarModeloTabla();
+				
+			}
+		});*/
+		//N
+		tableDestino.addMouseListener(new MouseAdapter() {
+		 
+			
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				con = BD.initBD("confortTravel.db");
+				int row = tableDestino.rowAtPoint(e.getPoint());
+				BD.eliminarDestino(con);
+				modeloDestino.removeRow(row);
+				tableDestino.updateUI();
 				cargarModeloTabla();
 				
 			}

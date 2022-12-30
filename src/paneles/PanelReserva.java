@@ -98,18 +98,22 @@ public class PanelReserva extends JPanel {
 
 		lblIDVuelo = new JLabel("ID Reserva:");
 		panelCC1.add(lblIDVuelo);
-		lblDNI = new JLabel("DNI_CLIENTE");
-		panelCC1.add(lblDNI);
-		txtDni =   new JTextField();
-		panelCC1.add(txtDni);
-		txtDni.setColumns(10);
+		
 		txtIDVuelo = new JTextField();
 		panelCC1.add(txtIDVuelo);
 		txtIDVuelo.setColumns(10);
 
 		panelCC2 = new JPanel();
 		panelCentroCentro.add(panelCC2);
-
+		panelCC2.setLayout(new GridLayout(5,1,0,0));
+		
+		lblDNI = new JLabel("DNI_CLIENTE");
+		panelCC2.add(lblDNI);
+		txtDni =   new JTextField();
+		
+		panelCC2.add(txtDni);
+		txtDni.setColumns(10);
+		
 		lblOrigen = new JLabel("Origen");
 		panelCC2.add(lblOrigen);
 
@@ -269,13 +273,14 @@ public class PanelReserva extends JPanel {
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null,"PARA MÁS SEGURIDAD INTRODUZCA EL SU DNI ");
-				String dni = txtDni.getText();
 				
-				int id = Integer.parseInt(txtIDVuelo.getText());
+				
+				
+				Integer id = Integer.parseInt(txtIDVuelo.getText());
 				Ciudad origen = (Ciudad) comboBoxOrigen.getSelectedItem();
 				Ciudad destino = (Ciudad) comboBoxDestino.getSelectedItem();
-				int idOrigen = origen.getId();
-				int idDestino = destino.getId();
+				Integer idOrigen = origen.getId();
+				Integer idDestino = destino.getId();
 
 				Date fechaInicio = cFechaInicio.getDate();
 				Date fechaFin = cFechaFin.getDate();
@@ -294,9 +299,10 @@ public class PanelReserva extends JPanel {
 
 				String tipoActividad = String.valueOf(cbActividades.getSelectedItem());
 				// TipoActividad tact = TipoActividad.valueOf(tipoActividad);
-
+				String dni = txtDni.getText();
+				
 				BD.insertarReserva(  con, id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
-						tipoExcursion, tipoActividad);
+						tipoExcursion, tipoActividad,dni);
 
 				// BD.closeBD(con);
 

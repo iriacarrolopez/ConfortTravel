@@ -4,6 +4,8 @@ import javax.swing.JPanel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -127,7 +129,7 @@ public class PanelExcursiones extends JPanel {
 		});
 		/*
 		 * Al hacer click en una fila se te borra
-		 */
+		 
 		btnEliminar.addActionListener(new ActionListener() {
 
 			@Override
@@ -139,6 +141,23 @@ public class PanelExcursiones extends JPanel {
 				// Borramos el contenido del modelo de la tabla
 				
 				cargarModeloTabla();
+			}
+		});*/
+		//N
+		tablaExcursion.addMouseListener(new MouseAdapter() {
+		 
+			
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				con = BD.initBD("confortTravel.db");
+				int row = tablaExcursion.rowAtPoint(e.getPoint());
+				BD.EliminarExcursion(con);
+				modeloExcursion.removeRow(row);
+				tablaExcursion.updateUI();
+				cargarModeloTabla();
+				
 			}
 		});
 		btnModificar.addActionListener(new ActionListener() {

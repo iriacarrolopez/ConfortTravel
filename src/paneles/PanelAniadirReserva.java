@@ -259,7 +259,7 @@ public class PanelAniadirReserva extends JPanel {
 		 * } } }); panelCA4.add(btnGuardar);
 		 */
 
-		btnAceptar.addActionListener(new ActionListener() {
+	/*	btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				int id = Integer.parseInt(txtIDVuelo.getText());
@@ -293,7 +293,7 @@ public class PanelAniadirReserva extends JPanel {
 
 			}
 		});
-
+*/
 	}
 
 	private void cargarModeloTabla() {

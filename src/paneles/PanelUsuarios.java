@@ -40,8 +40,13 @@ public class PanelUsuarios extends JPanel {
 	private JScrollPane scrollPaneList;
 	private JList<Persona> listCliente;
 	private JTextArea textAreaReservas;
-	// mapa de usarios con dni
-	private TreeMap<Persona, ArrayList<Reserva>> mapaClienteR;
+	//N 
+	/*
+	 * mapa
+	 * string -> dni 
+	 * arraylist -> todas las reservas por ese dni
+	 */
+	private TreeMap<String, ArrayList<Reserva>> mapaClienteR;
 	private Connection con;
 	private JButton btnGuardar;
 
@@ -51,8 +56,9 @@ public class PanelUsuarios extends JPanel {
 	public PanelUsuarios() {
 		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
+		
 		setLayout(new BorderLayout(0, 0));
-				panelNorte = new JPanel();
+		panelNorte = new JPanel();
 		add(panelNorte, BorderLayout.NORTH);
 
 		lblINFO = new JLabel("USUARIOS");
@@ -76,6 +82,9 @@ public class PanelUsuarios extends JPanel {
 		panelCentro.add(textAreaReservas);
 		cargarListaClientes();
 		
+		mapaClienteR = new TreeMap<String, ArrayList<Reserva>>();
+		
+	
 
 		listCliente.addMouseListener(new MouseAdapter() {
 
@@ -83,21 +92,24 @@ public class PanelUsuarios extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
 				Persona c = listCliente.getSelectedValue();
-				cargarTextArea(c);
-
+			
+				TreeMap<String ,ArrayList<Reserva>> mapaClienteR = BD.obtenerTodasLasReservasPorDni(c.getDni());
+				System.out.println(mapaClienteR);
+				textAreaReservas.setText(" ");
+				String texto ="";
+				for(String dni : mapaClienteR.keySet()) {
+					ArrayList<Reserva> a = mapaClienteR.get(dni);
+					for(Reserva r :a) {
+						texto = texto + r + "\n";
+					}
+					textAreaReservas.setText(texto);
+				}
 			}
 		});
-		btnGuardar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//guardarMapaEnFichero("nuevoficheroReservas.txt");
-			}
-		});
-		setVisible(true);
+		
 	}
 
-	private void cargarTextArea(Persona c) {
+	/*private void cargarTextArea(Persona c) {
 		textAreaReservas.setText("");
 		String texto = "";
 		// Vamos a cargar en el textArea los valores del mapa asociados al empleado
@@ -107,16 +119,18 @@ public class PanelUsuarios extends JPanel {
 			texto = texto + t + "\n";
 		}
 		textAreaReservas.setText(texto);
-	}
+	}*/
 
 	private void cargarListaClientes() {
 
 		try {
 
-ArrayList<Persona> lista =BD.ObtenerClientes("CLIENTE");
+			ArrayList<Persona> lista =BD.ObtenerClientes("CLIENTE");
 			modeloCliente.removeAllElements();
 			for (Persona p : lista) {
-				//mapaClienteR = BD.obtenerTodasLasReservasPorDni(a.getDni());
+				mapaClienteR = BD.obtenerTodasLasReservasPorDni(p.getDni());
+				System.out.println(lista);
+				System.out.println(mapaClienteR);
 				modeloCliente.addElement(p);
 			}
 
@@ -125,12 +139,14 @@ ArrayList<Persona> lista =BD.ObtenerClientes("CLIENTE");
 			e.printStackTrace();
 		}
 
-	}
-	private void cargarModelo() {
-		modeloCliente.removeAllElements();
-		for(Persona c :mapaClienteR.keySet()) {
-			modeloCliente.addElement(c);
-		}
-	}
+	
+	btnGuardar.addActionListener(new ActionListener() {
 
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			//guardarMapaEnFichero("nuevoficheroReservas.txt");
+		}
+	});
+	setVisible(true);
+	}
 }

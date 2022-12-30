@@ -20,9 +20,14 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTree;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
@@ -31,6 +36,7 @@ import paneles.PanelDestino;
 import paneles.PanelEliminarReserva;
 import paneles.PanelExcursiones;
 import paneles.PanelModificarReserva;
+import paneles.PanelReserva;
 
 public class VentanaCliente extends JFrame {
 
@@ -43,12 +49,14 @@ public class VentanaCliente extends JFrame {
 	private JLabel lblInfor, lblTitulo;
 	private JButton btnSalir, btnVolver;
 	public VentanaLogin ventanaLogin;
-	private JComboBox<String> comboAn;
-	private JButton btnResguardo;
-	private JButton btnFactura;
-	private PanelAniadirReserva par;
-	private PanelEliminarReserva per;
-	private PanelModificarReserva pmr;
+	public PanelReserva pr;
+	private JTree tree;
+	//private JComboBox<String> comboAn;
+	//private JButton btnResguardo;
+	//private JButton btnFactura;
+	//private PanelAniadirReserva par;
+	//private PanelEliminarReserva per;
+//	private PanelModificarReserva pmr;
 	private JLabel lblHora;
 
 	/**
@@ -105,17 +113,63 @@ public class VentanaCliente extends JFrame {
 		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
 		panelNorte.add(lblTitulo);
 
-		panelInformacion = new JPanel();
-		panelInformacion.setBackground(Color.BLACK);
-		panelIzq.add(panelInformacion);
-		panelInformacion.setLayout(new GridLayout(2, 0, 0, 0));
-		lblInfor = new JLabel("Introduce que operaci\u00F3n desea realizar");
-		lblInfor.setForeground(Color.WHITE);
-		lblInfor.setFont(new Font("Tahoma", Font.BOLD, 10));
-		panelInformacion.add(lblInfor);
-		lblInfor.setBackground(UIManager.getColor("Button.foreground"));
 		
-		par = new PanelAniadirReserva();
+		
+		/*
+		 * nuevo
+		 */
+		tree = new JTree();
+		tree.setModel(new DefaultTreeModel(
+			new DefaultMutableTreeNode("CLIENTES") {
+			
+				private static final long serialVersionUID = 1L;
+
+				{
+					DefaultMutableTreeNode nodo;
+					nodo = new DefaultMutableTreeNode("Coger Reserva");
+						nodo.add(new DefaultMutableTreeNode("NuevaReserva"));
+					add(nodo);
+					nodo = new DefaultMutableTreeNode("Importe de la reserva");
+						nodo.add(new DefaultMutableTreeNode("Imprimir"));
+					add(nodo);
+					nodo = new DefaultMutableTreeNode("Resguardo");
+							nodo.add(new DefaultMutableTreeNode("Imprimir"));
+					add(nodo);
+					nodo = new DefaultMutableTreeNode("Otras opciones");
+						nodo.add(new DefaultMutableTreeNode("Salir"));
+						nodo.add(new DefaultMutableTreeNode("Volver"));
+					add(nodo);
+						
+				
+	add(nodo);
+				}
+			}
+		));
+		tree.addTreeSelectionListener(new TreeSelectionListener() {
+			
+			@Override
+			public void valueChanged(TreeSelectionEvent e) {
+				// TODO Auto-generated method stub
+				  DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+				 String nodos =selectedNode.getUserObject().toString();
+            
+				 if("NuevaReserva".equals(nodos)) {
+					 panelPrincipal.removeAll();
+						panelPrincipal.add(pr);
+						panelPrincipal.updateUI();
+				 }
+            
+			}
+		});
+		panelIzq.add(tree);
+		
+		lblTitulo = new JLabel("Cliente");
+		lblTitulo.setFont(new Font("Verdana Pro Cond Black", Font.BOLD | Font.ITALIC, 15));
+		panelNorte.add(lblTitulo);
+		
+		pr = new PanelReserva();
+		
+		/*par = new PanelAniadirReserva();
 		per = new PanelEliminarReserva();
 		pmr = new PanelModificarReserva();
 		
@@ -194,7 +248,7 @@ public class VentanaCliente extends JFrame {
 				System.exit(0);
 
 			}
-		});
+		});*/
 		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
 		lblHora = new JLabel();
 		panelNorte.add(lblHora);

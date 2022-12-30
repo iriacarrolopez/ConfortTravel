@@ -11,7 +11,8 @@ public class Reserva {
 	private TipoAlojamiento tipoAlojamiento;
 	private TipoExcursion excursion;
 	private TipoActividad actividades;
-	private Persona dni;
+	//N
+	private String dni;
 	public Reserva() {
 		
 	}
@@ -33,7 +34,7 @@ public class Reserva {
 
 	public Reserva(Integer id, Ciudad origen, Ciudad destino, String fechaIni, String fechaFin,
 			TipoAlquiler alquilerTransporte, TipoAlojamiento tipoAlojamiento, TipoExcursion excursion,
-			TipoActividad actividades, Persona dni) {
+			TipoActividad actividades,String dni) {
 		super();
 		this.id = id;
 		this.origen = origen;
@@ -47,11 +48,11 @@ public class Reserva {
 		this.dni = dni;
 	}
 
-	public Persona getDni() {
+	public String getDni() {
 		return dni;
 	}
 
-	public void setDni(Persona dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 

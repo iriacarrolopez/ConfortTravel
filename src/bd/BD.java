@@ -82,14 +82,22 @@ public class BD {
 		return con;
 		
 	}
-	public static TreeMap<Cliente, ArrayList<Reserva>> obtenerTodasLasReservasPorDni(String dni_cliente) {
-		TreeMap<Cliente, ArrayList<Reserva>> tmR = new TreeMap<>();
+	/*
+	 * NUEVO
+	 */
+	/**
+	 * Obtener reservas por dni
+	 * @param dni_cliente que reciva
+	 * @return un mapa 
+	 */
+	public static TreeMap<String, ArrayList<Reserva>> obtenerTodasLasReservasPorDni(String dni_cliente) {
+		TreeMap<String, ArrayList<Reserva>> tmR = new TreeMap<>();
 		ArrayList<Reserva> aR = new ArrayList<>();
 		
 		try(Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
 			
 				
-				String sql1 ="SELECT * FROM Reserva WHERE dni='"+dni_cliente+"';";
+				String sql1 ="SELECT * FROM Reserva WHERE Dni_cliente='"+dni_cliente+"';";
 				Statement st = con.createStatement();
 				ResultSet rs1 = st.executeQuery(sql1);
 				while(rs1.next()) {
@@ -105,17 +113,22 @@ public class BD {
 					r.setTipoAlojamiento(TipoAlojamiento.valueOf(rs1.getString("tipoAlojamiento")));
 					r.setExcursion(TipoExcursion.valueOf(rs1.getString("excursion")));
 					r.setActividades(TipoActividad.valueOf(rs1.getString("actividades")));
-					Cliente c = new Cliente();
-					c.setDni(rs1.getString("dni"));
-				
+					r.setDni(rs1.getString("Dni_cliente"));
 					aR.add(r);
-					tmR.put(c, aR);
+					System.out.println(aR);
+					log(Level.INFO, "El array de reservas contiene"+aR, null);
+					tmR.put(dni_cliente, aR);
+					System.out.println(tmR);
+					log(Level.INFO, "El mapa contiene :"+tmR, null);
 				}
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	return tmR;
+			log(Level.WARNING, "Error al cargar el mapa", e);
+		}	
+		return tmR;
+		
 	}
 	public static ArrayList<Persona> ObtenerClientes(String tipo){
 		ArrayList<Persona>lp = new ArrayList<>();
@@ -172,33 +185,43 @@ public class BD {
 	 * 
 	 * @param con Conexiï¿½n con la base de datos
 	 */
+	/*CAMBIO EN EL FORMATO DE CREAR LAS TABLAS PARA HACER LA FOREIGN KEY*/
 	public static void crearTablas(Connection con) {
-		String sql = "CREATE TABLE IF NOT EXISTS Persona (dni String, nom String, cont String, email String, tipo String)";
-		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id Integer, nombre_comp String, talojamiento String, precio Float, duracion Integer, destino Integer)";
-		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id Integer, nombre String, tipo String,lugar String, precio Float,duracion Integer, numPersonas Integer)";
-		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id Integer, idOrigen Integer, idDestino Integer, fechaInicio String, fechaFin String, alquilerTransporte String, tipoAlojamiento String, excursion String, actividades String)";
-		String sql5 = "CREATE TABLE IF NOT EXISTS Ciudad (id Integer, nom String)";
+		String sql1 = "CREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))";
+		log(Level.INFO ,"Statement"+sql1,null);
+		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))";
+		log(Level.INFO ,"Statement"+sql2,null);
+		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))";
+		log(Level.INFO ,"Statement"+sql3,null);
+		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )";
+		log(Level.INFO ,"Statement"+sql4,null);
+		String sql5 = "CREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))";
+		log(Level.INFO ,"Statement"+sql5,null);
 		try {
 			Statement st = con.createStatement();
 
-			st.executeUpdate(sql);
+			st.executeUpdate(sql1);
 			st.executeUpdate(sql2);
 			st.executeUpdate(sql3);
 			st.executeUpdate(sql4);
 			st.executeUpdate(sql5);
+			
 			log(Level.INFO, "Creacion de las tablas", null);
 			System.out.println("--Se ha creado la tabla Destino");
 			System.out.println("--Se ha creado la tabla Persona");
 			System.out.println("--Se ha creado la tabla Alojamiento");
 			System.out.println("--Se ha creado la tabla Excursion");
 			
-			st.close();
+			//st.close();
 		} catch (SQLException e) {
 			System.err.println(String.format("* Error al crear la BBDD: %s", e.getMessage()));
 			log(Level.SEVERE, "Error al crea las tablas de la BBDD", e);
 
 		}
 	}
+
+	
+	
 
 	/**
 	 * 
@@ -419,6 +442,7 @@ public class BD {
 		}
 		return listaAlojamiento;
 	}
+	//C
 	public static ArrayList<Reserva> obtenerReservas(){
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
 		String sql = "SELECT * FROM Reserva WHERE id>=0";
@@ -429,9 +453,9 @@ public class BD {
 			
 			while (rs.next()) {
 			
-				int dni = rs.getInt("id");
-				int o = rs.getInt("idOrigen");
-				int d = rs.getInt("idDestino");
+				Integer dni = rs.getInt("id");
+				Integer o = rs.getInt("idOrigen");
+				Integer d = rs.getInt("idDestino");
 				Ciudad co = getCiudad(con,o);
 				Ciudad cd = getCiudad(con,d);
 				String fechaIni = rs.getString("fechaInicio");
@@ -444,8 +468,9 @@ public class BD {
 				TipoExcursion te = TipoExcursion.valueOf(ex);
 				String act = rs.getString("actividades");
 				TipoActividad tact = TipoActividad.valueOf(act);
+				String dni_c = rs.getString("Dni_cliente");
 				
-				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact);
+				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact,dni_c);
 				
 				listaReservas.add(r);
 			}
@@ -746,9 +771,9 @@ public class BD {
 			e.printStackTrace();
 		}
 	}
-	
-	public static void insertarReserva(Connection con, Integer id, Integer idOrigen, Integer idDestino, String fechaIni, String fechaFin, String alquilerTransporte, String tipoAlojamiento, String excursion, String actividades) {
-		String sql = "INSERT INTO Reserva VALUES(" + id + "," + idOrigen + "," + idDestino + ",'" + fechaIni + "','" + fechaFin + "','" + alquilerTransporte + "','" + tipoAlojamiento + "','" + excursion + "','" + actividades + "');";
+	//N
+	public static void insertarReserva(Connection con, Integer id, Integer idOrigen, Integer idDestino, String fechaIni, String fechaFin, String alquilerTransporte, String tipoAlojamiento, String excursion, String actividades,String dni) {
+		String sql = "INSERT INTO Reserva VALUES(" + id + "," + idOrigen + "," + idDestino + ",'" + fechaIni + "','" + fechaFin + "','" + alquilerTransporte + "','" + tipoAlojamiento + "','" + excursion + "','" + actividades + "','"+dni+"',);";
 		try {
 			
 			Statement stmt = con.createStatement();
@@ -772,28 +797,26 @@ public class BD {
 	 * Eliminar un destino
 	 * 
 	 * @param con abrir la conexion con la BBDD
-	 * @param id de la persona 
+	 * 
 	 */
-	
-	public static void eliminarDestino(Connection con, int id) {
+	//N
+	public static void eliminarDestino(Connection con) {
 		try (Statement st = con.createStatement();) {
-			String sql = "DELETE FROM Ciudad WHERE id='" + id + "';";
+			String sql = "DELETE FROM Ciudad ;";
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			int result = st.executeUpdate(sql);
-			System.out.println(String.format("- Se ha borrado el destino con id '" + id + "'", result));
 			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
 		} catch (SQLException e) {
 			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
 			System.err.println(String.format("* Error al eliminar el destino de la BBDD: %s", e.getMessage()));
 		}
 	}
-	
-	public static void eliminarAlojamiento(Connection con, int id) {
+	//N
+	public static void eliminarAlojamiento(Connection con) {
 		try (Statement st = con.createStatement();) {
-			String sql = "DELETE FROM Alojamiento WHERE id='" + id + "';";
+			String sql = "DELETE FROM Alojamiento;";
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			int result = st.executeUpdate(sql);
-			System.out.println(String.format("- Se ha borrado el alojamiento con id '" + id + "'", result));
 			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
 		} catch (SQLException e) {
 			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
@@ -903,13 +926,13 @@ public class BD {
 			e.printStackTrace();
 		}
 	} 
-	public static void EliminarExcursion(Connection con, int id) {
+	//N
+	public static void EliminarExcursion(Connection con) {
 		
 			try (Statement st = con.createStatement();) {
-				String sql = "DELETE FROM Excursion WHERE id='" + id + "';";
+				String sql = "DELETE FROM Excursion ;";
 				log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 				int result = st.executeUpdate(sql);
-				System.out.println(String.format("- Se ha borrado la excursion con id '" + id + "'", result));
 				log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
 			} catch (SQLException e) {
 				log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);

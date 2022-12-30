@@ -4,8 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
-
-public class Persona {
+//N
+public class Persona implements Comparable<Persona>{
 	private String dni;
 	private String nombre;
 	private String apellido;
@@ -153,6 +153,12 @@ public class Persona {
 	public String toString() {
 		return "Persona [dni=" + dni + ", nombre=" + nombre + ", email=" + email + ",  contrasenia=" + contrasenia
 				+ ", tipo=" + tipo + "]";
+	}
+//N
+	@Override
+	public int compareTo(Persona o) {
+		// TODO Auto-generated method stub
+		return this.dni.compareTo(o.dni);
 	}
 
 }

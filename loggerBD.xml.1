@@ -27080,3 +27080,3641 @@
   <thread>18</thread>
   <message>Se han encontrado las siguientes reservas:0</message>
 </record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T11:53:24.853615900Z</date>
+  <millis>1672401204853</millis>
+  <nanos>615900</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.879620300Z</date>
+  <millis>1672401204879</millis>
+  <nanos>620300</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.881582400Z</date>
+  <millis>1672401204881</millis>
+  <nanos>582400</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.887565700Z</date>
+  <millis>1672401204887</millis>
+  <nanos>565700</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.888562800Z</date>
+  <millis>1672401204888</millis>
+  <nanos>562800</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.890558300Z</date>
+  <millis>1672401204890</millis>
+  <nanos>558300</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.901538900Z</date>
+  <millis>1672401204901</millis>
+  <nanos>538900</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.942434900Z</date>
+  <millis>1672401204942</millis>
+  <nanos>434900</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:24.945411100Z</date>
+  <millis>1672401204945</millis>
+  <nanos>411100</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.026198300Z</date>
+  <millis>1672401205026</millis>
+  <nanos>198300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.028189200Z</date>
+  <millis>1672401205028</millis>
+  <nanos>189200</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.029186500Z</date>
+  <millis>1672401205029</millis>
+  <nanos>186500</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.031182600Z</date>
+  <millis>1672401205031</millis>
+  <nanos>182600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.032180Z</date>
+  <millis>1672401205032</millis>
+  <nanos>180000</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.035187100Z</date>
+  <millis>1672401205035</millis>
+  <nanos>187100</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.039170400Z</date>
+  <millis>1672401205039</millis>
+  <nanos>170400</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.079052300Z</date>
+  <millis>1672401205079</millis>
+  <nanos>52300</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.082045900Z</date>
+  <millis>1672401205082</millis>
+  <nanos>45900</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.109971800Z</date>
+  <millis>1672401205109</millis>
+  <nanos>971800</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.110968300Z</date>
+  <millis>1672401205110</millis>
+  <nanos>968300</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.112964100Z</date>
+  <millis>1672401205112</millis>
+  <nanos>964100</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.115954400Z</date>
+  <millis>1672401205115</millis>
+  <nanos>954400</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.118947200Z</date>
+  <millis>1672401205118</millis>
+  <nanos>947200</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.120942200Z</date>
+  <millis>1672401205120</millis>
+  <nanos>942200</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.125927800Z</date>
+  <millis>1672401205125</millis>
+  <nanos>927800</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.155848700Z</date>
+  <millis>1672401205155</millis>
+  <nanos>848700</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.158841800Z</date>
+  <millis>1672401205158</millis>
+  <nanos>841800</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.192750600Z</date>
+  <millis>1672401205192</millis>
+  <nanos>750600</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.196740Z</date>
+  <millis>1672401205196</millis>
+  <nanos>740000</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.201731600Z</date>
+  <millis>1672401205201</millis>
+  <nanos>731600</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:53:25.204718500Z</date>
+  <millis>1672401205204</millis>
+  <nanos>718500</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T11:54:04.631899400Z</date>
+  <millis>1672401244631</millis>
+  <nanos>899400</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.673786Z</date>
+  <millis>1672401244673</millis>
+  <nanos>786000</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.674784400Z</date>
+  <millis>1672401244674</millis>
+  <nanos>784400</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.678772300Z</date>
+  <millis>1672401244678</millis>
+  <nanos>772300</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.680767500Z</date>
+  <millis>1672401244680</millis>
+  <nanos>767500</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.682762800Z</date>
+  <millis>1672401244682</millis>
+  <nanos>762800</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.688748400Z</date>
+  <millis>1672401244688</millis>
+  <nanos>748400</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.757563600Z</date>
+  <millis>1672401244757</millis>
+  <nanos>563600</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.762549300Z</date>
+  <millis>1672401244762</millis>
+  <nanos>549300</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.907166100Z</date>
+  <millis>1672401244907</millis>
+  <nanos>166100</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.913146100Z</date>
+  <millis>1672401244913</millis>
+  <nanos>146100</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.914144300Z</date>
+  <millis>1672401244914</millis>
+  <nanos>144300</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.920127200Z</date>
+  <millis>1672401244920</millis>
+  <nanos>127200</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.930101Z</date>
+  <millis>1672401244930</millis>
+  <nanos>101000</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.934090900Z</date>
+  <millis>1672401244934</millis>
+  <nanos>90900</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.941074100Z</date>
+  <millis>1672401244941</millis>
+  <nanos>74100</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.994929300Z</date>
+  <millis>1672401244994</millis>
+  <nanos>929300</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:04.997921300Z</date>
+  <millis>1672401244997</millis>
+  <nanos>921300</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.022880800Z</date>
+  <millis>1672401245022</millis>
+  <nanos>880800</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.025851700Z</date>
+  <millis>1672401245025</millis>
+  <nanos>851700</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.026842600Z</date>
+  <millis>1672401245026</millis>
+  <nanos>842600</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.028852800Z</date>
+  <millis>1672401245028</millis>
+  <nanos>852800</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.029834600Z</date>
+  <millis>1672401245029</millis>
+  <nanos>834600</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.031829Z</date>
+  <millis>1672401245031</millis>
+  <nanos>829000</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.035817700Z</date>
+  <millis>1672401245035</millis>
+  <nanos>817700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.049781300Z</date>
+  <millis>1672401245049</millis>
+  <nanos>781300</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.052773800Z</date>
+  <millis>1672401245052</millis>
+  <nanos>773800</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.085685200Z</date>
+  <millis>1672401245085</millis>
+  <nanos>685200</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.092667400Z</date>
+  <millis>1672401245092</millis>
+  <nanos>667400</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.094674500Z</date>
+  <millis>1672401245094</millis>
+  <nanos>674500</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.097652700Z</date>
+  <millis>1672401245097</millis>
+  <nanos>652700</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.693061900Z</date>
+  <millis>1672401245693</millis>
+  <nanos>61900</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.697050100Z</date>
+  <millis>1672401245697</millis>
+  <nanos>50100</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.720986100Z</date>
+  <millis>1672401245720</millis>
+  <nanos>986100</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.730959500Z</date>
+  <millis>1672401245730</millis>
+  <nanos>959500</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.739936300Z</date>
+  <millis>1672401245739</millis>
+  <nanos>936300</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.742929Z</date>
+  <millis>1672401245742</millis>
+  <nanos>929000</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.748912200Z</date>
+  <millis>1672401245748</millis>
+  <nanos>912200</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.763873Z</date>
+  <millis>1672401245763</millis>
+  <nanos>873000</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.768858Z</date>
+  <millis>1672401245768</millis>
+  <nanos>858000</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.770852500Z</date>
+  <millis>1672401245770</millis>
+  <nanos>852500</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.776838500Z</date>
+  <millis>1672401245776</millis>
+  <nanos>838500</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.800774100Z</date>
+  <millis>1672401245800</millis>
+  <nanos>774100</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.802767600Z</date>
+  <millis>1672401245802</millis>
+  <nanos>767600</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.804762200Z</date>
+  <millis>1672401245804</millis>
+  <nanos>762200</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.812752200Z</date>
+  <millis>1672401245812</millis>
+  <nanos>752200</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.814736400Z</date>
+  <millis>1672401245814</millis>
+  <nanos>736400</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.829698100Z</date>
+  <millis>1672401245829</millis>
+  <nanos>698100</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.833684600Z</date>
+  <millis>1672401245833</millis>
+  <nanos>684600</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.894522300Z</date>
+  <millis>1672401245894</millis>
+  <nanos>522300</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T11:54:05.898512500Z</date>
+  <millis>1672401245898</millis>
+  <nanos>512500</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T13:04:30.258213700Z</date>
+  <millis>1672405470258</millis>
+  <nanos>213700</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.314066500Z</date>
+  <millis>1672405470314</millis>
+  <nanos>66500</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.316060Z</date>
+  <millis>1672405470316</millis>
+  <nanos>60000</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.320051Z</date>
+  <millis>1672405470320</millis>
+  <nanos>51000</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.323041200Z</date>
+  <millis>1672405470323</millis>
+  <nanos>41200</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.326034300Z</date>
+  <millis>1672405470326</millis>
+  <nanos>34300</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.337004300Z</date>
+  <millis>1672405470337</millis>
+  <nanos>4300</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.387867900Z</date>
+  <millis>1672405470387</millis>
+  <nanos>867900</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.392855800Z</date>
+  <millis>1672405470392</millis>
+  <nanos>855800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.567388300Z</date>
+  <millis>1672405470567</millis>
+  <nanos>388300</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.569382900Z</date>
+  <millis>1672405470569</millis>
+  <nanos>382900</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.577363600Z</date>
+  <millis>1672405470577</millis>
+  <nanos>363600</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.583345500Z</date>
+  <millis>1672405470583</millis>
+  <nanos>345500</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.594328900Z</date>
+  <millis>1672405470594</millis>
+  <nanos>328900</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.600300300Z</date>
+  <millis>1672405470600</millis>
+  <nanos>300300</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.610273900Z</date>
+  <millis>1672405470610</millis>
+  <nanos>273900</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.661137600Z</date>
+  <millis>1672405470661</millis>
+  <nanos>137600</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.665127700Z</date>
+  <millis>1672405470665</millis>
+  <nanos>127700</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.726962400Z</date>
+  <millis>1672405470726</millis>
+  <nanos>962400</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.733942Z</date>
+  <millis>1672405470733</millis>
+  <nanos>942000</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.736934500Z</date>
+  <millis>1672405470736</millis>
+  <nanos>934500</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.739934600Z</date>
+  <millis>1672405470739</millis>
+  <nanos>934600</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.744914100Z</date>
+  <millis>1672405470744</millis>
+  <nanos>914100</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.746908200Z</date>
+  <millis>1672405470746</millis>
+  <nanos>908200</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.751896300Z</date>
+  <millis>1672405470751</millis>
+  <nanos>896300</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.802759900Z</date>
+  <millis>1672405470802</millis>
+  <nanos>759900</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.809740900Z</date>
+  <millis>1672405470809</millis>
+  <nanos>740900</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.876562400Z</date>
+  <millis>1672405470876</millis>
+  <nanos>562400</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.884541Z</date>
+  <millis>1672405470884</millis>
+  <nanos>541000</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.901497100Z</date>
+  <millis>1672405470901</millis>
+  <nanos>497100</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:30.911468300Z</date>
+  <millis>1672405470911</millis>
+  <nanos>468300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.399163100Z</date>
+  <millis>1672405471399</millis>
+  <nanos>163100</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.400160800Z</date>
+  <millis>1672405471400</millis>
+  <nanos>160800</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.402178900Z</date>
+  <millis>1672405471402</millis>
+  <nanos>178900</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.403153200Z</date>
+  <millis>1672405471403</millis>
+  <nanos>153200</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.407142900Z</date>
+  <millis>1672405471407</millis>
+  <nanos>142900</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.412129800Z</date>
+  <millis>1672405471412</millis>
+  <nanos>129800</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.415121300Z</date>
+  <millis>1672405471415</millis>
+  <nanos>121300</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.420109300Z</date>
+  <millis>1672405471420</millis>
+  <nanos>109300</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.425093700Z</date>
+  <millis>1672405471425</millis>
+  <nanos>93700</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.427089100Z</date>
+  <millis>1672405471427</millis>
+  <nanos>89100</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.429084400Z</date>
+  <millis>1672405471429</millis>
+  <nanos>84400</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.437062700Z</date>
+  <millis>1672405471437</millis>
+  <nanos>62700</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.438058900Z</date>
+  <millis>1672405471438</millis>
+  <nanos>58900</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.441055400Z</date>
+  <millis>1672405471441</millis>
+  <nanos>55400</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.443046900Z</date>
+  <millis>1672405471443</millis>
+  <nanos>46900</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.445041900Z</date>
+  <millis>1672405471445</millis>
+  <nanos>41900</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.447035900Z</date>
+  <millis>1672405471447</millis>
+  <nanos>35900</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.452022800Z</date>
+  <millis>1672405471452</millis>
+  <nanos>22800</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.485931500Z</date>
+  <millis>1672405471485</millis>
+  <nanos>931500</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:04:31.487925700Z</date>
+  <millis>1672405471487</millis>
+  <nanos>925700</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T13:07:35.019380100Z</date>
+  <millis>1672405655019</millis>
+  <nanos>380100</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.058275500Z</date>
+  <millis>1672405655058</millis>
+  <nanos>275500</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.060270600Z</date>
+  <millis>1672405655060</millis>
+  <nanos>270600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.063262800Z</date>
+  <millis>1672405655063</millis>
+  <nanos>262800</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.067251600Z</date>
+  <millis>1672405655067</millis>
+  <nanos>251600</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.071244200Z</date>
+  <millis>1672405655071</millis>
+  <nanos>244200</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.083210400Z</date>
+  <millis>1672405655083</millis>
+  <nanos>210400</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.126095Z</date>
+  <millis>1672405655126</millis>
+  <nanos>95000</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.132080500Z</date>
+  <millis>1672405655132</millis>
+  <nanos>80500</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.238792400Z</date>
+  <millis>1672405655238</millis>
+  <nanos>792400</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.239789500Z</date>
+  <millis>1672405655239</millis>
+  <nanos>789500</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.241784500Z</date>
+  <millis>1672405655241</millis>
+  <nanos>784500</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.246778200Z</date>
+  <millis>1672405655246</millis>
+  <nanos>778200</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.254750600Z</date>
+  <millis>1672405655254</millis>
+  <nanos>750600</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.259737500Z</date>
+  <millis>1672405655259</millis>
+  <nanos>737500</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.267716600Z</date>
+  <millis>1672405655267</millis>
+  <nanos>716600</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.371532600Z</date>
+  <millis>1672405655371</millis>
+  <nanos>532600</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.384404100Z</date>
+  <millis>1672405655384</millis>
+  <nanos>404100</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.440254200Z</date>
+  <millis>1672405655440</millis>
+  <nanos>254200</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.443246300Z</date>
+  <millis>1672405655443</millis>
+  <nanos>246300</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.447235700Z</date>
+  <millis>1672405655447</millis>
+  <nanos>235700</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.449230Z</date>
+  <millis>1672405655449</millis>
+  <nanos>230000</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.451224800Z</date>
+  <millis>1672405655451</millis>
+  <nanos>224800</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.455214Z</date>
+  <millis>1672405655455</millis>
+  <nanos>214000</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.523033900Z</date>
+  <millis>1672405655523</millis>
+  <nanos>33900</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.568910200Z</date>
+  <millis>1672405655568</millis>
+  <nanos>910200</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.576889300Z</date>
+  <millis>1672405655576</millis>
+  <nanos>889300</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.641715300Z</date>
+  <millis>1672405655641</millis>
+  <nanos>715300</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.650692100Z</date>
+  <millis>1672405655650</millis>
+  <nanos>692100</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.664654500Z</date>
+  <millis>1672405655664</millis>
+  <nanos>654500</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:35.667647100Z</date>
+  <millis>1672405655667</millis>
+  <nanos>647100</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.004744700Z</date>
+  <millis>1672405656004</millis>
+  <nanos>744700</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.005742400Z</date>
+  <millis>1672405656005</millis>
+  <nanos>742400</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.006739200Z</date>
+  <millis>1672405656006</millis>
+  <nanos>739200</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.008733800Z</date>
+  <millis>1672405656008</millis>
+  <nanos>733800</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.013720700Z</date>
+  <millis>1672405656013</millis>
+  <nanos>720700</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.015715200Z</date>
+  <millis>1672405656015</millis>
+  <nanos>715200</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.019704700Z</date>
+  <millis>1672405656019</millis>
+  <nanos>704700</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.026685900Z</date>
+  <millis>1672405656026</millis>
+  <nanos>685900</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.031685100Z</date>
+  <millis>1672405656031</millis>
+  <nanos>685100</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.034665Z</date>
+  <millis>1672405656034</millis>
+  <nanos>665000</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.037658100Z</date>
+  <millis>1672405656037</millis>
+  <nanos>658100</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.050624900Z</date>
+  <millis>1672405656050</millis>
+  <nanos>624900</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.051619900Z</date>
+  <millis>1672405656051</millis>
+  <nanos>619900</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.052619200Z</date>
+  <millis>1672405656052</millis>
+  <nanos>619200</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.053613500Z</date>
+  <millis>1672405656053</millis>
+  <nanos>613500</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.054611500Z</date>
+  <millis>1672405656054</millis>
+  <nanos>611500</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.058600200Z</date>
+  <millis>1672405656058</millis>
+  <nanos>600200</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.060594400Z</date>
+  <millis>1672405656060</millis>
+  <nanos>594400</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.093510600Z</date>
+  <millis>1672405656093</millis>
+  <nanos>510600</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:07:36.096499900Z</date>
+  <millis>1672405656096</millis>
+  <nanos>499900</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T13:08:09.275404300Z</date>
+  <millis>1672405689275</millis>
+  <nanos>404300</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.334245800Z</date>
+  <millis>1672405689334</millis>
+  <nanos>245800</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.341247600Z</date>
+  <millis>1672405689341</millis>
+  <nanos>247600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.347211300Z</date>
+  <millis>1672405689347</millis>
+  <nanos>211300</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.349206700Z</date>
+  <millis>1672405689349</millis>
+  <nanos>206700</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.352198600Z</date>
+  <millis>1672405689352</millis>
+  <nanos>198600</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.360176600Z</date>
+  <millis>1672405689360</millis>
+  <nanos>176600</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.422046400Z</date>
+  <millis>1672405689422</millis>
+  <nanos>46400</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.426002100Z</date>
+  <millis>1672405689426</millis>
+  <nanos>2100</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.685307900Z</date>
+  <millis>1672405689685</millis>
+  <nanos>307900</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.689297900Z</date>
+  <millis>1672405689689</millis>
+  <nanos>297900</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.694285900Z</date>
+  <millis>1672405689694</millis>
+  <nanos>285900</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.701264600Z</date>
+  <millis>1672405689701</millis>
+  <nanos>264600</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.709245200Z</date>
+  <millis>1672405689709</millis>
+  <nanos>245200</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.712236Z</date>
+  <millis>1672405689712</millis>
+  <nanos>236000</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.716226Z</date>
+  <millis>1672405689716</millis>
+  <nanos>226000</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.803991900Z</date>
+  <millis>1672405689803</millis>
+  <nanos>991900</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.806983800Z</date>
+  <millis>1672405689806</millis>
+  <nanos>983800</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.902726300Z</date>
+  <millis>1672405689902</millis>
+  <nanos>726300</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.907742800Z</date>
+  <millis>1672405689907</millis>
+  <nanos>742800</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.913697400Z</date>
+  <millis>1672405689913</millis>
+  <nanos>697400</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:09.917686400Z</date>
+  <millis>1672405689917</millis>
+  <nanos>686400</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.560965100Z</date>
+  <millis>1672405690560</millis>
+  <nanos>965100</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.561963800Z</date>
+  <millis>1672405690561</millis>
+  <nanos>963800</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.565953100Z</date>
+  <millis>1672405690565</millis>
+  <nanos>953100</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.578918800Z</date>
+  <millis>1672405690578</millis>
+  <nanos>918800</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.580914200Z</date>
+  <millis>1672405690580</millis>
+  <nanos>914200</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.619808300Z</date>
+  <millis>1672405690619</millis>
+  <nanos>808300</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.623797600Z</date>
+  <millis>1672405690623</millis>
+  <nanos>797600</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.625792900Z</date>
+  <millis>1672405690625</millis>
+  <nanos>792900</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:10.627788300Z</date>
+  <millis>1672405690627</millis>
+  <nanos>788300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.379776600Z</date>
+  <millis>1672405691379</millis>
+  <nanos>776600</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.381770900Z</date>
+  <millis>1672405691381</millis>
+  <nanos>770900</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.382767800Z</date>
+  <millis>1672405691382</millis>
+  <nanos>767800</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.383765500Z</date>
+  <millis>1672405691383</millis>
+  <nanos>765500</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.384763Z</date>
+  <millis>1672405691384</millis>
+  <nanos>763000</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.387755200Z</date>
+  <millis>1672405691387</millis>
+  <nanos>755200</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.391744500Z</date>
+  <millis>1672405691391</millis>
+  <nanos>744500</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.398725900Z</date>
+  <millis>1672405691398</millis>
+  <nanos>725900</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.401717700Z</date>
+  <millis>1672405691401</millis>
+  <nanos>717700</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.406710800Z</date>
+  <millis>1672405691406</millis>
+  <nanos>710800</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.408700200Z</date>
+  <millis>1672405691408</millis>
+  <nanos>700200</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.418675400Z</date>
+  <millis>1672405691418</millis>
+  <nanos>675400</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.419682700Z</date>
+  <millis>1672405691419</millis>
+  <nanos>682700</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.421664400Z</date>
+  <millis>1672405691421</millis>
+  <nanos>664400</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.423658300Z</date>
+  <millis>1672405691423</millis>
+  <nanos>658300</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.424655900Z</date>
+  <millis>1672405691424</millis>
+  <nanos>655900</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.426651Z</date>
+  <millis>1672405691426</millis>
+  <nanos>651000</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.429651700Z</date>
+  <millis>1672405691429</millis>
+  <nanos>651700</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.479509700Z</date>
+  <millis>1672405691479</millis>
+  <nanos>509700</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:11.482501800Z</date>
+  <millis>1672405691482</millis>
+  <nanos>501800</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T13:08:50.314833600Z</date>
+  <millis>1672405730314</millis>
+  <nanos>833600</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.395639300Z</date>
+  <millis>1672405730395</millis>
+  <nanos>639300</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.397613300Z</date>
+  <millis>1672405730397</millis>
+  <nanos>613300</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.399608200Z</date>
+  <millis>1672405730399</millis>
+  <nanos>608200</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.402600400Z</date>
+  <millis>1672405730402</millis>
+  <nanos>600400</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.404593400Z</date>
+  <millis>1672405730404</millis>
+  <nanos>593400</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.415563700Z</date>
+  <millis>1672405730415</millis>
+  <nanos>563700</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.463437800Z</date>
+  <millis>1672405730463</millis>
+  <nanos>437800</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.470418800Z</date>
+  <millis>1672405730470</millis>
+  <nanos>418800</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.773607Z</date>
+  <millis>1672405730773</millis>
+  <nanos>607000</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.774603700Z</date>
+  <millis>1672405730774</millis>
+  <nanos>603700</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.777595800Z</date>
+  <millis>1672405730777</millis>
+  <nanos>595800</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.778595200Z</date>
+  <millis>1672405730778</millis>
+  <nanos>595200</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.780587500Z</date>
+  <millis>1672405730780</millis>
+  <nanos>587500</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.783580700Z</date>
+  <millis>1672405730783</millis>
+  <nanos>580700</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.787570Z</date>
+  <millis>1672405730787</millis>
+  <nanos>570000</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.937169500Z</date>
+  <millis>1672405730937</millis>
+  <nanos>169500</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.941160600Z</date>
+  <millis>1672405730941</millis>
+  <nanos>160600</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes alojamientos:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.981052300Z</date>
+  <millis>1672405730981</millis>
+  <nanos>52300</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:50.983048300Z</date>
+  <millis>1672405730983</millis>
+  <nanos>48300</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.033910700Z</date>
+  <millis>1672405731033</millis>
+  <nanos>910700</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.036903900Z</date>
+  <millis>1672405731036</millis>
+  <nanos>903900</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.040909100Z</date>
+  <millis>1672405731040</millis>
+  <nanos>909100</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.044881400Z</date>
+  <millis>1672405731044</millis>
+  <nanos>881400</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.048869700Z</date>
+  <millis>1672405731048</millis>
+  <nanos>869700</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.062833800Z</date>
+  <millis>1672405731062</millis>
+  <nanos>833800</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.065825300Z</date>
+  <millis>1672405731065</millis>
+  <nanos>825300</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes excursiones:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.123672600Z</date>
+  <millis>1672405731123</millis>
+  <nanos>672600</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.128658300Z</date>
+  <millis>1672405731128</millis>
+  <nanos>658300</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.132647400Z</date>
+  <millis>1672405731132</millis>
+  <nanos>647400</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:51.133644300Z</date>
+  <millis>1672405731133</millis>
+  <nanos>644300</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.030246100Z</date>
+  <millis>1672405732030</millis>
+  <nanos>246100</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.032241200Z</date>
+  <millis>1672405732032</millis>
+  <nanos>241200</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.040221500Z</date>
+  <millis>1672405732040</millis>
+  <nanos>221500</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.042215400Z</date>
+  <millis>1672405732042</millis>
+  <nanos>215400</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.045206900Z</date>
+  <millis>1672405732045</millis>
+  <nanos>206900</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.046203100Z</date>
+  <millis>1672405732046</millis>
+  <nanos>203100</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.048198100Z</date>
+  <millis>1672405732048</millis>
+  <nanos>198100</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.055179900Z</date>
+  <millis>1672405732055</millis>
+  <nanos>179900</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.058172Z</date>
+  <millis>1672405732058</millis>
+  <nanos>172000</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.061164200Z</date>
+  <millis>1672405732061</millis>
+  <nanos>164200</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.063157700Z</date>
+  <millis>1672405732063</millis>
+  <nanos>157700</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.073131200Z</date>
+  <millis>1672405732073</millis>
+  <nanos>131200</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.074128900Z</date>
+  <millis>1672405732074</millis>
+  <nanos>128900</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.075126Z</date>
+  <millis>1672405732075</millis>
+  <nanos>126000</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.082107600Z</date>
+  <millis>1672405732082</millis>
+  <nanos>107600</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.083103800Z</date>
+  <millis>1672405732083</millis>
+  <nanos>103800</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.084104200Z</date>
+  <millis>1672405732084</millis>
+  <nanos>104200</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.088092300Z</date>
+  <millis>1672405732088</millis>
+  <nanos>92300</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.173863600Z</date>
+  <millis>1672405732173</millis>
+  <nanos>863600</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2022-12-30T13:08:52.188822700Z</date>
+  <millis>1672405732188</millis>
+  <nanos>822700</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado los siguientes destinos:0</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-30T13:37:37.786113900Z</date>
+  <millis>1672407457786</millis>
+  <nanos>113900</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:37.818030800Z</date>
+  <millis>1672407457818</millis>
+  <nanos>30800</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:37.825010600Z</date>
+  <millis>1672407457825</millis>
+  <nanos>10600</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:37.828002Z</date>
+  <millis>1672407457828</millis>
+  <nanos>2000</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.264833400Z</date>
+  <millis>1672407458264</millis>
+  <nanos>833400</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.267825900Z</date>
+  <millis>1672407458267</millis>
+  <nanos>825900</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.270818300Z</date>
+  <millis>1672407458270</millis>
+  <nanos>818300</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2))</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.273810600Z</date>
+  <millis>1672407458273</millis>
+  <nanos>810600</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.275805400Z</date>
+  <millis>1672407458275</millis>
+  <nanos>805400</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.278796500Z</date>
+  <millis>1672407458278</millis>
+  <nanos>796500</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.286775300Z</date>
+  <millis>1672407458286</millis>
+  <nanos>775300</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.293770200Z</date>
+  <millis>1672407458293</millis>
+  <nanos>770200</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.299739900Z</date>
+  <millis>1672407458299</millis>
+  <nanos>739900</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.302735100Z</date>
+  <millis>1672407458302</millis>
+  <nanos>735100</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2022-12-30T13:37:38.305724700Z</date>
+  <millis>1672407458305</millis>
+  <nanos>724700</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Cierre de base de datos</message>
+</record>
