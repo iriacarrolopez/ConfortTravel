@@ -129,7 +129,7 @@ public class PanelExcursiones extends JPanel {
 		});
 		/*
 		 * Al hacer click en una fila se te borra
-		 
+		 */
 		btnEliminar.addActionListener(new ActionListener() {
 
 			@Override
@@ -142,8 +142,8 @@ public class PanelExcursiones extends JPanel {
 				
 				cargarModeloTabla();
 			}
-		});*/
-		//N
+		});
+		/*//N
 		tablaExcursion.addMouseListener(new MouseAdapter() {
 		 
 			
@@ -159,7 +159,7 @@ public class PanelExcursiones extends JPanel {
 				cargarModeloTabla();
 				
 			}
-		});
+		});*/
 		btnModificar.addActionListener(new ActionListener() {
 
 			@Override

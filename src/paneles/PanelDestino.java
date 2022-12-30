@@ -119,7 +119,6 @@ public class PanelDestino extends JPanel {
 				BD.closeBD(con);
 			}
 		});
-		/*
 		btnEliminarDestino.addActionListener(new ActionListener() {
 			
 			@Override
@@ -131,25 +130,7 @@ public class PanelDestino extends JPanel {
 				cargarModeloTabla();
 				
 			}
-		});*/
-		//N
-		tableDestino.addMouseListener(new MouseAdapter() {
-		 
-			
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				con = BD.initBD("confortTravel.db");
-				int row = tableDestino.rowAtPoint(e.getPoint());
-				BD.eliminarDestino(con);
-				modeloDestino.removeRow(row);
-				tableDestino.updateUI();
-				cargarModeloTabla();
-				
-			}
 		});
-		
 		btnModificarDestino.addActionListener(new ActionListener() {
 			
 			@Override
@@ -176,8 +157,7 @@ public class PanelDestino extends JPanel {
 	private void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraDestinos = new Vector<String>(Arrays.asList("ID", "NOMBRE"));
-		
-modeloDestino = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraDestinos) {
+		modeloDestino = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraDestinos) {
 			
 			private static final long serialVersionUID = 1L;
 };

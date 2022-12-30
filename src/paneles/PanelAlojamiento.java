@@ -46,7 +46,7 @@ public class PanelAlojamiento extends JPanel {
 
 	
 	private JLabel lblFiltro;
-	private JTextField textField;
+	//private JTextField textField;
 
 
 	/**
@@ -65,14 +65,14 @@ public class PanelAlojamiento extends JPanel {
 		add(panelArriba, BorderLayout.NORTH);
 		panelArriba.setLayout(new GridLayout(0, 4, 0, 0));
 		
-		lblTitulo = new JLabel("ALOJAMIENTO");
+		/*lblTitulo = new JLabel("ALOJAMIENTO");
 		panelArriba.add(lblTitulo);
 		
 		lblFiltro = new JLabel("Tipo de Alojamiento");
 		panelArriba.add(lblFiltro);
 		
 		textField = new JTextField();
-		panelArriba.add(textField);
+		panelArriba.add(textField);*/
 
 		panelAbajo = new JPanel();
 		add(panelAbajo, BorderLayout.SOUTH);
@@ -111,43 +111,41 @@ public class PanelAlojamiento extends JPanel {
 				// TODO Auto-generated method stub
 				String id = JOptionPane.showInputDialog("Introduce el id :");
 				String nombre = JOptionPane.showInputDialog("Introduce el nombre:");
-
 				String tipo = JOptionPane.showInputDialog("Introduce el tipo :");
 				String precio = JOptionPane.showInputDialog("Introduce el precio :");
 				String duracion = JOptionPane.showInputDialog("Introduce el duracion :");
 				String destino = JOptionPane.showInputDialog("Introduce el destino :");
 				Integer idA = Integer.parseInt(id);
-				Float p =Float.parseFloat(precio);
+				Float p = Float.parseFloat(precio);
 				Integer d = Integer.parseInt(duracion);
-				Integer des = Integer.parseInt(destino);
-				
-				BD.insertarAlojamiento(con, idA, nombre, tipo, p,d, des);
-
+				Integer destinoD = BD.obtenerIdDestino(destino);
+				con = BD.initBD("confortTravel.db");
+				BD.insertarAlojamiento(con, idA, nombre, tipo, p,d, destinoD);
 				// Borramos el contenido del modelo de la tabla
 				while (modeloAlojamiento.getRowCount() > 0) {
 					modeloAlojamiento.removeRow(0);
 				}
 				cargarModeloTabla();
-				
 				BD.closeBD(con);
 			}
 
 		});
 		/*
 		 * Al hacer click en una fila se te borra
-		 
+		 */
 		btnEliminar.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String id = JOptionPane.showInputDialog("inserta el id del alojamiento");
-				Integer idA =Integer.parseInt(id);
-				BD.eliminarAlojamiento(con, idA);
+				con = BD.initBD("confortTravel.db");
+				int d = tablaAlojamiento.getSelectedRow();
+				int id = (int) tablaAlojamiento.getValueAt(d, 0);
+				BD.eliminarAlojamiento(con, id);
 				// Borramos el contenido del modelo de la tabla
 				cargarModeloTabla();
 			}
-		});*/
-		//nuevo
+		});
+		/*//nuevo
 				tablaAlojamiento.addMouseListener(new MouseAdapter() {
 				 
 					
@@ -163,7 +161,7 @@ public class PanelAlojamiento extends JPanel {
 						cargarModeloTabla();
 						
 					}
-				});
+				});*/
 		btnModificar.addActionListener(new ActionListener() {
 
 			@Override
@@ -189,9 +187,7 @@ public class PanelAlojamiento extends JPanel {
 
 	public void inicializarTabla() {
 		// Cabecera del modelo de datos
-		Vector<String> cabeceraAlojamiento = new Vector<String>(
-				Arrays.asList("ID","NOMBRE", "TIPO ALOJAMIENTO", "PRECIO", "DURACION", "DESTINO"));
-	
+		Vector<String> cabeceraAlojamiento = new Vector<String>(Arrays.asList("ID","NOMBRE", "TIPO ALOJAMIENTO", "PRECIO", "DURACION", "DESTINO"));
 		modeloAlojamiento = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraAlojamiento) {
 			
 			private static final long serialVersionUID = 1L;
@@ -201,11 +197,8 @@ public class PanelAlojamiento extends JPanel {
 		// Se crea la tabla de alojamiento con el modelo de datos
 		tablaAlojamiento = new JTable(modeloAlojamiento);
 		// cargo el modelo
-		
 		cargarModeloTabla();
-
 		tablaAlojamiento.setRowHeight(30);
-
 		// Se cambia la anchura de las columnas
 		tablaAlojamiento.getColumnModel().getColumn(0).setPreferredWidth(200);
 		tablaAlojamiento.getColumnModel().getColumn(1).setPreferredWidth(300);
@@ -222,8 +215,8 @@ public class PanelAlojamiento extends JPanel {
 
 	
 	public void cargarModeloTabla() {
+		
 		//Connection con = BD.initBD("confortTravel.db");
-
 		try {
 
 			ArrayList<Alojamiento> listaAlojamientos = BD.obtenerAlojamientos();
@@ -231,18 +224,6 @@ public class PanelAlojamiento extends JPanel {
 			while (modeloAlojamiento.getRowCount() > 0) {
 				modeloAlojamiento.removeRow(0);
 			}
-			/*for (int i = 0; i < listaAlojamientos.size(); i++) {
-				   Object[] fila = new Object[6];
-				   fila[0]= listaAlojamientos.get(i).getId();
-				   fila[1]= listaAlojamientos.get(i).getNombre_comp();
-				   fila[2]= listaAlojamientos.get(i).getTalojamiento();
-				   fila[3]= listaAlojamientos.get(i).getPrecio();
-				   fila[4]= listaAlojamientos.get(i).getDuracion();
-				   fila[5]= listaAlojamientos.get(i).getCiudad().getId();
-				   modeloAlojamiento.addRow(fila);
-				   System.out.println("Cargada fila "+i);
-				   System.out.println("CARGANDO MODELO DE LA TABLA...");
-			}*/
 			for(Alojamiento a: listaAlojamientos) {
 				Object [] fila = {a.getId(),a.getNombre_comp(),a.getTalojamiento(),a.getPrecio(),a.getDuracion(),a.getCiudad().getId()};
 				modeloAlojamiento.addRow(fila);

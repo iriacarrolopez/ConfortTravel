@@ -800,11 +800,12 @@ public class BD {
 	 * 
 	 */
 	//N
-	public static void eliminarDestino(Connection con) {
+	public static void eliminarDestino(Connection con, int id) {
 		try (Statement st = con.createStatement();) {
-			String sql = "DELETE FROM Ciudad ;";
+			String sql = "DELETE FROM Ciudad WHERE id='" + id + "';";
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			int result = st.executeUpdate(sql);
+			System.out.println(String.format("- Se ha borrado el destino con id '" + id + "'", result));
 			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
 		} catch (SQLException e) {
 			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
@@ -812,12 +813,13 @@ public class BD {
 		}
 	}
 	//N
-	public static void eliminarAlojamiento(Connection con) {
+	public static void eliminarAlojamiento(Connection con, int id) {
 		try (Statement st = con.createStatement();) {
-			String sql = "DELETE FROM Alojamiento;";
+			String sql = "DELETE FROM Alojamiento WHERE id='" + id + "';";
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 			int result = st.executeUpdate(sql);
 			log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
+			System.out.println(String.format("- Se ha borrado el alojamiento con id '" + id + "'", result));
 		} catch (SQLException e) {
 			log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
 			System.err.println(String.format("* Error al eliminar el alojamiento de la BBDD: %s", e.getMessage()));
@@ -927,13 +929,14 @@ public class BD {
 		}
 	} 
 	//N
-	public static void EliminarExcursion(Connection con) {
+	public static void EliminarExcursion(Connection con, int id) {
 		
 			try (Statement st = con.createStatement();) {
-				String sql = "DELETE FROM Excursion ;";
+				String sql = "DELETE FROM Excursion WHERE id='" + id + "';";
 				log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
 				int result = st.executeUpdate(sql);
 				log(Level.INFO, "Se ha eliminado de la base de datos: " + result, null);
+				System.out.println(String.format("- Se ha borrado la excursion con id '" + id + "'", result));
 			} catch (SQLException e) {
 				log(Level.SEVERE, "Error la eliminacion de base de datos: " + e, null);
 				System.err.println(String.format("* Error al eliminar la excursion de la BBDD: %s", e.getMessage()));
@@ -1009,6 +1012,23 @@ public class BD {
 		}
 		return listaExcursion;
 	}
+	
+	public static int obtenerIdDestino(String nombre) {
+		int id = 0;
+		String sql = "SELECT * FROM Ciudad WHERE nom = " + nombre + ";";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			id = rs.getInt(id);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return id;
+	}
+	
 	/**
 	 * ACTUALIZA EL NUMERO DE PERSONAS DE LAS EXCURSIONES 
 	 * @param con CONEXION CON LA BASE DE DATOS
