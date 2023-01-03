@@ -22,7 +22,7 @@ import java.awt.event.ActionListener;
 //import java.sql.Connection;
 import java.awt.event.ActionEvent;
 
-public class VentanaLogin {
+public class VentanaLogin extends JFrame{
 
 	private static JFrame frame;
 	private JPanel contentPane, panelIzq, panelCentro, panelDerecha;

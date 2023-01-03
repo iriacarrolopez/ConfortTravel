@@ -93,7 +93,7 @@ public class PanelUsuarios extends JPanel {
 				// TODO Auto-generated method stub
 				Persona c = listCliente.getSelectedValue();
 			
-				TreeMap<String ,ArrayList<Reserva>> mapaClienteR = BD.obtenerTodasLasReservasPorDni(c.getDni());
+				TreeMap<String ,ArrayList<Reserva>> mapaClienteR = BD.obtenerTreeMapReservasPorDni(c.getDni());
 				System.out.println(mapaClienteR);
 				textAreaReservas.setText(" ");
 				String texto ="";
@@ -128,7 +128,7 @@ public class PanelUsuarios extends JPanel {
 			ArrayList<Persona> lista =BD.ObtenerClientes("CLIENTE");
 			modeloCliente.removeAllElements();
 			for (Persona p : lista) {
-				mapaClienteR = BD.obtenerTodasLasReservasPorDni(p.getDni());
+				mapaClienteR = BD.obtenerTreeMapReservasPorDni(p.getDni());
 				System.out.println(lista);
 				System.out.println(mapaClienteR);
 				modeloCliente.addElement(p);

@@ -51,8 +51,8 @@ public class PanelReserva extends JPanel {
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo, panelCC1, panelCC2, panelCC3,
 			panelCC4, panelCA1, panelCA2, panelCA3, panelCA4;
 	private JLabel lblAniadirReserva, lblIDVuelo, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento,
-			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI;
-	private JTextField txtIDVuelo,txtDni;
+			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI, lblPrecio;
+	private JTextField txtIDVuelo,txtDni, txtPrecio;
 	private JComboBox<Ciudad> comboBoxOrigen, comboBoxDestino;
 	private JComboBox<TipoAlojamiento> comboBoxTipoAlojamiento;
 	private JComboBox<TipoAlquiler> cbAlquilerTransporte;
@@ -110,9 +110,14 @@ public class PanelReserva extends JPanel {
 		lblDNI = new JLabel("DNI_CLIENTE");
 		panelCC2.add(lblDNI);
 		txtDni =   new JTextField();
-		
 		panelCC2.add(txtDni);
 		txtDni.setColumns(10);
+		
+		lblPrecio = new JLabel("PRECIO");
+		panelCC2.add(lblPrecio);
+		txtPrecio = new JTextField();
+		panelCC2.add(txtPrecio);
+		txtPrecio.setColumns(10);
 		
 		lblOrigen = new JLabel("Origen");
 		panelCC2.add(lblOrigen);
@@ -272,9 +277,7 @@ public class PanelReserva extends JPanel {
 
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null,"PARA MÁS SEGURIDAD INTRODUZCA EL SU DNI ");
-				
-				
+				//JOptionPane.showMessageDialog(null,"PARA MÁS SEGURIDAD INTRODUZCA EL SU DNI ");
 				
 				Integer id = Integer.parseInt(txtIDVuelo.getText());
 				Ciudad origen = (Ciudad) comboBoxOrigen.getSelectedItem();
@@ -301,10 +304,12 @@ public class PanelReserva extends JPanel {
 				// TipoActividad tact = TipoActividad.valueOf(tipoActividad);
 				String dni = txtDni.getText();
 				
-				BD.insertarReserva(  con, id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
-						tipoExcursion, tipoActividad,dni);
+				Float precio = Float.parseFloat(txtPrecio.getText());
+				
+				BD.insertarReserva(con, id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
+						tipoExcursion, tipoActividad,dni, precio);
 
-				// BD.closeBD(con);
+				BD.closeBD(con);
 
 			}
 		});

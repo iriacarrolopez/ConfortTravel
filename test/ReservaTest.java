@@ -26,6 +26,8 @@ public class ReservaTest {
 	private int IdReserva =1;
 	private String actividad= "Esnorquel";
 	private String alquiler = "coche";
+	private String dni = "21111189A";
+	private float precio = 200;
 
 	/* FECHAS */
 	private String fechaInic = "12/12/2022";
@@ -43,7 +45,7 @@ public class ReservaTest {
 		//pensar el destino
 		destino = new Ciudad ( 8 , "Estambul");
 		origen = new Ciudad (5, "Roma");
-		reserva = new Reserva(IdReserva , origen,destino,fechaInic,fechaFin,TipoAlquiler.BICICLETA,TipoAlojamiento.APARTAMENTO,TipoExcursion.ACUATICA, TipoActividad.SNORKEL);
+		reserva = new Reserva(IdReserva , origen,destino,fechaInic,fechaFin,TipoAlquiler.BICICLETA,TipoAlojamiento.APARTAMENTO,TipoExcursion.ACUATICA, TipoActividad.SNORKEL,dni,precio);
 			
 	}
 

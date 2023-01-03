@@ -48,7 +48,7 @@ import java.awt.Color;
 
 import javax.swing.UIManager;
 
-public class VentanaAdministrador {
+public class VentanaAdministrador extends JFrame{
 	private static JFrame frame;
 	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte;
 	private JComboBox<String> comboAn;
@@ -223,8 +223,8 @@ public class VentanaAdministrador {
 				// TODO Auto-generated method stub
 
 				ventanalogin = new VentanaLogin();
-				// ventanalogin.setVisible(true);
 				frame.dispose();
+				ventanalogin.setVisible(true);
 
 			}
 		});

@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.*;
+import java.util.zip.CheckedOutputStream;
 
 import javax.swing.plaf.multi.MultiPopupMenuUI;
 
@@ -90,14 +91,14 @@ public class BD {
 	 * @param dni_cliente que reciva
 	 * @return un mapa 
 	 */
-	public static TreeMap<String, ArrayList<Reserva>> obtenerTodasLasReservasPorDni(String dni_cliente) {
+	public static TreeMap<String, ArrayList<Reserva>> obtenerTreeMapReservasPorDni(String dni_cliente) {
 		TreeMap<String, ArrayList<Reserva>> tmR = new TreeMap<>();
 		ArrayList<Reserva> aR = new ArrayList<>();
 		
 		try(Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
 			
 				
-				String sql1 ="SELECT * FROM Reserva WHERE Dni_cliente='"+dni_cliente+"';";
+				String sql1 ="SELECT * FROM Reserva WHERE dni='"+dni_cliente+"';";
 				Statement st = con.createStatement();
 				ResultSet rs1 = st.executeQuery(sql1);
 				while(rs1.next()) {
@@ -113,7 +114,8 @@ public class BD {
 					r.setTipoAlojamiento(TipoAlojamiento.valueOf(rs1.getString("tipoAlojamiento")));
 					r.setExcursion(TipoExcursion.valueOf(rs1.getString("excursion")));
 					r.setActividades(TipoActividad.valueOf(rs1.getString("actividades")));
-					r.setDni(rs1.getString("Dni_cliente"));
+					r.setDni(rs1.getString("dni"));
+					r.setPrecio(rs1.getFloat("precio"));
 					aR.add(r);
 					System.out.println(aR);
 					log(Level.INFO, "El array de reservas contiene"+aR, null);
@@ -193,7 +195,7 @@ public class BD {
 		log(Level.INFO ,"Statement"+sql2,null);
 		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4))";
 		log(Level.INFO ,"Statement"+sql3,null);
-		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20),Dni_cliente CHAR(10), FOREIGN KEY(Dni_cliente) REFERENCES Persona(Dni) ON DELETE CASCADE  )";
+		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE, precio FLOAT(6))";
 		log(Level.INFO ,"Statement"+sql4,null);
 		String sql5 = "CREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20))";
 		log(Level.INFO ,"Statement"+sql5,null);
@@ -468,9 +470,10 @@ public class BD {
 				TipoExcursion te = TipoExcursion.valueOf(ex);
 				String act = rs.getString("actividades");
 				TipoActividad tact = TipoActividad.valueOf(act);
-				String dni_c = rs.getString("Dni_cliente");
+				String dni_c = rs.getString("dni");
+				Float precio = rs.getFloat("precio");
 				
-				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact,dni_c);
+				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact,dni_c, precio);
 				
 				listaReservas.add(r);
 			}
@@ -491,17 +494,17 @@ public class BD {
 	 * @param id
 	 * @return
 	 */
-	public static ArrayList<Reserva> obtenerReservasID(Integer id) {
+	public static ArrayList<Reserva> obtenerReservasDni(String dni) {
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
-		String sql = "SELECT * FROM Reserva WHERE id="+id+";";
+		String sql = "SELECT * FROM Reserva WHERE dni='"+dni+"';";
 		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")){
-			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			log(Level.INFO, "Lanzada consulta a base de datos,RESERVAS: " + sql, null);
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			
 			while (rs.next()) {
 			
-				Integer dni = rs.getInt("id");
+				Integer id = rs.getInt("id");
 				int o = rs.getInt("idOrigen");
 				int d = rs.getInt("idDestino");
 				Ciudad co = getCiudad(con,o);
@@ -516,13 +519,54 @@ public class BD {
 				TipoExcursion te = TipoExcursion.valueOf(ex);
 				String act = rs.getString("actividades");
 				TipoActividad tact = TipoActividad.valueOf(act);
+				String dniCliente = rs.getString("dni");
+				Float precio = rs.getFloat("precio");
 				
-				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact);
+				Reserva r = new Reserva(id, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact, dniCliente, precio);
 				
 				listaReservas.add(r);
 			}
 			rs.close();
 			System.out.println(String.format("- Se han recuperado %d reservas", listaReservas.size()));
+			log(Level.INFO, "Se han encontrado las siguientes reservas:" + listaReservas.size(), null);
+		} catch (SQLException e) {
+			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaReservas;
+	}
+	public static ArrayList<Reserva> obtenerReservasPorId(Integer id) {
+		ArrayList<Reserva> listaReservas = new ArrayList<>();
+		String sql = "SELECT FROM Reserva WHERE id="+id+";";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
+			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()) {
+				int idReserva = rs.getInt("id");
+				int idOrigen = rs.getInt("idOrigen");
+				int idDestino = rs.getInt("idDestino");
+				Ciudad cOrigen = getCiudad(con, idOrigen);
+				Ciudad cDestino = getCiudad(con, idDestino);
+				String fechaIni = rs.getString("fechaInicio");
+				String fechaFin = rs.getString("fechaFin");
+				String alquiler = rs.getString("alquilerTransporte");
+				TipoAlquiler tipoAlquiler = TipoAlquiler.valueOf(alquiler);
+				String alojamiento = rs.getString("tipoAlojamiento");
+				TipoAlojamiento tipoAlojamiento = TipoAlojamiento.valueOf(alojamiento);
+				String actividad = rs.getString("actividades");
+				TipoActividad tipoActividad = TipoActividad.valueOf(actividad);
+				String excursion = rs.getString("excursion");
+				TipoExcursion tipoExcursion = TipoExcursion.valueOf(excursion);
+				String dni = rs.getString("dni");
+				Float precio = rs.getFloat("precio");
+				
+				Reserva r = new Reserva(idReserva, cOrigen, cDestino, fechaIni, fechaFin, tipoAlquiler, tipoAlojamiento, tipoExcursion, tipoActividad, dni, precio);
+				listaReservas.add(r);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado % reservas", listaReservas.size()));
 			log(Level.INFO, "Se han encontrado las siguientes reservas:" + listaReservas.size(), null);
 		} catch (SQLException e) {
 			log( Level.SEVERE, "Error al obtener de base de datos: " + sql, e );
@@ -541,7 +585,7 @@ public class BD {
 			
 			while (rs.next()) {
 			
-				int dni = rs.getInt("id");
+				int idReserva = rs.getInt("id");
 				int o = rs.getInt("idOrigen");
 				int d = rs.getInt("idDestino");
 				Ciudad co = getCiudad(con,o);
@@ -556,8 +600,10 @@ public class BD {
 				TipoExcursion te = TipoExcursion.valueOf(ex);
 				String act = rs.getString("actividades");
 				TipoActividad tact = TipoActividad.valueOf(act);
+				String dni = rs.getString("dni");
+				Float precio = rs.getFloat("precio");
 				
-				Reserva r = new Reserva(dni, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact);
+				Reserva r = new Reserva(idReserva, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact, dni, precio);
 				
 				listaReservas.add(r);
 			}
@@ -772,8 +818,8 @@ public class BD {
 		}
 	}
 	//N
-	public static void insertarReserva(Connection con, Integer id, Integer idOrigen, Integer idDestino, String fechaIni, String fechaFin, String alquilerTransporte, String tipoAlojamiento, String excursion, String actividades,String dni) {
-		String sql = "INSERT INTO Reserva VALUES(" + id + "," + idOrigen + "," + idDestino + ",'" + fechaIni + "','" + fechaFin + "','" + alquilerTransporte + "','" + tipoAlojamiento + "','" + excursion + "','" + actividades + "','"+dni+"',);";
+	public static void insertarReserva(Connection con, Integer id, Integer idOrigen, Integer idDestino, String fechaIni, String fechaFin, String alquilerTransporte, String tipoAlojamiento, String excursion, String actividades,String dni, Float precio) {
+		String sql = "INSERT INTO Reserva VALUES(" + id + "," + idOrigen + "," + idDestino + ",'" + fechaIni + "','" + fechaFin + "','" + alquilerTransporte + "','" + tipoAlojamiento + "','" + excursion + "','" + actividades + "','"+dni+"','" + precio + ");";
 		try {
 			
 			Statement stmt = con.createStatement();
@@ -786,7 +832,7 @@ public class BD {
 			stmt.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			log(Level.SEVERE, "Error en inserci�n de base de datos\t" + sql, e);
+			log(Level.SEVERE, "Error en inserción de base de datos\t" + sql, e);
 			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
@@ -860,7 +906,7 @@ public class BD {
 	 *  tipoAlojamiento String, 
 	excursion String, 
 	actividades String)";*/
-	public static void uptadeReservas(Integer id, String tipoAlquiler, String tipoAlojamiento, String tipoExcursion, String tipoActividad) {
+	public static void uptadeReservas(Integer id, String tipoAlquiler, String tipoAlojamiento, String tipoExcursion, String tipoActividad, float precio) {
 		String sql = "UPDATE Reserva SET alquilerTransporte=?, tipoAlojamiento=?, excursion=?, actividades=? WHERE id=?";
 		PreparedStatement pstmt;
 		
@@ -871,6 +917,7 @@ public class BD {
 			pstmt.setString(3, tipoExcursion);
 			pstmt.setString(4, tipoActividad);
 			pstmt.setInt(5,id);
+			pstmt.setFloat(6, precio);
 			pstmt.executeUpdate();
 		
 			log(Level.INFO, "Se ha actualiza la sentencia:" + sql, null);
@@ -902,11 +949,6 @@ public class BD {
 			e.printStackTrace();
 		}
 	}
-	
-	public static void uptadeReservas(int id, Ciudad corigen, Ciudad cdestino, TipoAlojamiento tAlojamiento) {
-		//String sql = "UPDATE Reserva SET "
-	}
-	
 	/*
 	 * EXCURSION
 	 */

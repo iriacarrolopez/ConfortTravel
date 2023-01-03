@@ -11,7 +11,7 @@ public class Reserva {
 	private TipoAlojamiento tipoAlojamiento;
 	private TipoExcursion excursion;
 	private TipoActividad actividades;
-	//N
+	private float precio;
 	private String dni;
 	public Reserva() {
 		
@@ -19,22 +19,7 @@ public class Reserva {
 
 	public Reserva(Integer id, Ciudad origen, Ciudad destino, String fechaIni, String fechaFin,
 			TipoAlquiler alquilerTransporte, TipoAlojamiento tipoAlojamiento, TipoExcursion excursion,
-			TipoActividad actividades) {
-		super();
-		this.id = id;
-		this.origen = origen;
-		this.destino = destino;
-		this.fechaIni = fechaIni;
-		this.fechaFin = fechaFin;
-		this.alquilerTransporte = alquilerTransporte;
-		this.tipoAlojamiento = tipoAlojamiento;
-		this.excursion = excursion;
-		this.actividades = actividades;
-	}
-
-	public Reserva(Integer id, Ciudad origen, Ciudad destino, String fechaIni, String fechaFin,
-			TipoAlquiler alquilerTransporte, TipoAlojamiento tipoAlojamiento, TipoExcursion excursion,
-			TipoActividad actividades,String dni) {
+			TipoActividad actividades,String dni, float precio) {
 		super();
 		this.id = id;
 		this.origen = origen;
@@ -46,6 +31,7 @@ public class Reserva {
 		this.excursion = excursion;
 		this.actividades = actividades;
 		this.dni = dni;
+		this.precio = precio;
 	}
 
 	public String getDni() {
@@ -127,16 +113,20 @@ public class Reserva {
 	public void setActividades(TipoActividad actividades) {
 		this.actividades = actividades;
 	}
+	
+	public float getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
 
 	@Override
 	public String toString() {
 		return "Reserva [id=" + id + ", origen=" + origen + ", destino=" + destino + ", fechaIni=" + fechaIni
 				+ ", fechaFin=" + fechaFin + ", alquilerTransporte=" + alquilerTransporte + ", tipoAlojamiento="
-				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + ", dni=" + dni + "]";
+				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + ", precio=" + precio
+				+ ", dni=" + dni + "]";
 	}
-
-	
-	
-
-	
 }

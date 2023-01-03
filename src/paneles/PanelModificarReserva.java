@@ -33,7 +33,7 @@ import java.awt.event.ActionEvent;
 public class PanelModificarReserva extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
-	private JTextField txtID;
+	private JTextField txtID, txtPrecio;
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo;
 	private JLabel lblModificarReserva, lblIntroducirID;
 	private JButton btnModificarID;
@@ -79,6 +79,10 @@ public class PanelModificarReserva extends JPanel{
 		panelCentroCentro.add(txtID);
 		txtID.setColumns(10);
 		
+		txtPrecio = new JTextField();
+		panelCentroCentro.add(txtPrecio);
+		txtPrecio.setColumns(10);
+		
 		btnModificarID = new JButton("MODIFICAR");
 		panelCentroCentro.add(btnModificarID);
 		
@@ -111,8 +115,10 @@ public class PanelModificarReserva extends JPanel{
 				Object [] tipoActividad = {TipoActividad.SNORKEL, TipoActividad.SKI, TipoActividad.PATINAJE, TipoActividad.CINE, TipoActividad.BOLOS, TipoActividad.RUNNING};
 				String actividad = String.valueOf(JOptionPane.showInputDialog(null,"Selecciona un color", "Elegir",JOptionPane.QUESTION_MESSAGE,null,tipoActividad, tipoActividad[0]));
 				
-				BD.obtenerReservasID(id);
-				BD.uptadeReservas(id, alquiler, alojamiento, excursion, actividad);
+				Float precio = Float.parseFloat(txtPrecio.getText());
+				
+				BD.obtenerReservasPorId(id);
+				BD.uptadeReservas(id, alquiler, alojamiento, excursion, actividad, precio);
 				
 				JOptionPane.showMessageDialog(null, "Reserva modificada correctamente", "CORRECTO ",JOptionPane.INFORMATION_MESSAGE);
 				while(modeloReserva.getRowCount()>0) {

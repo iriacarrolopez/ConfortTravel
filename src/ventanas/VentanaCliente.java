@@ -9,9 +9,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.sql.Connection;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.TreeMap;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -19,6 +26,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTree;
 import javax.swing.SwingConstants;
@@ -29,6 +37,8 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
+import bd.BD;
+import clases.Reserva;
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
 import paneles.PanelAniadirReserva;
@@ -157,6 +167,31 @@ public class VentanaCliente extends JFrame {
 					 panelPrincipal.removeAll();
 						panelPrincipal.add(pr);
 						panelPrincipal.updateUI();
+				 } else if ("Imprimir".equals(nodos)) {
+					 
+					 String dni = JOptionPane.showInputDialog(null, "Introduzca su dni");
+					 ArrayList<Reserva> ar = new ArrayList<>();
+					 ar = BD.obtenerReservasDni(dni);
+					 for (Reserva r: ar) {
+						 System.out.println(r.toString());
+					 }
+					 
+					 try {
+						PrintWriter pw = new PrintWriter(new FileOutputStream("Factura.txt", false));
+						pw.println("Factura del cliente "+dni);
+						pw.println();
+						float precioTotal = 0;
+						for (Reserva r: ar) {
+							pw.println(r.getDestino()+" "+r.getFechaIni()+"   "+r.getPrecio()+" €");
+							precioTotal = precioTotal + r.getPrecio();
+						}
+						pw.println("------------------");
+						pw.println("TOTAL "+precioTotal+" €");
+						pw.close();
+					 } catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				 }
             
 			}
