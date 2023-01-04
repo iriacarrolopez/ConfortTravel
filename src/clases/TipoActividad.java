@@ -1,6 +1,6 @@
 package clases;
 
 public enum TipoActividad {
-	SNORKEL, SKI, PATINAJE, CINE, BOLOS, RUNNING 
+	SNORKEL, SKI, PATINAJE, CINE, BOLOS, RUNNING, NINGUNA
 
 }

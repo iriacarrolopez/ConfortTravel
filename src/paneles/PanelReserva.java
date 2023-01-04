@@ -306,7 +306,7 @@ public class PanelReserva extends JPanel {
 				
 				Float precio = Float.parseFloat(txtPrecio.getText());
 				
-				BD.insertarReserva(con, id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
+				BD.insertarReserva(id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
 						tipoExcursion, tipoActividad,dni, precio);
 
 				BD.closeBD(con);
@@ -327,7 +327,7 @@ public class PanelReserva extends JPanel {
 
 		for (Reserva r : listaReservas) {
 			Object fila[] = { r.getId(), r.getOrigen(), r.getDestino(), r.getFechaIni(), r.getFechaFin(),
-					r.getAlquilerTransporte(), r.getTipoAlojamiento(), r.getExcursion(), r.getActividades(),r.getDni() };
+					r.getAlquilerTransporte(), r.getTipoAlojamiento(), r.getExcursion(), r.getActividades(),r.getDni(),r.getPrecio() };
 			modeloReserva.addRow(fila);
 		}
 
@@ -337,7 +337,7 @@ public class PanelReserva extends JPanel {
 
 	private void inicializarTabla() {
 		Vector<String> cabeceraReserva = new Vector<String>(Arrays.asList("ID", "ORIGEN", "DESTINO", "FECHA INICIO",
-				"FECHA FIN", "ALQUILER TRANSPORTE", "TIPO ALOJAMIENTO", "TIPO EXCURSION", "ACTIVIDADES","DNI_CLIENTE"));
+				"FECHA FIN", "ALQUILER TRANSPORTE", "TIPO ALOJAMIENTO", "TIPO EXCURSION", "ACTIVIDADES","DNI_CLIENTE","PRECIO"));
 		modeloReserva = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraReserva);
 		tablaReserva = new JTable(modeloReserva);
 

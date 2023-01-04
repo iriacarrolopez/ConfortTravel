@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -37,7 +38,7 @@ public class PanelUsuarios extends JPanel {
 	JPanel panelNorte, panelCentro;
 	JLabel lblINFO;
 	DefaultListModel<Persona> modeloCliente;
-	private JScrollPane scrollPaneList;
+	private JScrollPane scrollPaneList,scrollArea;
 	private JList<Persona> listCliente;
 	private JTextArea textAreaReservas;
 	//N 
@@ -79,12 +80,12 @@ public class PanelUsuarios extends JPanel {
 		panelCentro.add(scrollPaneList);
 
 		textAreaReservas = new JTextArea();
-		panelCentro.add(textAreaReservas);
+		 scrollArea = new JScrollPane(textAreaReservas);
+		panelCentro.add(scrollArea);
+		//panelCentro.add(textAreaReservas);
 		cargarListaClientes();
 		
-		mapaClienteR = new TreeMap<String, ArrayList<Reserva>>();
 		
-	
 
 		listCliente.addMouseListener(new MouseAdapter() {
 

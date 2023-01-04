@@ -168,7 +168,7 @@ public class VentanaRegistro extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String nom = txtNombre.getText();
 				String dniExpresR = "[0-9]{8}[A-Z]";
-				String conExpresR = "[A-Z][a-z][0-9][^A-Za-z0-9]";
+				String conExpresR = "[A-Z][a-z]";
 				String dni = textDni.getText();
 				/*
 				 * para quitar el warning de getText() from the ty JPasswordField is deprecated
@@ -178,8 +178,7 @@ public class VentanaRegistro extends JFrame {
 				@SuppressWarnings("deprecation")
 				String cont2 = txtContrasenia2.getText();
 				String email = txtEmail.getText();
-				if (Pattern.matches(dniExpresR, dni) && Pattern.matches(conExpresR, cont)
-						&& Pattern.matches(conExpresR, cont2)) {
+				if (Pattern.matches(dniExpresR, dni) ) {
 					String sel = comboBox.getSelectedItem().toString();
 					if (sel.equals("CLIENTE")) {
 						BD.insertarPersona(con, nom, dni, cont2, email, sel);

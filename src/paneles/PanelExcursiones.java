@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 
 
 import bd.BD;
-
+import clases.Ciudad;
 import clases.Excursion;
 
 
@@ -113,8 +113,12 @@ public class PanelExcursiones extends JPanel {
 				String duracion = JOptionPane.showInputDialog("Introduce el duracion :");
 				String num = JOptionPane.showInputDialog("Introduce el numPersonas:");
 				
+				Ciudad c = BD.getCiudadByNombre(lugar);
 				
-				BD.insertarExcursion(con, Integer.parseInt(id), nombre, tipo, lugar, Float.parseFloat(precio),
+				String nlugar = c.getNombre();
+				
+				
+				BD.insertarExcursion(con, Integer.parseInt(id), nombre, tipo, nlugar, Float.parseFloat(precio),
 						Integer.parseInt(duracion), Integer.parseInt(num));
 
 				// Borramos el contenido del modelo de la tabla
@@ -132,34 +136,18 @@ public class PanelExcursiones extends JPanel {
 		 */
 		btnEliminar.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String id = JOptionPane.showInputDialog("inserta el id de la excursion");
-				Integer idE =Integer.parseInt(id);
-				
-				BD.EliminarExcursion(con, idE);
-				// Borramos el contenido del modelo de la tabla
-				
-				cargarModeloTabla();
-			}
+			
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					con = BD.initBD("confortTravel.db");
+					int d = tablaExcursion.getSelectedRow();
+					int id = (int) tablaExcursion.getValueAt(d, 0);
+					BD.EliminarExcursion(con, id);
+					cargarModeloTabla();
+				}
 		});
-		/*//N
-		tablaExcursion.addMouseListener(new MouseAdapter() {
-		 
+	
 			
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				con = BD.initBD("confortTravel.db");
-				int row = tablaExcursion.rowAtPoint(e.getPoint());
-				BD.EliminarExcursion(con);
-				modeloExcursion.removeRow(row);
-				tablaExcursion.updateUI();
-				cargarModeloTabla();
-				
-			}
-		});*/
 		btnModificar.addActionListener(new ActionListener() {
 
 			@Override
@@ -243,7 +231,7 @@ public class PanelExcursiones extends JPanel {
 				   System.out.println("CARGANDO MODELO DE LA TABLA...");
 			}*/
 			for(Excursion ex :lista) {
-				Object [] fila = {ex.getId(),ex.getNombre(),ex.getTipo(),ex.getLugar().getId(),ex.getPrecio(),ex.getDuracion(),ex.getNumPersonas()};
+				Object [] fila = {ex.getId(),ex.getNombre(),ex.getTipo(),ex.getLugar().getNombre(),ex.getPrecio(),ex.getDuracion(),ex.getNumPersonas()};
 				modeloExcursion.addRow(fila);
 			}
 			

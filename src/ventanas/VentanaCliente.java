@@ -43,7 +43,6 @@ import clases.TipoPersona;
 import paneles.PanelAlojamiento;
 import paneles.PanelAniadirReserva;
 import paneles.PanelDestino;
-import paneles.PanelEliminarReserva;
 import paneles.PanelExcursiones;
 import paneles.PanelModificarReserva;
 import paneles.PanelReserva;

@@ -13,7 +13,8 @@ import java.util.Vector;
 
 import javax.swing.JScrollPane;
 import java.awt.BorderLayout;
-
+import java.awt.Color;
+import java.awt.Component;
 
 import javax.swing.JButton;
 
@@ -23,12 +24,14 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
-
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-
+import javax.swing.table.TableCellRenderer;
 
 import bd.BD;
 import clases.Alojamiento;
+import clases.Ciudad;
+import clases.TipoAlojamiento;
 
 
 public class PanelAlojamiento extends JPanel {
@@ -48,7 +51,8 @@ public class PanelAlojamiento extends JPanel {
 	private JLabel lblFiltro;
 	//private JTextField textField;
 
-
+int mouserow =-1;
+int mouseColumn =-1;
 	/**
 	 * Create the panel.
 	 */
@@ -102,7 +106,31 @@ public class PanelAlojamiento extends JPanel {
 		
 		
 		
-		
+		tablaAlojamiento.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+			
+			@Override
+			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
+					int row, int column) {
+				Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+				TipoAlojamiento ta = (TipoAlojamiento) modeloAlojamiento.getValueAt(row, 2);
+				if(ta.equals(TipoAlojamiento.HOTEL)) {
+					c.setBackground(Color.lightGray);
+					
+				}else if(ta.equals(TipoAlojamiento.APARTAMENTO)) {
+					c.setBackground(Color.cyan);
+				}else if (ta.equals(TipoAlojamiento.valueOf("VILLA"))) {
+					c.setBackground(Color.white);
+					
+				}else if(ta.equals(TipoAlojamiento.valueOf("BUNGALO"))) {
+					c.setBackground(Color.green);
+					
+				}else {
+					c.setBackground(Color.orange);
+				}
+				// TODO Auto-generated method stub
+				return c;
+			}
+		});
 		
 		btnInsertarAlojamiento.addActionListener(new ActionListener() {
 
@@ -114,13 +142,21 @@ public class PanelAlojamiento extends JPanel {
 				String tipo = JOptionPane.showInputDialog("Introduce el tipo :");
 				String precio = JOptionPane.showInputDialog("Introduce el precio :");
 				String duracion = JOptionPane.showInputDialog("Introduce el duracion :");
-				String destino = JOptionPane.showInputDialog("Introduce el destino :");
+				String destino = JOptionPane.showInputDialog("Introduce el destino(nombre) :");
+				
+				Ciudad c = new Ciudad();
+				 c = BD.getCiudadByNombre(destino);
+				Integer des = c.getId();
+				
 				Integer idA = Integer.parseInt(id);
 				Float p = Float.parseFloat(precio);
 				Integer d = Integer.parseInt(duracion);
-				Integer destinoD = BD.obtenerIdDestino(destino);
+			//	Integer idD = Integer.parseInt(destino);
+				//c
+				//Ciudad destinoD = BD.obtenerIdDestino(destino);
+			
 				con = BD.initBD("confortTravel.db");
-				BD.insertarAlojamiento(con, idA, nombre, tipo, p,d, destinoD);
+				BD.insertarAlojamiento(con, idA, nombre, tipo, p,d,des);
 				// Borramos el contenido del modelo de la tabla
 				while (modeloAlojamiento.getRowCount() > 0) {
 					modeloAlojamiento.removeRow(0);
@@ -145,23 +181,7 @@ public class PanelAlojamiento extends JPanel {
 				cargarModeloTabla();
 			}
 		});
-		/*//nuevo
-				tablaAlojamiento.addMouseListener(new MouseAdapter() {
-				 
-					
-					
-					@Override
-					public void mouseClicked(MouseEvent e) {
-						// TODO Auto-generated method stub
-						con = BD.initBD("confortTravel.db");
-						int row = tablaAlojamiento.rowAtPoint(e.getPoint());
-						BD.eliminarAlojamiento(con);
-						modeloAlojamiento.removeRow(row);
-						tablaAlojamiento.updateUI();
-						cargarModeloTabla();
-						
-					}
-				});*/
+		
 		btnModificar.addActionListener(new ActionListener() {
 
 			@Override
@@ -225,7 +245,7 @@ public class PanelAlojamiento extends JPanel {
 				modeloAlojamiento.removeRow(0);
 			}
 			for(Alojamiento a: listaAlojamientos) {
-				Object [] fila = {a.getId(),a.getNombre_comp(),a.getTalojamiento(),a.getPrecio(),a.getDuracion(),a.getCiudad().getId()};
+				Object [] fila = {a.getId(),a.getNombre_comp(),a.getTalojamiento(),a.getPrecio(),a.getDuracion(),a.getCiudad().getNombre()};
 				modeloAlojamiento.addRow(fila);
 			}
 			
