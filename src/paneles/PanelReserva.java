@@ -74,7 +74,7 @@ public class PanelReserva extends JPanel {
 		panelArriba = new JPanel();
 		add(panelArriba, BorderLayout.NORTH);
 
-		lblAniadirReserva = new JLabel("AÃ±adir Reserva");
+		lblAniadirReserva = new JLabel("Añadir Reserva");
 		panelArriba.add(lblAniadirReserva);
 
 		panelCentro = new JPanel();

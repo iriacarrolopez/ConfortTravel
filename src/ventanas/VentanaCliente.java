@@ -82,6 +82,7 @@ public class VentanaCliente extends JFrame {
 				}
 			}
 		});
+		
 	}
 
 	/**
@@ -144,6 +145,9 @@ public class VentanaCliente extends JFrame {
 					nodo = new DefaultMutableTreeNode("Resguardo");
 							nodo.add(new DefaultMutableTreeNode("Imprimir"));
 					add(nodo);
+					nodo = new DefaultMutableTreeNode("Fibonacci");
+						nodo.add(new DefaultMutableTreeNode("ImprimirFibonacci"));
+					add(nodo);
 					nodo = new DefaultMutableTreeNode("Otras opciones");
 						nodo.add(new DefaultMutableTreeNode("Salir"));
 						nodo.add(new DefaultMutableTreeNode("Volver"));
@@ -191,8 +195,41 @@ public class VentanaCliente extends JFrame {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
+				 } else if ("ImprimirFibonacci".equals(nodos)) {
+					 
+					 String dni = JOptionPane.showInputDialog(null, "Introduzca su dni");
+					 ArrayList<Reserva> ar = new ArrayList<>();
+					 ar = BD.obtenerReservasDni(dni);
+					 for (Reserva r: ar) {
+						 System.out.println(r.toString());
+					 }
+					 
+					 try {
+						PrintWriter pw = new PrintWriter(new FileOutputStream("Fibonacci.txt", false));
+						pw.println("Fibonacci del cliente "+dni);
+						pw.println();
+						float n = 0;
+						for (Reserva r: ar) {
+							pw.println(r.getDestino()+" "+r.getFechaIni()+"   "+r.getPrecio()+" €");
+							n = n + r.getPrecio();
+							fibonacci(n);
+						}
+						pw.println("------------------");
+						pw.println("FIBONACCI "+fibonacci(n)+" €");
+						pw.close();
+					 } catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				 }
             
+			}
+
+			private float fibonacci(float n) {
+				// TODO Auto-generated method stub
+				if (n>1)
+				    return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
+				    else return n;
 			}
 		});
 		panelIzq.add(tree);
