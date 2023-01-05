@@ -37,6 +37,9 @@ import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -58,7 +61,7 @@ public class PanelReserva extends JPanel {
 	private JComboBox<TipoAlquiler> cbAlquilerTransporte;
 	private JComboBox<TipoExcursion> cbExcursion;
 	private JComboBox<TipoActividad> cbActividades;
-	private JButton btnAceptar, btnGuardar, btnCargar;
+	private JButton btnAceptar, btnGuardar;
 	private JCalendar cFechaInicio, cFechaFin;
 	private Connection con;
 
@@ -74,7 +77,7 @@ public class PanelReserva extends JPanel {
 		panelArriba = new JPanel();
 		add(panelArriba, BorderLayout.NORTH);
 
-		lblAniadirReserva = new JLabel("Añadir Reserva");
+		lblAniadirReserva = new JLabel("AÃ±adir Reserva");
 		panelArriba.add(lblAniadirReserva);
 
 		panelCentro = new JPanel();
@@ -212,68 +215,9 @@ public class PanelReserva extends JPanel {
 
 		btnAceptar = new JButton("Aceptar");
 		panelCA4.add(btnAceptar);
-		btnGuardar = new JButton("Guardar");
-		btnCargar = new JButton("Cargar");
-		panelCA4.add(btnCargar);
 		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
 		cargarModeloTabla();
-
-		btnCargar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				try {
-					BufferedReader br = new BufferedReader(new FileReader("Conf/miR.csv"));
-					String linea = br.readLine();
-					while (linea != null) {
-						String[] datos = linea.split(";");
-						// Reserva r = new
-						// Reserva(Integer.parseInt(datos[0]),datos[1],datos[2],datos[3],
-						// datos[4],TipoAlquiler.valueOf(datos[5]),TipoAlojamiento.valueOf(datos[6]),TipoExcursion.valueOf(datos[7]),TipoActividad.valueOf(datos[8]));
-						System.out.println(Arrays.toString(datos));
-
-						linea = br.readLine();
-					}
-					br.close();
-				} catch (FileNotFoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-
-			}
-		});
-		/*
-		 * btnGuardar.addActionListener(new ActionListener() { public void
-		 * actionPerformed(ActionEvent e) { JFileChooser jfc = new
-		 * JFileChooser("../ConfortTravel"); int sel = jfc.showSaveDialog(null); if(sel
-		 * == JFileChooser.APPROVE_OPTION) { File f = jfc.getSelectedFile(); PrintWriter
-		 * pw; try { pw = new PrintWriter(f); //for(int i=0;i<modeloReserva.size;i++){
-		 * // Reserva r = modeloReserva.getElementAt(i); //
-		 * pw.println(r.getId()+";"+r.getOrigen()+";"+r.getDestino()+";"+r.getFechaIni()
-		 * +";"+r.getFechaFin()+";"+r.getAlquilerTransporte()+ //
-		 * ";"+r.getTipoAlojamiento()+";"+r.getExcursion()+";"+r.getActividades()); }
-		 * for(int i=0;i<modeloReserva.getRowCount();i++) { //Integer id=(Integer)
-		 * modeloReserva.getValueAt(i, 0); String id=(String)
-		 * modeloReserva.getValueAt(i, 0); String origen=(String)
-		 * modeloReserva.getValueAt(i, 1); String destino =
-		 * (String)modeloReserva.getValueAt(i, 2); String fi=(String)
-		 * modeloReserva.getValueAt(i, 3); String fn = (String)
-		 * modeloReserva.getValueAt(i, 4); String alq=(String)
-		 * modeloReserva.getValueAt(i, 5); String t1 = (String)
-		 * modeloReserva.getValueAt(i, 6); String t2=(String)
-		 * modeloReserva.getValueAt(i, 7); String t3 = (String)
-		 * modeloReserva.getValueAt(i, 8);
-		 * pw.println(id+";"+origen+";"+destino+";"+fi+";"+fn+";"+alq+";"+t1+";"+t2+";"+
-		 * t3); } pw.flush(); pw.close(); } catch (FileNotFoundException e1) { // TODO
-		 * Auto-generated catch block e1.printStackTrace(); }
-		 * 
-		 * } } }); panelCA4.add(btnGuardar);
-		 */
 
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -310,14 +254,34 @@ public class PanelReserva extends JPanel {
 						tipoExcursion, tipoActividad,dni, precio);
 
 				BD.closeBD(con);
+				cargarModeloTabla();
 
 			}
 		});
+		
+		tablaReserva.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				if(e.isAltDown()) {
+					int row = tablaReserva.getSelectedRow();
+					int idSeleccionado = (int) tablaReserva.getValueAt(row, 0);
+					BD.eliminarReserva(idSeleccionado);
+					cargarModeloTabla();
+				}
+				
+				
+			}
+		});
+			
+		
 
 	}
 
 	private void cargarModeloTabla() {
 
+		System.out.println("CARGANDO EL MODELO");
 		con = BD.initBD("confortTravel.db");
 
 		ArrayList<Reserva> listaReservas = BD.obtenerReservas();
@@ -332,25 +296,24 @@ public class PanelReserva extends JPanel {
 		}
 
 		BD.closeBD(con);
+		tablaReserva.repaint();
 
 	}
 
 	private void inicializarTabla() {
 		Vector<String> cabeceraReserva = new Vector<String>(Arrays.asList("ID", "ORIGEN", "DESTINO", "FECHA INICIO",
 				"FECHA FIN", "ALQUILER TRANSPORTE", "TIPO ALOJAMIENTO", "TIPO EXCURSION", "ACTIVIDADES","DNI_CLIENTE","PRECIO"));
-		modeloReserva = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraReserva);
-		tablaReserva = new JTable(modeloReserva);
-
-		cargarModeloTabla();
-
-		modeloReserva = new DefaultTableModel() {
-
+		modeloReserva = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraReserva) {
 			private static final long serialVersionUID = 1L;
 
 			public boolean isCellEditable(int rowIndex, int columnIndex) {
 				return false;
 			}
+
 		};
+		tablaReserva = new JTable(modeloReserva);
+
+		cargarModeloTabla();
 
 	}
 }

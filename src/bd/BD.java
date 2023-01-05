@@ -778,10 +778,11 @@ public class BD {
 	 * @param con conexiÃ³n con la base de datos
 	 * @param id  id de la reserva que deseamos eliminar
 	 */
-	public static void eliminarReserva(Connection con, int id) {
+	public static void eliminarReserva(int id) {
 		String sql = "DELETE FROM Reserva WHERE id=" + id;
-		try (Statement st = con.createStatement();) {
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
 			log(Level.INFO, "Lanzada consulta a base de datos: " + sql, null);
+			Statement st = con.createStatement();
 			int result = st.executeUpdate(sql);
 
 			System.out.println(String.format("- Se han borrado la reserva con el id'" + id + "'", result));
