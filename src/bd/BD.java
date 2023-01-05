@@ -129,7 +129,11 @@ public class BD {
 		return tmR;
 
 	}
-
+	/**
+	 * Metodo que devuelve un array de clientes
+	 * @param tipo Si es administrador o cliente
+	 * @return arraylist de clientes
+	 */
 	public static ArrayList<Persona> ObtenerClientes(String tipo) {
 		ArrayList<Persona> lp = new ArrayList<>();
 		String sql = "SELECT * FROM Persona WHERE tipo ='" + tipo + "';";
@@ -161,7 +165,7 @@ public class BD {
 	}
 
 	/**
-	 * Mï¿½todo que cierra la conexiï¿½n con la base de datos
+	 * Metodo que cierra la conexion con la base de datos
 	 * 
 	 * @param con
 	 */
@@ -180,9 +184,9 @@ public class BD {
 	}
 
 	/**
-	 * Mï¿½todo que crea las tablas en la base de datos
+	 * Metodo que crea las tablas en la base de datos
 	 * 
-	 * @param con Conexiï¿½n con la base de datos
+	 * @param con Conexion con la base de datos
 	 */
 	/* CAMBIO EN EL FORMATO DE CREAR LAS TABLAS PARA HACER LA FOREIGN KEY */
 	public static void crearTablas(Connection con) {
@@ -221,12 +225,12 @@ public class BD {
 
 	/**
 	 * 
-	 * Mï¿½todo que inserta a una persona en la base de datos
+	 * Metodo que inserta a una persona en la base de datos
 	 * 
-	 * @param con   Conexiï¿½n con la base de datos
+	 * @param con   Conexion con la base de datos
 	 * @param nom   Nombre de la persona
 	 * @param dni   Dni de la persona
-	 * @param cont  Contraseï¿½a de la persona
+	 * @param cont  Contraseña de la persona
 	 * @param email Email de la persona
 	 * @param tipo  Tipo de persona
 	 */
@@ -445,6 +449,10 @@ public class BD {
 	}
 
 	// C
+	/**
+	 * Metodo que devuelve todas las reservas
+	 * @return arraylist con todas las reservas
+	 */
 	public static ArrayList<Reserva> obtenerReservas() {
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
 		String sql = "SELECT * FROM Reserva WHERE id>=0";
@@ -491,10 +499,10 @@ public class BD {
 
 	/***
 	 * 
-	 * Método para obtener las reservas en un destino
+	 * Método para obtener las reservas en una persona
 	 * 
-	 * @param id
-	 * @return
+	 * @param dni dni de la persona que queremos las reservas
+	 * @return arraylist de todas las reservas de esa persona
 	 */
 	public static ArrayList<Reserva> obtenerReservasDni(String dni) {
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
@@ -539,7 +547,11 @@ public class BD {
 		}
 		return listaReservas;
 	}
-
+	/**
+	 * Metodo para obtener todas las reservas por un id
+	 * @param id id de la reserva
+	 * @return arraylist de las reservas asociadas a ese id
+	 */
 	public static ArrayList<Reserva> obtenerReservasPorId(Integer id) {
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
 		String sql = "SELECT FROM Reserva WHERE id=" + id + ";";
@@ -580,7 +592,11 @@ public class BD {
 		}
 		return listaReservas;
 	}
-
+	/**
+	 * Metodo que devuelve un arraylist asociado al id de un destino
+	 * @param id id del destino de la reserva
+	 * @return arraylist de todas lasr reservas de ese destino
+	 */
 	public static ArrayList<Reserva> obtenerReservasPorDestino(Integer id) {
 		ArrayList<Reserva> listaReservas = new ArrayList<>();
 		String sql = "SELECT * FROM Reserva WHERE idDestino=" + id + ";";
@@ -624,7 +640,11 @@ public class BD {
 		}
 		return listaReservas;
 	}
-
+	/**
+	 * Metodo que devuelve un alojamiento 
+	 * @param id id del alojamiento
+	 * @return alojamiento
+	 */
 	public static Alojamiento obtenerAlojamientosPorid(Integer id) {
 
 		String sql = "SELECT * FROM Alojamiento WHERE id=" + id + ";";
@@ -655,7 +675,11 @@ public class BD {
 		}
 		return al;
 	}
-
+	/**
+	 * Metodo que devuelve una ciudad
+	 * @param id id de la ciudad
+	 * @return ciudad
+	 */
 	public static Ciudad obtenerDestinosPorId(Integer id) {
 		String sql = "SELECT * FROM Ciudad WHERE id=" + id + ";";
 		Ciudad c = null;
@@ -824,6 +848,20 @@ public class BD {
 	}
 
 	// N
+	/**
+	 * Metodo que inserta una reserva en la bd
+	 * @param id id de la reserva
+	 * @param idOrigen id de la ciudad origen
+	 * @param idDestino id de la ciudad destino
+	 * @param fechaIni fecha del inicio del viaje
+	 * @param fechaFin fecha del fin del viaje
+	 * @param alquilerTransporte alquiler del transporte
+	 * @param tipoAlojamiento tipo de alojamiento que se desea
+	 * @param excursion excursion a realizar
+	 * @param actividades actividad a realizar
+	 * @param dni dni del cliente que hace la reserva
+	 * @param precio precio de la reserva
+	 */
 	public static void insertarReserva( Integer id, Integer idOrigen, Integer idDestino, String fechaIni,
 			String fechaFin, String alquilerTransporte, String tipoAlojamiento, String excursion, String actividades,
 			String dni, Float precio) {
@@ -870,6 +908,11 @@ public class BD {
 	}
 
 	// N
+	/**
+	 * Metodo que elimina un alojamiento de la bd
+	 * @param con conexion con la bd
+	 * @param id id del alojamiento a eliminar
+	 */
 	public static void eliminarAlojamiento(Connection con,Integer id) {
 		try (Statement st = con.createStatement();) {
 			String sql = "DELETE FROM Alojamiento WHERE id = "+id+" ;";
@@ -917,6 +960,15 @@ public class BD {
 	 * alquilerTransporte String, tipoAlojamiento String, excursion String,
 	 * actividades String)";
 	 */
+	/**
+	 * Metodo que modifica las reservas
+	 * @param id id de la reserva
+	 * @param tipoAlquiler alquiler modificado
+	 * @param tipoAlojamiento alojamiento modificado
+	 * @param tipoExcursion excursion modificada
+	 * @param tipoActividad actividad modificada
+	 * @param precio precio de la reserva
+	 */
 	public static void uptadeReservas(Integer id, String tipoAlquiler, String tipoAlojamiento, String tipoExcursion,
 			String tipoActividad, float precio) {
 		String sql = "UPDATE Reserva SET alquilerTransporte=?, tipoAlojamiento=?, excursion=?, actividades=? WHERE id=?";
@@ -940,7 +992,11 @@ public class BD {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * Metodo que modifica el nombre del destino
+	 * @param id id de la ciudad destino
+	 * @param nombre nombre modificado
+	 */
 	public static void UpdateNombreDestino(Integer id, String nombre) {
 		String sql = "UPDATE Ciudad SET nom=? WHERE id=?";
 		PreparedStatement pstmt;
@@ -965,6 +1021,17 @@ public class BD {
 	/*
 	 * EXCURSION
 	 */
+	/**
+	 * Metodo que inserta una excursion en la bd
+	 * @param con conexion con la bd
+	 * @param id id de la excursion
+	 * @param nombre nombre de la excursion
+	 * @param tipo tipo de excursion
+	 * @param lugar lugar de la excursion
+	 * @param precio precio de la excursion
+	 * @param duracion duracion de la excursion
+	 * @param numPersonas personas que realizaran la excursion
+	 */
 	public static void insertarExcursion(Connection con, Integer id, String nombre, String tipo, String lugar,
 			Float precio, Integer duracion, Integer numPersonas) {
 		String sql = "INSERT INTO Excursion VALUES(" + id + ",'" + nombre + "','" + tipo + "','" + lugar + "'," + precio
@@ -987,6 +1054,11 @@ public class BD {
 	}
 
 	// N
+	/**
+	 * Metodo que elimina una excursion
+	 * @param con conexion con la bd
+	 * @param id id de la excursion
+	 */
 	public static void EliminarExcursion(Connection con, int id) {
 
 		try (Statement st = con.createStatement();) {
@@ -1003,6 +1075,11 @@ public class BD {
 
 	/*
 	 * nuevo
+	 */
+	/**
+	 * Metodo que devuelve los datos de una excursion
+	 * @param id id de la excurion a devolver
+	 * @return excursion
 	 */
 	public static Excursion obtenerDatosExcursion(Integer id) {
 		String sql = "SELECT * FROM Excursion WHERE dni=" + id + "";
@@ -1035,7 +1112,10 @@ public class BD {
 		}
 		return excursion;
 	}
-
+	/**
+	 * Metodo que devuelve un arraylist de excursiones
+	 * @return arraylist de excursiones
+	 */
 	public static ArrayList<Excursion> obtenerExcursiones() {
 		ArrayList<Excursion> listaExcursion = new ArrayList<>();
 		String sql = "SELECT * FROM Excursion WHERE id>=0";
@@ -1070,6 +1150,11 @@ public class BD {
 	}
 
 	// n
+	/**
+	 * Metodo que devuelve una ciudad por su nombre
+	 * @param nombre nombre de la ciudad
+	 * @return todos los datos de una ciudad
+	 */
 	public static Ciudad getCiudadByNombre(String nombre) {
 		Ciudad c = null;
 		String sql = "SELECT * FROM Ciudad WHERE nom = ? LIMIT 1;";
@@ -1093,6 +1178,11 @@ public class BD {
 
 	}
 	//n
+	/**
+	 * Metodo que devuelve una ciudad por su id
+	 * @param id id de la ciudad
+	 * @return todos los datos de una ciudad
+	 */
 	public static Ciudad getCiudadByID(int id) {
 		Ciudad c = null;
 		String sql = "SELECT nom FROM Ciudad WHERE id = ? ;";
@@ -1112,7 +1202,11 @@ public class BD {
 		}
 		return c;
 	}
-
+	/**
+	 * Metodo que devuelve el id del destino y recibe el nombre del mismo
+	 * @param nombre nombre del destino
+	 * @return id del destino
+	 */
 	public static int obtenerIdDestino(String nombre) {
 		int id = 0;
 		String sql = "SELECT * FROM Ciudad WHERE nom = " + nombre + ";";
@@ -1161,8 +1255,13 @@ public class BD {
 	 * LOGGER
 	 */
 
-	// Mï¿½todo local para loggear (si no se asigna un logger externo, se asigna uno
-	// local)
+
+	/**
+	 * Metodo local para loggear (si no se asigna un logger externo, se asigna uno local)
+	 * @param level tipo de logger
+	 * @param msg mensage del logger
+	 * @param excepcion excepcion del logger
+	 */
 	private static void log(Level level, String msg, Throwable excepcion) {
 		if (logger == null) { // Logger por defecto local:
 			logger = Logger.getLogger("BD-local"); // Nombre del logger

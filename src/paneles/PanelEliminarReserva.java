@@ -80,7 +80,7 @@ public class PanelEliminarReserva extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				con = BD.initBD("confortTravel.db");
 				int id = Integer.parseInt(textId.getText());
-				BD.eliminarReserva(con, id);
+				//BD.eliminarReserva(con, id);
 				tablaReserva.updateUI();
 				BD.closeBD(con);
 				
