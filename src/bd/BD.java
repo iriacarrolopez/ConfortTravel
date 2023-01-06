@@ -1250,6 +1250,28 @@ public class BD {
 		}
 
 	}
+	
+	/**
+	 * Metodo que devuelve el mayor codigo de todas las reservas
+	 * @return mayor codigo de las reservas
+	 */
+	public static int obtenerMayorCodigoReserva() {
+		String sql = "SELECT MAX(id) FROM Reserva";
+		int max = 0;
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			if(rs.next()) {
+				max = rs.getInt(1);
+			}
+			rs.close();
+			st.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return max;
+	}
 
 	/*
 	 * LOGGER

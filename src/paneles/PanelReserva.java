@@ -53,7 +53,7 @@ public class PanelReserva extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo, panelCC1, panelCC2, panelCC3,
 			panelCC4, panelCA1, panelCA2, panelCA3, panelCA4;
-	private JLabel lblAniadirReserva, lblIDVuelo, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento,
+	private JLabel lblAniadirReserva, lblEliminarReserva, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento,
 			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI, lblPrecio;
 	private JTextField txtIDVuelo,txtDni, txtPrecio;
 	private JComboBox<Ciudad> comboBoxOrigen, comboBoxDestino;
@@ -61,7 +61,7 @@ public class PanelReserva extends JPanel {
 	private JComboBox<TipoAlquiler> cbAlquilerTransporte;
 	private JComboBox<TipoExcursion> cbExcursion;
 	private JComboBox<TipoActividad> cbActividades;
-	private JButton btnAceptar, btnGuardar;
+	private JButton btnAceptar, btnGuardar, btnInsertar;
 	private JCalendar cFechaInicio, cFechaFin;
 	private Connection con;
 
@@ -99,12 +99,11 @@ public class PanelReserva extends JPanel {
 		panelCC1 = new JPanel();
 		panelCentroCentro.add(panelCC1);
 
-		lblIDVuelo = new JLabel("ID Reserva:");
-		panelCC1.add(lblIDVuelo);
+		lblEliminarReserva = new JLabel("Alt + Click para eliminar una reserva");
+		panelCC1.add(lblEliminarReserva);
 		
-		txtIDVuelo = new JTextField();
-		panelCC1.add(txtIDVuelo);
-		txtIDVuelo.setColumns(10);
+		btnInsertar = new JButton("INSERTAR");
+		panelCC1.add(btnInsertar);
 
 		panelCC2 = new JPanel();
 		panelCentroCentro.add(panelCC2);
@@ -218,12 +217,27 @@ public class PanelReserva extends JPanel {
 		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
 		cargarModeloTabla();
+		
+		ocultarCampos();
+		
+		btnInsertar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				panelCC2.setVisible(true);
+				panelCC3.setVisible(true);
+				panelCC4.setVisible(true);
+				panelCentroAbajo.setVisible(true);
+				
+			}
+		});
 
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//JOptionPane.showMessageDialog(null,"PARA MÁS SEGURIDAD INTRODUZCA EL SU DNI ");
 				
-				Integer id = Integer.parseInt(txtIDVuelo.getText());
+							
+				Integer id = BD.obtenerMayorCodigoReserva() + 1;
 				Ciudad origen = (Ciudad) comboBoxOrigen.getSelectedItem();
 				Ciudad destino = (Ciudad) comboBoxDestino.getSelectedItem();
 				Integer idOrigen = origen.getId();
@@ -315,5 +329,12 @@ public class PanelReserva extends JPanel {
 
 		cargarModeloTabla();
 
+	}
+	
+	private void ocultarCampos() {
+		panelCC2.setVisible(false);
+		panelCC3.setVisible(false);
+		panelCC4.setVisible(false);
+		panelCentroAbajo.setVisible(false);
 	}
 }
