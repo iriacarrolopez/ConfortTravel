@@ -592,6 +592,35 @@ public class BD {
 		}
 		return listaReservas;
 	}
+	 
+	public static ArrayList<Excursion> obtenerExcursionesPorDestino(Ciudad destino) {
+		ArrayList<Excursion> listaExcursiones = new ArrayList<>();
+		String sql = "SELECT * FROM Excursion WHERE lugar='" + destino.getNombre() + "';";
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:"+"confortTravel.db")) {
+			log(Level.INFO, "Lanzada consulta a base de datos: "+sql,null);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String nombre = rs.getString("nombre");
+				String nombreTipo = rs.getString("tipo");
+				TipoExcursion tipo = TipoExcursion.valueOf(nombreTipo);
+				Float precio = rs.getFloat("precio");
+				int numPersonas = rs.getInt("numPersonas");
+				int duracion = rs.getInt("duracion");
+				Excursion e = new Excursion(id,nombre,tipo,destino,precio,numPersonas, duracion);
+				listaExcursiones.add(e);
+			}
+			rs.close();
+			System.out.println(String.format("- Se han recuperado %d excursiones", listaExcursiones.size()));
+			log(Level.INFO, "Se han encontrado las siguientes excursiones:" + listaExcursiones.size(), null);
+		} catch (SQLException e) {
+			log(Level.SEVERE, "Error al obtener de base de datos: " + sql, e);
+			System.err.println(String.format("* Error al obtener datos de la BBDD: %s", e.getMessage()));
+			e.printStackTrace();
+		}
+		return listaExcursiones;
+	}
 	/**
 	 * Metodo que devuelve un arraylist asociado al id de un destino
 	 * @param id id del destino de la reserva

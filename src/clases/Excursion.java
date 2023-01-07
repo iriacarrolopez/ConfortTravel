@@ -167,6 +167,5 @@ public class Excursion {
 		return "Excursion [id=" + id + ", nombre=" + nombre + ", tipo=" + tipo + ", lugar=" + lugar + ", precio="
 				+ precio + ", numPersonas=" + numPersonas + ", duracion=" + duracion + "]";
 	}
-	
 
 }

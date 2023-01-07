@@ -1,7 +1,10 @@
 package ventanas;
 
 import java.awt.BorderLayout;
+
+import java.util.random.*;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -18,8 +21,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Random;
 import java.util.TreeMap;
 
+import javax.swing.ComboBoxEditor;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -28,16 +34,23 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.JTree;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
 import bd.BD;
+import clases.Ciudad;
+import clases.Excursion;
 import clases.Reserva;
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
@@ -55,11 +68,16 @@ public class VentanaCliente extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private static JFrame frame;
 	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte, panelInformacion;
-	private JLabel lblInfor, lblTitulo;
-	private JButton btnSalir, btnVolver;
+	private JLabel lblInfor, lblTitulo, lblCiudad, lblPresupuesto;
+	private JButton btnSalir, btnVolver, btnBuscar;
 	public VentanaLogin ventanaLogin;
 	public PanelReserva pr;
 	private JTree tree;
+	private DefaultTableModel modeloTablaExcursiones;
+	private JTable tablaExcursiones;
+	private JScrollPane scrollTablaExcursiones;
+	private JComboBox<Ciudad> cbCiudades;
+	private JTextField txtPresupuesto;
 	//private JComboBox<String> comboAn;
 	//private JButton btnResguardo;
 	//private JButton btnFactura;
@@ -139,8 +157,8 @@ public class VentanaCliente extends JFrame {
 					nodo = new DefaultMutableTreeNode("Coger Reserva");
 						nodo.add(new DefaultMutableTreeNode("NuevaReserva"));
 					add(nodo);
-					nodo = new DefaultMutableTreeNode("Importe de la reserva");
-						nodo.add(new DefaultMutableTreeNode("Imprimir"));
+					nodo = new DefaultMutableTreeNode("Ver excursiones");
+						nodo.add(new DefaultMutableTreeNode("Posibles excursiones"));
 					add(nodo);
 					nodo = new DefaultMutableTreeNode("Resguardo");
 							nodo.add(new DefaultMutableTreeNode("Imprimir"));
@@ -221,8 +239,65 @@ public class VentanaCliente extends JFrame {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-				 }
-            
+				 } else if ("Posibles excursiones".equals(nodos)) {
+					String [] titulos = {"NOMBRE","TIPO","LUGAR","PRECIO"};
+					modeloTablaExcursiones = new DefaultTableModel();
+					lblCiudad = new JLabel("Elige la ciudad: ");
+					cbCiudades = new JComboBox<Ciudad>();
+					ArrayList<Ciudad> aCiudades = BD.obtenerTodasCiudades();
+					for (Ciudad c: aCiudades) {
+						cbCiudades.addItem(c);
+					}
+					modeloTablaExcursiones.setColumnIdentifiers(titulos);
+					tablaExcursiones = new JTable(modeloTablaExcursiones);
+					scrollTablaExcursiones = new JScrollPane(tablaExcursiones);
+					panelPrincipal.add(scrollTablaExcursiones);
+					panelSur.add(lblCiudad);
+					panelSur.add(cbCiudades);
+					lblPresupuesto = new JLabel("Presupuesto");
+					txtPresupuesto = new JTextField(10);
+					panelSur.add(lblPresupuesto);
+					panelSur.add(txtPresupuesto);
+					btnBuscar = new JButton("BUSCAR");
+					panelSur.add(btnBuscar);
+					ArrayList<Excursion> alExcursiones = BD.obtenerExcursiones();
+					for (Excursion x: alExcursiones) {
+						Object [] row = {x.getNombre(),x.getTipo(),x.getLugarNombre(),x.getPrecio()};
+						modeloTablaExcursiones.addRow(row);
+					}
+					
+					btnBuscar.addActionListener(new ActionListener() {
+						
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							Ciudad ciudadDeseada = (Ciudad) cbCiudades.getSelectedItem();
+							ArrayList<Excursion> listaExcursiones = BD.obtenerExcursionesPorDestino(ciudadDeseada);
+							int filas = modeloTablaExcursiones.getRowCount();
+							for (int i=0;i<filas;i++) {
+								modeloTablaExcursiones.removeRow(0);
+							}
+							for (Excursion ex: listaExcursiones) {
+								Object [] fila = {ex.getNombre(),ex.getTipo(),ex.getLugarNombre(),ex.getPrecio()};
+								modeloTablaExcursiones.addRow(fila);
+							}
+							double presupuesto = Double.parseDouble(txtPresupuesto.getText());
+							List<List<Excursion>> alCombinaciones = combinaciones(listaExcursiones, presupuesto, 10);
+							System.out.println(String.format("Combinaciones de menos de %.2f€", presupuesto));
+							alCombinaciones.forEach(r -> System.out.println(r));
+							try {
+								PrintWriter pw = new PrintWriter(new FileOutputStream("Excursiones.txt", false));
+								pw.println("Posibles excursiones en "+ciudadDeseada+" con un presupuesto de "+presupuesto+"€");
+								pw.println();
+								alCombinaciones.forEach(r -> pw.println(r));
+								pw.close();
+							 } catch (FileNotFoundException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							 }
+						}
+					});
+				
+				}
 			}
 
 			private float fibonacci(float n) {
@@ -240,86 +315,6 @@ public class VentanaCliente extends JFrame {
 		
 		pr = new PanelReserva();
 		
-		/*par = new PanelAniadirReserva();
-		per = new PanelEliminarReserva();
-		pmr = new PanelModificarReserva();
-		
-		comboAn = new JComboBox<>();
-		comboAn.setBackground(UIManager.getColor("CheckBox.background"));
-		comboAn.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		panelInformacion.add(comboAn);
-		comboAn.setModel(new DefaultComboBoxModel<String>(
-				new String[] { "Opciones:", "AÃ±adir", "Modificar", "Eliminar" }));
-		comboAn.setEnabled(true);
-		
-		btnResguardo = new JButton("Resguardo");
-		panelIzq.add(btnResguardo);
-		
-		btnFactura = new JButton("Factura");
-		panelIzq.add(btnFactura);
-		
-		btnSalir = new JButton("Salir");
-		panelSur.add(btnSalir);
-
-		btnVolver = new JButton("Volver a la pagina principal");
-		panelSur.add(btnVolver);
-		
-		comboAn.addItemListener(new ItemListener() {
-			
-			@Override
-			public void itemStateChanged(ItemEvent e) {
-				// TODO Auto-generated method stub
-				if(e.getSource() == comboAn) {
-					String item = comboAn.getSelectedItem().toString();
-					
-					if("AÃ±adir".equals(item)) {
-						
-						panelPrincipal.removeAll();
-						panelPrincipal.add(par);
-						panelPrincipal.updateUI();
-						
-					}else if("Modificar".equals(item)) {
-
-						panelPrincipal.removeAll();
-						panelPrincipal.add(pmr);
-						panelPrincipal.updateUI();
-						
-					}else if("Eliminar".equals(item)) {
-
-						panelPrincipal.removeAll();
-						panelPrincipal.add(per);
-						panelPrincipal.updateUI();
-						
-					}else {
-						panelPrincipal.removeAll();
-						panelPrincipal.updateUI();
-					}
-				}
-			}
-		});	
-		
-		btnVolver.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-
-				ventanaLogin = new VentanaLogin();
-				// ventanalogin.setVisible(true);
-				frame.dispose();
-
-			}
-		});
-
-		btnSalir.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				System.exit(0);
-
-			}
-		});*/
 		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
 		lblHora = new JLabel();
 		panelNorte.add(lblHora);
@@ -345,10 +340,46 @@ public class VentanaCliente extends JFrame {
 		
 
 	}
+	
 	public VentanaCliente(TipoPersona tipo) {
 		VentanaInicio vi = new VentanaInicio();
 		vi.dispose();
 		frame.setVisible(true);
 	}
-
+	public static void combinaciones(List<List<Excursion>> result, List<Excursion> elementos, double disponible, double sobranteMax, List<Excursion> temp) {
+		// Caso base. Si el importe disponible es negativo se detiene la recursividad
+    	if (disponible < 0) {
+        	return;
+        // Caso base. Si el importe disponible es menor que el sobrante máximo
+        } else if (disponible < sobranteMax) {
+        	//Se reordena la lista temporal de productos para evitar combinaciones equivalentes
+        	//Para reordenar se crea un Comparator de productos con una expresión lambda.
+        	temp.sort((Excursion e1, Excursion e2) -> Integer.compare(e1.getId(), e2.getId()));
+        	//Se añade la lista temporal si no se había añadido previamente.
+        	if (!result.contains(temp)) {
+            	//Se añade la lista temporal a la lista de resultados
+                result.add(new ArrayList<>(temp));        	
+        	}
+        } else {
+            // Caso recursivo. Por cada elemento        	
+        	for(Excursion e : elementos) {
+        		//Se añade el elemento a la lista temporal
+        		temp.add(e);
+        		//Se realiza la invocación recursiva en la que se va decrementado el importe disponible
+        		combinaciones(result, elementos, disponible-e.getPrecio(), sobranteMax, temp);
+        		//Se elimina el último de la lista temporal
+        		temp.remove(temp.size()-1);
+        	}
+        }
+	}
+	
+	public static List<List<Excursion>> combinaciones(List<Excursion> elementos, double disponible, double sobranteMax) {
+    	//Se inicializa la lista de combinaciones que se devolverá como resultado.
+    	List<List<Excursion>> result = new ArrayList<>();
+    	//Se invoca al método recursivo
+    	combinaciones(result, elementos, disponible, sobranteMax, new ArrayList<>());
+    	//Se devuelve el resultado.
+    	return result;
+    }
 }
+
