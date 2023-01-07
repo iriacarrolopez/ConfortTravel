@@ -2,6 +2,7 @@ package paneles;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.GridLayout;
 import java.sql.Connection;
 import java.text.SimpleDateFormat;
@@ -18,11 +19,15 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 
 import org.sqlite.core.DB;
 
 import com.toedter.calendar.JCalendar;
+import com.toedter.calendar.JDateChooser;
+import com.toedter.calendar.JSpinnerDateEditor;
 
 import bd.BD;
 import clases.Ciudad;
@@ -62,7 +67,7 @@ public class PanelReserva extends JPanel {
 	private JComboBox<TipoExcursion> cbExcursion;
 	private JComboBox<TipoActividad> cbActividades;
 	private JButton btnAceptar, btnGuardar, btnInsertar;
-	private JCalendar cFechaInicio, cFechaFin;
+	private JDateChooser dcFechaInicio, dcFechaFin;
 	private Connection con;
 
 	private final static SimpleDateFormat SDF_FECHAS = new SimpleDateFormat("dd/MM/yyyy");
@@ -159,18 +164,18 @@ public class PanelReserva extends JPanel {
 
 		lblFechaIni = new JLabel("Fecha Inicio");
 		panelCC3.add(lblFechaIni);
-
-		cFechaInicio = new JCalendar();
-		panelCC3.add(cFechaInicio);
+		
+		dcFechaInicio = new JDateChooser(new JSpinnerDateEditor());
+		panelCC3.add(dcFechaInicio);
 
 		panelCC4 = new JPanel();
 		panelCentroCentro.add(panelCC4);
 
 		lblFechaFin = new JLabel("Fecha Fin");
 		panelCC4.add(lblFechaFin);
-
-		cFechaFin = new JCalendar();
-		panelCC4.add(cFechaFin);
+		
+		dcFechaFin = new JDateChooser(new JSpinnerDateEditor());
+		panelCC4.add(dcFechaFin);
 
 		panelCentroAbajo = new JPanel();
 		panelCentro.add(panelCentroAbajo);
@@ -228,6 +233,7 @@ public class PanelReserva extends JPanel {
 				panelCC3.setVisible(true);
 				panelCC4.setVisible(true);
 				panelCentroAbajo.setVisible(true);
+				btnInsertar.setVisible(false);
 				
 			}
 		});
@@ -243,8 +249,8 @@ public class PanelReserva extends JPanel {
 				Integer idOrigen = origen.getId();
 				Integer idDestino = destino.getId();
 
-				Date fechaInicio = cFechaInicio.getDate();
-				Date fechaFin = cFechaFin.getDate();
+				Date fechaInicio = dcFechaInicio.getDate();
+				Date fechaFin = dcFechaFin.getDate();
 
 				String fInicio = SDF_FECHAS.format(fechaInicio);
 				String fFin = SDF_FECHAS.format(fechaFin);
@@ -269,6 +275,8 @@ public class PanelReserva extends JPanel {
 
 				BD.closeBD(con);
 				cargarModeloTabla();
+				
+				ocultarCampos();
 
 			}
 		});
@@ -288,9 +296,17 @@ public class PanelReserva extends JPanel {
 				
 			}
 		});
-			
 		
-
+		tablaReserva.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+			
+			@Override
+			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
+					int row, int column) {
+				Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+				
+				return c;
+			}
+		});
 	}
 
 	private void cargarModeloTabla() {
@@ -321,7 +337,11 @@ public class PanelReserva extends JPanel {
 			private static final long serialVersionUID = 1L;
 
 			public boolean isCellEditable(int rowIndex, int columnIndex) {
-				return false;
+				if(columnIndex == 0 || columnIndex == 9 || columnIndex == 10) {
+					return false;
+				}else {
+					return true;
+				}
 			}
 
 		};
@@ -336,5 +356,6 @@ public class PanelReserva extends JPanel {
 		panelCC3.setVisible(false);
 		panelCC4.setVisible(false);
 		panelCentroAbajo.setVisible(false);
+		btnInsertar.setVisible(true);
 	}
 }

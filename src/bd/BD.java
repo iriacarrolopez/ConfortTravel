@@ -1301,6 +1301,50 @@ public class BD {
 		}
 		return max;
 	}
+	
+	/**
+	 * Metodo que devuelve todas las reservas que ha hecho un cliente
+	 * @param dni dni del cliente que ha hecho las reservas
+	 * @return lista con todas las reservas de un cliente
+	 */
+	public static List<Reserva> obtenerReservasPorCliente(String dni){
+		String sql = "SELECT * FROM Reserva WHERE dni='"+dni+"'";
+		List<Reserva> reservasCliente = new ArrayList<>();
+		try (Connection con = DriverManager.getConnection("jdbc:sqlite:" + "confortTravel.db")) {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				int o = rs.getInt("idOrigen");
+				int d = rs.getInt("idDestino");
+				Ciudad co = getCiudad(con, o);
+				Ciudad cd = getCiudad(con, d);
+				String fechaIni = rs.getString("fechaInicio");
+				String fechaFin = rs.getString("fechaFin");
+				String at = rs.getString("alquilerTransporte");
+				TipoAlquiler alquilerTransporte = TipoAlquiler.valueOf(at);
+				String tipoA = rs.getString("tipoAlojamiento");
+				TipoAlojamiento ta = TipoAlojamiento.valueOf(tipoA);
+				String ex = rs.getString("excursion");
+				TipoExcursion te = TipoExcursion.valueOf(ex);
+				String act = rs.getString("actividades");
+				TipoActividad tact = TipoActividad.valueOf(act);
+				String dniReserva = rs.getString("dni");
+				Float precio = rs.getFloat("precio");
+				
+				Reserva r = new Reserva(id, co, cd, fechaIni, fechaFin, alquilerTransporte, ta, te, tact, dniReserva, o);
+				
+				reservasCliente.add(r);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return reservasCliente;
+	}
 
 	/*
 	 * LOGGER
