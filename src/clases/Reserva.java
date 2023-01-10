@@ -1,5 +1,6 @@
 package clases;
 
+
 public class Reserva {
 	
 	private Integer id;
@@ -233,9 +234,14 @@ public class Reserva {
 	 */
 	@Override
 	public String toString() {
+		return String.format(" RESERVA : %s, %s ,%s  %s, %s ,%s, %s ,%s,%s,(%02f €) ,%s ", 
+			id, origen.getNombre(), destino.getNombre(), fechaIni, fechaFin, alquilerTransporte,tipoAlojamiento,excursion,actividades, precio, dni);
+	}
+	/*@Override
+	public String toString() {
 		return "Reserva [id=" + id + ", origen=" + origen + ", destino=" + destino + ", fechaIni=" + fechaIni
 				+ ", fechaFin=" + fechaFin + ", alquilerTransporte=" + alquilerTransporte + ", tipoAlojamiento="
 				+ tipoAlojamiento + ", excursion=" + excursion + ", actividades=" + actividades + ", precio=" + precio
 				+ ", dni=" + dni + "]";
-	}
+	}*/
 }

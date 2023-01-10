@@ -257,9 +257,14 @@ public class Persona implements Comparable<Persona>{
 	 */
 	@Override
 	public String toString() {
+		return String.format(" %s: %s ,%s , %s, Tipo: %s  ", 
+			dni ,nombre, email, contrasenia,tipo);
+	}
+	/*@Override
+	public String toString() {
 		return "Persona [dni=" + dni + ", nombre=" + nombre + ", email=" + email + ",  contrasenia=" + contrasenia
 				+ ", tipo=" + tipo + "]";
-	}
+	}*/
 //N
 	/**
 	 * Metodo que compara si dos personas tienen el mismo dni

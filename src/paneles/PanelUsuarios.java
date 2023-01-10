@@ -8,6 +8,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -121,7 +124,25 @@ public class PanelUsuarios extends JPanel {
 		}
 		textAreaReservas.setText(texto);
 	}*/
-
+	private void CargarPorUsuario(String file) {
+		try (PrintWriter pw = new PrintWriter(new File(file))) {
+			//RECORRO EL MAPA
+			ArrayList<Persona> lista =BD.ObtenerClientes("CLIENTE");
+			Persona c = listCliente.getSelectedValue();
+			
+				for(String dni : mapaClienteR.keySet()) {
+					ArrayList<Reserva> a = mapaClienteR.get(dni);
+					for(Reserva r :a) {
+						pw.print(c+r.toString()+"\n");
+					}
+				
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	private void cargarListaClientes() {
 
 		try {
@@ -139,15 +160,19 @@ public class PanelUsuarios extends JPanel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 	
 	btnGuardar.addActionListener(new ActionListener() {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			//guardarMapaEnFichero("nuevoficheroReservas.txt");
+			Persona c = listCliente.getSelectedValue();
+			CargarPorUsuario( "ReservasDni/"+c.getDni()+".txt");
 		}
 	});
+	
+	
+	
 	setVisible(true);
 	}
 }

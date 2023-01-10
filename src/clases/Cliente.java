@@ -74,9 +74,14 @@ public class Cliente extends Persona {
 	 */
 	@Override
 	public String toString() {
+		return String.format(" %s: %s ,%s , %d , Email : %s ,%s)\n Usuario[ %s ,%d, %s] ", 
+			getDni() , getNombre(), getApellido(), getTelefono(), getEmail(), getDireccion(),getNomUsuario(),getContrasenia(),viajes);
+	}
+	/*@Override
+	public String toString() {
 		return "Cliente [Dni=" + getDni() + ", Nombre=" + getNombre() + ", Apellido=" + getApellido() + ", Telefono="
 				+ getTelefono() + ", Email=" + getEmail() + ", Direccion=" + getDireccion() + ", FechaNac="
 				+ getFechaNac() + ", NomUsuario=" + getNomUsuario() + ", Contrasenia=" + getContrasenia() + ", viajes="
 				+ viajes + "]";
-	}
+	}*/
 }
