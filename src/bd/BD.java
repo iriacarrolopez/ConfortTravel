@@ -194,7 +194,7 @@ public class BD {
 		log(Level.INFO, "Statement" + sql1, null);
 		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);";
 		log(Level.INFO, "Statement" + sql2, null);
-		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3),duracion INTEGER(3), numPersonas INTEGER(4));";
+		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), edad VARCHAR(4) ,duracion INTEGER(3),numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);";
 		log(Level.INFO, "Statement" + sql3, null);
 		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);";
 		log(Level.INFO, "Statement" + sql4, null);
@@ -432,7 +432,7 @@ public class BD {
 				al.setPrecio(rs.getFloat("precio"));
 				al.setDuracion(rs.getInt("duracion"));
 				//Ciudad c = obtenerCiudad(con, rs.getInt("id"));
-				Ciudad c = getCiudadByID(rs.getInt("id"));
+				Ciudad c = getCiudadByID(rs.getInt("destino"));
 				al.setCiudad(c);
 
 				listaAlojamiento.add(al);
@@ -605,10 +605,13 @@ public class BD {
 				String nombre = rs.getString("nombre");
 				String nombreTipo = rs.getString("tipo");
 				TipoExcursion tipo = TipoExcursion.valueOf(nombreTipo);
+				 destino = getCiudadByNombre(rs.getString("lugar"));
 				Float precio = rs.getFloat("precio");
 				int numPersonas = rs.getInt("numPersonas");
+				String edad = rs.getString("edad");
 				int duracion = rs.getInt("duracion");
-				Excursion e = new Excursion(id,nombre,tipo,destino,precio,numPersonas, duracion);
+				//cam
+				Excursion e = new Excursion(id,nombre,tipo,destino,precio,edad,numPersonas, duracion);
 				listaExcursiones.add(e);
 			}
 			rs.close();
@@ -689,7 +692,7 @@ public class BD {
 				TipoAlojamiento tipo = TipoAlojamiento.valueOf(rs.getString("talojamiento"));// .setTalojamiento(TipoAlojamiento.valueOf(rs.getString("talojamiento")));
 				Float p = rs.getFloat("precio");// .setPrecio(rs.getFloat("precio"));
 				Integer dur = rs.getInt("duracion");// .setDuracion(rs.getInt("duracion"));
-				Ciudad c = obtenerCiudad(con, rs.getInt("id"));
+				Ciudad c = obtenerCiudad(con, rs.getInt("destino"));
 
 				al = new Alojamiento(i, nom, tipo, p, dur, c);
 
@@ -1060,11 +1063,11 @@ public class BD {
 	 * @param precio precio de la excursion
 	 * @param duracion duracion de la excursion
 	 * @param numPersonas personas que realizaran la excursion
-	 */
+	 *///cam
 	public static void insertarExcursion(Connection con, Integer id, String nombre, String tipo, String lugar,
-			Float precio, Integer duracion, Integer numPersonas) {
+			Float precio,String edad, Integer duracion, Integer numPersonas) {
 		String sql = "INSERT INTO Excursion VALUES(" + id + ",'" + nombre + "','" + tipo + "','" + lugar + "'," + precio
-				+ "," + duracion + "," + numPersonas + ");";
+				+ ",'"+edad+"'," + duracion + "," + numPersonas + ");";
 		try {
 			Statement st = con.createStatement();
 
@@ -1110,6 +1113,7 @@ public class BD {
 	 * @param id id de la excurion a devolver
 	 * @return excursion
 	 */
+	//cam
 	public static Excursion obtenerDatosExcursion(Integer id) {
 		String sql = "SELECT * FROM Excursion WHERE dni=" + id + "";
 		Excursion excursion = null;
@@ -1123,12 +1127,13 @@ public class BD {
 				TipoExcursion tipo = TipoExcursion.valueOf(rs.getString("tipo"));
 				Ciudad c = obtenerCiudad(con, rs.getInt("id"));
 				// String e = rs.getString("lugar");
-
+				//cam
+				String edad = rs.getString("edad");
 				Float precio = rs.getFloat("precio");
 				Integer dur = rs.getInt("duracion");
 				Integer num = rs.getInt("numPersonas");
 
-				excursion = new Excursion(d, n, tipo, c, precio, dur, num);
+				excursion = new Excursion(d, n, tipo, c, precio,edad, dur, num);
 
 			}
 			log(Level.INFO, "Se ha obten: " + excursion, null);
@@ -1159,8 +1164,9 @@ public class BD {
 				ex.setId(rs.getInt("id"));
 				ex.setNombre(rs.getString("nombre"));
 				ex.setTipo(TipoExcursion.valueOf(rs.getString("tipo")));
-				Ciudad c = obtenerCiudad(con, rs.getInt("id"));
+				Ciudad c = getCiudadByNombre(rs.getString("lugar"));
 				ex.setLugar(c);
+				ex.setEdad(rs.getString("edad"));
 				ex.setPrecio(rs.getFloat("precio"));
 				ex.setDuracion(rs.getInt("duracion"));
 				ex.setNumPersonas(rs.getInt("numPersonas"));

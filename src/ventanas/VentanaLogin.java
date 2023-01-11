@@ -25,12 +25,13 @@ import java.awt.event.ActionEvent;
 public class VentanaLogin extends JFrame{
 
 	private static JFrame frame;
-	private JPanel contentPane, panelIzq, panelCentro, panelDerecha;
+	private JPanel contentPane, panelCentro, panelDerecha;
 	private JButton btnInicioSesion;
 	private JButton btnRegistrar;
-	private JLabel lblTitulo, lblImagen1, lblImagen2;
+	private JLabel lblTitulo, lblImagen2;
 	private VentanaRegistro VReg;
-	private VentanaInicio VIni;
+	private JPanel panelBotones;
+	
 
 	/**
 	 * Launch the application.
@@ -64,29 +65,26 @@ public class VentanaLogin extends JFrame{
 
 		frame = new JFrame();
 		frame.setBackground(new Color(248, 248, 255));
-		frame.setBounds(200, 200, 950, 550);
+		//frame.setBounds(200, 200, 950, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		frame.setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout());
 
-		// paneles
-		panelIzq = new JPanel();
-		contentPane.add(panelIzq);
-		// panelIzq.setLayout(new GridLayout(0, 1, 0, 0));
-		panelIzq.setLayout(new FlowLayout(FlowLayout.CENTER));
-
-		lblImagen1 = new JLabel();
-		lblImagen1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblImagen1.setVerticalAlignment(SwingConstants.BOTTOM);
-		lblImagen1.setIcon(new ImageIcon(VentanaLogin.class.getResource("/imagenes/logo.jpg")));
-
-		panelIzq.add(lblImagen1);
-
+		
+		
+		frame.setTitle(" Booking");
+		frame.setIconImage(new ImageIcon("imagenes/logo.jpg").getImage());		
+		frame.setSize(800, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
+		
+		
 		panelCentro = new JPanel();
 		contentPane.add(panelCentro);
-		panelCentro.setLayout(new GridLayout(3, 0, 0, 0));
+		panelCentro.setLayout(new GridLayout(2, 0, 0, 0));
 
 		panelDerecha = new JPanel();
 		contentPane.add(panelDerecha);
@@ -104,26 +102,29 @@ public class VentanaLogin extends JFrame{
 		lblTitulo.setForeground(new Color(0, 0, 0));
 		lblTitulo.setFont(new Font("Times New Roman", Font.BOLD, 17));
 		panelCentro.add(lblTitulo);
-
-		// BOTONES
-		btnRegistrar = new JButton("REGISTRAR");
-		panelCentro.add(btnRegistrar);
 		/**
 		 * Boton registrar - Nos lleva a la ventana inicio sesion
 		 */
-		btnRegistrar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				// ir a la ventana de registro
-				VReg = new VentanaRegistro();
-				VReg.setVisible(true);
-				frame.dispose();
-			}
-		});
+		
+		panelBotones = new JPanel();
+		panelCentro.add(panelBotones);
 		btnInicioSesion = new JButton("INICIO SESION");
-		panelCentro.add(btnInicioSesion);
+		panelBotones.add(btnInicioSesion);
+		
+				// BOTONES
+				btnRegistrar = new JButton("REGISTRAR");
+				panelBotones.add(btnRegistrar);
+				btnRegistrar.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						// TODO Auto-generated method stub
+						// ir a la ventana de registro
+						VReg = new VentanaRegistro();
+						VReg.setVisible(true);
+						frame.dispose();
+					}
+				});
 
 		/**
 		 * Boton inicio de sesion Este boton nos lleva a la venta de inicio sesión
@@ -134,7 +135,7 @@ public class VentanaLogin extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				// ir a la ventana de inicio
-				VIni = new VentanaInicio();
+				VentanaInicio VIni = new VentanaInicio();
 				VIni.setVisible(true);
 				frame.dispose();
 			}

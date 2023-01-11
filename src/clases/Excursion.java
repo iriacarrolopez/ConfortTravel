@@ -9,6 +9,7 @@ public class Excursion {
 	private  TipoExcursion tipo;
 	private Ciudad lugar;
 	private Float precio;
+	private String edad;
 	private Integer numPersonas;
 	private Integer duracion;
 	
@@ -22,7 +23,7 @@ public class Excursion {
 	 * @param duracion
 	 * @param numPersonas
 	 */
-	public Excursion(Integer id,String nombre, TipoExcursion tipo, Ciudad lugar, Float precio,Integer duracion, Integer numPersonas) {
+	public Excursion(Integer id,String nombre, TipoExcursion tipo, Ciudad lugar, Float precio, String edad,Integer duracion,Integer numPersonas) {
 		this.id =id;
 		this.nombre = nombre;
 		this.tipo = tipo;
@@ -30,6 +31,7 @@ public class Excursion {
 		this.precio = precio;
 		this.duracion=duracion;
 		this.numPersonas = numPersonas;
+		this.edad = edad;
 	}
 	
 	/**
@@ -162,10 +164,21 @@ public class Excursion {
 	/**
 	 * Metodo toString con el formato deseado para salir por pantalla
 	 */
+	
+	
+	public String getEdad() {
+		return edad;
+	}
+
+	public void setEdad(String edad) {
+		this.edad = edad;
+	}
+
 	@Override
 	public String toString() {
 		return "Excursion [id=" + id + ", nombre=" + nombre + ", tipo=" + tipo + ", lugar=" + lugar + ", precio="
-				+ precio + ", numPersonas=" + numPersonas + ", duracion=" + duracion + "]";
+				+ precio + ", edad=" + edad + ", numPersonas=" + numPersonas + ", duracion=" + duracion + "]";
 	}
+	
 
 }

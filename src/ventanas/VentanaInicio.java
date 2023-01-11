@@ -77,9 +77,13 @@ public class VentanaInicio extends JFrame {
 	public VentanaInicio() {
 
 		frame = new JFrame();
-		frame.setBounds(100, 100, 750, 500);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setTitle("INICIO DE SESIÓN");
+		frame.setSize(800, 600);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
 		Connection con = BD.initBD("confortTravel.db");
 		System.out.println("--Abriendo la conexion con la base de datos en la ventana inicio sesion");
 

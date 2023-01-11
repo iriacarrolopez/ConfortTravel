@@ -13,7 +13,8 @@ import java.util.Vector;
 
 import javax.swing.JScrollPane;
 import java.awt.BorderLayout;
-
+import java.awt.Color;
+import java.awt.Component;
 
 import javax.swing.JButton;
 
@@ -23,9 +24,9 @@ import javax.swing.JTable;
 
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
-
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-
+import javax.swing.table.TableCellRenderer;
 
 import bd.BD;
 import clases.Ciudad;
@@ -110,6 +111,7 @@ public class PanelExcursiones extends JPanel {
 				String tipo = JOptionPane.showInputDialog("Introduce el tipo :");
 				String lugar = JOptionPane.showInputDialog("Introduce el lugar :");
 				String precio = JOptionPane.showInputDialog("Introduce el precio :");
+				String edad = JOptionPane.showInputDialog("Introduce la edad :");
 				String duracion = JOptionPane.showInputDialog("Introduce el duracion :");
 				String num = JOptionPane.showInputDialog("Introduce el numPersonas:");
 				
@@ -118,7 +120,7 @@ public class PanelExcursiones extends JPanel {
 				String nlugar = c.getNombre();
 				
 				
-				BD.insertarExcursion(con, Integer.parseInt(id), nombre, tipo, nlugar, Float.parseFloat(precio),
+				BD.insertarExcursion(con, Integer.parseInt(id), nombre, tipo, nlugar, Float.parseFloat(precio),edad,
 						Integer.parseInt(duracion), Integer.parseInt(num));
 
 				// Borramos el contenido del modelo de la tabla
@@ -177,7 +179,7 @@ public class PanelExcursiones extends JPanel {
 	public void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraExcursion = new Vector<String>(
-				Arrays.asList("ID", "NOMBRE", "TIPO EXCUSION", "LUGAR", "PRECIO", "DURACION(HORAS)", "NUMERO DE PERSONAS"));
+				Arrays.asList("ID", "NOMBRE", "TIPO EXCUSION", "LUGAR", "PRECIO","EDAD", "DURACION(HORAS)", "NUMERO DE PERSONAS"));
 		// Se crea el modelo de datos para la tabla de comics s�lo con la cabecera
 		modeloExcursion = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraExcursion) {
 			
@@ -204,7 +206,25 @@ public class PanelExcursiones extends JPanel {
 		// Se modifica el modelo de selecci�n de la tabla para que se pueda selecciona
 		// �nicamente una fila
 		tablaExcursion.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
+		tablaExcursion.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+			
+			@Override
+			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
+					int row, int column) {
+				// TODO Auto-generated method stub
+			Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+			JLabel edad = (JLabel) modeloExcursion.getValueAt(row, 6);
+		
+				if(edad.equals("Todas las edades")) {
+					c.setForeground(Color.green);
+				}else {
+					c.setForeground(Color.red);
+				}
+			
+			
+				return c;
+			}
+		});
 	}
 
 
@@ -231,7 +251,7 @@ public class PanelExcursiones extends JPanel {
 				   System.out.println("CARGANDO MODELO DE LA TABLA...");
 			}*/
 			for(Excursion ex :lista) {
-				Object [] fila = {ex.getId(),ex.getNombre(),ex.getTipo(),ex.getLugar().getNombre(),ex.getPrecio(),ex.getDuracion(),ex.getNumPersonas()};
+				Object [] fila = {ex.getId(),ex.getNombre(),ex.getTipo(),ex.getLugar().getNombre(),ex.getPrecio(),ex.getEdad(),ex.getDuracion(),ex.getNumPersonas()};
 				modeloExcursion.addRow(fila);
 			}
 			

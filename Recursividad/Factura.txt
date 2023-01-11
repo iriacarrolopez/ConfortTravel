@@ -1,0 +1,4 @@
+Factura del cliente null
+
+------------------
+TOTAL 0.0 €

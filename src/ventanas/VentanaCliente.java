@@ -53,7 +53,7 @@ import clases.Excursion;
 import clases.Reserva;
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
-import paneles.PanelAniadirReserva;
+
 import paneles.PanelDestino;
 import paneles.PanelExcursiones;
 import paneles.PanelModificarReserva;
@@ -109,7 +109,10 @@ public class VentanaCliente extends JFrame {
 		frame = new JFrame();
 		frame.setTitle("Ventana Cliente");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(40, 50, 1010, 790);
+		frame.setSize(1000, 800);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
 		contentPane = new JPanel();
 		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -197,7 +200,7 @@ public class VentanaCliente extends JFrame {
 					 }
 					 
 					 try {
-						PrintWriter pw = new PrintWriter(new FileOutputStream("Factura.txt", false));
+						PrintWriter pw = new PrintWriter(new FileOutputStream("Recursividad/Factura.txt", false));
 						pw.println("Factura del cliente "+dni);
 						pw.println();
 						float precioTotal = 0;
@@ -222,7 +225,7 @@ public class VentanaCliente extends JFrame {
 					 }
 					 
 					 try {
-						PrintWriter pw = new PrintWriter(new FileOutputStream("Fibonacci.txt", false));
+						PrintWriter pw = new PrintWriter(new FileOutputStream("Recursividad/Fibonacci.txt", false));
 						pw.println("Fibonacci del cliente "+dni);
 						pw.println();
 						float n = 0;
@@ -295,6 +298,7 @@ public class VentanaCliente extends JFrame {
 							 }
 						}
 					});
+					setVisible(false);
 				
 				}
 			}

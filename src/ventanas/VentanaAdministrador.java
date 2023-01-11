@@ -96,7 +96,11 @@ public class VentanaAdministrador extends JFrame{
 		frame = new JFrame();
 		frame.setTitle("Ventana Administrador");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(40, 50, 1010, 790);
+		//frame.setBounds(40, 50, 1010, 790);
+		frame.setSize(1000, 800);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
 		contentPane = new JPanel();
 		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

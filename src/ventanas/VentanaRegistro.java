@@ -47,6 +47,7 @@ public class VentanaRegistro extends JFrame {
 	private JLabel lblTipo;
 	private JComboBox<String> comboBox;
 	private JLabel lblHora;
+	private static VentanaRegistro frame;
 
 	/**
 	 * Launch the application.
@@ -55,7 +56,7 @@ public class VentanaRegistro extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaRegistro frame = new VentanaRegistro();
+					frame = new VentanaRegistro();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -188,6 +189,14 @@ public class VentanaRegistro extends JFrame {
 					}
 					JOptionPane.showMessageDialog(null, "REGISTRO CORRECTO, BIENVENIDO", "CORRECTO ",
 							JOptionPane.INFORMATION_MESSAGE);
+					if (sel.equals("CLIENTE")) {
+						VentanaCliente vc = new VentanaCliente();
+						vc.setVisible(true);
+						frame.dispose();
+					}else {
+						VentanaAdministrador va = new VentanaAdministrador();
+						va.setVisible(true);
+					}
 					System.out.println("--Se ha insertado la persona en la base de datos");
 				} else {
 					JOptionPane.showMessageDialog(null, "ERROR, compruebe de nuevo los datos introduccidos", "ERROR",
