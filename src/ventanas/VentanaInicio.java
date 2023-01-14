@@ -175,7 +175,7 @@ public class VentanaInicio extends JFrame {
 							}
 							
 							System.out.println("--Inicio de sesion correcto");
-							frame.dispose();
+							//frame.dispose();
 						} else {
 							JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ERROR",
 									JOptionPane.ERROR_MESSAGE);

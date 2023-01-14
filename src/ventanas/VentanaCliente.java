@@ -44,6 +44,7 @@ import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -84,6 +85,8 @@ public class VentanaCliente extends JFrame {
 	//private PanelEliminarReserva per;
 //	private PanelModificarReserva pmr;
 	private JLabel lblHora;
+	
+	List<List<Excursion>> alCombinaciones;
 
 	/**
 	 * Launch the application.
@@ -242,7 +245,8 @@ public class VentanaCliente extends JFrame {
 						e1.printStackTrace();
 					}
 				 } else if ("Posibles excursiones".equals(nodos)) {
-					String [] titulos = {"NOMBRE","TIPO","LUGAR","PRECIO"};
+					 panelPrincipal.removeAll();
+					String [] titulos = {"NOMBRE","TIPO","LUGAR","PRECIO","EDAD","DURACION","PLAZAS DISPONIBLES"};
 					modeloTablaExcursiones = new DefaultTableModel();
 					lblCiudad = new JLabel("Elige la ciudad: ");
 					cbCiudades = new JComboBox<Ciudad>();
@@ -260,14 +264,43 @@ public class VentanaCliente extends JFrame {
 					txtPresupuesto = new JTextField(10);
 					panelSur.add(lblPresupuesto);
 					panelSur.add(txtPresupuesto);
+					
 					btnBuscar = new JButton("BUSCAR");
 					panelSur.add(btnBuscar);
 					ArrayList<Excursion> alExcursiones = BD.obtenerExcursiones();
 					for (Excursion x: alExcursiones) {
-						Object [] row = {x.getNombre(),x.getTipo(),x.getLugarNombre(),x.getPrecio()};
+						Object [] row = {x.getNombre(),x.getTipo(),x.getLugarNombre(),x.getPrecio(),x.getEdad(),x.getDuracion(),x.getNumPersonas()};
 						modeloTablaExcursiones.addRow(row);
 					}
+					//RENDER
+					tablaExcursiones.setRowHeight(40);
+					tablaExcursiones.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+						
+						private static final long serialVersionUID = 1L;
+
+						@Override
+						public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
+								int row, int column) {
+							// TODO Auto-generated method stub
+							//Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+							this.setText(value.toString());
+							if(column == 4) {
+								String edad = (String) table.getModel().getValueAt(row, 4);
+						
+								if(edad.contains("Todas las edades")) {
+									this.setForeground(Color.GREEN);
+								}else {
+									this.setForeground(Color.RED);
+								}
+							}else {
+								this.setForeground(Color.BLACK);
+							}
+							
+							return this;
+						}
+					});
 					
+					//boton buscar
 					btnBuscar.addActionListener(new ActionListener() {
 						
 						@Override
@@ -279,11 +312,11 @@ public class VentanaCliente extends JFrame {
 								modeloTablaExcursiones.removeRow(0);
 							}
 							for (Excursion ex: listaExcursiones) {
-								Object [] fila = {ex.getNombre(),ex.getTipo(),ex.getLugarNombre(),ex.getPrecio()};
+								Object [] fila = {ex.getNombre(),ex.getTipo(),ex.getLugarNombre(),ex.getPrecio(),ex.getEdad(),ex.getDuracion(),ex.getNumPersonas()};
 								modeloTablaExcursiones.addRow(fila);
 							}
 							double presupuesto = Double.parseDouble(txtPresupuesto.getText());
-							List<List<Excursion>> alCombinaciones = combinaciones(listaExcursiones, presupuesto, 10);
+							alCombinaciones = combinaciones(listaExcursiones, presupuesto, 10);
 							System.out.println(String.format("Combinaciones de menos de %.2f€", presupuesto));
 							alCombinaciones.forEach(r -> System.out.println(r));
 							try {

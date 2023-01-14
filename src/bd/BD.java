@@ -194,7 +194,7 @@ public class BD {
 		log(Level.INFO, "Statement" + sql1, null);
 		String sql2 = "CREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);";
 		log(Level.INFO, "Statement" + sql2, null);
-		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), edad VARCHAR(4) ,duracion INTEGER(3),numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);";
+		String sql3 = "CREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), duracion INTEGER(3),edad VARCHAR(4) ,numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);";
 		log(Level.INFO, "Statement" + sql3, null);
 		String sql4 = "CREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);";
 		log(Level.INFO, "Statement" + sql4, null);
@@ -281,6 +281,21 @@ public class BD {
 			System.err.println(String.format("* Error al insertar el archivo a la BBDD: %s", e.getMessage()));
 			e.printStackTrace();
 		}
+	}
+	/**
+	 * BUSQUEDA POR IMPORTE
+	 * @param importe float
+	 * @return Lista con ese importe
+	 */
+	public static List<Alojamiento> busquedaA(float importe){
+		List<Alojamiento> lista = BD.obtenerAlojamientos();
+		List<Alojamiento> listaA = new ArrayList<>();
+		for (Alojamiento alojamiento : lista) {
+			if(alojamiento.getPrecio()<=importe) {
+				listaA.add(alojamiento);
+			}
+		}
+			return listaA;
 	}
 
 	/**

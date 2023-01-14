@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Vector;
 
 import javax.swing.JScrollPane;
@@ -24,6 +25,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
@@ -48,11 +51,13 @@ public class PanelAlojamiento extends JPanel {
 	private JButton btnInsertarAlojamiento, btnEliminar, btnModificar;
 
 	
-	private JLabel lblFiltro;
-	//private JTextField textField;
+
 
 int mouserow =-1;
 int mouseColumn =-1;
+private JPanel panel;
+private JLabel lblPrecio;
+private JTextField textField;
 	/**
 	 * Create the panel.
 	 */
@@ -104,6 +109,51 @@ int mouseColumn =-1;
 		add(scrollPaneAlojamiento, BorderLayout.CENTER);
 		scrollPaneAlojamiento.setViewportView(tablaAlojamiento);
 		
+		panel = new JPanel();
+		add(panel, BorderLayout.WEST);
+		
+		lblPrecio = new JLabel("Precio");
+		panel.add(lblPrecio);
+		
+		textField = new JTextField();
+		panel.add(textField);
+		textField.setColumns(10);
+
+		textField.getDocument().addDocumentListener(new DocumentListener() {
+			
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				
+				/*float importe = Float.parseFloat(textField.getText());
+				List<Alojamiento> alojamientos = new ArrayList<>();
+				alojamientos = BD.busquedaA(importe);
+				cargarModeloTabla();*/
+			}
+			
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				
+				float importe = Float.parseFloat(textField.getText());
+				List<Alojamiento> alojamientos = new ArrayList<>();
+				alojamientos = BD.busquedaA(importe);
+				while (modeloAlojamiento.getRowCount() > 0) {
+					modeloAlojamiento.removeRow(0);
+				}
+				cargarModeloTabla2(alojamientos);
+			}
+			
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				
+				float importe = Float.parseFloat(textField.getText());
+				List<Alojamiento> alojamientos = new ArrayList<>();
+				alojamientos = BD.busquedaA(importe);
+				while (modeloAlojamiento.getRowCount() > 0) {
+					modeloAlojamiento.removeRow(0);
+				}
+				cargarModeloTabla2(alojamientos);
+			}
+		});
 		
 		
 		tablaAlojamiento.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
@@ -232,7 +282,12 @@ int mouseColumn =-1;
 		tablaAlojamiento.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 	}
-
+	public void cargarModeloTabla2(List<Alojamiento> listaAlojamientos) {
+		for(Alojamiento a: listaAlojamientos) {
+			Object [] fila = {a.getId(),a.getNombre_comp(),a.getTalojamiento(),a.getPrecio(),a.getDuracion(),a.getCiudad().getNombre()};
+			modeloAlojamiento.addRow(fila);
+		}
+	}
 	
 	public void cargarModeloTabla() {
 		

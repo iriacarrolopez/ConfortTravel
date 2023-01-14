@@ -100,6 +100,7 @@ public class PanelExcursiones extends JPanel {
 		
 		
 		
+
 		btnInsertarExcursion.addActionListener(new ActionListener() {
 
 			@Override
@@ -196,36 +197,44 @@ public class PanelExcursiones extends JPanel {
 		tablaExcursion.setRowHeight(40);
 
 		// Se cambia la anchura de las columnas
-				tablaExcursion.getColumnModel().getColumn(0).setPreferredWidth(100);
-				tablaExcursion.getColumnModel().getColumn(1).setPreferredWidth(300);
-				tablaExcursion.getColumnModel().getColumn(2).setPreferredWidth(300);
-				tablaExcursion.getColumnModel().getColumn(3).setPreferredWidth(100);
-				tablaExcursion.getColumnModel().getColumn(4).setPreferredWidth(200);
-				tablaExcursion.getColumnModel().getColumn(5).setPreferredWidth(200);
-				tablaExcursion.getColumnModel().getColumn(6).setPreferredWidth(300);
+		tablaExcursion.getColumnModel().getColumn(0).setPreferredWidth(100);//id
+		tablaExcursion.getColumnModel().getColumn(1).setPreferredWidth(300);//nombre
+		tablaExcursion.getColumnModel().getColumn(2).setPreferredWidth(300);//tipo
+		tablaExcursion.getColumnModel().getColumn(3).setPreferredWidth(100);//lugar
+		tablaExcursion.getColumnModel().getColumn(4).setPreferredWidth(200);//precio
+		tablaExcursion.getColumnModel().getColumn(5).setPreferredWidth(200);//edad
+		tablaExcursion.getColumnModel().getColumn(6).setPreferredWidth(200);//duracion
+		tablaExcursion.getColumnModel().getColumn(7).setPreferredWidth(300);//numero personas
 		// Se modifica el modelo de selecci�n de la tabla para que se pueda selecciona
 		// �nicamente una fila
 		tablaExcursion.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tablaExcursion.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
 			
+			private static final long serialVersionUID = 1L;
+
 			@Override
 			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
 					int row, int column) {
 				// TODO Auto-generated method stub
-			Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-			JLabel edad = (JLabel) modeloExcursion.getValueAt(row, 6);
-		
-				if(edad.equals("Todas las edades")) {
-					c.setForeground(Color.green);
+				//Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+				this.setText(value.toString());
+				if(column == 5) {
+					String edad = (String) table.getModel().getValueAt(row, 5);
+			
+					if(edad.contains("Todas las edades")) {
+						this.setForeground(Color.GREEN);
+					}else {
+						this.setForeground(Color.RED);
+					}
 				}else {
-					c.setForeground(Color.red);
+					this.setForeground(Color.BLACK);
 				}
-			
-			
-				return c;
+				
+				return this;
 			}
 		});
-	}
+			
+		}
 
 
 	public void cargarModeloTabla() {
