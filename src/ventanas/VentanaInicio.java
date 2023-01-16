@@ -56,6 +56,8 @@ public class VentanaInicio extends JFrame {
 	protected VentanaCliente vcl;
 	protected JFrame ventanaActual;
 	
+	public static String dni;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -151,7 +153,7 @@ public class VentanaInicio extends JFrame {
 				String dniExpresR = "[0-9]{8}[A-Z]{1}";
 				
 				//String conExpresR = "[A-Z][a-z]";
-				String dni = textDni.getText();
+				dni = textDni.getText();
 				String cont = String.valueOf(txtcontrasenia.getPassword());
 				if (Pattern.matches(dniExpresR, dni)/* && Pattern.matches(conExpresR, cont)*/){
 					Persona p = BD.obtenerDatosPersona(con, dni);

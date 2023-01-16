@@ -37,6 +37,7 @@ import clases.TipoActividad;
 import clases.TipoAlojamiento;
 import clases.TipoAlquiler;
 import clases.TipoExcursion;
+import ventanas.VentanaInicio;
 
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
@@ -59,8 +60,8 @@ public class PanelReserva extends JPanel {
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo, panelCC1, panelCC2, panelCC3,
 			panelCC4, panelCA1, panelCA2, panelCA3, panelCA4;
 	private JLabel lblAniadirReserva, lblEliminarReserva, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento,
-			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI, lblPrecio;
-	private JTextField txtIDVuelo,txtDni, txtPrecio;
+			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI;
+	private JTextField txtIDVuelo,txtDni;
 	private JComboBox<Ciudad> comboBoxOrigen, comboBoxDestino;
 	private JComboBox<TipoAlojamiento> comboBoxTipoAlojamiento;
 	private JComboBox<TipoAlquiler> cbAlquilerTransporte;
@@ -119,12 +120,6 @@ public class PanelReserva extends JPanel {
 		txtDni =   new JTextField();
 		panelCC2.add(txtDni);
 		txtDni.setColumns(10);
-		
-		lblPrecio = new JLabel("PRECIO");
-		panelCC2.add(lblPrecio);
-		txtPrecio = new JTextField();
-		panelCC2.add(txtPrecio);
-		txtPrecio.setColumns(10);
 		
 		lblOrigen = new JLabel("Origen");
 		panelCC2.add(lblOrigen);
@@ -256,27 +251,51 @@ public class PanelReserva extends JPanel {
 				String fFin = SDF_FECHAS.format(fechaFin);
 
 				String tipoAlquiler = String.valueOf(cbAlquilerTransporte.getSelectedItem());
-				// TipoAlquiler ta = TipoAlquiler.valueOf(tipoAlquiler);
+				TipoAlquiler ta = TipoAlquiler.valueOf(tipoAlquiler);
 
 				String tipoAlojamiento = String.valueOf(comboBoxTipoAlojamiento.getSelectedItem());
-				// TipoAlojamiento tal = TipoAlojamiento.valueOf(tipoAlojamiento);
+				TipoAlojamiento tal = TipoAlojamiento.valueOf(tipoAlojamiento);
 
 				String tipoExcursion = String.valueOf(cbExcursion.getSelectedItem());
-				// TipoExcursion te = TipoExcursion.valueOf(tipoExcursion);
+				TipoExcursion te = TipoExcursion.valueOf(tipoExcursion);
 
 				String tipoActividad = String.valueOf(cbActividades.getSelectedItem());
-				// TipoActividad tact = TipoActividad.valueOf(tipoActividad);
+				TipoActividad tact = TipoActividad.valueOf(tipoActividad);
 				String dni = txtDni.getText();
 				
-				Float precio = Float.parseFloat(txtPrecio.getText());
 				
-				BD.insertarReserva(id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
-						tipoExcursion, tipoActividad,dni, precio);
+				
+				//Float precio = Float.parseFloat(txtPrecio.getText());
+				
+				//Calculamos el precio
+				float precioTotal = 1000;
+				
+				if(ta != TipoAlquiler.NINGUNO) {
+					precioTotal = precioTotal + 300;
+				}else if(tal != TipoAlojamiento.NINGUNO) {
+					precioTotal = precioTotal + 500;
+				}else if(te != TipoExcursion.NINGUNA_EXCURSION) {
+					precioTotal = precioTotal + 100;
+				}else if(tact != TipoActividad.NINGUNA) {
+					precioTotal = precioTotal + 250;
+				}
+				
+				if(!dni.equals(VentanaInicio.dni)) {
+					JOptionPane.showMessageDialog(null,"INTRODUCE BIEN TU DNI ");
+				}else {
+					JOptionPane.showMessageDialog(null,"RESERVA INSERTADA CORRECTAMENTE ");
+					BD.insertarReserva(id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
+							tipoExcursion, tipoActividad,dni, precioTotal);
+					
 
-				BD.closeBD(con);
-				cargarModeloTabla();
+					BD.closeBD(con);
+					cargarModeloTabla();
+					
+					ocultarCampos();
+					txtDni.setText("");
+				}
 				
-				ocultarCampos();
+
 
 			}
 		});
@@ -314,14 +333,14 @@ public class PanelReserva extends JPanel {
 		System.out.println("CARGANDO EL MODELO");
 		con = BD.initBD("confortTravel.db");
 
-		ArrayList<Reserva> listaReservas = BD.obtenerReservas();
+		ArrayList<Reserva> listaReservas = (ArrayList<Reserva>) BD.obtenerReservasPorCliente(VentanaInicio.dni);
 		while (modeloReserva.getRowCount() > 0) {
 			modeloReserva.removeRow(0);
 		}
 
 		for (Reserva r : listaReservas) {
 			Object fila[] = { r.getId(), r.getOrigen(), r.getDestino(), r.getFechaIni(), r.getFechaFin(),
-					r.getAlquilerTransporte(), r.getTipoAlojamiento(), r.getExcursion(), r.getActividades(),r.getDni(),r.getPrecio() };
+					r.getAlquilerTransporte(), r.getTipoAlojamiento(), r.getExcursion(), r.getActividades(),r.getDni(),r.getPrecioTotal() };
 			modeloReserva.addRow(fila);
 		}
 
@@ -358,4 +377,5 @@ public class PanelReserva extends JPanel {
 		panelCentroAbajo.setVisible(false);
 		btnInsertar.setVisible(true);
 	}
+	
 }
