@@ -42,7 +42,7 @@ public class VentanaInicio extends JFrame {
 	/**
 	 * 
 	 */
-	private static JFrame frame;
+	//private static JFrame frame;
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane, panelNorte, panelSur, panelCentro, panelIzquierda;
 	private JButton btnInicio;
@@ -52,9 +52,10 @@ public class VentanaInicio extends JFrame {
 	private JLabel lblContrasena, lblImagen;
 	private JLabel lblNewLabel;
 	private JLabel lblHora;
+	protected VentanaAdministrador va;
+	protected VentanaCliente vcl;
+	protected JFrame ventanaActual;
 	
-	public VentanaAdministrador va;
-	public VentanaCliente vcl;
 	/**
 	 * Launch the application.
 	 */
@@ -62,8 +63,8 @@ public class VentanaInicio extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaInicio window = new VentanaInicio();
-					window.frame.setVisible(true);
+					VentanaInicio frame = new VentanaInicio();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -76,13 +77,13 @@ public class VentanaInicio extends JFrame {
 	 */
 	public VentanaInicio() {
 
-		frame = new JFrame();
-		
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.setTitle("INICIO DE SESIÓN");
-		frame.setSize(800, 600);
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
+		//frame = new JFrame();
+		ventanaActual = this;
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setTitle("INICIO DE SESIï¿½N");
+		setSize(800, 600);
+		setLocationRelativeTo(null);
+		setVisible(true);
 		
 		Connection con = BD.initBD("confortTravel.db");
 		System.out.println("--Abriendo la conexion con la base de datos en la ventana inicio sesion");
@@ -90,7 +91,7 @@ public class VentanaInicio extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
-		frame.setContentPane(contentPane);
+		setContentPane(contentPane);
 
 		panelSur = new JPanel();
 		panelSur.setBackground(Color.CYAN);
@@ -139,8 +140,7 @@ public class VentanaInicio extends JFrame {
 
 		btnInicio = new JButton("INICIO SESION");
 		panelSur.add(btnInicio);
-		va= new VentanaAdministrador();
-		vcl = new VentanaCliente();
+		
 		
 		
 		/**
@@ -159,27 +159,27 @@ public class VentanaInicio extends JFrame {
 						if (p.getContrasenia().equals(cont)) {
 							if(p.getTipo().equals(TipoPersona.ADMINISTRADOR)) {
 								
-								va = new VentanaAdministrador(TipoPersona.ADMINISTRADOR);
-								//va.setVisible(true);
+								va = new VentanaAdministrador();
 								JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA EN ADMINISTRADOR",JOptionPane.INFORMATION_MESSAGE);
 								System.out.println("entra con el usuario administrador");
-								frame.dispose();
+								//frame.dispose();
+								ventanaActual.setVisible(false);
 									
 							}else {
-								vcl = new VentanaCliente(TipoPersona.CLIENTE);
-								//vcl.setVisible(true);
+								vcl = new VentanaCliente();
 								JOptionPane.showMessageDialog(null, "Bienvenido", "SESION INICIADA EN CLIENTE",
 										JOptionPane.INFORMATION_MESSAGE);
 								System.out.println("entra con el usuario cliente");
-								frame.dispose();
+								//frame.dispose();
+								ventanaActual.setVisible(false);
 							}
 							
 							System.out.println("--Inicio de sesion correcto");
 							//frame.dispose();
 						} else {
-							JOptionPane.showMessageDialog(null, "La contraseña no es correcta", "ERROR",
+							JOptionPane.showMessageDialog(null, "La contraseï¿½a no es correcta", "ERROR",
 									JOptionPane.ERROR_MESSAGE);
-							System.out.println("--La contraseña es incorrecta");
+							System.out.println("--La contraseï¿½a es incorrecta");
 						}
 					} else {
 						JOptionPane.showMessageDialog(null, "No existe un registro asociado a ese DNI", "ERROR",

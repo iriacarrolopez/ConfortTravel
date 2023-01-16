@@ -22,7 +22,7 @@ import java.awt.event.ActionListener;
 //import java.sql.Connection;
 import java.awt.event.ActionEvent;
 
-public class VentanaLogin extends JFrame{
+public class VentanaLogin extends JFrame {
 
 	private static JFrame frame;
 	private JPanel contentPane, panelCentro, panelDerecha;
@@ -30,8 +30,8 @@ public class VentanaLogin extends JFrame{
 	private JButton btnRegistrar;
 	private JLabel lblTitulo, lblImagen2;
 	private VentanaRegistro VReg;
+	private VentanaInicio VIni;
 	private JPanel panelBotones;
-	
 
 	/**
 	 * Launch the application.
@@ -65,23 +65,19 @@ public class VentanaLogin extends JFrame{
 
 		frame = new JFrame();
 		frame.setBackground(new Color(248, 248, 255));
-		//frame.setBounds(200, 200, 950, 550);
+		// frame.setBounds(200, 200, 950, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		frame.setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout());
 
-		
-		
 		frame.setTitle(" Booking");
-		frame.setIconImage(new ImageIcon("imagenes/logo.jpg").getImage());		
+		frame.setIconImage(new ImageIcon("imagenes/logo.jpg").getImage());
 		frame.setSize(800, 600);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		
-		
-		
+
 		panelCentro = new JPanel();
 		contentPane.add(panelCentro);
 		panelCentro.setLayout(new GridLayout(2, 0, 0, 0));
@@ -105,37 +101,37 @@ public class VentanaLogin extends JFrame{
 		/**
 		 * Boton registrar - Nos lleva a la ventana inicio sesion
 		 */
-		
+
 		panelBotones = new JPanel();
 		panelCentro.add(panelBotones);
-		btnInicioSesion = new JButton("INICIO SESION");
-		panelBotones.add(btnInicioSesion);
-		
-				// BOTONES
-				btnRegistrar = new JButton("REGISTRAR");
-				panelBotones.add(btnRegistrar);
-				btnRegistrar.addActionListener(new ActionListener() {
 
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						// TODO Auto-generated method stub
-						// ir a la ventana de registro
-						VReg = new VentanaRegistro();
-						VReg.setVisible(true);
-						frame.dispose();
-					}
-				});
+		// BOTONES
+		btnRegistrar = new JButton("REGISTRAR");
+		panelBotones.add(btnRegistrar);
+		btnRegistrar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				// ir a la ventana de registro
+				VReg = new VentanaRegistro();
+				VReg.setVisible(true);
+				frame.dispose();
+			}
+		});
 
 		/**
-		 * Boton inicio de sesion Este boton nos lleva a la venta de inicio sesión
+		 * Boton inicio de sesion Este boton nos lleva a la venta de inicio sesiï¿½n
 		 */
+		btnInicioSesion = new JButton("INICIO SESION");
+		panelBotones.add(btnInicioSesion);
 		btnInicioSesion.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				// ir a la ventana de inicio
-				VentanaInicio VIni = new VentanaInicio();
+				VIni = new VentanaInicio();
 				VIni.setVisible(true);
 				frame.dispose();
 			}

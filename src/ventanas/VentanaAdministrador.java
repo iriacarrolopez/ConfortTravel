@@ -49,9 +49,12 @@ import java.awt.Color;
 import javax.swing.UIManager;
 
 public class VentanaAdministrador extends JFrame{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static JFrame frame;
 	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte;
-	private JComboBox<String> comboAn;
 	private JButton btnVolver, btnSalir,btnReservas;
 	public VentanaLogin ventanalogin;
 	private JLabel lblTitulo;
@@ -81,7 +84,7 @@ public class VentanaAdministrador extends JFrame{
 			public void run() {
 				try {
 					VentanaAdministrador window = new VentanaAdministrador();
-					window.frame.setVisible(true);
+					window.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -294,8 +297,10 @@ public class VentanaAdministrador extends JFrame{
 
 	}
 	public VentanaAdministrador(TipoPersona tipo) {
+		
 		VentanaInicio vi = new VentanaInicio();
 		vi.dispose();
-		frame.setVisible(true);
+		
+		this.setVisible(true);
 	}
 }

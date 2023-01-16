@@ -208,11 +208,11 @@ public class VentanaCliente extends JFrame {
 						pw.println();
 						float precioTotal = 0;
 						for (Reserva r: ar) {
-							pw.println(r.getDestino()+" "+r.getFechaIni()+"   "+r.getPrecio()+" €");
+							pw.println(r.getDestino()+" "+r.getFechaIni()+"   "+r.getPrecio()+" ï¿½");
 							precioTotal = precioTotal + r.getPrecio();
 						}
 						pw.println("------------------");
-						pw.println("TOTAL "+precioTotal+" €");
+						pw.println("TOTAL "+precioTotal+" ï¿½");
 						pw.close();
 					 } catch (FileNotFoundException e1) {
 						// TODO Auto-generated catch block
@@ -233,12 +233,12 @@ public class VentanaCliente extends JFrame {
 						pw.println();
 						float n = 0;
 						for (Reserva r: ar) {
-							pw.println(r.getDestino()+" "+r.getFechaIni()+"   "+r.getPrecio()+" €");
+							pw.println(r.getDestino()+" "+r.getFechaIni()+"   "+r.getPrecio()+" ï¿½");
 							n = n + r.getPrecio();
 							fibonacci(n);
 						}
 						pw.println("------------------");
-						pw.println("FIBONACCI "+fibonacci(n)+" €");
+						pw.println("FIBONACCI "+fibonacci(n)+" ï¿½");
 						pw.close();
 					 } catch (FileNotFoundException e1) {
 						// TODO Auto-generated catch block
@@ -317,11 +317,11 @@ public class VentanaCliente extends JFrame {
 							}
 							double presupuesto = Double.parseDouble(txtPresupuesto.getText());
 							alCombinaciones = combinaciones(listaExcursiones, presupuesto, 10);
-							System.out.println(String.format("Combinaciones de menos de %.2f€", presupuesto));
+							System.out.println(String.format("Combinaciones de menos de %.2fï¿½", presupuesto));
 							alCombinaciones.forEach(r -> System.out.println(r));
 							try {
 								PrintWriter pw = new PrintWriter(new FileOutputStream("Excursiones.txt", false));
-								pw.println("Posibles excursiones en "+ciudadDeseada+" con un presupuesto de "+presupuesto+"€");
+								pw.println("Posibles excursiones en "+ciudadDeseada+" con un presupuesto de "+presupuesto+"ï¿½");
 								pw.println();
 								alCombinaciones.forEach(r -> pw.println(r));
 								pw.close();
@@ -339,7 +339,7 @@ public class VentanaCliente extends JFrame {
 			private float fibonacci(float n) {
 				// TODO Auto-generated method stub
 				if (n>1)
-				    return fibonacci(n-1) + fibonacci(n-2);  //función recursiva
+				    return fibonacci(n-1) + fibonacci(n-2);  //funciï¿½n recursiva
 				    else return n;
 			}
 		});
@@ -378,41 +378,39 @@ public class VentanaCliente extends JFrame {
 	}
 	
 	public VentanaCliente(TipoPersona tipo) {
-		VentanaInicio vi = new VentanaInicio();
-		vi.dispose();
-		frame.setVisible(true);
+		this.setVisible(true);
 	}
 	public static void combinaciones(List<List<Excursion>> result, List<Excursion> elementos, double disponible, double sobranteMax, List<Excursion> temp) {
 		// Caso base. Si el importe disponible es negativo se detiene la recursividad
     	if (disponible < 0) {
         	return;
-        // Caso base. Si el importe disponible es menor que el sobrante máximo
+        // Caso base. Si el importe disponible es menor que el sobrante mï¿½ximo
         } else if (disponible < sobranteMax) {
         	//Se reordena la lista temporal de productos para evitar combinaciones equivalentes
-        	//Para reordenar se crea un Comparator de productos con una expresión lambda.
+        	//Para reordenar se crea un Comparator de productos con una expresiï¿½n lambda.
         	temp.sort((Excursion e1, Excursion e2) -> Integer.compare(e1.getId(), e2.getId()));
-        	//Se añade la lista temporal si no se había añadido previamente.
+        	//Se aï¿½ade la lista temporal si no se habï¿½a aï¿½adido previamente.
         	if (!result.contains(temp)) {
-            	//Se añade la lista temporal a la lista de resultados
+            	//Se aï¿½ade la lista temporal a la lista de resultados
                 result.add(new ArrayList<>(temp));        	
         	}
         } else {
             // Caso recursivo. Por cada elemento        	
         	for(Excursion e : elementos) {
-        		//Se añade el elemento a la lista temporal
+        		//Se aï¿½ade el elemento a la lista temporal
         		temp.add(e);
-        		//Se realiza la invocación recursiva en la que se va decrementado el importe disponible
+        		//Se realiza la invocaciï¿½n recursiva en la que se va decrementado el importe disponible
         		combinaciones(result, elementos, disponible-e.getPrecio(), sobranteMax, temp);
-        		//Se elimina el último de la lista temporal
+        		//Se elimina el ï¿½ltimo de la lista temporal
         		temp.remove(temp.size()-1);
         	}
         }
 	}
 	
 	public static List<List<Excursion>> combinaciones(List<Excursion> elementos, double disponible, double sobranteMax) {
-    	//Se inicializa la lista de combinaciones que se devolverá como resultado.
+    	//Se inicializa la lista de combinaciones que se devolverï¿½ como resultado.
     	List<List<Excursion>> result = new ArrayList<>();
-    	//Se invoca al método recursivo
+    	//Se invoca al mï¿½todo recursivo
     	combinaciones(result, elementos, disponible, sobranteMax, new ArrayList<>());
     	//Se devuelve el resultado.
     	return result;

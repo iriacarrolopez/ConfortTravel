@@ -126,7 +126,7 @@ public class VentanaRegistro extends JFrame {
 		textDni = new JTextField(20);
 		panelCentro.add(textDni);
 
-		lblContrasena = new JLabel("Introduzca una contraseña:");
+		lblContrasena = new JLabel("Introduzca una contraseï¿½a:");
 		lblContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(lblContrasena);
 
@@ -134,7 +134,7 @@ public class VentanaRegistro extends JFrame {
 		txtContrasenia.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(txtContrasenia);
 
-		lblContrasena2 = new JLabel("Confirme su contraseña:");
+		lblContrasena2 = new JLabel("Confirme su contraseï¿½a:");
 		lblContrasena2.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(lblContrasena2);
 
