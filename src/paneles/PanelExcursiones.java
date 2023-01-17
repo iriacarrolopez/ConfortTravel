@@ -1,11 +1,11 @@
 package paneles;
 
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,28 +23,30 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 import javax.swing.ListSelectionModel;
+import javax.swing.Timer;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
-
 import bd.BD;
 import clases.Ciudad;
 import clases.Excursion;
 
 
-public class PanelExcursiones extends JPanel {
+public class PanelExcursiones extends JPanel implements Runnable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private JTable tablaExcursion;
 	private JPanel panelArriba, panelAbajo;
-	private JLabel lblTitulo;
+	private JLabel lblTitulo ,labelC;
 	private DefaultTableModel modeloExcursion;
 	private JScrollPane scrollPaneExcursion;
 	private Connection con;
+	 static Timer timer;
 	private JButton btnInsertarExcursion, btnEliminar, btnModificar;
+	private JProgressBar progressBar;
 
 	
 
@@ -66,7 +68,42 @@ public class PanelExcursiones extends JPanel {
 		panelArriba.setLayout(new GridLayout(0, 4, 0, 0));
 		
 		lblTitulo = new JLabel("Excursion");
+		labelC = new JLabel();
 		panelArriba.add(lblTitulo);
+		panelArriba.add(labelC);
+		
+		progressBar = new JProgressBar(0,100);
+		progressBar.setVisible(true);
+		progressBar.setStringPainted(true);
+		progressBar.setForeground(Color.GREEN);
+		progressBar.setBackground(Color.LIGHT_GRAY);
+		progressBar.setBorder(new LineBorder(Color.DARK_GRAY));
+		
+			
+		
+		timer = new Timer(100, new ActionListener() {
+			int cont =0;
+			Thread hilo = new Thread();
+			@SuppressWarnings("deprecation")
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				progressBar.setValue(cont++);
+				labelC.setText("CARGANDO :");
+				
+					if(cont==100) {
+						hilo.start();
+						timer.stop();
+						
+						JOptionPane.showMessageDialog(null, "FUNCION REALIZADA CON  EXITO");
+						cont=0;
+					
+					
+				}
+				
+			}
+		});
+		panelArriba.add(progressBar);
 		
 		
 
@@ -100,14 +137,21 @@ public class PanelExcursiones extends JPanel {
 		
 		
 		
+		
 
 		btnInsertarExcursion.addActionListener(new ActionListener() {
 
+			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				// TODO Auto-generated method stub
+				
+				
+				//List<Integer> excursiones = BD.getExcursiones();
+				
+				timer.start();
 				String id = JOptionPane.showInputDialog("Introduce el id :");
+				
 				String nombre = JOptionPane.showInputDialog("Introduce el nombre:");
 				String tipo = JOptionPane.showInputDialog("Introduce el tipo :");
 				String lugar = JOptionPane.showInputDialog("Introduce el lugar :");
@@ -123,17 +167,23 @@ public class PanelExcursiones extends JPanel {
 				
 				BD.insertarExcursion(con, Integer.parseInt(id), nombre, tipo, nlugar, Float.parseFloat(precio),edad,
 						Integer.parseInt(duracion), Integer.parseInt(num));
-
+				
+					
+					
+				
+				
 				// Borramos el contenido del modelo de la tabla
 				while (modeloExcursion.getRowCount() > 0) {
 					modeloExcursion.removeRow(0);
 				}
 				cargarModeloTabla();
-				
+				timer.stop();
+				labelC.setText(" ");
 				BD.closeBD(con);
 			}
 
 		});
+		
 		/*
 		 * Al hacer click en una fila se te borra
 		 */
@@ -236,7 +286,6 @@ public class PanelExcursiones extends JPanel {
 			
 		}
 
-
 	public void cargarModeloTabla() {
 		//Connection con = BD.initBD("confortTravel.db");
 
@@ -270,6 +319,18 @@ public class PanelExcursiones extends JPanel {
 		}
 		//BD.closeBD(con);
 
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }

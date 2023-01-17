@@ -1,7 +1,10 @@
 package paneles;
 
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.GridLayout;
 import java.sql.Connection;
@@ -17,7 +20,8 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-
+import javax.swing.Timer;
+import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
@@ -54,13 +58,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.awt.event.ActionEvent;
 
-public class PanelReserva extends JPanel {
+public class PanelReserva extends JPanel implements Runnable {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel panelArriba, panelCentro, panelCentroCentro, panelCentroAbajo, panelCC1, panelCC2, panelCC3,
 			panelCC4, panelCA1, panelCA2, panelCA3, panelCA4;
 	private JLabel lblAniadirReserva, lblEliminarReserva, lblOrigen, lblDestino, lblFechaIni, lblFechaFin, lblTipoAlojamiento,
-			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI;
+			lblAlquilerTransporte, lblExcursiones, lblActividades,lblDNI,labelC;
 	private JTextField txtIDVuelo,txtDni;
 	private JComboBox<Ciudad> comboBoxOrigen, comboBoxDestino;
 	private JComboBox<TipoAlojamiento> comboBoxTipoAlojamiento;
@@ -70,7 +74,8 @@ public class PanelReserva extends JPanel {
 	private JButton btnAceptar, btnGuardar, btnInsertar;
 	private JDateChooser dcFechaInicio, dcFechaFin;
 	private Connection con;
-
+	private JProgressBar progressBar;
+	private static Timer timer ;
 	private final static SimpleDateFormat SDF_FECHAS = new SimpleDateFormat("dd/MM/yyyy");
 
 	private JScrollPane scrollPane;
@@ -123,7 +128,41 @@ public class PanelReserva extends JPanel {
 		
 		lblOrigen = new JLabel("Origen");
 		panelCC2.add(lblOrigen);
-
+		progressBar = new JProgressBar(0,100);
+		progressBar.setVisible(true);
+		progressBar.setStringPainted(true);
+		progressBar.setForeground(Color.GREEN);
+		progressBar.setBackground(Color.LIGHT_GRAY);
+		progressBar.setBorder(new LineBorder(Color.DARK_GRAY));
+		
+			
+		labelC = new JLabel();
+		 timer = new Timer(100, new ActionListener() {
+			int cont =0;
+			Thread hilo = new Thread();
+			@SuppressWarnings("deprecation")
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				progressBar.setValue(cont++);
+			 
+				labelC.setText("CARGANDO :");
+				
+					if(cont==100) {
+						hilo.start();
+						timer.stop();
+						
+						JOptionPane.showMessageDialog(null, "FUNCION REALIZADA CON  EXITO");
+						cont=0;
+					
+					
+				}
+				
+			}
+		});
+		 
+		panelArriba.add(progressBar);
+		
 		Ciudad c1 = new Ciudad(1, "Sevilla");
 		Ciudad c2 = new Ciudad(2, "Barcelona");
 		Ciudad c3 = new Ciudad(3, "Madrid");
@@ -224,6 +263,7 @@ public class PanelReserva extends JPanel {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				timer.start();
 				panelCC2.setVisible(true);
 				panelCC3.setVisible(true);
 				panelCC4.setVisible(true);
@@ -237,7 +277,7 @@ public class PanelReserva extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				//JOptionPane.showMessageDialog(null,"PARA MÁS SEGURIDAD INTRODUZCA EL SU DNI ");
 				
-							
+					
 				Integer id = BD.obtenerMayorCodigoReserva() + 1;
 				Ciudad origen = (Ciudad) comboBoxOrigen.getSelectedItem();
 				Ciudad destino = (Ciudad) comboBoxDestino.getSelectedItem();
@@ -284,14 +324,16 @@ public class PanelReserva extends JPanel {
 					JOptionPane.showMessageDialog(null,"INTRODUCE BIEN TU DNI ");
 				}else {
 					JOptionPane.showMessageDialog(null,"RESERVA INSERTADA CORRECTAMENTE ");
+					
 					BD.insertarReserva(id, idOrigen, idDestino, fInicio, fFin, tipoAlquiler, tipoAlojamiento,
 							tipoExcursion, tipoActividad,dni, precioTotal);
 					
-
+					timer.stop();
 					BD.closeBD(con);
 					cargarModeloTabla();
 					
 					ocultarCampos();
+					labelC.setText(" ");
 					txtDni.setText("");
 				}
 				
@@ -377,5 +419,15 @@ public class PanelReserva extends JPanel {
 		panelCentroAbajo.setVisible(false);
 		btnInsertar.setVisible(true);
 	}
-	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 }

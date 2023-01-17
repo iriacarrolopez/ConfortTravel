@@ -57,7 +57,7 @@ import paneles.PanelAlojamiento;
 
 import paneles.PanelDestino;
 import paneles.PanelExcursiones;
-import paneles.PanelModificarReserva;
+
 import paneles.PanelReserva;
 
 public class VentanaCliente extends JFrame {
