@@ -16,7 +16,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
@@ -83,6 +82,9 @@ public class PanelEliminarDestino extends JPanel{
 		
 	}
 	
+	/**
+	 * Metodo que inicializa la JTable mediante el método cargarModeloTabla
+	 */
 	private void inicializarTabla() {
 		
 		Vector<String> cabeceraDestinos = new Vector<String>(Arrays.asList("ID","NOMBRE"));
@@ -97,6 +99,9 @@ public class PanelEliminarDestino extends JPanel{
 		
 	}
 	
+	/**
+	 * Método que elimina una fila de la JTable
+	 */
 	private static void eliminarFilaDestinoDeLaTabla() {
 		int rowCount = modeloDestino.getRowCount();
 		for (int i=rowCount-1; i>=0;i--) {
@@ -104,6 +109,9 @@ public class PanelEliminarDestino extends JPanel{
 		}
 	}
 	
+	/**
+	 * Método que carga el modelo de la JTable a partir de la BD	
+	 */
 	private static void cargarModeloTabla() {
 		Connection con = BD.initBD("confortTravel.db");
 		

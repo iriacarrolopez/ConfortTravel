@@ -4,29 +4,19 @@ import java.awt.BorderLayout;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
-import java.util.TreeMap;
 
-import javax.swing.ComboBoxEditor;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
+
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -37,14 +27,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JTree;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -53,10 +40,6 @@ import clases.Ciudad;
 import clases.Excursion;
 import clases.Reserva;
 import clases.TipoPersona;
-import paneles.PanelAlojamiento;
-
-import paneles.PanelDestino;
-import paneles.PanelExcursiones;
 
 import paneles.PanelReserva;
 
@@ -67,9 +50,9 @@ public class VentanaCliente extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private static JFrame frame;
-	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte, panelInformacion;
-	private JLabel lblInfor, lblTitulo, lblCiudad, lblPresupuesto;
-	private JButton btnSalir, btnVolver, btnBuscar;
+	private JPanel contentPane, panelPrincipal, panelSur, panelIzq, panelNorte;
+	private JLabel lblTitulo, lblCiudad, lblPresupuesto;
+	private JButton btnBuscar;
 	public VentanaLogin ventanaLogin;
 	public PanelReserva pr;
 	private JTree tree;
@@ -78,32 +61,10 @@ public class VentanaCliente extends JFrame {
 	private JScrollPane scrollTablaExcursiones;
 	private JComboBox<Ciudad> cbCiudades;
 	private JTextField txtPresupuesto;
-	//private JComboBox<String> comboAn;
-	//private JButton btnResguardo;
-	//private JButton btnFactura;
-	//private PanelAniadirReserva par;
-	//private PanelEliminarReserva per;
-//	private PanelModificarReserva pmr;
 	private JLabel lblHora;
 	
 	List<List<Excursion>> alCombinaciones;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaCliente window = new VentanaCliente();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		
-	}
 
 	/**
 	 * Create the frame.
@@ -148,8 +109,8 @@ public class VentanaCliente extends JFrame {
 
 		
 		
-		/*
-		 * nuevo
+		/**
+		 * JTree con todas las opciones que puede realizar el cliente
 		 */
 		tree = new JTree();
 		tree.setModel(new DefaultTreeModel(
@@ -333,6 +294,12 @@ public class VentanaCliente extends JFrame {
 					});
 					setVisible(false);
 				
+				}else if("Salir".equals(nodos)) {
+					System.exit(0);
+				}else if("Volver".equals(nodos)) {
+					ventanaLogin = new VentanaLogin();
+					frame.dispose();
+					ventanaLogin.setVisible(true);
 				}
 			}
 

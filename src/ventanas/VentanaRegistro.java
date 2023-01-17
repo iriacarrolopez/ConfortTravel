@@ -1,7 +1,6 @@
 package ventanas;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -49,21 +48,7 @@ public class VentanaRegistro extends JFrame {
 	private JLabel lblHora;
 	private static VentanaRegistro frame;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					frame = new VentanaRegistro();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -116,6 +101,7 @@ public class VentanaRegistro extends JFrame {
 		panelCentro.add(lblNombre);
 
 		txtNombre = new JTextField();
+		txtNombre.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(txtNombre);
 		txtNombre.setColumns(10);
 
@@ -124,6 +110,7 @@ public class VentanaRegistro extends JFrame {
 		panelCentro.add(lbldni);
 
 		textDni = new JTextField(20);
+		textDni.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(textDni);
 
 		lblContrasena = new JLabel("Introduzca una contrase�a:");
@@ -147,6 +134,7 @@ public class VentanaRegistro extends JFrame {
 		panelCentro.add(lblEmail);
 
 		txtEmail = new JTextField();
+		txtEmail.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(txtEmail);
 		txtEmail.setColumns(10);
 

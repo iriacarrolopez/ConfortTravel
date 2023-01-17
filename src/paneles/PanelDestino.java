@@ -17,7 +17,6 @@ import clases.Ciudad;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.sql.Connection;
@@ -154,6 +153,9 @@ public class PanelDestino extends JPanel {
 
 	}
 
+	/**
+	 * Método que inicializa la JTable utilizando el método cargarModeloTabla
+	 */
 	private void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraDestinos = new Vector<String>(Arrays.asList("ID", "NOMBRE"));
@@ -241,6 +243,9 @@ public class PanelDestino extends JPanel {
 
 	}
 
+	/**
+	 * Método que carga el modelo de la JTable
+	 */
 	public static void cargarModeloTabla() {
 		//Connection con = BD.initBD("confortTravel.db");
 

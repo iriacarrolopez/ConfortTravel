@@ -113,17 +113,10 @@ public class PanelUsuarios extends JPanel {
 		
 	}
 
-	/*private void cargarTextArea(Persona c) {
-		textAreaReservas.setText("");
-		String texto = "";
-		// Vamos a cargar en el textArea los valores del mapa asociados al empleado
-		// seleccionado en la JList
-		for (Reserva t : mapaClienteR.get(c)) {
-			
-			texto = texto + t + "\n";
-		}
-		textAreaReservas.setText(texto);
-	}*/
+	/**
+	 * Método que carga un fichero con los clientes
+	 * @param file nombre del fichero
+	 */
 	private void CargarPorUsuario(String file) {
 		try (PrintWriter pw = new PrintWriter(new File(file))) {
 			//RECORRO EL MAPA
@@ -143,6 +136,10 @@ public class PanelUsuarios extends JPanel {
 		}
 		
 	}
+	
+	/**
+	 * Método que carga la lista de clientes
+	 */
 	private void cargarListaClientes() {
 
 		try {

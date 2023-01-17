@@ -4,8 +4,6 @@ import javax.swing.JPanel;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +27,6 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 
 import bd.BD;
 import clases.Alojamiento;
@@ -44,7 +41,6 @@ public class PanelAlojamiento extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private JTable tablaAlojamiento;
 	private JPanel panelArriba, panelAbajo;
-	private JLabel lblTitulo;
 	private DefaultTableModel modeloAlojamiento;
 	private JScrollPane scrollPaneAlojamiento;
 	private Connection con;

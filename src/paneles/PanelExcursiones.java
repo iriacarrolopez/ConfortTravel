@@ -227,6 +227,9 @@ public class PanelExcursiones extends JPanel implements Runnable {
 		
 	}
 
+	/**
+	 * Método que inicializa la JTable mediante el método cargarModeloTabla
+	 */
 	public void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraExcursion = new Vector<String>(
@@ -285,7 +288,10 @@ public class PanelExcursiones extends JPanel implements Runnable {
 		});
 			
 		}
-
+	
+	/**
+	 * Método que carga el modelo de la JTable a partir de la BD
+	 */
 	public void cargarModeloTabla() {
 		//Connection con = BD.initBD("confortTravel.db");
 

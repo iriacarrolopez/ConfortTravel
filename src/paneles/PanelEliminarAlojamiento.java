@@ -15,7 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
@@ -34,8 +33,6 @@ public class PanelEliminarAlojamiento extends JPanel{
 	private JPanel panelAbajo;
 	private JLabel lblInfo;
 	
-	private JLabel lblId;
-	private JTextField txtId;
 	
 	private Connection con;
 	
@@ -79,7 +76,9 @@ public class PanelEliminarAlojamiento extends JPanel{
 			}
 		});
 	}
-	
+	/**
+	 * Método que inicializa la JTable mediante el método cargarModeloTabla
+	 */
 	private void inicializarTabla() {
 		
 		Vector<String> cabeceraAlojamientos = new Vector<String>(Arrays.asList("ID","NOMBRE","TIPO","DURACION","DESTINO","PRECIO"));
@@ -97,6 +96,9 @@ public class PanelEliminarAlojamiento extends JPanel{
 		
 	}
 	
+	/**
+	 * Método que elimina una fila de la JTable
+	 */
 	private static void eliminarFilaDestinoDeLaTabla() {
 		int rowCount = modeloAlojamiento.getRowCount();
 		for (int i=rowCount-1;i>=0;i--) {
@@ -104,6 +106,9 @@ public class PanelEliminarAlojamiento extends JPanel{
 		}
 	}
 	
+	/**
+	 * Método que carga el modelo de la JTable
+	 */
 	private static void cargarModeloTabla() {
 		Connection con = BD.initBD("confortTravel.db");
 		try {

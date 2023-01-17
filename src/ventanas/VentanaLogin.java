@@ -2,31 +2,28 @@ package ventanas;
 
 import java.awt.EventQueue;
 
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-/*No lo usamos ahora*/
-//import bd.BD;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.SystemColor;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
-/*No lo usamos ahora*/
-//import java.sql.Connection;
 import java.awt.event.ActionEvent;
-import javax.swing.UIManager;
 import java.awt.BorderLayout;
 
 public class VentanaLogin extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static JFrame frame;
 	private JPanel contentPane;
 	private JButton btnInicioSesion;

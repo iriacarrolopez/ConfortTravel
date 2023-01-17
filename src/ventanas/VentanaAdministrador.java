@@ -1,15 +1,13 @@
 package ventanas;
 
-import java.awt.EventQueue;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import bd.BD;
 import clases.Ciudad;
-import clases.Persona;
 import clases.Reserva;
 import clases.TipoPersona;
 import paneles.PanelAlojamiento;
@@ -21,8 +19,6 @@ import paneles.PanelUsuarios;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 
 import java.time.LocalDateTime;
@@ -37,16 +33,11 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 import java.awt.BorderLayout;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 
 
 import java.awt.Font;
 import java.awt.Color;
-
-import javax.swing.UIManager;
 
 public class VentanaAdministrador extends JFrame{
 	/**
@@ -71,26 +62,7 @@ public class VentanaAdministrador extends JFrame{
 	private JMenu menu;
 	private JMenuItem m1,m2,m3,m4,m5;
 	
-	/*
-	 * PanelAnadirAlojamiento paa = new PanelAnaidirAlojamiento();
-	 * PanelAnadirExcursiones pae= new PanelAnadirExcursiones();
-	 */
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaAdministrador window = new VentanaAdministrador();
-					window.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -166,6 +138,9 @@ public class VentanaAdministrador extends JFrame{
 		menuBar.add(menu);
 		panelNorte.add(menuBar);
 		
+	/**
+	 * Menu con todas las interacciones que puede realizar el administrador	
+	 */
 	m1.addActionListener(new ActionListener() {
 		
 		@Override

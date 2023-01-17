@@ -5,10 +5,6 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -20,9 +16,6 @@ import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 
 import bd.BD;
-/*NO LAS UTILIZAMOS DE MOMENTO*/
-//import clases.Administrador;
-//import clases.Cliente;
 import clases.Persona;
 import clases.TipoPersona;
 
@@ -35,7 +28,6 @@ import javax.swing.JOptionPane;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Frame;
 
 public class VentanaInicio extends JFrame {
 
@@ -143,7 +135,6 @@ public class VentanaInicio extends JFrame {
 
 		btnInicio = new JButton("INICIO SESION");
 		panelSur.add(btnInicio);
-		
 		
 		
 		/**

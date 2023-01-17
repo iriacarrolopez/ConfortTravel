@@ -371,11 +371,38 @@ public class PanelReserva extends JPanel implements Runnable {
 					int row, int column) {
 				Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 				
+				TipoAlquiler ta = (TipoAlquiler) modeloReserva.getValueAt(row, 5);
+				
+				if(ta.equals(TipoAlquiler.BICICLETA)) {
+					c.setBackground(Color.YELLOW);
+				}else if(ta.equals(TipoAlquiler.COCHE)) {
+					c.setBackground(Color.LIGHT_GRAY);
+				}else if(ta.equals(TipoAlquiler.MOTO)) {
+					c.setBackground(Color.ORANGE);
+				}else if(ta.equals(TipoAlquiler.PATIN_ELECTRICO)) {
+					c.setBackground(Color.GREEN);
+				}else {
+					c.setBackground(Color.CYAN);
+				}
+				
 				return c;
+				
+				/*
+				 * Ciudad c1 = new Ciudad(1, "Sevilla");
+		Ciudad c2 = new Ciudad(2, "Barcelona");
+		Ciudad c3 = new Ciudad(3, "Madrid");
+		Ciudad c4 = new Ciudad(4, "Bilbao");
+		Ciudad c5 = new Ciudad(5, "Mallorca");
+		Ciudad c6 = new Ciudad(6, "Paris");
+		Ciudad c7 = new Ciudad(7, "Malta");
+				 */
 			}
 		});
 	}
 
+	/**
+	 * Método que carga el método de la JTable a partir de la BD
+	 */
 	private void cargarModeloTabla() {
 
 		System.out.println("CARGANDO EL MODELO");
@@ -395,6 +422,9 @@ public class PanelReserva extends JPanel implements Runnable {
 
 	}
 
+	/**
+	 * Método que inicializa la JTable mediante el método de cargarModeloTabla
+	 */
 	private void inicializarTabla() {
 		Vector<String> cabeceraReserva = new Vector<String>(Arrays.asList("ID", "ORIGEN", "DESTINO", "FECHA INICIO",
 				"FECHA FIN", "ALQUILER TRANSPORTE", "TIPO ALOJAMIENTO", "TIPO EXCURSION", "ACTIVIDADES","DNI_CLIENTE","PRECIO"));
@@ -416,6 +446,9 @@ public class PanelReserva extends JPanel implements Runnable {
 
 	}
 	
+	/**
+	 * Método que oculta los campos cuando no se utilicen
+	 */
 	private void ocultarCampos() {
 		panelCC2.setVisible(false);
 		panelCC3.setVisible(false);
