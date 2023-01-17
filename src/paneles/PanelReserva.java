@@ -255,6 +255,7 @@ public class PanelReserva extends JPanel implements Runnable {
 		panelCA4.add(btnAceptar);
 		con = BD.initBD("confortTravel.db");
 		BD.crearTablas(con);
+		BD.closeBD(con);
 		cargarModeloTabla();
 		
 		ocultarCampos();
@@ -312,16 +313,21 @@ public class PanelReserva extends JPanel implements Runnable {
 				
 				if(ta != TipoAlquiler.NINGUNO) {
 					precioTotal = precioTotal + 300;
-				}else if(tal != TipoAlojamiento.NINGUNO) {
+				}
+				if(tal != TipoAlojamiento.NINGUNO) {
 					precioTotal = precioTotal + 500;
-				}else if(te != TipoExcursion.NINGUNA_EXCURSION) {
+				}
+				if(te != TipoExcursion.NINGUNA_EXCURSION) {
 					precioTotal = precioTotal + 100;
-				}else if(tact != TipoActividad.NINGUNA) {
+				}
+				if(tact != TipoActividad.NINGUNA) {
 					precioTotal = precioTotal + 250;
 				}
 				
 				if(!dni.equals(VentanaInicio.dni)) {
 					JOptionPane.showMessageDialog(null,"INTRODUCE BIEN TU DNI ");
+				}else if(origen.equals(destino)){
+					JOptionPane.showMessageDialog(null,"EL ORIGEN Y DESTINO NO PUEDEN SER IGUALES");
 				}else {
 					JOptionPane.showMessageDialog(null,"RESERVA INSERTADA CORRECTAMENTE ");
 					
@@ -329,7 +335,7 @@ public class PanelReserva extends JPanel implements Runnable {
 							tipoExcursion, tipoActividad,dni, precioTotal);
 					
 					timer.stop();
-					BD.closeBD(con);
+					
 					cargarModeloTabla();
 					
 					ocultarCampos();
@@ -373,7 +379,6 @@ public class PanelReserva extends JPanel implements Runnable {
 	private void cargarModeloTabla() {
 
 		System.out.println("CARGANDO EL MODELO");
-		con = BD.initBD("confortTravel.db");
 
 		ArrayList<Reserva> listaReservas = (ArrayList<Reserva>) BD.obtenerReservasPorCliente(VentanaInicio.dni);
 		while (modeloReserva.getRowCount() > 0) {
@@ -386,7 +391,6 @@ public class PanelReserva extends JPanel implements Runnable {
 			modeloReserva.addRow(fila);
 		}
 
-		BD.closeBD(con);
 		tablaReserva.repaint();
 
 	}

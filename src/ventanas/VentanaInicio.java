@@ -130,9 +130,10 @@ public class VentanaInicio extends JFrame {
 		panelCentro.add(lbldni);
 
 		textDni = new JTextField(20);
+		textDni.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(textDni);
 
-		lblContrasena = new JLabel("Introduzca su contrase\u00F1a:");
+		lblContrasena = new JLabel("Introduzca su contraseña:");
 		lblContrasena.setHorizontalAlignment(SwingConstants.CENTER);
 		panelCentro.add(lblContrasena);
 
@@ -157,6 +158,7 @@ public class VentanaInicio extends JFrame {
 				String cont = String.valueOf(txtcontrasenia.getPassword());
 				if (Pattern.matches(dniExpresR, dni)/* && Pattern.matches(conExpresR, cont)*/){
 					Persona p = BD.obtenerDatosPersona(con, dni);
+					BD.closeBD(con);
 					if (p != null) {
 						if (p.getContrasenia().equals(cont)) {
 							if(p.getTipo().equals(TipoPersona.ADMINISTRADOR)) {

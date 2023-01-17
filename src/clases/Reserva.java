@@ -249,11 +249,14 @@ public class Reserva {
 		
 		if(alquilerTransporte != TipoAlquiler.NINGUNO) {
 			precioTotal = precioTotal + 300;
-		}else if(tipoAlojamiento != TipoAlojamiento.NINGUNO) {
+		}
+		if(tipoAlojamiento != TipoAlojamiento.NINGUNO) {
 			precioTotal = precioTotal + 500;
-		}else if(excursion != TipoExcursion.NINGUNA_EXCURSION) {
+		}
+		if(excursion != TipoExcursion.NINGUNA_EXCURSION) {
 			precioTotal = precioTotal + 100;
-		}else if(actividades != TipoActividad.NINGUNA) {
+		}
+		if(actividades != TipoActividad.NINGUNA) {
 			precioTotal = precioTotal + 250;
 		}
 		

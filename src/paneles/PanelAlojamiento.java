@@ -255,6 +255,9 @@ private JTextField textField;
 		
 	}
 
+	/**
+	 * Método que inicializa la JTable a partir del método de cargarModeloTabla
+	 */
 	public void inicializarTabla() {
 		// Cabecera del modelo de datos
 		Vector<String> cabeceraAlojamiento = new Vector<String>(Arrays.asList("ID","NOMBRE", "TIPO ALOJAMIENTO", "PRECIO", "DURACION", "DESTINO"));
@@ -282,6 +285,11 @@ private JTextField textField;
 		tablaAlojamiento.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 	}
+	
+	/**
+	 * Método que carga el modelo de la JTable recibiendo una lista por parametro
+	 * @param listaAlojamientos lista con la que cargaremos el modelo
+	 */
 	public void cargarModeloTabla2(List<Alojamiento> listaAlojamientos) {
 		for(Alojamiento a: listaAlojamientos) {
 			Object [] fila = {a.getId(),a.getNombre_comp(),a.getTalojamiento(),a.getPrecio(),a.getDuracion(),a.getCiudad().getNombre()};
@@ -289,6 +297,9 @@ private JTextField textField;
 		}
 	}
 	
+	/**
+	 * Método que carga el modelo de la JTable
+	 */
 	public void cargarModeloTabla() {
 		
 		//Connection con = BD.initBD("confortTravel.db");
