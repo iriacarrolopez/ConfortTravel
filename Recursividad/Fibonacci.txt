@@ -1,4 +1,0 @@
-Fibonacci del cliente null
-
-------------------
-FIBONACCI 0.0 €

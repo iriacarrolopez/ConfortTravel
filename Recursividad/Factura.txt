@@ -1,4 +1,5 @@
-Factura del cliente null
+Factura del cliente 34567801A
 
+Marbella 09/01/2023   1504.89 ï¿½
 ------------------
-TOTAL 0.0 €
+TOTAL 1504.89 ï¿½

@@ -24,8 +24,8 @@ public class ReservaTest {
 	private Ciudad destino;
 	private Ciudad origen;
 	private int IdReserva =1;
-	private String actividad= "Esnorquel";
-	private String alquiler = "coche";
+	private TipoActividad tipoActividad = TipoActividad.SNORKEL;
+	private TipoAlquiler tipoAlquiler = TipoAlquiler.BICICLETA;
 	private String dni = "21111189A";
 	private float precio = 200;
 
@@ -139,7 +139,7 @@ public class ReservaTest {
 	@Test
 	public void testGetAlquilerTransporte() {
 
-		assertEquals(alquiler, reserva.getAlquilerTransporte());
+		assertEquals(tipoAlquiler, reserva.getAlquilerTransporte());
 	}
 
 	@Test
@@ -177,7 +177,7 @@ public class ReservaTest {
 	@Test
 	public void testGetActividades() {
 	
-		assertEquals(actividad, reserva.getActividades());
+		assertEquals(tipoActividad, reserva.getActividades());
 	}
 
 	@Test
@@ -190,8 +190,8 @@ public class ReservaTest {
 	@Test
 	public void testToString() {
 		String toString ="Reserva [origen=" + origen + ", destino=" + destino + ", fechaIni=" + fechaInic + ", fechaFin="
-				+ fechaFin + ", alquilerTransporte=" + alquiler + ", tipoAlojamiento=" +TipoAlojamiento.APARTAMENTO
-				+ ", excursion=" + TipoExcursion.ACUATICA+ ", actividades=" + actividad + "]";
+				+ fechaFin + ", alquilerTransporte=" + tipoAlquiler + ", tipoAlojamiento=" +TipoAlojamiento.APARTAMENTO
+				+ ", excursion=" + TipoExcursion.ACUATICA+ ", actividades=" + tipoActividad + "]";
 		assertEquals(toString, reserva.toString());
 	}
 

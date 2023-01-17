@@ -115862,3 +115862,2528 @@
   <thread>19</thread>
   <message>Conectada base de datos confortTravel.db</message>
 </record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-01-17T22:34:51.776576400Z</date>
+  <millis>1673994891776</millis>
+  <nanos>576400</nanos>
+  <sequence>0</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.847383Z</date>
+  <millis>1673994891847</millis>
+  <nanos>383000</nanos>
+  <sequence>1</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.849376100Z</date>
+  <millis>1673994891849</millis>
+  <nanos>376100</nanos>
+  <sequence>2</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.852375700Z</date>
+  <millis>1673994891852</millis>
+  <nanos>375700</nanos>
+  <sequence>3</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), duracion INTEGER(3),edad VARCHAR(4) ,numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.855360700Z</date>
+  <millis>1673994891855</millis>
+  <nanos>360700</nanos>
+  <sequence>4</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.858354300Z</date>
+  <millis>1673994891858</millis>
+  <nanos>354300</nanos>
+  <sequence>5</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.869325600Z</date>
+  <millis>1673994891869</millis>
+  <nanos>325600</nanos>
+  <sequence>6</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.935149800Z</date>
+  <millis>1673994891935</millis>
+  <nanos>149800</nanos>
+  <sequence>7</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:51.943127600Z</date>
+  <millis>1673994891943</millis>
+  <nanos>127600</nanos>
+  <sequence>8</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:8</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.029895100Z</date>
+  <millis>1673994892029</millis>
+  <nanos>895100</nanos>
+  <sequence>9</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.031888800Z</date>
+  <millis>1673994892031</millis>
+  <nanos>888800</nanos>
+  <sequence>10</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.032887100Z</date>
+  <millis>1673994892032</millis>
+  <nanos>887100</nanos>
+  <sequence>11</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.034881100Z</date>
+  <millis>1673994892034</millis>
+  <nanos>881100</nanos>
+  <sequence>12</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), duracion INTEGER(3),edad VARCHAR(4) ,numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.035879200Z</date>
+  <millis>1673994892035</millis>
+  <nanos>879200</nanos>
+  <sequence>13</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.037876800Z</date>
+  <millis>1673994892037</millis>
+  <nanos>876800</nanos>
+  <sequence>14</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.040867Z</date>
+  <millis>1673994892040</millis>
+  <nanos>867000</nanos>
+  <sequence>15</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.050839700Z</date>
+  <millis>1673994892050</millis>
+  <nanos>839700</nanos>
+  <sequence>16</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Alojamiento WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.081755700Z</date>
+  <millis>1673994892081</millis>
+  <nanos>755700</nanos>
+  <sequence>17</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes alojamientos:6</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.154560800Z</date>
+  <millis>1673994892154</millis>
+  <nanos>560800</nanos>
+  <sequence>18</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.155558Z</date>
+  <millis>1673994892155</millis>
+  <nanos>558000</nanos>
+  <sequence>19</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.156556200Z</date>
+  <millis>1673994892156</millis>
+  <nanos>556200</nanos>
+  <sequence>20</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.158550800Z</date>
+  <millis>1673994892158</millis>
+  <nanos>550800</nanos>
+  <sequence>21</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), duracion INTEGER(3),edad VARCHAR(4) ,numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.161543800Z</date>
+  <millis>1673994892161</millis>
+  <nanos>543800</nanos>
+  <sequence>22</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.163539800Z</date>
+  <millis>1673994892163</millis>
+  <nanos>539800</nanos>
+  <sequence>23</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.167527500Z</date>
+  <millis>1673994892167</millis>
+  <nanos>527500</nanos>
+  <sequence>24</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.187473100Z</date>
+  <millis>1673994892187</millis>
+  <nanos>473100</nanos>
+  <sequence>25</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Excursion WHERE id&gt;=0</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.203429700Z</date>
+  <millis>1673994892203</millis>
+  <nanos>429700</nanos>
+  <sequence>26</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes excursiones:5</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.801830500Z</date>
+  <millis>1673994892801</millis>
+  <nanos>830500</nanos>
+  <sequence>27</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.802828500Z</date>
+  <millis>1673994892802</millis>
+  <nanos>828500</nanos>
+  <sequence>28</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.805047500Z</date>
+  <millis>1673994892805</millis>
+  <nanos>47500</nanos>
+  <sequence>29</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.806775800Z</date>
+  <millis>1673994892806</millis>
+  <nanos>775800</nanos>
+  <sequence>30</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), duracion INTEGER(3),edad VARCHAR(4) ,numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.809095400Z</date>
+  <millis>1673994892809</millis>
+  <nanos>95400</nanos>
+  <sequence>31</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.810808100Z</date>
+  <millis>1673994892810</millis>
+  <nanos>808100</nanos>
+  <sequence>32</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.813799Z</date>
+  <millis>1673994892813</millis>
+  <nanos>799000</nanos>
+  <sequence>33</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.817791400Z</date>
+  <millis>1673994892817</millis>
+  <nanos>791400</nanos>
+  <sequence>34</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.841724200Z</date>
+  <millis>1673994892841</millis>
+  <nanos>724200</nanos>
+  <sequence>35</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.844187700Z</date>
+  <millis>1673994892844</millis>
+  <nanos>187700</nanos>
+  <sequence>36</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Persona (Dni  VARCHAR(10) PRIMARY KEY NOT NULL, nom VARCHAR(20), cont VARCHAR(20), email VARCHAR(20), tipo VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.845713700Z</date>
+  <millis>1673994892845</millis>
+  <nanos>713700</nanos>
+  <sequence>37</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Alojamiento (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre_comp VARCHAR(20), talojamiento VARCHAR(20), precio FLOAT(3), duracion INTEGER(3), destino INTEGER(2),FOREIGN KEY(destino) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.847898500Z</date>
+  <millis>1673994892847</millis>
+  <nanos>898500</nanos>
+  <sequence>38</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Excursion (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombre VARCHAR(20), tipo VARCHAR(20),lugar VARCHAR(20), precio FLOAT(3), duracion INTEGER(3),edad VARCHAR(4) ,numPersonas INTEGER(4),FOREIGN KEY(lugar) REFERENCES Ciudad(id) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.849057200Z</date>
+  <millis>1673994892849</millis>
+  <nanos>57200</nanos>
+  <sequence>39</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Reserva (id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, idOrigen INTEGER(2), idDestino INTEGER(2), fechaInicio VARCHAR(20), fechaFin VARCHAR(20), alquilerTransporte VARCHAR(20), tipoAlojamiento VARCHAR(20), excursion VARCHAR(20), actividades VARCHAR(20), dni VARCHAR(10), precio FLOAT(6), FOREIGN KEY(dni) REFERENCES Persona(Dni) ON DELETE CASCADE);</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.850699900Z</date>
+  <millis>1673994892850</millis>
+  <nanos>699900</nanos>
+  <sequence>40</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>StatementCREATE TABLE IF NOT EXISTS Ciudad (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nom VARCHAR(20));</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.854689600Z</date>
+  <millis>1673994892854</millis>
+  <nanos>689600</nanos>
+  <sequence>41</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Creacion de las tablas</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.885606800Z</date>
+  <millis>1673994892885</millis>
+  <nanos>606800</nanos>
+  <sequence>42</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.887718200Z</date>
+  <millis>1673994892887</millis>
+  <nanos>718200</nanos>
+  <sequence>43</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.890595300Z</date>
+  <millis>1673994892890</millis>
+  <nanos>595300</nanos>
+  <sequence>44</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.892588500Z</date>
+  <millis>1673994892892</millis>
+  <nanos>588500</nanos>
+  <sequence>45</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.894584600Z</date>
+  <millis>1673994892894</millis>
+  <nanos>584600</nanos>
+  <sequence>46</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.896578800Z</date>
+  <millis>1673994892896</millis>
+  <nanos>578800</nanos>
+  <sequence>47</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.903560600Z</date>
+  <millis>1673994892903</millis>
+  <nanos>560600</nanos>
+  <sequence>48</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.906551700Z</date>
+  <millis>1673994892906</millis>
+  <nanos>551700</nanos>
+  <sequence>49</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.907550Z</date>
+  <millis>1673994892907</millis>
+  <nanos>550000</nanos>
+  <sequence>50</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.909544300Z</date>
+  <millis>1673994892909</millis>
+  <nanos>544300</nanos>
+  <sequence>51</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.912536100Z</date>
+  <millis>1673994892912</millis>
+  <nanos>536100</nanos>
+  <sequence>52</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.914529800Z</date>
+  <millis>1673994892914</millis>
+  <nanos>529800</nanos>
+  <sequence>53</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.916532800Z</date>
+  <millis>1673994892916</millis>
+  <nanos>532800</nanos>
+  <sequence>54</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.919516400Z</date>
+  <millis>1673994892919</millis>
+  <nanos>516400</nanos>
+  <sequence>55</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Granada</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.921812500Z</date>
+  <millis>1673994892921</millis>
+  <nanos>812500</nanos>
+  <sequence>56</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.924503400Z</date>
+  <millis>1673994892924</millis>
+  <nanos>503400</nanos>
+  <sequence>57</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.926499500Z</date>
+  <millis>1673994892926</millis>
+  <nanos>499500</nanos>
+  <sequence>58</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.928493600Z</date>
+  <millis>1673994892928</millis>
+  <nanos>493600</nanos>
+  <sequence>59</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.930487500Z</date>
+  <millis>1673994892930</millis>
+  <nanos>487500</nanos>
+  <sequence>60</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.932482900Z</date>
+  <millis>1673994892932</millis>
+  <nanos>482900</nanos>
+  <sequence>61</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='3'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.934477800Z</date>
+  <millis>1673994892934</millis>
+  <nanos>477800</nanos>
+  <sequence>62</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='3'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.937468900Z</date>
+  <millis>1673994892937</millis>
+  <nanos>468900</nanos>
+  <sequence>63</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Bilbao</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.939908300Z</date>
+  <millis>1673994892939</millis>
+  <nanos>908300</nanos>
+  <sequence>64</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.942456200Z</date>
+  <millis>1673994892942</millis>
+  <nanos>456200</nanos>
+  <sequence>65</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.943454100Z</date>
+  <millis>1673994892943</millis>
+  <nanos>454100</nanos>
+  <sequence>66</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.945447900Z</date>
+  <millis>1673994892945</millis>
+  <nanos>447900</nanos>
+  <sequence>67</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.947442300Z</date>
+  <millis>1673994892947</millis>
+  <nanos>442300</nanos>
+  <sequence>68</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.949437200Z</date>
+  <millis>1673994892949</millis>
+  <nanos>437200</nanos>
+  <sequence>69</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.950435400Z</date>
+  <millis>1673994892950</millis>
+  <nanos>435400</nanos>
+  <sequence>70</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.952433200Z</date>
+  <millis>1673994892952</millis>
+  <nanos>433200</nanos>
+  <sequence>71</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Granada</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.955523900Z</date>
+  <millis>1673994892955</millis>
+  <nanos>523900</nanos>
+  <sequence>72</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.958413700Z</date>
+  <millis>1673994892958</millis>
+  <nanos>413700</nanos>
+  <sequence>73</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.960407200Z</date>
+  <millis>1673994892960</millis>
+  <nanos>407200</nanos>
+  <sequence>74</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.961407100Z</date>
+  <millis>1673994892961</millis>
+  <nanos>407100</nanos>
+  <sequence>75</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.963405300Z</date>
+  <millis>1673994892963</millis>
+  <nanos>405300</nanos>
+  <sequence>76</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.965394400Z</date>
+  <millis>1673994892965</millis>
+  <nanos>394400</nanos>
+  <sequence>77</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.966392900Z</date>
+  <millis>1673994892966</millis>
+  <nanos>392900</nanos>
+  <sequence>78</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.967389Z</date>
+  <millis>1673994892967</millis>
+  <nanos>389000</nanos>
+  <sequence>79</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Granada</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.970381400Z</date>
+  <millis>1673994892970</millis>
+  <nanos>381400</nanos>
+  <sequence>80</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.972901400Z</date>
+  <millis>1673994892972</millis>
+  <nanos>901400</nanos>
+  <sequence>81</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.974369800Z</date>
+  <millis>1673994892974</millis>
+  <nanos>369800</nanos>
+  <sequence>82</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.975368600Z</date>
+  <millis>1673994892975</millis>
+  <nanos>368600</nanos>
+  <sequence>83</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.977362200Z</date>
+  <millis>1673994892977</millis>
+  <nanos>362200</nanos>
+  <sequence>84</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.979358300Z</date>
+  <millis>1673994892979</millis>
+  <nanos>358300</nanos>
+  <sequence>85</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.981352400Z</date>
+  <millis>1673994892981</millis>
+  <nanos>352400</nanos>
+  <sequence>86</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.984342800Z</date>
+  <millis>1673994892984</millis>
+  <nanos>342800</nanos>
+  <sequence>87</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Granada</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.987335600Z</date>
+  <millis>1673994892987</millis>
+  <nanos>335600</nanos>
+  <sequence>88</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A], Reserva [id=12, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=BUNGALO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1500.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.990328800Z</date>
+  <millis>1673994892990</millis>
+  <nanos>328800</nanos>
+  <sequence>89</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A], Reserva [id=12, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=BUNGALO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1500.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.992321600Z</date>
+  <millis>1673994892992</millis>
+  <nanos>321600</nanos>
+  <sequence>90</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.994317900Z</date>
+  <millis>1673994892994</millis>
+  <nanos>317900</nanos>
+  <sequence>91</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.996311900Z</date>
+  <millis>1673994892996</millis>
+  <nanos>311900</nanos>
+  <sequence>92</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.997308800Z</date>
+  <millis>1673994892997</millis>
+  <nanos>308800</nanos>
+  <sequence>93</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:52.999304500Z</date>
+  <millis>1673994892999</millis>
+  <nanos>304500</nanos>
+  <sequence>94</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='4'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.001301500Z</date>
+  <millis>1673994893001</millis>
+  <nanos>301500</nanos>
+  <sequence>95</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Granada</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.003295Z</date>
+  <millis>1673994893003</millis>
+  <nanos>295000</nanos>
+  <sequence>96</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A], Reserva [id=12, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=BUNGALO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1500.0, dni=23456789A], Reserva [id=13, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=BUNGALO, excursion=ACUATICA, actividades=PATINAJE, precio=1300.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.005287Z</date>
+  <millis>1673994893005</millis>
+  <nanos>287000</nanos>
+  <sequence>97</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A], Reserva [id=12, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=BUNGALO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1500.0, dni=23456789A], Reserva [id=13, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=BUNGALO, excursion=ACUATICA, actividades=PATINAJE, precio=1300.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.007281400Z</date>
+  <millis>1673994893007</millis>
+  <nanos>281400</nanos>
+  <sequence>98</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.008279400Z</date>
+  <millis>1673994893008</millis>
+  <nanos>279400</nanos>
+  <sequence>99</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.010273900Z</date>
+  <millis>1673994893010</millis>
+  <nanos>273900</nanos>
+  <sequence>100</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.012271900Z</date>
+  <millis>1673994893012</millis>
+  <nanos>271900</nanos>
+  <sequence>101</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='3'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.014266500Z</date>
+  <millis>1673994893014</millis>
+  <nanos>266500</nanos>
+  <sequence>102</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='3'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.016258700Z</date>
+  <millis>1673994893016</millis>
+  <nanos>258700</nanos>
+  <sequence>103</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Bilbao</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.019249400Z</date>
+  <millis>1673994893019</millis>
+  <nanos>249400</nanos>
+  <sequence>104</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A], Reserva [id=12, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=BUNGALO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1500.0, dni=23456789A], Reserva [id=13, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=BUNGALO, excursion=ACUATICA, actividades=PATINAJE, precio=1300.0, dni=23456789A], Reserva [id=14, origen=Sevilla, destino=Bilbao, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=2150.0, dni=23456789A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.022244100Z</date>
+  <millis>1673994893022</millis>
+  <nanos>244100</nanos>
+  <sequence>105</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{23456789A=[Reserva [id=7, origen=Sevilla, destino=Sevilla, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=8, origen=Sevilla, destino=Granada, fechaIni=18/01/2023, fechaFin=21/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=9, origen=Sevilla, destino=Bilbao, fechaIni=18/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=1300.0, dni=23456789A], Reserva [id=10, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1000.0, dni=23456789A], Reserva [id=11, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=NINGUNO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1300.0, dni=23456789A], Reserva [id=12, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=NINGUNO, tipoAlojamiento=BUNGALO, excursion=NINGUNA_EXCURSION, actividades=NINGUNA, precio=1500.0, dni=23456789A], Reserva [id=13, origen=Sevilla, destino=Granada, fechaIni=17/01/2023, fechaFin=21/01/2023, alquilerTransporte=MOTO, tipoAlojamiento=BUNGALO, excursion=ACUATICA, actividades=PATINAJE, precio=1300.0, dni=23456789A], Reserva [id=14, origen=Sevilla, destino=Bilbao, fechaIni=17/01/2023, fechaFin=20/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=RURAL, excursion=ACUATICA, actividades=SNORKEL, precio=2150.0, dni=23456789A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.032088700Z</date>
+  <millis>1673994893032</millis>
+  <nanos>88700</nanos>
+  <sequence>106</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.035075500Z</date>
+  <millis>1673994893035</millis>
+  <nanos>75500</nanos>
+  <sequence>107</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.038066500Z</date>
+  <millis>1673994893038</millis>
+  <nanos>66500</nanos>
+  <sequence>108</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.040064100Z</date>
+  <millis>1673994893040</millis>
+  <nanos>64100</nanos>
+  <sequence>109</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='2'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.042056700Z</date>
+  <millis>1673994893042</millis>
+  <nanos>56700</nanos>
+  <sequence>110</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='2'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.045048900Z</date>
+  <millis>1673994893045</millis>
+  <nanos>48900</nanos>
+  <sequence>111</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Madrid</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.049037900Z</date>
+  <millis>1673994893049</millis>
+  <nanos>37900</nanos>
+  <sequence>112</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=1, origen=Sevilla, destino=Madrid, fechaIni=05/01/2023, fechaFin=08/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=200.8, dni=21111189A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.053030500Z</date>
+  <millis>1673994893053</millis>
+  <nanos>30500</nanos>
+  <sequence>113</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{21111189A=[Reserva [id=1, origen=Sevilla, destino=Madrid, fechaIni=05/01/2023, fechaFin=08/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=200.8, dni=21111189A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.056018100Z</date>
+  <millis>1673994893056</millis>
+  <nanos>18100</nanos>
+  <sequence>114</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='2'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.058016500Z</date>
+  <millis>1673994893058</millis>
+  <nanos>16500</nanos>
+  <sequence>115</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='2'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.061007300Z</date>
+  <millis>1673994893061</millis>
+  <nanos>7300</nanos>
+  <sequence>116</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Madrid</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.063999800Z</date>
+  <millis>1673994893063</millis>
+  <nanos>999800</nanos>
+  <sequence>117</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.066991200Z</date>
+  <millis>1673994893066</millis>
+  <nanos>991200</nanos>
+  <sequence>118</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.068985700Z</date>
+  <millis>1673994893068</millis>
+  <nanos>985700</nanos>
+  <sequence>119</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.072975800Z</date>
+  <millis>1673994893072</millis>
+  <nanos>975800</nanos>
+  <sequence>120</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=1, origen=Sevilla, destino=Madrid, fechaIni=05/01/2023, fechaFin=08/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=200.8, dni=21111189A], Reserva [id=2, origen=Madrid, destino=Sevilla, fechaIni=12/11/2022, fechaFin=16/11/2022, alquilerTransporte=MOTO, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=250.7, dni=21111189A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.077961700Z</date>
+  <millis>1673994893077</millis>
+  <nanos>961700</nanos>
+  <sequence>121</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{21111189A=[Reserva [id=1, origen=Sevilla, destino=Madrid, fechaIni=05/01/2023, fechaFin=08/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=200.8, dni=21111189A], Reserva [id=2, origen=Madrid, destino=Sevilla, fechaIni=12/11/2022, fechaFin=16/11/2022, alquilerTransporte=MOTO, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=250.7, dni=21111189A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.080954400Z</date>
+  <millis>1673994893080</millis>
+  <nanos>954400</nanos>
+  <sequence>122</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='3'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.083946200Z</date>
+  <millis>1673994893083</millis>
+  <nanos>946200</nanos>
+  <sequence>123</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='3'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.087935Z</date>
+  <millis>1673994893087</millis>
+  <nanos>935000</nanos>
+  <sequence>124</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Bilbao</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.089930100Z</date>
+  <millis>1673994893089</millis>
+  <nanos>930100</nanos>
+  <sequence>125</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.091925300Z</date>
+  <millis>1673994893091</millis>
+  <nanos>925300</nanos>
+  <sequence>126</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='1'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.095915300Z</date>
+  <millis>1673994893095</millis>
+  <nanos>915300</nanos>
+  <sequence>127</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Sevilla</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.100900200Z</date>
+  <millis>1673994893100</millis>
+  <nanos>900200</nanos>
+  <sequence>128</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=1, origen=Sevilla, destino=Madrid, fechaIni=05/01/2023, fechaFin=08/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=200.8, dni=21111189A], Reserva [id=2, origen=Madrid, destino=Sevilla, fechaIni=12/11/2022, fechaFin=16/11/2022, alquilerTransporte=MOTO, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=250.7, dni=21111189A], Reserva [id=4, origen=Bilbao, destino=Sevilla, fechaIni=04/01/2023, fechaFin=04/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=PATINAJE, precio=998.0, dni=21111189A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.104889100Z</date>
+  <millis>1673994893104</millis>
+  <nanos>889100</nanos>
+  <sequence>129</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{21111189A=[Reserva [id=1, origen=Sevilla, destino=Madrid, fechaIni=05/01/2023, fechaFin=08/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=200.8, dni=21111189A], Reserva [id=2, origen=Madrid, destino=Sevilla, fechaIni=12/11/2022, fechaFin=16/11/2022, alquilerTransporte=MOTO, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=250.7, dni=21111189A], Reserva [id=4, origen=Bilbao, destino=Sevilla, fechaIni=04/01/2023, fechaFin=04/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=PATINAJE, precio=998.0, dni=21111189A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.117861300Z</date>
+  <millis>1673994893117</millis>
+  <nanos>861300</nanos>
+  <sequence>130</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='6'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.120847300Z</date>
+  <millis>1673994893120</millis>
+  <nanos>847300</nanos>
+  <sequence>131</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='6'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.123838100Z</date>
+  <millis>1673994893123</millis>
+  <nanos>838100</nanos>
+  <sequence>132</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Barcelona</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.125832200Z</date>
+  <millis>1673994893125</millis>
+  <nanos>832200</nanos>
+  <sequence>133</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='5'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.126830300Z</date>
+  <millis>1673994893126</millis>
+  <nanos>830300</nanos>
+  <sequence>134</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lamzada consulta a base de datos: SELECT * FROM Ciudad WHERE id ='5'</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.128823900Z</date>
+  <millis>1673994893128</millis>
+  <nanos>823900</nanos>
+  <sequence>135</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se ha obtenido: Marbella</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.130820100Z</date>
+  <millis>1673994893130</millis>
+  <nanos>820100</nanos>
+  <sequence>136</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El array de reservas contiene[Reserva [id=6, origen=Barcelona, destino=Marbella, fechaIni=09/01/2023, fechaFin=13/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=1504.89, dni=34567801A]]</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.132814500Z</date>
+  <millis>1673994893132</millis>
+  <nanos>814500</nanos>
+  <sequence>137</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>El mapa contiene :{34567801A=[Reserva [id=6, origen=Barcelona, destino=Marbella, fechaIni=09/01/2023, fechaFin=13/01/2023, alquilerTransporte=COCHE, tipoAlojamiento=HOTEL, excursion=TOUR, actividades=CINE, precio=1504.89, dni=34567801A]]}</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.207612200Z</date>
+  <millis>1673994893207</millis>
+  <nanos>612200</nanos>
+  <sequence>138</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.211601800Z</date>
+  <millis>1673994893211</millis>
+  <nanos>601800</nanos>
+  <sequence>139</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:8</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.216589Z</date>
+  <millis>1673994893216</millis>
+  <nanos>589000</nanos>
+  <sequence>140</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=1;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.220579900Z</date>
+  <millis>1673994893220</millis>
+  <nanos>579900</nanos>
+  <sequence>141</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.222589400Z</date>
+  <millis>1673994893222</millis>
+  <nanos>589400</nanos>
+  <sequence>142</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.225565300Z</date>
+  <millis>1673994893225</millis>
+  <nanos>565300</nanos>
+  <sequence>143</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.227563200Z</date>
+  <millis>1673994893227</millis>
+  <nanos>563200</nanos>
+  <sequence>144</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.229555Z</date>
+  <millis>1673994893229</millis>
+  <nanos>555000</nanos>
+  <sequence>145</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.230558300Z</date>
+  <millis>1673994893230</millis>
+  <nanos>558300</nanos>
+  <sequence>146</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.232546900Z</date>
+  <millis>1673994893232</millis>
+  <nanos>546900</nanos>
+  <sequence>147</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.238534Z</date>
+  <millis>1673994893238</millis>
+  <nanos>534000</nanos>
+  <sequence>148</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=2;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.241523Z</date>
+  <millis>1673994893241</millis>
+  <nanos>523000</nanos>
+  <sequence>149</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.243519600Z</date>
+  <millis>1673994893243</millis>
+  <nanos>519600</nanos>
+  <sequence>150</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.245514700Z</date>
+  <millis>1673994893245</millis>
+  <nanos>514700</nanos>
+  <sequence>151</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.248504200Z</date>
+  <millis>1673994893248</millis>
+  <nanos>504200</nanos>
+  <sequence>152</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=2</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.251498300Z</date>
+  <millis>1673994893251</millis>
+  <nanos>498300</nanos>
+  <sequence>153</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:2</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.255484200Z</date>
+  <millis>1673994893255</millis>
+  <nanos>484200</nanos>
+  <sequence>154</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=3;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.258480100Z</date>
+  <millis>1673994893258</millis>
+  <nanos>480100</nanos>
+  <sequence>155</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.259474200Z</date>
+  <millis>1673994893259</millis>
+  <nanos>474200</nanos>
+  <sequence>156</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.261470200Z</date>
+  <millis>1673994893261</millis>
+  <nanos>470200</nanos>
+  <sequence>157</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.263466Z</date>
+  <millis>1673994893263</millis>
+  <nanos>466000</nanos>
+  <sequence>158</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.265458700Z</date>
+  <millis>1673994893265</millis>
+  <nanos>458700</nanos>
+  <sequence>159</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.267455800Z</date>
+  <millis>1673994893267</millis>
+  <nanos>455800</nanos>
+  <sequence>160</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=3</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.269450700Z</date>
+  <millis>1673994893269</millis>
+  <nanos>450700</nanos>
+  <sequence>161</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:3</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.273436100Z</date>
+  <millis>1673994893273</millis>
+  <nanos>436100</nanos>
+  <sequence>162</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=4;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.276428600Z</date>
+  <millis>1673994893276</millis>
+  <nanos>428600</nanos>
+  <sequence>163</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.279424700Z</date>
+  <millis>1673994893279</millis>
+  <nanos>424700</nanos>
+  <sequence>164</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.282413600Z</date>
+  <millis>1673994893282</millis>
+  <nanos>413600</nanos>
+  <sequence>165</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.285408600Z</date>
+  <millis>1673994893285</millis>
+  <nanos>408600</nanos>
+  <sequence>166</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.287400100Z</date>
+  <millis>1673994893287</millis>
+  <nanos>400100</nanos>
+  <sequence>167</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.288396800Z</date>
+  <millis>1673994893288</millis>
+  <nanos>396800</nanos>
+  <sequence>168</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.290392600Z</date>
+  <millis>1673994893290</millis>
+  <nanos>392600</nanos>
+  <sequence>169</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.292386200Z</date>
+  <millis>1673994893292</millis>
+  <nanos>386200</nanos>
+  <sequence>170</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.293383400Z</date>
+  <millis>1673994893293</millis>
+  <nanos>383400</nanos>
+  <sequence>171</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.295379100Z</date>
+  <millis>1673994893295</millis>
+  <nanos>379100</nanos>
+  <sequence>172</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=4</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.297373500Z</date>
+  <millis>1673994893297</millis>
+  <nanos>373500</nanos>
+  <sequence>173</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:5</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.302360800Z</date>
+  <millis>1673994893302</millis>
+  <nanos>360800</nanos>
+  <sequence>174</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=5;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.305352100Z</date>
+  <millis>1673994893305</millis>
+  <nanos>352100</nanos>
+  <sequence>175</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=6</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.307347100Z</date>
+  <millis>1673994893307</millis>
+  <nanos>347100</nanos>
+  <sequence>176</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad WHERE id=5</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.309347100Z</date>
+  <millis>1673994893309</millis>
+  <nanos>347100</nanos>
+  <sequence>177</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:1</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.314329200Z</date>
+  <millis>1673994893314</millis>
+  <nanos>329200</nanos>
+  <sequence>178</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=6;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.318316900Z</date>
+  <millis>1673994893318</millis>
+  <nanos>316900</nanos>
+  <sequence>179</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.322307400Z</date>
+  <millis>1673994893322</millis>
+  <nanos>307400</nanos>
+  <sequence>180</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=7;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.326294400Z</date>
+  <millis>1673994893326</millis>
+  <nanos>294400</nanos>
+  <sequence>181</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.332280700Z</date>
+  <millis>1673994893332</millis>
+  <nanos>280700</nanos>
+  <sequence>182</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Reserva WHERE idDestino=8;</message>
+</record>
+<record>
+  <date>2023-01-17T22:34:53.335271600Z</date>
+  <millis>1673994893335</millis>
+  <nanos>271600</nanos>
+  <sequence>183</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado las siguientes reservas:0</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:19.960852400Z</date>
+  <millis>1673994919960</millis>
+  <nanos>852400</nanos>
+  <sequence>184</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Conectada base de datos confortTravel.db</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:19.965592Z</date>
+  <millis>1673994919965</millis>
+  <nanos>592000</nanos>
+  <sequence>185</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:19.969581400Z</date>
+  <millis>1673994919969</millis>
+  <nanos>581400</nanos>
+  <sequence>186</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:8</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:19.971574700Z</date>
+  <millis>1673994919971</millis>
+  <nanos>574700</nanos>
+  <sequence>187</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada actualizaci�n a base de datos: INSERT INTO Ciudad VALUES(9,'Paris');</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:23.394364600Z</date>
+  <millis>1673994923394</millis>
+  <nanos>364600</nanos>
+  <sequence>188</sequence>
+  <logger>BD-local</logger>
+  <level>SEVERE</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Error en inserci�n de base de datos	INSERT INTO Ciudad VALUES(9,'Paris');</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>1010</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>1022</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>987</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec_utf8</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec</method>
+      <line>94</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeUpdate</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>bd.BD</class>
+      <method>insertarDestino</method>
+      <line>884</line>
+    </frame>
+    <frame>
+      <class>paneles.PanelDestino$1</class>
+      <method>actionPerformed</method>
+      <line>112</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton</class>
+      <method>fireActionPerformed</method>
+      <line>1972</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton$Handler</class>
+      <method>actionPerformed</method>
+      <line>2313</line>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>fireActionPerformed</method>
+      <line>405</line>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>setPressed</method>
+      <line>262</line>
+    </frame>
+    <frame>
+      <class>javax.swing.plaf.basic.BasicButtonListener</class>
+      <method>mouseReleased</method>
+      <line>279</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processMouseEvent</method>
+      <line>6626</line>
+    </frame>
+    <frame>
+      <class>javax.swing.JComponent</class>
+      <method>processMouseEvent</method>
+      <line>3389</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processEvent</method>
+      <line>6391</line>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>processEvent</method>
+      <line>2266</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEventImpl</method>
+      <line>5001</line>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+      <line>2324</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+      <line>4833</line>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>retargetMouseEvent</method>
+      <line>4948</line>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>processMouseEvent</method>
+      <line>4575</line>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>dispatchEvent</method>
+      <line>4516</line>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+      <line>2310</line>
+    </frame>
+    <frame>
+      <class>java.awt.Window</class>
+      <method>dispatchEventImpl</method>
+      <line>2780</line>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+      <line>4833</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+      <line>773</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+      <line>722</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+      <line>716</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+      <line>399</line>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+      <line>86</line>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+      <line>97</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$5</class>
+      <method>run</method>
+      <line>746</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$5</class>
+      <method>run</method>
+      <line>744</line>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+      <line>399</line>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+      <line>86</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+      <line>743</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+      <line>203</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+      <line>124</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+      <line>113</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+      <line>101</line>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+      <line>90</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2023-01-17T22:35:23.400360300Z</date>
+  <millis>1673994923400</millis>
+  <nanos>360300</nanos>
+  <sequence>189</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Lanzada consulta a base de datos: SELECT * FROM Ciudad</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:23.402345500Z</date>
+  <millis>1673994923402</millis>
+  <nanos>345500</nanos>
+  <sequence>190</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Se han encontrado los siguientes destinos:8</message>
+</record>
+<record>
+  <date>2023-01-17T22:35:23.404340900Z</date>
+  <millis>1673994923404</millis>
+  <nanos>340900</nanos>
+  <sequence>191</sequence>
+  <logger>BD-local</logger>
+  <level>INFO</level>
+  <class>bd.BD</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>Cierre de base de datos</message>
+</record>
+</log>
